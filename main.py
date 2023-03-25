@@ -1,1 +1,3 @@
 import dataprep
+
+dataprep.dataprep()
