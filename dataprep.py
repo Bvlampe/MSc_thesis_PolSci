@@ -19,18 +19,29 @@ def format_GTD(in_data):
     return out_data
 
 
+# Transforms the election system dataset from an election-level format to a country-year format
+def format_elecsys(in_data):
+    return False
+
+
 def dataprep():
     path_rawdata = "datasets_input/"
 
     path_GTD_raw = path_rawdata + "GTD_raw.csv"
     path_GTD = path_rawdata + "GTD.csv"
+    path_fragility = path_rawdata + "fragility.csv"
+    # [Regime durability]
+    path_elecsys = path_rawdata + "electoral_system.csv"
     path_glob = path_rawdata + "globalisation.csv"
     path_iusers = path_rawdata + "internet_users.csv"
     path_lit = path_rawdata + "literacy_rate.csv"
 
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252")
+    raw_fragility = pd.read_csv(path_fragility, sep=';')
+    # [Regime durability]
+    raw_elecsys = pd.read_csv(path_elecsys)
     raw_glob = pd.read_csv(path_glob, encoding="cp1252")
     raw_iusers = pd.read_csv(path_iusers)
     raw_lit = pd.read_csv(path_lit)
-    print(format_GTD(raw_GTD).head())
+    print(raw_elecsys.head())
