@@ -20,7 +20,12 @@ def format_GTD(in_data):
 
 
 # Transforms the election system dataset from an election-level format to a country-year format
-def format_elecsys(in_data):
+# WIP: main dataset structure update in progress, then come back here
+def format_elecsys(in_main, in_elec):
+    out_data = pd.DataFrame(index=in_main.index, columns = in_main.columns)
+    for _, row in in_elec.iterrows():
+        x = 0
+
     return False
 
 
