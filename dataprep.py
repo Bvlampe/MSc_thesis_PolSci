@@ -1,4 +1,5 @@
 import pandas as pd
+import math
 
 
 # Cuts unnecessary data from the 100MB GTD and exports the 10x smaller dataframe back to a .csv file
@@ -9,17 +10,25 @@ def cut_GTD(path_in, path_out, code="cp1252"):
     return in_data
 
 
+def list_countries_per_set(in_dataset, name_column, name_dataset, io_list):
+    i = 0
+    for country in in_dataset.loc[:, name_column].unique():
+        io_list.loc[i, name_dataset] = country
+        i += 1
+
 # Takes the country names in the main dataset (as list-like variable) and a DataFrame of country names in
 # the other datasets (each column being a list of all countries from one specific dataset, with the column
 # name being the name of the dataset) and exports an Excel file with
-def create_concordance_table(main, in_data):
+def create_country_table(main, in_data):
     first = list(set(main))
     first.sort()
     out = pd.DataFrame(index=range(len(list(first))), columns=["Main"], data=list(first))
     for column in in_data.columns:
         second = set(in_data.loc[:, column])
         both = set(first).intersection(second)
-        unique = list(second - both)
+        # Necessary for some reason because a nan value managed to slip through in the Fragility dataset
+        unique = [x for x in list(second - both) if type(x) == str]
+        unique.sort()
 
         i = 0
         for name in unique:
@@ -86,10 +95,10 @@ def dataprep():
     cntry_names = pd.DataFrame()
     cntry_names["Fragility"] = raw_fragility.loc[:, "country"].unique()
     # [Regime durability]
-    i = 0
-    for name in raw_elecsys.loc[:, "Country"].unique():
-        cntry_names.loc[i, "Election system"] = name
-        i += 1
-    create_concordance_table(main_data.index.get_level_values(0), cntry_names)
+    list_countries_per_set(raw_elecsys, "Country", "Election system", cntry_names)
+    list_countries_per_set(raw_glob, "country", "Globalisation", cntry_names)
+    list_countries_per_set(raw_iusers, "Country Name", "Internet users", cntry_names)
+    list_countries_per_set(raw_lit, "Entity", "Literacy rate", cntry_names)
 
+    create_country_table(main_data.index.get_level_values(0), cntry_names)
     # print(format_elecsys(raw_elecsys, main_data))
