@@ -74,18 +74,34 @@ def dataprep():
     path_fragility = path_rawdata + "fragility.csv"
     # [Regime durability]
     path_elecsys = path_rawdata + "electoral_system.csv"
-    path_glob = path_rawdata + "globalisation.csv"
-    path_iusers = path_rawdata + "internet_users.csv"
+    # [Level of democracy]
+    # [Political rights]
+    # [Civil rights]
+    # [Economic inequality]
+    # [Poverty rate]
+    # [Inflation]
     path_lit = path_rawdata + "literacy_rate.csv"
+    path_iusers = path_rawdata + "internet_users.csv"
+    # [Foreign interventions]
+    # [Religious fragmentation]
+    path_glob = path_rawdata + "globalisation.csv"
 
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252")
     raw_fragility = pd.read_csv(path_fragility, sep=';')
     # [Regime durability]
     raw_elecsys = pd.read_csv(path_elecsys)
-    raw_glob = pd.read_csv(path_glob, encoding="cp1252")
-    raw_iusers = pd.read_csv(path_iusers)
+    # [Level of democracy]
+    # [Political rights]
+    # [Civil rights]
+    # [Economic inequality]
+    # [Poverty rate]
+    # [Inflation]
     raw_lit = pd.read_csv(path_lit)
+    raw_iusers = pd.read_csv(path_iusers)
+    # [Foreign interventions]
+    # [Religious fragmentation]
+    raw_glob = pd.read_csv(path_glob, encoding="cp1252")
 
     main_index_ctry = raw_GTD.loc[:, "country_txt"].unique()
     main_index_year = range(raw_GTD.loc[:, "iyear"].min(), raw_GTD.loc[:, "iyear"].max() + 1)
@@ -96,9 +112,17 @@ def dataprep():
     cntry_names["Fragility"] = raw_fragility.loc[:, "country"].unique()
     # [Regime durability]
     list_countries_per_set(raw_elecsys, "Country", "Election system", cntry_names)
-    list_countries_per_set(raw_glob, "country", "Globalisation", cntry_names)
-    list_countries_per_set(raw_iusers, "Country Name", "Internet users", cntry_names)
+    # [Level of democracy]
+    # [Political rights]
+    # [Civil rights]
+    # [Economic inequality]
+    # [Poverty rate]
+    # [Inflation]
     list_countries_per_set(raw_lit, "Entity", "Literacy rate", cntry_names)
+    list_countries_per_set(raw_iusers, "Country Name", "Internet users", cntry_names)
+    # [Foreign interventions]
+    # [Religious fragmentation]
+    list_countries_per_set(raw_glob, "country", "Globalisation", cntry_names)
 
     create_country_table(main_data.index.get_level_values(0), cntry_names)
     # print(format_elecsys(raw_elecsys, main_data))
