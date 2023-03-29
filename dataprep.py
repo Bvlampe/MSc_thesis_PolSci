@@ -9,6 +9,25 @@ def cut_GTD(path_in, path_out, code="cp1252"):
     return in_data
 
 
+# Takes the country names in the main dataset (as list-like variable) and a DataFrame of country names in
+# the other datasets (each column being a list of all countries from one specific dataset, with the column
+# name being the name of the dataset) and exports an Excel file with
+def create_concordance_table(main, in_data):
+    first = list(set(main))
+    first.sort()
+    out = pd.DataFrame(index=range(len(list(first))), columns=["Main"], data=list(first))
+    for column in in_data.columns:
+        second = set(in_data.loc[:, column])
+        both = set(first).intersection(second)
+        unique = list(second - both)
+
+        i = 0
+        for name in unique:
+            out.loc[i, column] = name
+            i += 1
+    out.to_csv("country_names.csv", index=False)
+
+
 # Transforms the GTD into a country-year format
 def format_GTD(in_data):
     out_data = pd.DataFrame(columns=range(in_data["iyear"].min(), in_data["iyear"].max() + 1))
@@ -21,12 +40,21 @@ def format_GTD(in_data):
 
 # Transforms the election system dataset from an election-level format to a country-year format
 # WIP: main dataset structure update in progress, then come back here
-def format_elecsys(in_main, in_elec):
-    out_data = pd.DataFrame(index=in_main.index, columns=in_main.columns)
+def format_elecsys(in_elec, in_main_structure, inplace=False):
+    out_data = pd.DataFrame(index=in_main_structure.index, columns=["Elec_sys"])
+    print(in_elec.columns)
     for _, row in in_elec.iterrows():
-        x = 0
+        out_data.loc[(row["Country"], row["Year"]), "Elec_sys"] = row["Electoral system family"]
 
-    return False
+    # Gotta do this by country otherwise a recent election might propagate to the early years of the next country
+    for country in out_data.index.get_level_values(0):
+        out_data.loc[country, :].fillna(method="ffill", inplace=True)
+    # out_data.fillna(method="ffill", inplace=True)
+    if inplace:
+        in_elec = out_data
+    else:
+        return out_data
+
 
 
 def dataprep():
@@ -49,4 +77,19 @@ def dataprep():
     raw_glob = pd.read_csv(path_glob, encoding="cp1252")
     raw_iusers = pd.read_csv(path_iusers)
     raw_lit = pd.read_csv(path_lit)
-    print(raw_elecsys.head())
+
+    main_index_ctry = raw_GTD.loc[:, "country_txt"].unique()
+    main_index_year = range(raw_GTD.loc[:, "iyear"].min(), raw_GTD.loc[:, "iyear"].max() + 1)
+    main_index = pd.MultiIndex.from_product([main_index_ctry, main_index_year], names=["Country", "Year"])
+    main_data = pd.DataFrame(index=main_index)
+
+    cntry_names = pd.DataFrame()
+    cntry_names["Fragility"] = raw_fragility.loc[:, "country"].unique()
+    # [Regime durability]
+    i = 0
+    for name in raw_elecsys.loc[:, "Country"].unique():
+        cntry_names.loc[i, "Election system"] = name
+        i += 1
+    create_concordance_table(main_data.index.get_level_values(0), cntry_names)
+
+    # print(format_elecsys(raw_elecsys, main_data))
