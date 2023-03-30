@@ -77,8 +77,8 @@ def dataprep():
     # [Level of democracy]
     # [Political rights]
     # [Civil rights]
-    # [Economic inequality]
-    # [Poverty rate]
+    path_inequality = path_rawdata + "inequality.csv"
+    path_poverty = path_rawdata + "poverty.csv"
     # [Inflation]
     path_lit = path_rawdata + "literacy_rate.csv"
     path_iusers = path_rawdata + "internet_users.csv"
@@ -94,8 +94,8 @@ def dataprep():
     # [Level of democracy]
     # [Political rights]
     # [Civil rights]
-    # [Economic inequality]
-    # [Poverty rate]
+    raw_inequality = pd.read_csv(path_inequality)
+    raw_poverty = pd.read_csv(path_poverty)
     # [Inflation]
     raw_lit = pd.read_csv(path_lit)
     raw_iusers = pd.read_csv(path_iusers)
@@ -115,8 +115,8 @@ def dataprep():
     # [Level of democracy]
     # [Political rights]
     # [Civil rights]
-    # [Economic inequality]
-    # [Poverty rate]
+    list_countries_per_set(raw_inequality, "Country Name", "Inequality", cntry_names)
+    list_countries_per_set(raw_poverty, "Country Name", "Poverty", cntry_names)
     # [Inflation]
     list_countries_per_set(raw_lit, "Entity", "Literacy rate", cntry_names)
     list_countries_per_set(raw_iusers, "Country Name", "Internet users", cntry_names)
