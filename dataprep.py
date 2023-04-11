@@ -110,7 +110,7 @@ def dataprep():
     main_data = pd.DataFrame(index=main_index)
     main_data = format_GTD(raw_GTD, main_index)
     print(main_data.head())
-    main_data.to_csv("GTD_formatted.csv")
+    main_data.to_csv(path_rawdata + "GTD_formatted.csv")
 
     cntry_names = pd.DataFrame()
     cntry_names["Fragility"] = raw_fragility.loc[:, "country"].unique()
