@@ -38,11 +38,12 @@ def create_country_table(main, in_data):
 
 
 # Transforms the GTD into a country-year format
-def format_GTD(in_data):
-    out_data = pd.DataFrame(columns=range(in_data["iyear"].min(), in_data["iyear"].max() + 1))
+def format_GTD(in_data, in_index):
+    out_data = pd.DataFrame(index=in_index)
     for _, row in in_data.iterrows():
         if True: # Add possible inclusion criteria here
             out_data.loc[row["country_txt"], row["iyear"]] = True
+            out_data.loc[(row["country_txt"], row["iyear"]), "Terrorist attack"] = True
     out_data.fillna(value=False, inplace=True)
     return out_data
 
@@ -107,6 +108,9 @@ def dataprep():
     main_index_year = range(raw_GTD.loc[:, "iyear"].min(), raw_GTD.loc[:, "iyear"].max() + 1)
     main_index = pd.MultiIndex.from_product([main_index_ctry, main_index_year], names=["Country", "Year"])
     main_data = pd.DataFrame(index=main_index)
+    main_data = format_GTD(raw_GTD, main_index)
+    print(main_data.head())
+    main_data.to_csv("GTD_formatted.csv")
 
     cntry_names = pd.DataFrame()
     cntry_names["Fragility"] = raw_fragility.loc[:, "country"].unique()
