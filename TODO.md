@@ -4,6 +4,9 @@
 - [ ] Homogenise country names
   - [ ] Create concordance tables (WIP)
   - [ ] Apply CTs to each dataset
+- [ ] Decide on new datasets
+  - [x] Weapons movement
+  - [ ] Ties to US
 - [ ] Train models
 - [ ] Evaluate models
 
