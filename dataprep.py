@@ -16,6 +16,7 @@ def list_countries_per_set(in_dataset, name_column, name_dataset, io_list):
         io_list.loc[i, name_dataset] = country
         i += 1
 
+
 # Takes the country names in the main dataset (as list-like variable) and a DataFrame of country names in
 # the other datasets (each column being a list of all countries from one specific dataset, with the column
 # name being the name of the dataset) and exports an Excel file with
@@ -45,6 +46,7 @@ def format_GTD(in_data, in_index):
             out_data.loc[row["country_txt"], row["iyear"]] = True
             out_data.loc[(row["country_txt"], row["iyear"]), "Terrorist attack"] = True
     out_data.fillna(value=False, inplace=True)
+    # out_data.sort_index(inplace=True)
     return out_data
 
 
@@ -83,7 +85,7 @@ def dataprep():
     # [Inflation]
     path_lit = path_rawdata + "literacy_rate.csv"
     path_iusers = path_rawdata + "internet_users.csv"
-    # [Foreign interventions]
+    path_interventions = path_rawdata + "interventions.csv"
     # [Religious fragmentation]
     path_glob = path_rawdata + "globalisation.csv"
 
@@ -100,11 +102,12 @@ def dataprep():
     # [Inflation]
     raw_lit = pd.read_csv(path_lit)
     raw_iusers = pd.read_csv(path_iusers)
-    # [Foreign interventions]
+    # raw_interventions = pd.read_csv(path_interventions)
     # [Religious fragmentation]
     raw_glob = pd.read_csv(path_glob, encoding="cp1252")
 
     main_index_ctry = raw_GTD.loc[:, "country_txt"].unique()
+    main_index_ctry.sort()
     main_index_year = range(raw_GTD.loc[:, "iyear"].min(), raw_GTD.loc[:, "iyear"].max() + 1)
     main_index = pd.MultiIndex.from_product([main_index_ctry, main_index_year], names=["Country", "Year"])
     main_data = pd.DataFrame(index=main_index)
