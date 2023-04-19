@@ -19,7 +19,8 @@ def list_countries_per_set(in_dataset, name_column, name_dataset, io_list):
 
 # Takes the country names in the main dataset (as list-like variable) and a DataFrame of country names in
 # the other datasets (each column being a list of all countries from one specific dataset, with the column
-# name being the name of the dataset) and exports an Excel file with
+# name being the name of the dataset) and exports an Excel file with those countries not matching up between the
+# datasets with the goal to create a concordance table from it
 def create_country_table(main, in_data):
     first = list(set(main))
     first.sort()
@@ -86,7 +87,7 @@ def dataprep():
     path_lit = path_rawdata + "literacy_rate.csv"
     path_iusers = path_rawdata + "internet_users.csv"
     path_interventions = path_rawdata + "interventions.csv"
-    # [Religious fragmentation]
+    path_religion = path_rawdata + "religion.csv"
     path_glob = path_rawdata + "globalisation.csv"
 
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
@@ -103,7 +104,7 @@ def dataprep():
     raw_lit = pd.read_csv(path_lit)
     raw_iusers = pd.read_csv(path_iusers)
     # raw_interventions = pd.read_csv(path_interventions)
-    # [Religious fragmentation]
+    raw_religion = pd.read_csv(path_religion)
     raw_glob = pd.read_csv(path_glob, encoding="cp1252")
 
     main_index_ctry = raw_GTD.loc[:, "country_txt"].unique()
@@ -128,7 +129,7 @@ def dataprep():
     list_countries_per_set(raw_lit, "Entity", "Literacy rate", cntry_names)
     list_countries_per_set(raw_iusers, "Country Name", "Internet users", cntry_names)
     # [Foreign interventions]
-    # [Religious fragmentation]
+    list_countries_per_set(raw_religion, "Country", "Religion", cntry_names)
     list_countries_per_set(raw_glob, "country", "Globalisation", cntry_names)
 
     create_country_table(main_data.index.get_level_values(0), cntry_names)
