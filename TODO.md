@@ -15,11 +15,7 @@
 - [ ] Add new datasets
   - [ ] Weapons movement
   - [ ] Ties to US (?)
-- [ ] Create concordance tables
-  - [x] List non-corresponding country names per dataset
-  - [ ] Attribute missing country names from other datasets to those in GTD in Excel (manually)
-  - [ ] Create dict or DataFrame from newly "sorted" file
-- [ ] Finish calc_rel_frag() function
+
 
 ### Done ✓
 - [x] Make main dataset with [country, year] multi-index
@@ -40,3 +36,8 @@
   - [x] Interventions
   - [x] Religious fragmentation
   - [x] Globalisation
+- [x] Create concordance tables
+  - [x] List non-corresponding country names per dataset
+  - [x] Attribute missing country names from other datasets to those in GTD in Excel (manually)
+  - [x] Create dict or DataFrame from newly "sorted" file
+- [x] Finish calc_rel_frag() function

@@ -80,6 +80,14 @@ def calc_rel_frag(in_reldata, in_index, first_group="Other"):
     return out_data
 
 
+def country_dict():
+    source = pd.read_csv("concordance_table.csv")
+    out = {}
+    for _, row in source.iterrows():
+        out[row.loc["Non-matching"]] = row.loc["Rename"]
+    return out
+
+
 def dataprep():
     path_rawdata = "datasets_input/"
 
