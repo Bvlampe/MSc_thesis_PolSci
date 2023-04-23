@@ -14,12 +14,12 @@
 - [ ] Get all datasets and add to project
   - [x] GTD
   - [x] Fragility
-  - [ ] Durability
+  - [x] Durability
   - [x] Electoral system
-  - [ ] Level of democracy
+  - [x] Level of democracy
   - [ ] Political rights
   - [ ] Civil liberties
-  - [ ] Inequality
+  - [x] Inequality
   - [x] Poverty
   - [ ] Inflation
   - [x] Literacy
