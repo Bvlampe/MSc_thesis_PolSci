@@ -1,8 +1,11 @@
 # MSc Thesis PolSci: Forecasting terrorism
 
 ### Todo
+- [ ] Add new datasets
+  - [ ] Weapons movement
+  - [ ] Ties to US (?)
 - [ ] Homogenise country names
-  - [ ] Create concordance tables (WIP)
+  - [x] Create concordance tables (WIP)
   - [ ] Apply CTs to each dataset
 - [ ] Decide on new datasets
   - [x] Weapons movement
@@ -10,13 +13,12 @@
 - [ ] Train models
 - [ ] Evaluate models
 
+---
 ### WIP
 
-- [ ] Add new datasets
-  - [ ] Weapons movement
-  - [ ] Ties to US (?)
 
 
+---
 ### Done ✓
 - [x] Make main dataset with [country, year] multi-index
 - [x] Change election system dataset to country-year format
