@@ -31,7 +31,8 @@
   - [x] List non-corresponding country names per dataset
   - [ ] Attribute missing country names from other datasets to those in GTD in Excel (manually)
   - [ ] Create dict or DataFrame from newly "sorted" file
-- [ ] Change election system dataset to country-year format
+- [ ] Finish calc_rel_frag() function
 
 ### Done ✓
 - [x] Make main dataset with [country, year] multi-index
+- [x] Change election system dataset to country-year format
