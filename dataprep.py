@@ -21,23 +21,26 @@ def list_countries_per_set(in_dataset, name_column, name_dataset, io_list):
 # the other datasets (each column being a list of all countries from one specific dataset, with the column
 # name being the name of the dataset) and exports an Excel file with those countries not matching up between the
 # datasets with the goal to create a concordance table from it
-# TODO: Change to have a single unified list of non-matching country names instead of it being split by dataset
 def create_country_table(main, in_data):
     first = list(set(main))
     first.sort()
     out = pd.DataFrame(index=range(len(list(first))), columns=["Main"], data=list(first))
+    diff_countries = []
+
     for column in in_data.columns:
         second = set(in_data.loc[:, column])
         both = set(first).intersection(second)
         # Necessary for some reason because a nan value managed to slip through in the Fragility dataset
         unique = [x for x in list(second - both) if type(x) == str]
         unique.sort()
+        diff_countries.extend(unique)
 
-        i = 0
-        for name in unique:
-            out.loc[i, column] = name
-            i += 1
-    out.to_csv("country_names.csv", index=False)
+    diff_countries = set(diff_countries)
+    i = 0
+    for ctry in diff_countries:
+        out.loc[i, "Non-matching"] = ctry
+        i += 1
+    out.loc[:, ["Non-matching", "Main"]].to_csv("country_names.csv", index=False)
 
 
 # Transforms the GTD into a country-year format
