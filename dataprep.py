@@ -90,7 +90,7 @@ def dataprep():
     # [Civil rights]
     path_inequality = path_rawdata + "inequality.csv"
     path_poverty = path_rawdata + "poverty.csv"
-    # [Inflation]
+    path_inflation = path_rawdata + "inflation.csv"
     path_lit = path_rawdata + "literacy_rate.csv"
     path_iusers = path_rawdata + "internet_users.csv"
     path_interventions = path_rawdata + "interventions.csv"
@@ -108,7 +108,7 @@ def dataprep():
     # [Civil rights]
     raw_inequality = pd.read_csv(path_inequality).rename(columns={"Country Name": "Country"})
     raw_poverty = pd.read_csv(path_poverty).rename(columns={"Country Name": "Country"})
-    # [Inflation]
+    raw_inflation = pd.read_csv(path_inflation, encoding="cp1252")
     dict_lit = {"Entity": "Country", "Literacy rate, adult total (% of people ages 15 and above)": "Literacy"}
     raw_lit = pd.read_csv(path_lit).rename(columns=dict_lit).loc[:, ["Country", "Year", "Literacy"]].rename(str.capitalize, axis="columns")
     raw_iusers = pd.read_csv(path_iusers).rename(columns={"Country Name": "Country"}).rename(str.capitalize, axis="columns")
@@ -135,7 +135,7 @@ def dataprep():
     # [Civil rights]
     list_countries_per_set(raw_inequality, "Country", "Inequality", cntry_names)
     list_countries_per_set(raw_poverty, "Country", "Poverty", cntry_names)
-    # [Inflation]
+    list_countries_per_set(raw_inflation, "Country", "Inflation", cntry_names)
     list_countries_per_set(raw_lit, "Country", "Literacy rate", cntry_names)
     list_countries_per_set(raw_iusers, "Country", "Internet users", cntry_names)
     # [Foreign interventions]
