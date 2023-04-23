@@ -22,7 +22,7 @@ def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Count
 # the other datasets (each column being a list of all countries from one specific dataset, with the column
 # name being the name of the dataset) and exports an Excel file with those countries not matching up between the
 # datasets with the goal to create a concordance table from it
-def create_country_table(main, in_data):
+def create_country_table(main, in_data, write=False):
     first = list(set(main))
     first.sort()
     out = pd.DataFrame(index=range(len(list(first))), columns=["Main"], data=list(first))
@@ -36,12 +36,14 @@ def create_country_table(main, in_data):
         unique.sort()
         diff_countries.extend(unique)
 
-    diff_countries = set(diff_countries)
+    diff_countries = list(set(diff_countries))
+    diff_countries.sort()
     i = 0
     for ctry in diff_countries:
         out.loc[i, "Non-matching"] = ctry
         i += 1
-    out.loc[:, ["Non-matching", "Main"]].to_csv("country_names.csv", index=False)
+    if write:
+        out.loc[:, ["Non-matching", "Main"]].to_csv("country_names.csv", index=False)
 
 
 # Transforms the GTD into a country-year format
@@ -138,7 +140,7 @@ def dataprep():
     list_countries_per_set(raw_religion, "Religious fragmentation", cntry_names)
     list_countries_per_set(raw_glob, "Globalisation", cntry_names)
 
-    create_country_table(main_index.get_level_values(0), cntry_names)
+    create_country_table(main_index.get_level_values(0), cntry_names, write=False)
 
     data_elecsys = format_elecsys(raw_elecsys, main_index)
     data_rel_frag = calc_rel_frag(raw_religion, main_index)
