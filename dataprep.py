@@ -10,9 +10,10 @@ def cut_GTD(path_in, path_out, code="cp1252"):
     return in_data
 
 
-def list_countries_per_set(in_dataset, name_dataset, io_list, name_column = "Country",):
+def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Country", in_index=False):
     i = 0
-    for country in in_dataset.loc[:, name_column].unique():
+    countries = in_dataset.index.unique() if in_index else in_dataset.loc[:, name_column].unique()
+    for country in countries:
         io_list.loc[i, name_dataset] = country
         i += 1
 
@@ -86,8 +87,7 @@ def dataprep():
     path_durability = path_rawdata + "dur_dem.csv"
     path_elecsys = path_rawdata + "electoral_system.csv"
     path_democracy = path_rawdata + "dur_dem.csv"
-    # [Political rights]
-    # [Civil rights]
+    path_FH = path_rawdata + "FH_data.csv"
     path_inequality = path_rawdata + "inequality.csv"
     path_poverty = path_rawdata + "poverty.csv"
     path_inflation = path_rawdata + "inflation.csv"
@@ -103,8 +103,7 @@ def dataprep():
     raw_durability = pd.read_csv(path_durability).loc[:, ["country", "year", "durable"]].rename(str.capitalize, axis="columns")
     raw_elecsys = pd.read_csv(path_elecsys).loc[:, ["Country", "Year", "Electoral system family"]].rename(str.capitalize, axis="columns")
     raw_democracy = pd.read_csv(path_democracy).loc[:, ["country", "year", "polity2"]].rename(str.capitalize, axis="columns").rename(columns={"polity2": "Democracy"})
-    # [Political rights]
-    # [Civil rights]
+    raw_FH = pd.read_csv(path_FH, header=[0, 1, 2], index_col=0, encoding="cp1252")
     raw_inequality = pd.read_csv(path_inequality).rename(columns={"Country Name": "Country"})
     raw_poverty = pd.read_csv(path_poverty).rename(columns={"Country Name": "Country"})
     raw_inflation = pd.read_csv(path_inflation, encoding="cp1252")
@@ -129,8 +128,7 @@ def dataprep():
     list_countries_per_set(raw_durability,"Durability", cntry_names)
     list_countries_per_set(raw_elecsys, "Election system", cntry_names)
     list_countries_per_set(raw_democracy, "Democracy", cntry_names)
-    # [Political rights]
-    # [Civil rights]
+    list_countries_per_set(raw_FH, "FreedomHouse", cntry_names, in_index=True)
     list_countries_per_set(raw_inequality, "Inequality", cntry_names)
     list_countries_per_set(raw_poverty, "Poverty", cntry_names)
     list_countries_per_set(raw_inflation, "Inflation", cntry_names)
