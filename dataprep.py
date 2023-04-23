@@ -54,20 +54,23 @@ def format_GTD(in_data, in_index):
 # Transforms the election system dataset from an election-level format to a country-year format
 # WIP: main dataset structure update in progress, then come back here
 def format_elecsys(in_elec, in_main_structure, inplace=False):
-    out_data = pd.DataFrame(index=in_main_structure.index, columns=["Elec_sys"])
-    print(in_elec.columns)
+    out_data = pd.DataFrame(index=in_main_structure, columns=["Elec_sys"])
     for _, row in in_elec.iterrows():
         out_data.loc[(row["Country"], row["Year"]), "Elec_sys"] = row["Electoral system family"]
+    out_data = out_data.groupby("Country").transform(lambda group: group.ffill())
 
-    # Gotta do this by country otherwise a recent election might propagate to the early years of the next country
-    for country in out_data.index.get_level_values(0):
-        out_data.loc[country, :].fillna(method="ffill", inplace=True)
-    # out_data.fillna(method="ffill", inplace=True)
     if inplace:
         in_elec = out_data
     else:
         return out_data
 
+
+def calc_rel_frag(in_reldata, in_index):
+    out_data = pd.DataFrame(index=in_index, columns=["Religious fragmentation"])
+    for _, row in in_reldata.iterrows():
+        # Formula here
+        x = 0
+    return out_data
 
 
 def dataprep():
@@ -113,8 +116,8 @@ def dataprep():
     main_index = pd.MultiIndex.from_product([main_index_ctry, main_index_year], names=["Country", "Year"])
     main_data = pd.DataFrame(index=main_index)
     main_data = format_GTD(raw_GTD, main_index)
-    print(main_data.head())
     main_data.to_csv(path_rawdata + "GTD_formatted.csv")
+    format_elecsys(raw_elecsys, main_index, inplace=True)
 
     cntry_names = pd.DataFrame()
     cntry_names["Fragility"] = raw_fragility.loc[:, "country"].unique()
@@ -133,4 +136,4 @@ def dataprep():
     list_countries_per_set(raw_glob, "country", "Globalisation", cntry_names)
 
     create_country_table(main_data.index.get_level_values(0), cntry_names)
-    # print(format_elecsys(raw_elecsys, main_data))
+
