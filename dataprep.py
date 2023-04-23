@@ -10,7 +10,7 @@ def cut_GTD(path_in, path_out, code="cp1252"):
     return in_data
 
 
-def list_countries_per_set(in_dataset, name_column, name_dataset, io_list):
+def list_countries_per_set(in_dataset, name_dataset, io_list, name_column = "Country",):
     i = 0
     for country in in_dataset.loc[:, name_column].unique():
         io_list.loc[i, name_dataset] = country
@@ -99,7 +99,6 @@ def dataprep():
 
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252").rename(str.capitalize, axis="columns")
-    # print(pd.read_csv(path_fragility, sep=';').columns)
     raw_fragility = pd.read_csv(path_fragility).loc[:, ["country", "year", "sfi"]].rename(columns={"sfi" : "Fragility"}).rename(str.capitalize, axis="columns")
     raw_durability = pd.read_csv(path_durability).loc[:, ["country", "year", "durable"]].rename(str.capitalize, axis="columns")
     raw_elecsys = pd.read_csv(path_elecsys).loc[:, ["Country", "Year", "Electoral system family"]].rename(str.capitalize, axis="columns")
@@ -112,7 +111,7 @@ def dataprep():
     dict_lit = {"Entity": "Country", "Literacy rate, adult total (% of people ages 15 and above)": "Literacy"}
     raw_lit = pd.read_csv(path_lit).rename(columns=dict_lit).loc[:, ["Country", "Year", "Literacy"]].rename(str.capitalize, axis="columns")
     raw_iusers = pd.read_csv(path_iusers).rename(columns={"Country Name": "Country"}).rename(str.capitalize, axis="columns")
-    # raw_interventions = pd.read_csv(path_interventions)
+    raw_interventions = pd.read_csv(path_interventions, encoding="cp1252").loc[:, ["YEAR", "GOVTPERM", "INTERVEN1"]].rename(columns={"INTERVEN1": "Country"}).rename(str.capitalize, axis="columns")
     raw_religion = pd.read_csv(path_religion).rename(str.capitalize, axis="columns")
     raw_glob = pd.read_csv(path_glob, encoding="cp1252").rename(str.capitalize, axis="columns")
 
@@ -128,19 +127,19 @@ def dataprep():
 
     cntry_names = pd.DataFrame()
     cntry_names["Fragility"] = raw_fragility.loc[:, "Country"].unique()
-    # [Regime durability]
-    list_countries_per_set(raw_elecsys, "Country", "Election system", cntry_names)
-    list_countries_per_set(raw_democracy, "Country", "Democracy", cntry_names)
+    list_countries_per_set(raw_durability,"Durability", cntry_names)
+    list_countries_per_set(raw_elecsys, "Election system", cntry_names)
+    list_countries_per_set(raw_democracy, "Democracy", cntry_names)
     # [Political rights]
     # [Civil rights]
-    list_countries_per_set(raw_inequality, "Country", "Inequality", cntry_names)
-    list_countries_per_set(raw_poverty, "Country", "Poverty", cntry_names)
-    list_countries_per_set(raw_inflation, "Country", "Inflation", cntry_names)
-    list_countries_per_set(raw_lit, "Country", "Literacy rate", cntry_names)
-    list_countries_per_set(raw_iusers, "Country", "Internet users", cntry_names)
-    # [Foreign interventions]
-    list_countries_per_set(raw_religion, "Country", "Religion", cntry_names)
-    list_countries_per_set(raw_glob, "Country", "Globalisation", cntry_names)
+    list_countries_per_set(raw_inequality, "Inequality", cntry_names)
+    list_countries_per_set(raw_poverty, "Poverty", cntry_names)
+    list_countries_per_set(raw_inflation, "Inflation", cntry_names)
+    list_countries_per_set(raw_lit, "Literacy rate", cntry_names)
+    list_countries_per_set(raw_iusers, "Internet users", cntry_names)
+    list_countries_per_set(raw_interventions, "Interventions", cntry_names)
+    list_countries_per_set(raw_religion, "Religion", cntry_names)
+    list_countries_per_set(raw_glob, "Globalisation", cntry_names)
 
     create_country_table(main_index.get_level_values(0), cntry_names)
 
