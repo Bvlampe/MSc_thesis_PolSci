@@ -102,7 +102,7 @@ def dataprep():
     raw_fragility = pd.read_csv(path_fragility).loc[:, ["country", "year", "sfi"]].rename(columns={"sfi" : "Fragility"}).rename(str.capitalize, axis="columns")
     raw_durability = pd.read_csv(path_durability).loc[:, ["country", "year", "durable"]].rename(str.capitalize, axis="columns")
     raw_elecsys = pd.read_csv(path_elecsys).loc[:, ["Country", "Year", "Electoral system family"]].rename(str.capitalize, axis="columns")
-    raw_democracy = pd.read_csv(path_durability).loc[:, ["country", "year", "polity2"]].rename(str.capitalize, axis="columns").rename(columns={"polity2": "Democracy"})
+    raw_democracy = pd.read_csv(path_democracy).loc[:, ["country", "year", "polity2"]].rename(str.capitalize, axis="columns").rename(columns={"polity2": "Democracy"})
     # [Political rights]
     # [Civil rights]
     raw_inequality = pd.read_csv(path_inequality).rename(columns={"Country Name": "Country"})
