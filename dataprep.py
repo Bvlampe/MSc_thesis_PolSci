@@ -56,24 +56,24 @@ def format_GTD(in_data, in_index):
 
 
 # Transforms the election system dataset from an election-level format to a country-year format
-def format_elecsys(in_elec, in_main_structure, inplace=False):
-    out_data = pd.DataFrame(index=in_main_structure, columns=["Elec_sys"])
+def format_elecsys(in_elec, in_index):
+    out_data = pd.DataFrame(index=in_index, columns=["Elec_sys"])
     for _, row in in_elec.iterrows():
         out_data.loc[(row["Country"], row["Year"]), "Elec_sys"] = row["Electoral system family"]
     out_data = out_data.groupby("Country").transform(lambda group: group.ffill())
     out_data.fillna(value="No data", inplace=True)
-
-    if inplace:
-        in_elec = out_data
-    else:
-        return out_data
+    return out_data
 
 
-def calc_rel_frag(in_reldata, in_index):
+def calc_rel_frag(in_reldata, in_index, first_group="Other"):
     out_data = pd.DataFrame(index=in_index, columns=["Religious fragmentation"])
     for _, row in in_reldata.iterrows():
-        # Formula here
-        x = 0
+        frag = 1
+        for value in row.loc[first_group:]:
+            frag -= (value/100)**2
+        ctry = row.loc["Country"]
+        year = row.loc["Year"]
+        out_data.loc[(ctry, year), "Religious fragmentation"] = frag
     return out_data
 
 
@@ -123,7 +123,6 @@ def dataprep():
     # main_data = format_GTD(raw_GTD, main_index)
     # main_data.to_csv(path_rawdata + "GTD_formatted.csv")
     main_data = raw_GTD
-    format_elecsys(raw_elecsys, main_index, inplace=True)
 
     cntry_names = pd.DataFrame()
     cntry_names["Fragility"] = raw_fragility.loc[:, "Country"].unique()
@@ -138,8 +137,10 @@ def dataprep():
     list_countries_per_set(raw_lit, "Literacy rate", cntry_names)
     list_countries_per_set(raw_iusers, "Internet users", cntry_names)
     list_countries_per_set(raw_interventions, "Interventions", cntry_names)
-    list_countries_per_set(raw_religion, "Religion", cntry_names)
+    list_countries_per_set(raw_religion, "Religious fragmentation", cntry_names)
     list_countries_per_set(raw_glob, "Globalisation", cntry_names)
 
     create_country_table(main_index.get_level_values(0), cntry_names)
 
+    data_elecsys = format_elecsys(raw_elecsys, main_index)
+    data_rel_frag = calc_rel_frag(raw_religion, main_index)

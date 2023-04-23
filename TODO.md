@@ -21,11 +21,11 @@
   - [ ] Civil liberties
   - [x] Inequality
   - [x] Poverty
-  - [ ] Inflation
+  - [x] Inflation
   - [x] Literacy
   - [x] Internet usage
   - [x] Interventions
-  - [ ] Religious fragmentation
+  - [x] Religious fragmentation
   - [x] Globalisation
 - [ ] Create concordance tables
   - [x] List non-corresponding country names per dataset
