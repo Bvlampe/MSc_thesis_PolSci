@@ -88,6 +88,28 @@ def country_dict():
     return out
 
 
+# Transforms a dataset with country and year in different columns (with one datapoint per row)
+# into a DataFrame with the standardised Multi-Index
+def generic_list_transform(in_data, in_index, var_name, column_name=None):
+    if column_name is None:
+        column_name = var_name
+    out = pd.DataFrame(index=in_index, columns=[var_name])
+    for _, row in in_data.iterrows():
+        ctry = row.loc["Country"]
+        year = row.loc["Year"]
+        out.loc[(ctry, year), var_name] =column_name
+    return out
+
+
+# Transforms a dataset with country as the index and one column per year
+# into a DataFrame with the standardised Multi-Index
+# TODO: finish function definition
+def generic_table_transform(in_data, in_index, var_name):
+    out = pd.DataFrame(index=in_index, columns=[var_name])
+    for country, row in in_data.iterrows():
+        # placeholder
+        x = 0
+
 def dataprep():
     path_rawdata = "datasets_input/"
 
