@@ -90,14 +90,20 @@ def country_dict():
 
 # Transforms a dataset with country and year in different columns (with one datapoint per row)
 # into a DataFrame with the standardised Multi-Index
-def generic_list_transform(in_data, in_index, var_name, column_name=None):
+# var_name is the name to be assigned to the new column in the output set,
+# column_name the column to be searched for in the input set
+def generic_list_transform(in_data, in_index, var_name, column_name=None, year_name="Year", ctry_name="Country"):
     if column_name is None:
         column_name = var_name
     out = pd.DataFrame(index=in_index, columns=[var_name])
     for _, row in in_data.iterrows():
         ctry = row.loc["Country"]
         year = row.loc["Year"]
-        out.loc[(ctry, year), var_name] =column_name
+        slice1 = in_data.loc[in_data[year_name] == year, :]
+        slice2 = slice1.loc[in_data[ctry_name] == ctry, :]
+        assert(len(slice2.loc[:, column_name].values <= 1) and f"Error in generic_list_transform(): more than one value detected for cell {ctry}, {year} in {var_name}")
+        value = slice2.loc[:, column_name].values[0]
+        out.loc[(ctry, year), var_name] = value
     return out
 
 
@@ -173,3 +179,6 @@ def dataprep():
 
     data_elecsys = format_elecsys(raw_elecsys, main_index)
     data_rel_frag = calc_rel_frag(raw_religion, main_index)
+
+    slice_durability = generic_list_transform(raw_fragility, main_index, "Fragility")
+    slice_durability.to_csv("test.csv")
