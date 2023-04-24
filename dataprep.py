@@ -64,6 +64,8 @@ def format_elecsys(in_elec, in_index):
     for _, row in in_elec.iterrows():
         out_data.loc[(row["Country"], row["Year"]), "Elec_sys"] = row["Electoral system family"]
     out_data = out_data.groupby("Country").transform(lambda group: group.ffill())
+    # Unlike in most datasets, missing data here in all likelihood signifies the absence of elections, something
+    # that should very much be included in the analysis
     out_data.fillna(value="No data", inplace=True)
     return out_data
 
@@ -101,7 +103,7 @@ def generic_list_transform(in_data, in_index, var_name, column_name=None, year_n
         year = row.loc["Year"]
         slice1 = in_data.loc[in_data[year_name] == year, :]
         slice2 = slice1.loc[in_data[ctry_name] == ctry, :]
-        assert(len(slice2.loc[:, column_name].values <= 1) and f"Error in generic_list_transform(): more than one value detected for cell {ctry}, {year} in {var_name}")
+        # assert(len(slice2.loc[:, column_name].values <= 1) and f"Error in generic_list_transform(): more than one value detected for cell {ctry}, {year} in {var_name}")
         value = slice2.loc[:, column_name].values[0]
         out.loc[(ctry, year), var_name] = value
     return out
@@ -109,12 +111,22 @@ def generic_list_transform(in_data, in_index, var_name, column_name=None, year_n
 
 # Transforms a dataset with country as the index and one column per year
 # into a DataFrame with the standardised Multi-Index
-# TODO: finish function definition
-def generic_table_transform(in_data, in_index, var_name):
+# var_name is the name to be assigned to the new column in the output set, no effect on input set search
+def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
+    print(var_name, ':')
     out = pd.DataFrame(index=in_index, columns=[var_name])
-    for country, row in in_data.iterrows():
-        # placeholder
-        x = 0
+    years = [col for col in in_data.columns if col.isdigit()]
+    totalrows = len(in_data.index)
+    done = 0
+    for _, row in in_data.iterrows():
+        if not done % 10:
+            print(100 * done / totalrows, '%')
+        country = row.loc[ctry_name]
+        for year in in_index.get_level_values(1):
+            if str(year) in years:
+                out.loc[(country, year), var_name] = row.loc[str(year)]
+        done += 1
+    return out
 
 def dataprep():
     path_rawdata = "datasets_input/"
@@ -140,7 +152,7 @@ def dataprep():
     raw_fragility = pd.read_csv(path_fragility).loc[:, ["country", "year", "sfi"]].rename(columns={"sfi" : "Fragility"}).rename(str.capitalize, axis="columns")
     raw_durability = pd.read_csv(path_durability).loc[:, ["country", "year", "durable"]].rename(str.capitalize, axis="columns")
     raw_elecsys = pd.read_csv(path_elecsys).loc[:, ["Country", "Year", "Electoral system family"]].rename(str.capitalize, axis="columns")
-    raw_democracy = pd.read_csv(path_democracy).loc[:, ["country", "year", "polity2"]].rename(str.capitalize, axis="columns").rename(columns={"polity2": "Democracy"})
+    raw_democracy = pd.read_csv(path_democracy).loc[:, ["country", "year", "polity2"]].rename(columns={"polity2": "Democracy"}).rename(str.capitalize, axis="columns")
     raw_FH = pd.read_csv(path_FH, header=[0, 1, 2], index_col=0, encoding="cp1252")
     raw_inequality = pd.read_csv(path_inequality).rename(columns={"Country Name": "Country"})
     raw_poverty = pd.read_csv(path_poverty).rename(columns={"Country Name": "Country"})
@@ -177,8 +189,12 @@ def dataprep():
     # list_countries_per_set(raw_glob, "Globalisation", cntry_names)
     # create_country_table(main_index.get_level_values(0), cntry_names, write=False)
 
-    data_elecsys = format_elecsys(raw_elecsys, main_index)
-    data_rel_frag = calc_rel_frag(raw_religion, main_index)
-
-    slice_durability = generic_list_transform(raw_fragility, main_index, "Fragility")
-    slice_durability.to_csv("test.csv")
+    # slice_rel_frag = calc_rel_frag(raw_religion, main_index)
+    #
+    # slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
+    # slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")
+    # slice_elecsys = format_elecsys(raw_elecsys, main_index)
+    # slice_democracy = generic_list_transform(raw_democracy, main_index, "Democracy")
+    # FH data TBA
+    slice_inequality = generic_table_transform(raw_inequality, main_index, "Inequality")
+    slice_inequality.to_csv("test.csv")
