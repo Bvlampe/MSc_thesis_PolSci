@@ -112,6 +112,7 @@ def generic_list_transform(in_data, in_index, var_name, column_name=None, year_n
 # Transforms a dataset with country as the index and one column per year
 # into a DataFrame with the standardised Multi-Index
 # var_name is the name to be assigned to the new column in the output set, no effect on input set search
+# WARNING: very slow when having to expand the output dataset beyond the input index. Use after country renaming.
 def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
     print(var_name, ':')
     out = pd.DataFrame(index=in_index, columns=[var_name])
@@ -162,7 +163,7 @@ def dataprep():
     raw_iusers = pd.read_csv(path_iusers).rename(columns={"Country Name": "Country"}).rename(str.capitalize, axis="columns")
     raw_interventions = pd.read_csv(path_interventions, encoding="cp1252").loc[:, ["YEAR", "GOVTPERM", "INTERVEN1"]].rename(columns={"INTERVEN1": "Country"}).rename(str.capitalize, axis="columns")
     raw_religion = pd.read_csv(path_religion).rename(str.capitalize, axis="columns")
-    raw_glob = pd.read_csv(path_glob, encoding="cp1252").rename(str.capitalize, axis="columns")
+    raw_glob = pd.read_csv(path_glob, encoding="cp1252").loc[:, ["country", "year", "KOFGI"]].rename(columns={"KOFGI": "Globalization"}).rename(str.capitalize, axis="columns")
 
     main_index_ctry = raw_GTD.loc[:, "Country"].unique()
     main_index_ctry.sort()
@@ -182,19 +183,25 @@ def dataprep():
     # list_countries_per_set(raw_inequality, "Inequality", cntry_names)
     # list_countries_per_set(raw_poverty, "Poverty", cntry_names)
     # list_countries_per_set(raw_inflation, "Inflation", cntry_names)
-    # list_countries_per_set(raw_lit, "Literacy rate", cntry_names)
+    # list_countries_per_set(raw_lit, "Literacy", cntry_names)
     # list_countries_per_set(raw_iusers, "Internet users", cntry_names)
     # list_countries_per_set(raw_interventions, "Interventions", cntry_names)
     # list_countries_per_set(raw_religion, "Religious fragmentation", cntry_names)
     # list_countries_per_set(raw_glob, "Globalisation", cntry_names)
     # create_country_table(main_index.get_level_values(0), cntry_names, write=False)
 
-    # slice_rel_frag = calc_rel_frag(raw_religion, main_index)
-    #
-    # slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
-    # slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")
-    # slice_elecsys = format_elecsys(raw_elecsys, main_index)
-    # slice_democracy = generic_list_transform(raw_democracy, main_index, "Democracy")
+    ###TODO: use dict to rename countries
+
+    slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
+    slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")
+    slice_elecsys = format_elecsys(raw_elecsys, main_index)
+    slice_democracy = generic_list_transform(raw_democracy, main_index, "Democracy")
     # FH data TBA
     slice_inequality = generic_table_transform(raw_inequality, main_index, "Inequality")
-    slice_inequality.to_csv("test.csv")
+    slice_poverty = generic_table_transform(raw_poverty, main_index, "Poverty")
+    slice_inflation = generic_table_transform(raw_inflation, main_index, "Inflation")
+    slice_lit = generic_list_transform(raw_lit, main_index, "Literacy")
+    slice_iusers = generic_table_transform(raw_iusers, main_index, "Internet users")
+    # Interventions TBA
+    slice_rel_frag = calc_rel_frag(raw_religion, main_index)
+    slice_glob = generic_list_transform(raw_glob, main_index, "Globalization")
