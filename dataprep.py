@@ -1,14 +1,7 @@
 import pandas as pd
-import numpy as np
-import math
+import var_edits
 
 
-# Cuts unnecessary data from the 100MB GTD and exports the 10x smaller dataframe back to a .csv file
-def cut_GTD(path_in, path_out, code="cp1252"):
-    in_data = pd.read_csv(path_in, encoding=code)
-    in_data = in_data[["eventid", "iyear", "country", "country_txt", "success", "INT_LOG", "INT_IDEO"]]
-    in_data.to_csv(path_out)
-    return in_data
 
 
 def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Country", in_index=False):
@@ -45,46 +38,6 @@ def create_country_table(main, in_data, write=False):
         i += 1
     if write:
         out.loc[:, ["Non-matching", "Main"]].to_csv("country_names.csv", index=False)
-
-
-# Transforms the GTD into a country-year format
-def format_GTD(in_data, in_index):
-    out_data = pd.DataFrame(index=in_index)
-    for _, row in in_data.iterrows():
-        if True: # Add possible inclusion criteria here
-            out_data.loc[row["country_txt"], row["iyear"]] = True
-            out_data.loc[(row["country_txt"], row["iyear"]), "Terrorist attack"] = True
-    out_data.fillna(value=False, inplace=True)
-    # out_data.sort_index(inplace=True)
-    return out_data
-
-
-# Transforms the election system dataset from an election-level format to a country-year format
-def format_elecsys(in_elec, in_index):
-    out_data = pd.DataFrame(index=in_index, columns=["Elec_sys"])
-    for _, row in in_elec.iterrows():
-        out_data.loc[(row["Country"], row["Year"]), "Elec_sys"] = row["Electoral system family"]
-    out_data = out_data.groupby("Country").transform(lambda group: group.ffill())
-    # Unlike in most datasets, missing data here in all likelihood signifies the absence of elections, something
-    # that should very much be included in the analysis
-    out_data.fillna(value="No data", inplace=True)
-    return out_data
-
-
-def calc_rel_frag(in_reldata, in_index, first_group="Other"):
-    out_data = pd.DataFrame(index=in_index, columns=["Religious fragmentation"])
-    for _, row in in_reldata.iterrows():
-        found_any = False
-        frag = 1
-        for value in row.loc[first_group:]:
-            if not np.isnan(value):
-                found_any = True
-                frag -= (value/100)**2
-        ctry = row.loc["Country"]
-        year = row.loc["Year"]
-        if found_any:
-            out_data.loc[(ctry, year), "Religious fragmentation"] = frag
-    return out_data
 
 
 def country_dict():
@@ -261,7 +214,7 @@ def dataprep(step="merge", edit_col=None):
         main_data = generic_list_transform(raw_GTD, main_index, "Terrorist attack")
         slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
         slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")
-        slice_elecsys = format_elecsys(raw_elecsys, main_index)
+        slice_elecsys = var_edits.format_elecsys(raw_elecsys, main_index)
         slice_democracy = generic_list_transform(raw_democracy, main_index, "Democracy")
         # FH data TBA
         slice_inequality = generic_table_transform(raw_inequality, main_index, "Inequality")
@@ -270,7 +223,7 @@ def dataprep(step="merge", edit_col=None):
         slice_lit = generic_list_transform(raw_lit, main_index, "Literacy")
         slice_iusers = generic_table_transform(raw_iusers, main_index, "Internet users")
         # Interventions TBA
-        slice_rel_frag = calc_rel_frag(raw_religion, main_index)
+        slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
         slice_glob = generic_list_transform(raw_glob, main_index, "Globalization")
 
         main_data = main_data.merge(slice_fragility, left_index=True, right_index=True)
@@ -295,7 +248,7 @@ def dataprep(step="merge", edit_col=None):
         main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
 
         if edit_col == "Religious fragmentation":
-            slice_rel_frag = calc_rel_frag(raw_religion, main_index)
+            slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
             main_data.loc[:, "Religious fragmentation"] = slice_rel_frag.loc[:, "Religious fragmentation"]
 
         main_data.to_csv("merged_data.csv")
