@@ -153,14 +153,14 @@ def dataprep(step="merge", edit_col=None, write=False):
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252").rename(str.capitalize, axis="columns")
     raw_fragility = pd.read_csv(path_fragility).loc[:, ["country", "year", "sfi"]].rename(columns={"sfi" : "Fragility"}).rename(str.capitalize, axis="columns")
     raw_durability = pd.read_csv(path_durability).loc[:, ["country", "year", "durable"]].rename(str.capitalize, axis="columns")
-    raw_durability = raw_durability.loc[raw_durability["Year"] >= 1950, :]
+    raw_durability = raw_durability.loc[raw_durability["Year"] >= 1950, :].reset_index()
     raw_elecsys = pd.read_csv(path_elecsys).loc[:, ["Country", "Year", "Electoral system family"]].rename(str.capitalize, axis="columns")
     raw_democracy = pd.read_csv(path_democracy).loc[:, ["country", "year", "polity2"]].rename(columns={"polity2": "Democracy"}).rename(str.capitalize, axis="columns")
-    raw_democracy = raw_democracy.loc[raw_democracy["Year"] >= 1950, :]
+    raw_democracy = raw_democracy.loc[raw_democracy["Year"] >= 1950, :].reset_index()
     raw_FH = pd.read_csv(path_FH, header=[0, 1, 2], index_col=0, encoding="cp1252")
     raw_inequality = pd.read_csv(path_inequality).rename(columns={"Country Name": "Country"})
     raw_poverty = pd.read_csv(path_poverty).rename(columns={"Country Name": "Country"})
-    raw_poverty = raw_poverty.loc[raw_poverty["Indicator Name"] == "Poverty gap at $6.85 a day (2017 PPP) (%)", :]
+    raw_poverty = raw_poverty.loc[raw_poverty["Indicator Name"] == "Poverty gap at $6.85 a day (2017 PPP) (%)", :].reset_index()
     raw_inflation = pd.read_csv(path_inflation, encoding="cp1252")
     dict_lit = {"Entity": "Country", "Literacy rate, adult total (% of people ages 15 and above)": "Literacy"}
     raw_lit = pd.read_csv(path_lit).rename(columns=dict_lit).loc[:, ["Country", "Year", "Literacy"]].rename(str.capitalize, axis="columns")
@@ -222,7 +222,7 @@ def dataprep(step="merge", edit_col=None, write=False):
         slice_inflation = generic_table_transform(raw_inflation, main_index, "Inflation")
         slice_lit = generic_list_transform(raw_lit, main_index, "Literacy")
         slice_iusers = generic_table_transform(raw_iusers, main_index, "Internet users")
-        # slice_interventions = var_edits.format_interventions(raw_interventions, main_index)
+        slice_interventions = var_edits.format_interventions(raw_interventions, main_index)
         slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
         slice_glob = generic_list_transform(raw_glob, main_index, "Globalization")
 
@@ -236,7 +236,7 @@ def dataprep(step="merge", edit_col=None, write=False):
         main_data = main_data.merge(slice_inflation, left_index=True, right_index=True)
         main_data = main_data.merge(slice_lit, left_index=True, right_index=True)
         main_data = main_data.merge(slice_iusers, left_index=True, right_index=True)
-        # main_data = main_data.merge(slice_interventions, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_interventions, left_index=True, right_index=True)
         main_data = main_data.merge(slice_rel_frag, left_index=True, right_index=True)
         main_data = main_data.merge(slice_glob, left_index=True, right_index=True)
 
@@ -244,7 +244,7 @@ def dataprep(step="merge", edit_col=None, write=False):
             main_data.to_csv("merged_data.csv")
 
     # Not needed in common usage, only for short ad-hoc patches
-    # (all patches should also be integrated into "merge" mode for potential future usage)
+    # (all patches should also be integrated into "merge" mode for potential future full re-runs)
     # Only rel_frag and intervention editing implemented, to be expanded as needed
     elif step == "edit":
         assert(edit_col is not None)
