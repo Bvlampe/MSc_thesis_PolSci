@@ -196,7 +196,7 @@ def dataprep(step="merge", edit_col=None):
         # main_data = format_GTD(raw_GTD, main_index)
         # main_data.to_csv(path_rawdata + "GTD_formatted.csv")
 
-        concordance_table = pd.read_csv("concordance_table.csv").loc[:, ["Non-matching", "Rename"]]
+        concordance_table = country_dict()
         rename_countries(raw_fragility, concordance_table)
         rename_countries(raw_durability, concordance_table)
         rename_countries(raw_elecsys, concordance_table)
@@ -222,7 +222,7 @@ def dataprep(step="merge", edit_col=None):
         slice_inflation = generic_table_transform(raw_inflation, main_index, "Inflation")
         slice_lit = generic_list_transform(raw_lit, main_index, "Literacy")
         slice_iusers = generic_table_transform(raw_iusers, main_index, "Internet users")
-        # Interventions TBA
+        # slice_interventions = var_edits.format_interventions(raw_interventions, main_index)
         slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
         slice_glob = generic_list_transform(raw_glob, main_index, "Globalization")
 
@@ -236,13 +236,15 @@ def dataprep(step="merge", edit_col=None):
         main_data = main_data.merge(slice_inflation, left_index=True, right_index=True)
         main_data = main_data.merge(slice_lit, left_index=True, right_index=True)
         main_data = main_data.merge(slice_iusers, left_index=True, right_index=True)
-        # Interventions TBA
+        # main_data = main_data.merge(slice_interventions, left_index=True, right_index=True)
         main_data = main_data.merge(slice_rel_frag, left_index=True, right_index=True)
         main_data = main_data.merge(slice_glob, left_index=True, right_index=True)
 
         main_data.to_csv("merged_data.csv")
 
-    # Only rel_frag editing implemented, to be expanded as needed
+    # Not needed in common usage, only for short ad-hoc patches
+    # (all patches should also be integrated into "merge" mode for potential future usage)
+    # Only rel_frag and intervention editing implemented, to be expanded as needed
     elif step == "edit":
         assert(edit_col is not None)
         main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
@@ -250,5 +252,9 @@ def dataprep(step="merge", edit_col=None):
         if edit_col == "Religious fragmentation":
             slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
             main_data.loc[:, "Religious fragmentation"] = slice_rel_frag.loc[:, "Religious fragmentation"]
+
+        if edit_col == "Intervention":
+            rename_countries(raw_interventions, country_dict())
+            slice_intervention = var_edits.format_interventions(raw_interventions, main_index)
 
         main_data.to_csv("merged_data.csv")

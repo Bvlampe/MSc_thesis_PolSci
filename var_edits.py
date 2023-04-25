@@ -47,3 +47,11 @@ def format_GTD(in_data, in_index):
     out_data.fillna(value=False, inplace=True)
     # out_data.sort_index(inplace=True)
     return out_data
+
+
+def format_interventions(in_data, in_index):
+    out_data = pd.DataFrame(index=in_index, columns=["Intervention"])
+    for _, row in in_data.iterrows():
+        out_data.loc[(row.loc["Country"], row.loc["Year"]), "Intervention"] = True
+    out_data.fillna(value=False, inplace=True)
+    return out_data

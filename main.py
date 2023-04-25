@@ -2,7 +2,7 @@ import dataprep
 
 
 def main():
-    dataprep.dataprep("edit", edit_col="Religious fragmentation")
+    dataprep.dataprep("merge")
 
 
 if __name__ == "__main__":
