@@ -120,7 +120,6 @@ def generic_list_transform(in_data, in_index, var_name, column_name=None, year_n
 # Transforms a dataset with country as the index and one column per year
 # into a DataFrame with the standardised Multi-Index
 # var_name is the name to be assigned to the new column in the output set, no effect on input set search
-# WARNING: very slow when having to expand the output dataset beyond the input index. Use after country renaming.
 def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
     print(var_name, ':')
     totalrows = len(in_data.index)
@@ -133,6 +132,7 @@ def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
     for _, row in in_data.iterrows():
         if not done % print_freq:
             print(100 * done / totalrows, '%')
+
         country = row.loc[ctry_name]
         for year in in_index.get_level_values(1):
             if str(year) in years:
@@ -172,7 +172,7 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop
             io_data.dropna(subset=ctry_name)
 
 
-def dataprep():
+def dataprep(step="merge"):
     path_rawdata = "datasets_input/"
 
     path_GTD_raw = path_rawdata + "GTD_raw.csv"
@@ -198,7 +198,7 @@ def dataprep():
     raw_durability = raw_durability.loc[raw_durability["Year"] >= 1950, :]
     raw_elecsys = pd.read_csv(path_elecsys).loc[:, ["Country", "Year", "Electoral system family"]].rename(str.capitalize, axis="columns")
     raw_democracy = pd.read_csv(path_democracy).loc[:, ["country", "year", "polity2"]].rename(columns={"polity2": "Democracy"}).rename(str.capitalize, axis="columns")
-    raw_democracy = raw_democracy.loc[raw_durability["Year"] >= 1950, :]
+    raw_democracy = raw_democracy.loc[raw_democracy["Year"] >= 1950, :]
     raw_FH = pd.read_csv(path_FH, header=[0, 1, 2], index_col=0, encoding="cp1252")
     raw_inequality = pd.read_csv(path_inequality).rename(columns={"Country Name": "Country"})
     raw_poverty = pd.read_csv(path_poverty).rename(columns={"Country Name": "Country"})
@@ -220,47 +220,65 @@ def dataprep():
     # main_data.to_csv(path_rawdata + "GTD_formatted.csv")
     main_data = raw_GTD
 
-    # cntry_names = pd.DataFrame()
-    # cntry_names["Fragility"] = raw_fragility.loc[:, "Country"].unique()
-    # list_countries_per_set(raw_durability,"Durability", cntry_names)
-    # list_countries_per_set(raw_elecsys, "Election system", cntry_names)
-    # list_countries_per_set(raw_democracy, "Democracy", cntry_names)
-    # list_countries_per_set(raw_FH, "FreedomHouse", cntry_names, in_index=True)
-    # list_countries_per_set(raw_inequality, "Inequality", cntry_names)
-    # list_countries_per_set(raw_poverty, "Poverty", cntry_names)
-    # list_countries_per_set(raw_inflation, "Inflation", cntry_names)
-    # list_countries_per_set(raw_lit, "Literacy", cntry_names)
-    # list_countries_per_set(raw_iusers, "Internet users", cntry_names)
-    # list_countries_per_set(raw_interventions, "Interventions", cntry_names)
-    # list_countries_per_set(raw_religion, "Religious fragmentation", cntry_names)
-    # list_countries_per_set(raw_glob, "Globalisation", cntry_names)
-    # create_country_table(main_index.get_level_values(0), cntry_names, write=False)
+    if step == "create_dict":
+        cntry_names = pd.DataFrame()
+        cntry_names["Fragility"] = raw_fragility.loc[:, "Country"].unique()
+        list_countries_per_set(raw_durability,"Durability", cntry_names)
+        list_countries_per_set(raw_elecsys, "Election system", cntry_names)
+        list_countries_per_set(raw_democracy, "Democracy", cntry_names)
+        list_countries_per_set(raw_FH, "FreedomHouse", cntry_names, in_index=True)
+        list_countries_per_set(raw_inequality, "Inequality", cntry_names)
+        list_countries_per_set(raw_poverty, "Poverty", cntry_names)
+        list_countries_per_set(raw_inflation, "Inflation", cntry_names)
+        list_countries_per_set(raw_lit, "Literacy", cntry_names)
+        list_countries_per_set(raw_iusers, "Internet users", cntry_names)
+        list_countries_per_set(raw_interventions, "Interventions", cntry_names)
+        list_countries_per_set(raw_religion, "Religious fragmentation", cntry_names)
+        list_countries_per_set(raw_glob, "Globalisation", cntry_names)
+        create_country_table(main_index.get_level_values(0), cntry_names, write=False)
 
-    concordance_table = pd.read_csv("concordance_table.csv").loc[:, ["Non-matching", "Rename"]]
-    rename_countries(raw_fragility, concordance_table)
-    rename_countries(raw_durability, concordance_table)
-    rename_countries(raw_elecsys, concordance_table)
-    rename_countries(raw_democracy, concordance_table)
-    rename_countries(raw_FH, concordance_table, in_index=True)
-    rename_countries(raw_inequality, concordance_table)
-    rename_countries(raw_poverty, concordance_table)
-    rename_countries(raw_inflation, concordance_table)
-    rename_countries(raw_lit, concordance_table)
-    rename_countries(raw_iusers, concordance_table)
-    rename_countries(raw_interventions, concordance_table)
-    rename_countries(raw_religion, concordance_table)
-    rename_countries(raw_glob, concordance_table)
+    elif step == "merge":
+        concordance_table = pd.read_csv("concordance_table.csv").loc[:, ["Non-matching", "Rename"]]
+        rename_countries(raw_fragility, concordance_table)
+        rename_countries(raw_durability, concordance_table)
+        rename_countries(raw_elecsys, concordance_table)
+        rename_countries(raw_democracy, concordance_table)
+        rename_countries(raw_FH, concordance_table, in_index=True)
+        rename_countries(raw_inequality, concordance_table)
+        rename_countries(raw_poverty, concordance_table)
+        rename_countries(raw_inflation, concordance_table)
+        rename_countries(raw_lit, concordance_table)
+        rename_countries(raw_iusers, concordance_table)
+        rename_countries(raw_interventions, concordance_table)
+        rename_countries(raw_religion, concordance_table)
+        rename_countries(raw_glob, concordance_table)
 
-    slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
-    slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")
-    slice_elecsys = format_elecsys(raw_elecsys, main_index)
-    slice_democracy = generic_list_transform(raw_democracy, main_index, "Democracy")
-    # FH data TBA
-    slice_inequality = generic_table_transform(raw_inequality, main_index, "Inequality")
-    slice_poverty = generic_table_transform(raw_poverty, main_index, "Poverty")
-    slice_inflation = generic_table_transform(raw_inflation, main_index, "Inflation")
-    slice_lit = generic_list_transform(raw_lit, main_index, "Literacy")
-    slice_iusers = generic_table_transform(raw_iusers, main_index, "Internet users")
-    # Interventions TBA
-    slice_rel_frag = calc_rel_frag(raw_religion, main_index)
-    slice_glob = generic_list_transform(raw_glob, main_index, "Globalization")
+        slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
+        slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")
+        slice_elecsys = format_elecsys(raw_elecsys, main_index)
+        slice_democracy = generic_list_transform(raw_democracy, main_index, "Democracy")
+        # FH data TBA
+        slice_inequality = generic_table_transform(raw_inequality, main_index, "Inequality")
+        slice_poverty = generic_table_transform(raw_poverty, main_index, "Poverty")
+        slice_inflation = generic_table_transform(raw_inflation, main_index, "Inflation")
+        slice_lit = generic_list_transform(raw_lit, main_index, "Literacy")
+        slice_iusers = generic_table_transform(raw_iusers, main_index, "Internet users")
+        # Interventions TBA
+        slice_rel_frag = calc_rel_frag(raw_religion, main_index)
+        slice_glob = generic_list_transform(raw_glob, main_index, "Globalization")
+
+        main_data = main_data.merge(slice_fragility, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_durability, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_elecsys, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_democracy, left_index=True, right_index=True)
+        # FH data TBA
+        main_data = main_data.merge(slice_inequality, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_poverty, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_inflation, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_lit, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_iusers, left_index=True, right_index=True)
+        # Interventions TBA
+        main_data = main_data.merge(slice_rel_frag, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_glob, left_index=True, right_index=True)
+
+        main_data.to_csv("merged_data.csv")
