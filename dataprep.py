@@ -215,10 +215,6 @@ def dataprep(step="merge"):
     main_index_ctry.sort()
     main_index_year = range(raw_GTD.loc[:, "Year"].min(), raw_GTD.loc[:, "Year"].max() + 1)
     main_index = pd.MultiIndex.from_product([main_index_ctry, main_index_year], names=["Country", "Year"])
-    # main_data = pd.DataFrame(index=main_index)
-    # main_data = format_GTD(raw_GTD, main_index)
-    # main_data.to_csv(path_rawdata + "GTD_formatted.csv")
-    main_data = raw_GTD
 
     if step == "create_dict":
         cntry_names = pd.DataFrame()
@@ -238,6 +234,10 @@ def dataprep(step="merge"):
         create_country_table(main_index.get_level_values(0), cntry_names, write=False)
 
     elif step == "merge":
+        # main_data = pd.DataFrame(index=main_index)
+        # main_data = format_GTD(raw_GTD, main_index)
+        # main_data.to_csv(path_rawdata + "GTD_formatted.csv")
+
         concordance_table = pd.read_csv("concordance_table.csv").loc[:, ["Non-matching", "Rename"]]
         rename_countries(raw_fragility, concordance_table)
         rename_countries(raw_durability, concordance_table)
@@ -253,6 +253,7 @@ def dataprep(step="merge"):
         rename_countries(raw_religion, concordance_table)
         rename_countries(raw_glob, concordance_table)
 
+        main_data = generic_list_transform(raw_GTD, main_index, "Terrorist attack")
         slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
         slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")
         slice_elecsys = format_elecsys(raw_elecsys, main_index)
