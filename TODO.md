@@ -2,6 +2,7 @@
 
 ### Todo
 
+- [ ] Implement attribution of group interventions (NATO, UN, etc.)
 - [ ] Decide on new datasets
   - [x] Weapons movement
   - [ ] Ties to US

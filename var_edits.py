@@ -50,6 +50,7 @@ def format_GTD(in_data, in_index):
 
 
 def format_interventions(in_data, in_index):
+    in_data.dropna(subset="Country", inplace=True)
     out_data = pd.DataFrame(index=in_index, columns=["Intervention"])
     for _, row in in_data.iterrows():
         out_data.loc[(row.loc["Country"], row.loc["Year"]), "Intervention"] = True

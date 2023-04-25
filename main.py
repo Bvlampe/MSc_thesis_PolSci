@@ -2,7 +2,7 @@ import dataprep
 
 
 def main():
-    dataprep.dataprep("merge")
+    dataprep.dataprep("edit", edit_col="Intervention")
 
 
 if __name__ == "__main__":

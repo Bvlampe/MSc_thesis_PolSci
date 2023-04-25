@@ -106,7 +106,7 @@ def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
 # should be dropped (True) or left in with their original names (False)
 def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop_missing=True):
     if in_index:
-        for country, row in io_data.iterrows():
+        for country in io_data.index:
             if country in in_dict.keys():
                 newname = in_dict[country]
                 if newname == "None" and drop_missing:
@@ -116,21 +116,21 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop
                 else:
                     io_data.rename(index={country: newname})
     else:
-        for index, row in io_data.iterrows():
-            country = row.loc[ctry_name]
+        for i in range(len(io_data.index)):
+            country = io_data.loc[i, ctry_name]
             if country in in_dict.keys():
                 newname = in_dict[country]
                 if newname == "None" and drop_missing:
-                    row.loc[ctry_name] = None
+                    io_data.loc[i, ctry_name] = None
                 elif newname == "Region" and drop_missing:
-                    row.loc[ctry_name] = None
+                    io_data.loc[i, ctry_name] = None
                 else:
-                    row.loc[ctry_name] = newname
+                    io_data.loc[i, ctry_name] = newname
         if drop_missing:
-            io_data.dropna(subset=ctry_name)
+            io_data.dropna(subset=ctry_name, inplace=True)
 
 
-def dataprep(step="merge", edit_col=None):
+def dataprep(step="merge", edit_col=None, write=False):
     path_rawdata = "datasets_input/"
 
     path_GTD_raw = path_rawdata + "GTD_raw.csv"
@@ -240,7 +240,8 @@ def dataprep(step="merge", edit_col=None):
         main_data = main_data.merge(slice_rel_frag, left_index=True, right_index=True)
         main_data = main_data.merge(slice_glob, left_index=True, right_index=True)
 
-        main_data.to_csv("merged_data.csv")
+        if write:
+            main_data.to_csv("merged_data.csv")
 
     # Not needed in common usage, only for short ad-hoc patches
     # (all patches should also be integrated into "merge" mode for potential future usage)
@@ -256,5 +257,7 @@ def dataprep(step="merge", edit_col=None):
         if edit_col == "Intervention":
             rename_countries(raw_interventions, country_dict())
             slice_intervention = var_edits.format_interventions(raw_interventions, main_index)
+            main_data = main_data.merge(slice_intervention, left_index=True, right_index=True)
 
-        main_data.to_csv("merged_data.csv")
+        if write:
+            main_data.to_csv("merged_data.csv")
