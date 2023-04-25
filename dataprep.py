@@ -95,10 +95,17 @@ def country_dict():
 # var_name is the name to be assigned to the new column in the output set,
 # column_name the column to be searched for in the input set
 def generic_list_transform(in_data, in_index, var_name, column_name=None, year_name="Year", ctry_name="Country"):
+    print(var_name, ':')
+    totalrows = len(in_data.index)
+    done = 0
+    print_freq = int(totalrows / 10)
+
     if column_name is None:
         column_name = var_name
     out = pd.DataFrame(index=in_index, columns=[var_name])
     for _, row in in_data.iterrows():
+        if not done % print_freq:
+            print(100 * done / totalrows, '%')
         ctry = row.loc["Country"]
         year = row.loc["Year"]
         slice1 = in_data.loc[in_data[year_name] == year, :]
@@ -106,6 +113,7 @@ def generic_list_transform(in_data, in_index, var_name, column_name=None, year_n
         # assert(len(slice2.loc[:, column_name].values <= 1) and f"Error in generic_list_transform(): more than one value detected for cell {ctry}, {year} in {var_name}")
         value = slice2.loc[:, column_name].values[0]
         out.loc[(ctry, year), var_name] = value
+        done += 1
     return out
 
 
@@ -115,12 +123,15 @@ def generic_list_transform(in_data, in_index, var_name, column_name=None, year_n
 # WARNING: very slow when having to expand the output dataset beyond the input index. Use after country renaming.
 def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
     print(var_name, ':')
-    out = pd.DataFrame(index=in_index, columns=[var_name])
-    years = [col for col in in_data.columns if col.isdigit()]
     totalrows = len(in_data.index)
     done = 0
+    print_freq = int(totalrows / 10)
+
+    out = pd.DataFrame(index=in_index, columns=[var_name])
+    years = [col for col in in_data.columns if col.isdigit()]
+
     for _, row in in_data.iterrows():
-        if not done % 10:
+        if not done % print_freq:
             print(100 * done / totalrows, '%')
         country = row.loc[ctry_name]
         for year in in_index.get_level_values(1):
@@ -128,6 +139,38 @@ def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
                 out.loc[(country, year), var_name] = row.loc[str(year)]
         done += 1
     return out
+
+
+# Uses a country name dict to homogenise the country names. Carried out in place on the dataset given as input.
+# in_index should be set to true if the country names are in the index and not in a dedicated column.
+# drop_missing regulates whether countries that do not appear in the dict
+# (not present in GTD, too small, sub- and super-national entities)
+# should be dropped (True) or left in with their original names (False)
+def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop_missing=True):
+    if in_index:
+        for country, row in io_data.iterrows():
+            if country in in_dict.keys():
+                newname = in_dict[country]
+                if newname == "None" and drop_missing:
+                    io_data.drop(country)
+                elif newname == "Region" and drop_missing:
+                    io_data.drop(country)
+                else:
+                    io_data.rename(index={country: newname})
+    else:
+        for index, row in io_data.iterrows():
+            country = row.loc[ctry_name]
+            if country in in_dict.keys():
+                newname = in_dict[country]
+                if newname == "None" and drop_missing:
+                    row.loc[ctry_name] = None
+                elif newname == "Region" and drop_missing:
+                    row.loc[ctry_name] = None
+                else:
+                    row.loc[ctry_name] = newname
+        if drop_missing:
+            io_data.dropna(subset=ctry_name)
+
 
 def dataprep():
     path_rawdata = "datasets_input/"
@@ -152,11 +195,14 @@ def dataprep():
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252").rename(str.capitalize, axis="columns")
     raw_fragility = pd.read_csv(path_fragility).loc[:, ["country", "year", "sfi"]].rename(columns={"sfi" : "Fragility"}).rename(str.capitalize, axis="columns")
     raw_durability = pd.read_csv(path_durability).loc[:, ["country", "year", "durable"]].rename(str.capitalize, axis="columns")
+    raw_durability = raw_durability.loc[raw_durability["Year"] >= 1950, :]
     raw_elecsys = pd.read_csv(path_elecsys).loc[:, ["Country", "Year", "Electoral system family"]].rename(str.capitalize, axis="columns")
     raw_democracy = pd.read_csv(path_democracy).loc[:, ["country", "year", "polity2"]].rename(columns={"polity2": "Democracy"}).rename(str.capitalize, axis="columns")
+    raw_democracy = raw_democracy.loc[raw_durability["Year"] >= 1950, :]
     raw_FH = pd.read_csv(path_FH, header=[0, 1, 2], index_col=0, encoding="cp1252")
     raw_inequality = pd.read_csv(path_inequality).rename(columns={"Country Name": "Country"})
     raw_poverty = pd.read_csv(path_poverty).rename(columns={"Country Name": "Country"})
+    raw_poverty = raw_poverty.loc[raw_poverty["Indicator Name"] == "Poverty gap at $6.85 a day (2017 PPP) (%)", :]
     raw_inflation = pd.read_csv(path_inflation, encoding="cp1252")
     dict_lit = {"Entity": "Country", "Literacy rate, adult total (% of people ages 15 and above)": "Literacy"}
     raw_lit = pd.read_csv(path_lit).rename(columns=dict_lit).loc[:, ["Country", "Year", "Literacy"]].rename(str.capitalize, axis="columns")
@@ -190,7 +236,20 @@ def dataprep():
     # list_countries_per_set(raw_glob, "Globalisation", cntry_names)
     # create_country_table(main_index.get_level_values(0), cntry_names, write=False)
 
-    ###TODO: use dict to rename countries
+    concordance_table = pd.read_csv("concordance_table.csv").loc[:, ["Non-matching", "Rename"]]
+    rename_countries(raw_fragility, concordance_table)
+    rename_countries(raw_durability, concordance_table)
+    rename_countries(raw_elecsys, concordance_table)
+    rename_countries(raw_democracy, concordance_table)
+    rename_countries(raw_FH, concordance_table, in_index=True)
+    rename_countries(raw_inequality, concordance_table)
+    rename_countries(raw_poverty, concordance_table)
+    rename_countries(raw_inflation, concordance_table)
+    rename_countries(raw_lit, concordance_table)
+    rename_countries(raw_iusers, concordance_table)
+    rename_countries(raw_interventions, concordance_table)
+    rename_countries(raw_religion, concordance_table)
+    rename_countries(raw_glob, concordance_table)
 
     slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
     slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")

@@ -6,9 +6,6 @@
 - [ ] Add new datasets
   - [ ] Weapons movement
   - [ ] Ties to US (?)
-- [ ] Homogenise country names
-  - [x] Create concordance tables (WIP)
-  - [ ] Apply CTs to each dataset
 - [ ] Decide on new datasets
   - [x] Weapons movement
   - [ ] Ties to US
@@ -47,3 +44,6 @@
   - [x] Attribute missing country names from other datasets to those in GTD in Excel (manually)
   - [x] Create dict or DataFrame from newly "sorted" file
 - [x] Finish calc_rel_frag() function
+- [x] Homogenise country names
+  - [x] Create concordance tables (WIP)
+  - [x] Apply CTs to each dataset
