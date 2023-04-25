@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import math
 
 
@@ -73,12 +74,16 @@ def format_elecsys(in_elec, in_index):
 def calc_rel_frag(in_reldata, in_index, first_group="Other"):
     out_data = pd.DataFrame(index=in_index, columns=["Religious fragmentation"])
     for _, row in in_reldata.iterrows():
+        found_any = False
         frag = 1
         for value in row.loc[first_group:]:
-            frag -= (value/100)**2
+            if not np.isnan(value):
+                found_any = True
+                frag -= (value/100)**2
         ctry = row.loc["Country"]
         year = row.loc["Year"]
-        out_data.loc[(ctry, year), "Religious fragmentation"] = frag
+        if found_any:
+            out_data.loc[(ctry, year), "Religious fragmentation"] = frag
     return out_data
 
 
@@ -172,7 +177,7 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop
             io_data.dropna(subset=ctry_name)
 
 
-def dataprep(step="merge"):
+def dataprep(step="merge", edit_col=None):
     path_rawdata = "datasets_input/"
 
     path_GTD_raw = path_rawdata + "GTD_raw.csv"
@@ -281,5 +286,16 @@ def dataprep(step="merge"):
         # Interventions TBA
         main_data = main_data.merge(slice_rel_frag, left_index=True, right_index=True)
         main_data = main_data.merge(slice_glob, left_index=True, right_index=True)
+
+        main_data.to_csv("merged_data.csv")
+
+    # Only rel_frag editing implemented, to be expanded as needed
+    elif step == "edit":
+        assert(edit_col is not None)
+        main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
+
+        if edit_col == "Religious fragmentation":
+            slice_rel_frag = calc_rel_frag(raw_religion, main_index)
+            main_data.loc[:, "Religious fragmentation"] = slice_rel_frag.loc[:, "Religious fragmentation"]
 
         main_data.to_csv("merged_data.csv")

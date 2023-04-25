@@ -2,7 +2,7 @@ import dataprep
 
 
 def main():
-    dataprep.dataprep()
+    dataprep.dataprep("edit", edit_col="Religious fragmentation")
 
 
 if __name__ == "__main__":
