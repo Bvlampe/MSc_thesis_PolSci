@@ -1,11 +1,7 @@
 # MSc Thesis PolSci: Forecasting terrorism
 
 ### Todo
-- [ ] Interpolate values for literacy dataset
-- [ ] Format intervention dataset
-- [ ] Add new datasets
-  - [ ] Weapons movement
-  - [ ] Ties to US (?)
+
 - [ ] Decide on new datasets
   - [x] Weapons movement
   - [ ] Ties to US
@@ -17,7 +13,12 @@
 
 - [ ] DataPrep
   - [x] Finish generic_table_transform() function definition
-  - [ ] Merge datasets
+  - [x] Merge datasets
+  - [ ] Add new datasets
+    - [ ] Weapons movement
+    - [ ] Ties to US (?)
+  - [ ] Interpolate values for literacy dataset
+  - [ ] Format intervention and FH datasets
 
 ---
 ### Done ✓
