@@ -3,9 +3,7 @@
 ### Todo
 
 - [ ] Implement attribution of group interventions (NATO, UN, etc.)
-- [ ] Decide on new datasets
-  - [x] Weapons movement
-  - [ ] Ties to US
+
 
 
 ---
@@ -26,7 +24,9 @@
   - [ ] Format intervention and FH datasets
 - [ ] Train models
   - [x] Linear regression
+  - [x] Random forest
 - [ ] Evaluate models
+  - [ ] Compare predictive power of variables
 
 ---
 ### Done ✓
@@ -56,3 +56,6 @@
 - [x] Homogenise country names
   - [x] Create concordance tables (WIP)
   - [x] Apply CTs to each dataset
+- [x] Decide on new datasets
+  - [x] Weapons movement
+  - [x] Ties to US
