@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, ConfusionMatrixDisplay, classification_report
+from sklearn.ensemble import RandomForestClassifier
 
 
 
@@ -20,11 +20,12 @@ def models():
     main_data.loc[:, "Intervention"].replace({True: 1, False: 0}, inplace=True)
 
     main_data['Year'] = main_data.index.get_level_values(1)
-    n_splits = 4
+    n_splits = 5
 
 
     tss = TimeSeriesSplit(n_splits=n_splits)
-    model = LogisticRegression(max_iter=500)
+    model_logreg = LogisticRegression(max_iter=1000)
+    model_rf = RandomForestClassifier()
 
     indep_vars = list(main_data.columns.values)
     indep_vars.remove("Terrorist attack")
@@ -41,10 +42,19 @@ def models():
         x_test.columns = x_test.columns.tolist()
 
         y_train, y_test = x_train['Terrorist attack'], x_test['Terrorist attack']
-        x_train.drop(["Terrorist attack"], axis=1, inplace=True)
-        x_test.drop(["Terrorist attack"], axis=1, inplace=True)
+        x_train = x_train.drop(["Terrorist attack"], axis=1)
+        x_test = x_test.drop(["Terrorist attack"], axis=1)
 
-        model.fit(x_train, y_train)
-        predictions = model.predict(x_test)
+        model_logreg.fit(x_train, y_train)
+        predictions = model_logreg.predict(x_test)
+        print("Logistic regression:")
         print(classification_report(y_test, predictions))
         print(confusion_matrix(y_test, predictions))
+
+        model_rf.fit(x_train, y_train)
+        y_pred = model_rf.predict(x_test)
+        accuracy = accuracy_score(y_test, y_pred)
+        print("Random forest:")
+        print("Accuracy:", accuracy)
+
+        print("--------------------------------------------------------")
