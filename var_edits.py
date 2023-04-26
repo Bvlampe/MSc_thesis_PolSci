@@ -56,3 +56,8 @@ def format_interventions(in_data, in_index):
         out_data.loc[(row.loc["Country"], row.loc["Year"]), "Intervention"] = True
     out_data.fillna(value=False, inplace=True)
     return out_data
+
+def format_FH(in_data, in_index):
+    out_data = pd.DataFrame(index=in_index, columns=["FH_pol", "FH_civ"])
+    # for country, row in in_data.iterrows():
+    #

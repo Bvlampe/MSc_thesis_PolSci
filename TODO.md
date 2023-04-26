@@ -6,8 +6,7 @@
 - [ ] Decide on new datasets
   - [x] Weapons movement
   - [ ] Ties to US
-- [ ] Train models
-- [ ] Evaluate models
+
 
 ---
 ### WIP
@@ -20,6 +19,9 @@
     - [ ] Ties to US (?)
   - [ ] Interpolate values for literacy dataset
   - [ ] Format intervention and FH datasets
+- [ ] Train models
+  - [x] Linear regression
+- [ ] Evaluate models
 
 ---
 ### Done ✓
