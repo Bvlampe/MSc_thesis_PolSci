@@ -17,7 +17,12 @@
   - [ ] Add new datasets
     - [ ] Weapons movement
     - [ ] Ties to US (?)
-  - [ ] Interpolate values for literacy dataset
+  - [ ] Interpolate values:
+    - [ ] Fragility?
+    - [ ] Inequality
+    - [ ] Poverty
+    - [ ] Literacy
+    - [ ] Internet users?
   - [ ] Format intervention and FH datasets
 - [ ] Train models
   - [x] Linear regression

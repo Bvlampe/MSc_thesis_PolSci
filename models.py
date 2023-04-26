@@ -37,7 +37,6 @@ def models():
 
         x_train, x_test = main_data.loc[main_data['Year'].isin(main_data['Year'].unique()[train_index])], main_data.loc[
             main_data['Year'].isin(main_data['Year'].unique()[test_index])]
-        print(type(x_train))
         x_train.columns = x_train.columns.tolist()
         x_test.columns = x_test.columns.tolist()
 
