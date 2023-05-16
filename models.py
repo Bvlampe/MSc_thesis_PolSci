@@ -5,9 +5,8 @@ import seaborn as sns
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, ConfusionMatrixDisplay, classification_report
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import roc_auc_score, roc_curve
-
 
 
 def models():
@@ -29,6 +28,7 @@ def models():
     tss = TimeSeriesSplit(n_splits=n_splits)
     model_logreg = LogisticRegression(max_iter=1000)
     model_rf = RandomForestClassifier()
+    model_gbm = GradientBoostingClassifier()
 
     indep_vars = list(main_data.columns.values)
     indep_vars.remove("Terrorist attack lag-1")
@@ -61,5 +61,10 @@ def models():
         print("Random forest:")
         # print("Accuracy:", accuracy)
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_rf.predict_proba(x_test)[:, 1]))
+
+        model_gbm.fit(x_train, y_train)
+        y_pred = model_gbm.predict(x_test)
+        print("Gradient boosting machine:")
+        print("ROC-AUC-score: ", roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1]))
 
         print("--------------------------------------------------------")
