@@ -40,6 +40,31 @@ def create_country_table(main, in_data, write=False):
         out.loc[:, ["Non-matching", "Main"]].to_csv("country_names.csv", index=False)
 
 
+def update_table(main, in_data):
+    old_table = pd.read_csv("concordance_table.csv")
+    first = list(set(main))
+    first.sort()
+    out = pd.DataFrame(index=range(len(list(first))), columns=["Main"], data=list(first))
+    diff_countries = []
+
+    for column in in_data.columns:
+        second = set(in_data.loc[:, column])
+        both = set(first).intersection(second)
+        # Necessary for some reason because a nan value managed to slip through in the Fragility dataset
+        unique = [x for x in list(second - both) if type(x) == str]
+        unique.sort()
+        for newctry in unique:
+            if newctry not in old_table.loc[:, "Non-matching"].values:
+                diff_countries.append(newctry)
+
+    diff_countries = list(set(diff_countries))
+    diff_countries.sort()
+    i = 0
+    for ctry in diff_countries:
+        out.loc[i, "Non-matching"] = ctry
+        i += 1
+    out.loc[:, ["Non-matching", "Main"]].to_csv("updated_country_names.csv", index=False)
+
 def country_dict():
     source = pd.read_csv("concordance_table.csv")
     out = {}
@@ -148,6 +173,9 @@ def dataprep(step="merge", edit_col=None, write=False):
     path_interventions = path_rawdata + "interventions.csv"
     path_religion = path_rawdata + "religion.csv"
     path_glob = path_rawdata + "globalisation.csv"
+    path_edu = path_rawdata + "education.csv"
+    path_econ = path_rawdata + "econ.csv"
+    path_pop = path_rawdata + "population.csv"
 
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252").rename(str.capitalize, axis="columns")
@@ -168,6 +196,9 @@ def dataprep(step="merge", edit_col=None, write=False):
     raw_interventions = pd.read_csv(path_interventions, encoding="cp1252").loc[:, ["YEAR", "GOVTPERM", "INTERVEN1"]].rename(columns={"INTERVEN1": "Country"}).rename(str.capitalize, axis="columns")
     raw_religion = pd.read_csv(path_religion).rename(str.capitalize, axis="columns")
     raw_glob = pd.read_csv(path_glob, encoding="cp1252").loc[:, ["country", "year", "KOFGI"]].rename(columns={"KOFGI": "Globalization"}).rename(str.capitalize, axis="columns")
+    raw_edu = pd.read_csv(path_edu).loc[:, ["country", "year", "lpc"]].rename(columns={"lpc": "education"}).rename(str.capitalize, axis="columns")
+    raw_econ = pd.read_csv(path_econ, encoding="cp1252").loc[:, ["country", "year", "rgdpe"]].rename(str.capitalize, axis="columns").rename(columns={"Rgdpe": "GDP"})
+    raw_pop = pd.read_csv(path_pop).rename(columns={"Country Name": "Country"})
 
     main_index_ctry = raw_GTD.loc[:, "Country"].unique()
     main_index_ctry.sort()
@@ -189,7 +220,17 @@ def dataprep(step="merge", edit_col=None, write=False):
         list_countries_per_set(raw_interventions, "Interventions", cntry_names)
         list_countries_per_set(raw_religion, "Religious fragmentation", cntry_names)
         list_countries_per_set(raw_glob, "Globalisation", cntry_names)
-        create_country_table(main_index.get_level_values(0), cntry_names, write=False)
+        list_countries_per_set(raw_edu, "Education", cntry_names)
+        list_countries_per_set(raw_econ, "GDP", cntry_names)
+        list_countries_per_set(raw_pop, "Population", cntry_names)
+        create_country_table(main_index.get_level_values(0), cntry_names, write=write)
+
+    elif step == "update_dict":
+        cntry_names = pd.DataFrame()
+        cntry_names["Education"] = raw_edu.loc[:, "Country"].unique()
+        list_countries_per_set(raw_econ, "GDP", cntry_names)
+        list_countries_per_set(raw_pop, "Population", cntry_names)
+        update_table(main_index.get_level_values(0), cntry_names)
 
     elif step == "merge":
         # main_data = pd.DataFrame(index=main_index)
@@ -210,6 +251,9 @@ def dataprep(step="merge", edit_col=None, write=False):
         rename_countries(raw_interventions, concordance_table)
         rename_countries(raw_religion, concordance_table)
         rename_countries(raw_glob, concordance_table)
+        rename_countries(raw_edu, concordance_table)
+        rename_countries(raw_econ, concordance_table)
+        rename_countries(raw_pop, concordance_table)
 
         main_data = generic_list_transform(raw_GTD, main_index, "Terrorist attack")
         slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
@@ -225,6 +269,9 @@ def dataprep(step="merge", edit_col=None, write=False):
         slice_interventions = var_edits.format_interventions(raw_interventions, main_index)
         slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
         slice_glob = generic_list_transform(raw_glob, main_index, "Globalization")
+        slice_edu = generic_list_transform(raw_edu, main_index, "Education")
+        slice_econ = generic_list_transform(raw_econ, main_index, "GDP")
+        slice_pop = generic_table_transform(raw_pop, main_index, "Population")
 
         main_data = main_data.merge(slice_fragility, left_index=True, right_index=True)
         main_data = main_data.merge(slice_durability, left_index=True, right_index=True)
@@ -239,6 +286,9 @@ def dataprep(step="merge", edit_col=None, write=False):
         main_data = main_data.merge(slice_interventions, left_index=True, right_index=True)
         main_data = main_data.merge(slice_rel_frag, left_index=True, right_index=True)
         main_data = main_data.merge(slice_glob, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_edu, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_econ, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
 
         if write:
             main_data.to_csv("merged_data.csv")
@@ -254,10 +304,22 @@ def dataprep(step="merge", edit_col=None, write=False):
             slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
             main_data.loc[:, "Religious fragmentation"] = slice_rel_frag.loc[:, "Religious fragmentation"]
 
-        if edit_col == "Intervention":
+        elif edit_col == "Intervention":
             rename_countries(raw_interventions, country_dict())
             slice_intervention = var_edits.format_interventions(raw_interventions, main_index)
             main_data = main_data.merge(slice_intervention, left_index=True, right_index=True)
+
+        elif edit_col == "set_1":
+            concordance_table = country_dict()
+            rename_countries(raw_edu, concordance_table)
+            rename_countries(raw_econ, concordance_table)
+            rename_countries(raw_pop, concordance_table)
+            slice_edu = generic_list_transform(raw_edu, main_index, "Education")
+            slice_econ = generic_list_transform(raw_econ, main_index, "GDP")
+            slice_pop = generic_table_transform(raw_pop, main_index, "Population")
+            main_data = main_data.merge(slice_edu, left_index=True, right_index=True)
+            main_data = main_data.merge(slice_econ, left_index=True, right_index=True)
+            main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
 
         if write:
             main_data.to_csv("merged_data.csv")
