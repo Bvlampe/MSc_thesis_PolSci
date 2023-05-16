@@ -11,7 +11,8 @@ from sklearn.metrics import roc_auc_score, roc_curve
 
 def models():
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
-    main_data.loc[:, "Terrorist attack lag-1"] = main_data.loc[:, "Terrorist attack"].shift(1)
+    main_data.loc[:, "Terrorist attack lag-1"] = main_data.loc[:, "Terrorist attack"].shift(-1)
+    print(main_data.loc[:, "Terrorist attack lag-1"])
     main_data.drop(["Terrorist attack"], axis=1, inplace=True)
     main_data.drop(["Inequality", "Poverty", "Literacy", "Education"], axis=1, inplace=True)
     main_data.dropna(inplace=True)
@@ -66,5 +67,11 @@ def models():
         y_pred = model_gbm.predict(x_test)
         print("Gradient boosting machine:")
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1]))
+
+        importance = model_gbm.feature_importances_
+        features = model_gbm.feature_names_in_
+        # summarize feature importance
+        for i, v in enumerate(importance):
+            print('Feature: %0d, Score: %.5f' % (i, v))
 
         print("--------------------------------------------------------")

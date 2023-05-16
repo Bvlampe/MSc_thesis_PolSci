@@ -3,7 +3,7 @@
 ### Todo
 
 - [ ] Implement attribution of group interventions (NATO, UN, etc.)
-
+- [ ] Properly shift GTD data in a way that respects country-level index differences
 
 
 ---
@@ -21,10 +21,12 @@
     - [ ] Poverty
     - [ ] Literacy
     - [ ] Internet users?
+    - [ ] Education
   - [ ] Format intervention and FH datasets
 - [ ] Train models
   - [x] Linear regression
   - [x] Random forest
+  - [x] GBM
 - [ ] Evaluate models
   - [ ] Compare predictive power of variables
 
