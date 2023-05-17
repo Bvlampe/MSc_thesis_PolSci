@@ -23,7 +23,7 @@
     - [x] Education
   - [ ] Format intervention and FH datasets
 - [ ] Train models
-  - [x] Linear regression
+  - [x] Logistic regression
   - [x] Random forest
   - [x] GBM
 - [ ] Evaluate models
