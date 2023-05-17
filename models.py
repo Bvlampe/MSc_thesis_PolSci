@@ -14,11 +14,24 @@ def models():
 
     # Lag DV to avoid data leakage
     main_data["Terrorist attack lag-1"] = main_data.groupby(level=0)["Terrorist attack"].shift(-1)
-
     # Drop un-lagged DV and variables with too little data, as well as missing values
     main_data.drop(["Terrorist attack"], axis=1, inplace=True)
-    main_data.drop(["Inequality", "Poverty", "Literacy", "Education"], axis=1, inplace=True)
+
+    # Interpolate missing values for some sparsely-documented features, max 10 consecutive years to be interpolated
+    main_data["Inequality"] = main_data.groupby(level=0)["Inequality"].apply(
+        lambda group: group.interpolate(limit=10, limit_area="inside"))
+    main_data["Poverty"] = main_data.groupby(level=0)["Poverty"].apply(
+        lambda group: group.interpolate(limit=10, limit_area="inside"))
+    main_data["Literacy"] = main_data.groupby(level=0)["Literacy"].apply(
+        lambda group: group.interpolate(limit=10, limit_area="inside"))
+    main_data["Education"] = main_data.groupby(level=0)["Education"].apply(
+        lambda group: group.interpolate(limit=10, limit_area="inside"))
+
+    # Literacy and education datasets are used for the same reason so I drop one. TBA: create models with either one
+    # and compare performances
+    main_data.drop(["Education"], axis=1, inplace=True)
     main_data.dropna(inplace=True)
+
     # Ensures the "no data" value is the default case dropped in the dummies
     elecsys_dummies = pd.get_dummies(main_data["Elec_sys"], drop_first=False, prefix="elecsys").drop(["elecsys_No data"], axis=1)
     main_data = pd.concat([main_data, elecsys_dummies], axis=1).drop(["Elec_sys"], axis=1)

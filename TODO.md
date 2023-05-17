@@ -16,11 +16,11 @@
     - [ ] Ties to US (?)
   - [ ] Interpolate values:
     - [ ] Fragility?
-    - [ ] Inequality
-    - [ ] Poverty
-    - [ ] Literacy
+    - [x] Inequality
+    - [x] Poverty
+    - [x] Literacy
     - [ ] Internet users?
-    - [ ] Education
+    - [x] Education
   - [ ] Format intervention and FH datasets
 - [ ] Train models
   - [x] Linear regression
