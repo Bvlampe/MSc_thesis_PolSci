@@ -11,8 +11,11 @@ from sklearn.metrics import roc_auc_score, roc_curve
 
 def models():
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
-    main_data.loc[:, "Terrorist attack lag-1"] = main_data.loc[:, "Terrorist attack"].shift(-1)
-    print(main_data.loc[:, "Terrorist attack lag-1"])
+
+    # Lag DV to avoid data leakage
+    main_data["Terrorist attack lag-1"] = main_data.groupby(level=0)["Terrorist attack"].shift(-1)
+
+    # Drop un-lagged DV and variables with too little data, as well as missing values
     main_data.drop(["Terrorist attack"], axis=1, inplace=True)
     main_data.drop(["Inequality", "Poverty", "Literacy", "Education"], axis=1, inplace=True)
     main_data.dropna(inplace=True)

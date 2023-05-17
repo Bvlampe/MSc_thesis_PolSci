@@ -3,7 +3,6 @@
 ### Todo
 
 - [ ] Implement attribution of group interventions (NATO, UN, etc.)
-- [ ] Properly shift GTD data in a way that respects country-level index differences
 
 
 ---
@@ -61,3 +60,4 @@
 - [x] Decide on new datasets
   - [x] Weapons movement
   - [x] Ties to US
+- [x] Properly shift GTD data in a way that respects country-level index differences
