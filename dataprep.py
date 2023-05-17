@@ -177,6 +177,7 @@ def dataprep(step="merge", edit_col=None, write=False):
     path_econ = path_rawdata + "econ.csv"
     path_pop = path_rawdata + "population.csv"
 
+    # Only done once
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252").rename(str.capitalize, axis="columns")
     raw_fragility = pd.read_csv(path_fragility).loc[:, ["country", "year", "sfi"]].rename(columns={"sfi" : "Fragility"}).rename(str.capitalize, axis="columns")

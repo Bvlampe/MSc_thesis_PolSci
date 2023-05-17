@@ -3,7 +3,7 @@
 ### Todo
 
 - [ ] Implement attribution of group interventions (NATO, UN, etc.)
-
+- [ ] Format FH data and integrate it into the unified dataset
 
 ---
 ### WIP
