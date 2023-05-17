@@ -71,6 +71,9 @@ def models():
         print("Gradient boosting machine:")
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1]))
 
+
+        # The feature_importances_ attribute measures the "mean and standard deviation of accumulation
+        # of the impurity decrease within each tree" - scikit-learn doc
         importance = model_gbm.feature_importances_
         features = model_gbm.feature_names_in_
         # summarize feature importance
