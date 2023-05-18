@@ -17,7 +17,8 @@ def models():
     # Drop un-lagged DV and variables with too little data, as well as missing values
     main_data.drop(["Terrorist attack"], axis=1, inplace=True)
 
-    # Interpolate missing values for some sparsely-documented features, max 10 consecutive years to be interpolated
+    # Interpolate missing values for some sparsely-documented features,
+    # max 10 consecutive years to be interpolated
     main_data["Inequality"] = main_data.groupby(level=0)["Inequality"].apply(
         lambda group: group.interpolate(limit=10, limit_area="inside"))
     main_data["Poverty"] = main_data.groupby(level=0)["Poverty"].apply(

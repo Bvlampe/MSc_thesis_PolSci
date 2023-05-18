@@ -73,7 +73,7 @@ def format_FH(in_data, in_index):
             if last_year[0] in ["A", "N"]:
                 last_year = last_year[-4:]
 
-        if last_year.isnumeric():
+        if last_year.isnumeric() and int(last_year) in in_index.get_level_values(1):
             for country, row in in_data.iterrows():
                 if var == "PR":
                     out_data.loc[(country, int(last_year)), "FH_pol"] = row[column]
@@ -89,7 +89,7 @@ def format_FH(in_data, in_index):
                 out_data.loc[(country, 1981), "FH_civ"] = row[column]
                 out_data.loc[(country, 1982), "FH_civ"] = row[column]
 
+    print(out_data)
     if True: # Remove after finalising function
-        print(out_data)
         assert(False)
     return out_data

@@ -135,11 +135,11 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop
             if country in in_dict.keys():
                 newname = in_dict[country]
                 if newname == "None" and drop_missing:
-                    io_data.drop(country)
+                    io_data.drop(country, inplace=True)
                 elif newname == "Region" and drop_missing:
-                    io_data.drop(country)
+                    io_data.drop(country, inplace=True)
                 else:
-                    io_data.rename(index={country: newname})
+                    io_data.rename(index={country: newname}, inplace=True)
     else:
         for i in range(len(io_data.index)):
             country = io_data.loc[i, ctry_name]
