@@ -89,7 +89,4 @@ def format_FH(in_data, in_index):
                 out_data.loc[(country, 1981), "FH_civ"] = row[column]
                 out_data.loc[(country, 1982), "FH_civ"] = row[column]
 
-    print(out_data)
-    if True: # Remove after finalising function
-        assert(False)
     return out_data

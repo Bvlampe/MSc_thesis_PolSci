@@ -3,7 +3,6 @@
 ### Todo
 
 - [ ] Implement attribution of group interventions (NATO, UN, etc.)
-- [ ] Format FH data and integrate it into the unified dataset
 
 ---
 ### WIP
@@ -61,3 +60,4 @@
   - [x] Weapons movement
   - [x] Ties to US
 - [x] Properly shift GTD data in a way that respects country-level index differences
+- [x] Format FH data and integrate it into the unified dataset

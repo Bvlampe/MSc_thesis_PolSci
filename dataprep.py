@@ -261,7 +261,7 @@ def dataprep(step="merge", edit_col=None, write=False):
         slice_durability = generic_list_transform(raw_durability, main_index, "Durability", column_name="Durable")
         slice_elecsys = var_edits.format_elecsys(raw_elecsys, main_index)
         slice_democracy = generic_list_transform(raw_democracy, main_index, "Democracy")
-        # FH data TBA
+        slice_FH = var_edits.format_FH(raw_FH, main_index)
         slice_inequality = generic_table_transform(raw_inequality, main_index, "Inequality")
         slice_poverty = generic_table_transform(raw_poverty, main_index, "Poverty")
         slice_inflation = generic_table_transform(raw_inflation, main_index, "Inflation")
@@ -278,7 +278,7 @@ def dataprep(step="merge", edit_col=None, write=False):
         main_data = main_data.merge(slice_durability, left_index=True, right_index=True)
         main_data = main_data.merge(slice_elecsys, left_index=True, right_index=True)
         main_data = main_data.merge(slice_democracy, left_index=True, right_index=True)
-        # FH data TBA
+        main_data = main_data.merge(slice_FH, left_index=True, right_index=True)
         main_data = main_data.merge(slice_inequality, left_index=True, right_index=True)
         main_data = main_data.merge(slice_poverty, left_index=True, right_index=True)
         main_data = main_data.merge(slice_inflation, left_index=True, right_index=True)
