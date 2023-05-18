@@ -83,10 +83,10 @@ def format_FH(in_data, in_index):
         # and the majority of 1982
         elif last_year == "Jan.1981-Aug. 1982":
             if var == "PR":
-                out_data.loc[(country, 1981), "FH_pol"] = row[column]
-                out_data.loc[(country, 1982), "FH_pol"] = row[column]
+                out_data.loc[(country, 1981), "FH_pol"] = row[column] if '-' not in row[column] else np.nan
+                out_data.loc[(country, 1982), "FH_pol"] = row[column] if '-' not in row[column] else np.nan
             elif var == "CL":
-                out_data.loc[(country, 1981), "FH_civ"] = row[column]
-                out_data.loc[(country, 1982), "FH_civ"] = row[column]
+                out_data.loc[(country, 1981), "FH_civ"] = row[column] if '-' not in row[column] else np.nan
+                out_data.loc[(country, 1982), "FH_civ"] = row[column] if '-' not in row[column] else np.nan
 
     return out_data

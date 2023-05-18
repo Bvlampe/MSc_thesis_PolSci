@@ -3,8 +3,8 @@ import models
 
 
 def main():
-    dataprep.dataprep("edit", edit_col="FH")
-    # models.models()
+    # dataprep.dataprep("edit", edit_col="FH", write=True)
+    models.models()
 
 
 if __name__ == "__main__":

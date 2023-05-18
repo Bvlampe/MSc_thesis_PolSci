@@ -1,7 +1,6 @@
 import pandas as pd
+import numpy as np
 import var_edits
-
-
 
 
 def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Country", in_index=False):
@@ -326,7 +325,9 @@ def dataprep(step="merge", edit_col=None, write=False):
             concordance_table = country_dict()
             rename_countries(raw_FH, concordance_table, in_index=True)
             slice_FH = var_edits.format_FH(raw_FH, main_index)
-            main_data = main_data.merge(slice_FH, left_index=True, right_index=True)
-
+            main_data.loc[:, "FH_civ"] = slice_FH.loc[:, "FH_civ"]
+            main_data.loc[:, "FH_pol"] = slice_FH.loc[:, "FH_pol"]
+            # main_data = main_data.merge(slice_FH, left_index=True, right_index=True)
+            main_data.replace(to_replace={"FH_civ": '-', "FH_pol": '-'}, value=np.nan, inplace=True)
         if write:
             main_data.to_csv("merged_data.csv")

@@ -159,22 +159,22 @@ Andorra,1973,False,,,No data,,,,,,,False,,47.0,,,24393.0,4,4
 Andorra,1974,True,,,No data,,,,,,,False,,47.0,,,26003.0,4,4
 Andorra,1975,False,,,No data,,,,,,,False,,45.0,,,27640.0,4,4
 Andorra,1976,False,,,No data,,,,,,,False,,45.0,,,29294.0,4,4
-Andorra,1977,False,,,No data,,,,,,,False,,47.0,,,30949.0,-,-
-Andorra,1978,False,,,No data,,,,,,,False,,47.0,,,32574.0,-,-
-Andorra,1979,False,,,No data,,,,,,,False,,47.0,,,34142.0,-,-
-Andorra,1980,False,,,No data,,,,,,,False,,43.0,,,35611.0,-,-
+Andorra,1977,False,,,No data,,,,,,,False,,47.0,,,30949.0,,
+Andorra,1978,False,,,No data,,,,,,,False,,47.0,,,32574.0,,
+Andorra,1979,False,,,No data,,,,,,,False,,47.0,,,34142.0,,
+Andorra,1980,False,,,No data,,,,,,,False,,43.0,,,35611.0,,
 Andorra,1981,False,,,No data,,,,,,,False,,46.0,,,36987.0,,
 Andorra,1982,False,,,No data,,,,,,,False,,39.0,,,38598.0,,
-Andorra,1983,False,,,No data,,,,,,,False,,44.0,,,40432.0,-,-
-Andorra,1984,False,,,No data,,,,,,,False,,44.0,,,42181.0,-,-
-Andorra,1985,False,,,No data,,,,,,,False,,45.0,,,43809.0,-,-
-Andorra,1986,False,,,No data,,,,,,,False,,46.0,,,45605.0,-,-
-Andorra,1987,False,,,No data,,,,,,,False,,45.0,,,47635.0,-,-
-Andorra,1988,False,,,No data,,,,,,,False,,46.0,,,49654.0,-,-
-Andorra,1989,False,,,No data,,,,,,,False,,46.0,,,51639.0,-,-
-Andorra,1990,False,,,No data,,,,,,0.0,False,,45.0,,,53569.0,-,-
-Andorra,1991,False,,,No data,,,,,,0.0,False,,44.0,,,55434.0,-,-
-Andorra,1992,False,,,No data,,,,,,0.0,False,,45.0,,,57283.0,-,-
+Andorra,1983,False,,,No data,,,,,,,False,,44.0,,,40432.0,,
+Andorra,1984,False,,,No data,,,,,,,False,,44.0,,,42181.0,,
+Andorra,1985,False,,,No data,,,,,,,False,,45.0,,,43809.0,,
+Andorra,1986,False,,,No data,,,,,,,False,,46.0,,,45605.0,,
+Andorra,1987,False,,,No data,,,,,,,False,,45.0,,,47635.0,,
+Andorra,1988,False,,,No data,,,,,,,False,,46.0,,,49654.0,,
+Andorra,1989,False,,,No data,,,,,,,False,,46.0,,,51639.0,,
+Andorra,1990,False,,,No data,,,,,,0.0,False,,45.0,,,53569.0,,
+Andorra,1991,False,,,No data,,,,,,0.0,False,,44.0,,,55434.0,,
+Andorra,1992,False,,,No data,,,,,,0.0,False,,45.0,,,57283.0,,
 Andorra,1993,False,,,No data,,,,,,0.0,False,,46.0,,,59156.0,2,1
 Andorra,1994,False,,,No data,,,,,,0.0,False,,45.0,,,61037.0,1,1
 Andorra,1995,False,,,No data,,,,,,0.0,False,,42.0,,,62928.0,1,1
@@ -205,9 +205,9 @@ Andorra,2019,False,,,Mixed,,,,,,,False,,54.0,,,76343.0,1,1
 Andorra,2020,False,,,Mixed,,,,,,,False,,54.0,,,77700.0,1,1
 Angola,1970,False,,,No data,,,,7.97,,,False,,,,28969.0,6029700.0,,
 Angola,1971,False,,,No data,,,,5.78,,,False,,,,30687.0,6177049.0,,
-Angola,1972,False,,,No data,,,,15.8,,,False,,,,30796.0,6364731.0,-,-
-Angola,1973,False,,,No data,,,,15.67,,,False,,,,33607.0,6578230.0,-,-
-Angola,1974,False,,,No data,,,,27.42,,,False,,,,34614.0,6802494.0,-,-
+Angola,1972,False,,,No data,,,,15.8,,,False,,,,30796.0,6364731.0,,
+Angola,1973,False,,,No data,,,,15.67,,,False,,,,33607.0,6578230.0,,
+Angola,1974,False,,,No data,,,,27.42,,,False,,,,34614.0,6802494.0,,
 Angola,1975,False,,0.0,No data,-7.0,,,29.0,,,False,0.6024646442398299,27.0,,32736.0,7032713.0,6,6
 Angola,1976,False,,1.0,No data,-7.0,,,80.7,,,False,0.6025693182857899,30.0,,31027.0,7266780.0,6,6
 Angola,1977,True,,2.0,No data,-7.0,,,69.01,,,False,0.60264085363592,30.0,,31654.0,7511895.0,7,7
@@ -256,15 +256,15 @@ Angola,2019,True,,,PR,,,,17.08,,32.4,False,,44.0,,228151.0,32353588.0,6,5
 Angola,2020,True,,,PR,,,,21.02,,36.0,False,,43.0,,,33428486.0,6,5
 Antigua and Barbuda,1970,False,,,No data,,,,8.87,,,False,,,,307.0,64517.0,,
 Antigua and Barbuda,1971,False,,,No data,,,,8.63,,,False,,,,329.0,64769.0,,
-Antigua and Barbuda,1972,False,,,No data,,,,12.67,,,False,,,,354.0,64695.0,-,-
-Antigua and Barbuda,1973,False,,,No data,,,,21.72,,,False,,,,382.0,64463.0,-,-
-Antigua and Barbuda,1974,False,,,No data,,,,12.97,,,False,,,,400.0,64218.0,-,-
-Antigua and Barbuda,1975,False,,,No data,,,,8.61,,,False,,,,376.0,64035.0,-,-
-Antigua and Barbuda,1976,False,,,No data,,,,15.62,,,False,,,,341.0,63990.0,-,-
-Antigua and Barbuda,1977,False,,,No data,,,,13.75,,,False,,,,365.0,64117.0,-,-
-Antigua and Barbuda,1978,False,,,No data,,,,6.15,,,False,,,,368.0,64329.0,-,-
-Antigua and Barbuda,1979,False,,,No data,,,,16.33,,,False,,,,457.0,64609.0,-,-
-Antigua and Barbuda,1980,False,,,No data,,,,19.0,,,False,,,,440.0,64889.0,-,-
+Antigua and Barbuda,1972,False,,,No data,,,,12.67,,,False,,,,354.0,64695.0,,
+Antigua and Barbuda,1973,False,,,No data,,,,21.72,,,False,,,,382.0,64463.0,,
+Antigua and Barbuda,1974,False,,,No data,,,,12.97,,,False,,,,400.0,64218.0,,
+Antigua and Barbuda,1975,False,,,No data,,,,8.61,,,False,,,,376.0,64035.0,,
+Antigua and Barbuda,1976,False,,,No data,,,,15.62,,,False,,,,341.0,63990.0,,
+Antigua and Barbuda,1977,False,,,No data,,,,13.75,,,False,,,,365.0,64117.0,,
+Antigua and Barbuda,1978,False,,,No data,,,,6.15,,,False,,,,368.0,64329.0,,
+Antigua and Barbuda,1979,False,,,No data,,,,16.33,,,False,,,,457.0,64609.0,,
+Antigua and Barbuda,1980,False,,,No data,,,,19.0,,,False,,,,440.0,64889.0,,
 Antigua and Barbuda,1981,False,,,No data,,,,11.47,,,False,,43.0,,459.0,65076.0,,
 Antigua and Barbuda,1982,False,,,No data,,,,4.17,,,False,,43.0,,580.0,65231.0,,
 Antigua and Barbuda,1983,False,,,No data,,,,2.35,,,False,,42.0,,594.0,65408.0,2,3
@@ -358,25 +358,25 @@ Argentina,2019,True,,,PR,,42.9,3.7,53.55,,79.9,False,,70.0,,991646.0,44938712.0,
 Argentina,2020,True,,,PR,,42.3,4.5,42.02,,85.5,False,,69.0,,,45376763.0,2,2
 Armenia,1970,False,,,No data,,,,,,,False,,,19.17,,2534377.0,,
 Armenia,1971,False,,,No data,,,,,,,False,,,,,2590923.0,,
-Armenia,1972,False,,,No data,,,,,,,False,,,,,2648048.0,-,-
-Armenia,1973,False,,,No data,,,,,,,False,,,,,2706852.0,-,-
-Armenia,1974,False,,,No data,,,,,,,False,,,,,2767646.0,-,-
-Armenia,1975,False,,,No data,,,,,,,False,,,16.2,,2830798.0,-,-
-Armenia,1976,False,,,No data,,,,,,,False,,,,,2896311.0,-,-
-Armenia,1977,False,,,No data,,,,,,,False,,,,,2965523.0,-,-
-Armenia,1978,False,,,No data,,,,,,,False,,,,,3038224.0,-,-
-Armenia,1979,False,,,No data,,,,,,,False,,,,,3097058.0,-,-
-Armenia,1980,False,,,No data,,,,,,,False,,,13.43,,3135123.0,-,-
+Armenia,1972,False,,,No data,,,,,,,False,,,,,2648048.0,,
+Armenia,1973,False,,,No data,,,,,,,False,,,,,2706852.0,,
+Armenia,1974,False,,,No data,,,,,,,False,,,,,2767646.0,,
+Armenia,1975,False,,,No data,,,,,,,False,,,16.2,,2830798.0,,
+Armenia,1976,False,,,No data,,,,,,,False,,,,,2896311.0,,
+Armenia,1977,False,,,No data,,,,,,,False,,,,,2965523.0,,
+Armenia,1978,False,,,No data,,,,,,,False,,,,,3038224.0,,
+Armenia,1979,False,,,No data,,,,,,,False,,,,,3097058.0,,
+Armenia,1980,False,,,No data,,,,,,,False,,,13.43,,3135123.0,,
 Armenia,1981,False,,,No data,,,,,,,False,,,,,3167876.0,,
 Armenia,1982,False,,,No data,,,,,,,False,,,,,3202011.0,,
-Armenia,1983,False,,,No data,,,,,,,False,,,,,3238291.0,-,-
-Armenia,1984,False,,,No data,,,,,,,False,,,,,3272102.0,-,-
-Armenia,1985,False,,,No data,,,,,,,False,,,11.78,,3300896.0,-,-
-Armenia,1986,False,,,No data,,,,,,,False,,,,,3327182.0,-,-
-Armenia,1987,False,,,No data,,,,,,,False,,,,,3351364.0,-,-
-Armenia,1988,False,,,No data,,,,,,,False,,,,,3366838.0,-,-
-Armenia,1989,False,,,No data,,,,,98.75196075439452,,False,,,,,3448186.0,-,-
-Armenia,1990,False,,,No data,,,,,,0.0,False,,,9.7,23707.0,3556539.0,-,-
+Armenia,1983,False,,,No data,,,,,,,False,,,,,3238291.0,,
+Armenia,1984,False,,,No data,,,,,,,False,,,,,3272102.0,,
+Armenia,1985,False,,,No data,,,,,,,False,,,11.78,,3300896.0,,
+Armenia,1986,False,,,No data,,,,,,,False,,,,,3327182.0,,
+Armenia,1987,False,,,No data,,,,,,,False,,,,,3351364.0,,
+Armenia,1988,False,,,No data,,,,,,,False,,,,,3366838.0,,
+Armenia,1989,False,,,No data,,,,,98.75196075439452,,False,,,,,3448186.0,,
+Armenia,1990,False,,,No data,,,,,,0.0,False,,,9.7,23707.0,3556539.0,,
 Armenia,1991,True,,0.0,No data,6.0,,,,,0.0,False,0.1174404986578002,27.0,,21362.0,3617631.0,5,5
 Armenia,1992,True,,1.0,No data,6.0,,,,,0.0,False,0.1161243674276657,30.0,,12296.0,3574555.0,4,3
 Armenia,1993,False,,2.0,No data,6.0,,,3731.8,,0.0,False,0.1148212209482756,33.0,,10928.0,3457349.0,3,4
@@ -511,25 +511,25 @@ Austria,2019,False,,,PR,,30.2,0.7,1.49,,87.75220479,False,,89.0,,498022.0,887992
 Austria,2020,True,,,PR,,,,1.38,,87.52942813,False,,88.0,,,8916864.0,1,1
 Azerbaijan,1970,False,,,No data,,,,,,,False,,,,,5172050.0,,
 Azerbaijan,1971,False,,,No data,,,,,,,False,,,,,5282950.0,,
-Azerbaijan,1972,False,,,No data,,,,,,,False,,,,,5391450.0,-,-
-Azerbaijan,1973,False,,,No data,,,,,,,False,,,,,5493900.0,-,-
-Azerbaijan,1974,False,,,No data,,,,,,,False,,,,,5594100.0,-,-
-Azerbaijan,1975,False,,,No data,,,,,,,False,,,,,5689050.0,-,-
-Azerbaijan,1976,False,,,No data,,,,,,,False,,,,,5781000.0,-,-
-Azerbaijan,1977,False,,,No data,,,,,,,False,,,,,5876150.0,-,-
-Azerbaijan,1978,False,,,No data,,,,,,,False,,,,,5976150.0,-,-
-Azerbaijan,1979,False,,,No data,,,,,,,False,,,,,6071300.0,-,-
-Azerbaijan,1980,False,,,No data,,,,,,,False,,,,,6160500.0,-,-
+Azerbaijan,1972,False,,,No data,,,,,,,False,,,,,5391450.0,,
+Azerbaijan,1973,False,,,No data,,,,,,,False,,,,,5493900.0,,
+Azerbaijan,1974,False,,,No data,,,,,,,False,,,,,5594100.0,,
+Azerbaijan,1975,False,,,No data,,,,,,,False,,,,,5689050.0,,
+Azerbaijan,1976,False,,,No data,,,,,,,False,,,,,5781000.0,,
+Azerbaijan,1977,False,,,No data,,,,,,,False,,,,,5876150.0,,
+Azerbaijan,1978,False,,,No data,,,,,,,False,,,,,5976150.0,,
+Azerbaijan,1979,False,,,No data,,,,,,,False,,,,,6071300.0,,
+Azerbaijan,1980,False,,,No data,,,,,,,False,,,,,6160500.0,,
 Azerbaijan,1981,False,,,No data,,,,,,,False,,,,,6257750.0,,
 Azerbaijan,1982,False,,,No data,,,,,,,False,,,,,6357550.0,,
-Azerbaijan,1983,False,,,No data,,,,,,,False,,,,,6459800.0,-,-
-Azerbaijan,1984,False,,,No data,,,,,,,False,,,,,6567850.0,-,-
-Azerbaijan,1985,False,,,No data,,,,,,,False,,,,,6670150.0,-,-
-Azerbaijan,1986,False,,,No data,,,,,,,False,,,,,6770300.0,-,-
-Azerbaijan,1987,False,,,No data,,,,,,,False,,,,,6875350.0,-,-
-Azerbaijan,1988,False,,,No data,,,,,,,False,,,,,6974600.0,-,-
-Azerbaijan,1989,False,,,No data,,,,,,,False,,,,,7076550.0,-,-
-Azerbaijan,1990,False,,,No data,,,,,,0.0,False,,,,57295.0,7175200.0,-,-
+Azerbaijan,1983,False,,,No data,,,,,,,False,,,,,6459800.0,,
+Azerbaijan,1984,False,,,No data,,,,,,,False,,,,,6567850.0,,
+Azerbaijan,1985,False,,,No data,,,,,,,False,,,,,6670150.0,,
+Azerbaijan,1986,False,,,No data,,,,,,,False,,,,,6770300.0,,
+Azerbaijan,1987,False,,,No data,,,,,,,False,,,,,6875350.0,,
+Azerbaijan,1988,False,,,No data,,,,,,,False,,,,,6974600.0,,
+Azerbaijan,1989,False,,,No data,,,,,,,False,,,,,7076550.0,,
+Azerbaijan,1990,False,,,No data,,,,,,0.0,False,,,,57295.0,7175200.0,,
 Azerbaijan,1991,True,,0.0,No data,-3.0,,,106.6,,0.0,False,0.4793909790086014,28.0,,70102.0,7271300.0,5,5
 Azerbaijan,1992,True,,0.0,No data,1.0,,,917.0,,0.0,False,0.483433243408315,30.0,,49601.0,7382050.0,5,5
 Azerbaijan,1993,False,,0.0,No data,-3.0,,,1129.7,,0.0,False,0.4874607862031991,31.0,,40438.0,7494800.0,6,6
@@ -562,7 +562,7 @@ Azerbaijan,2019,False,,,Plurality/Majority,,,,2.71,99.79598236083984,81.09999907
 Azerbaijan,2020,False,,,Plurality/Majority,,,,2.76,,84.59999573,False,,66.0,,,10093121.0,7,6
 Bahamas,1970,False,,,No data,,,,6.15,,,False,,,,3239.0,179129.0,,
 Bahamas,1971,False,,,No data,,,,4.61,,,False,,,,3303.0,184435.0,,
-Bahamas,1972,False,,,No data,,,,6.83,,,False,,,,3180.0,189181.0,-,-
+Bahamas,1972,False,,,No data,,,,6.83,,,False,,,,3180.0,189181.0,,
 Bahamas,1973,False,,,No data,,,,5.48,,,False,,45.0,,3397.0,193563.0,1,2
 Bahamas,1974,False,,,No data,,,,13.07,,,False,,45.0,,2884.0,197767.0,1,2
 Bahamas,1975,False,,,No data,,,,10.36,,,False,,46.0,,2413.0,201881.0,1,2
@@ -766,25 +766,25 @@ Barbados,2019,False,,,Plurality/Majority,,,,4.1,,,False,,63.0,,4848.0,280180.0,1
 Barbados,2020,False,,,Plurality/Majority,,,,2.88,,,False,,63.0,,,280693.0,1,1
 Belarus,1970,False,,,No data,,,,0.0,,,False,,,,,9040000.0,,
 Belarus,1971,False,,,No data,,,,-0.4,,,False,,,,,9115576.0,,
-Belarus,1972,False,,,No data,,,,-0.2,,,False,,,,,9188968.0,-,-
-Belarus,1973,False,,,No data,,,,0.0,,,False,,,,,9257272.0,-,-
-Belarus,1974,False,,,No data,,,,-0.1,,,False,,,,,9317584.0,-,-
-Belarus,1975,False,,,No data,,,,0.1,,,False,,,,,9367000.0,-,-
-Belarus,1976,False,,,No data,,,,0.1,,,False,,,,,9411000.0,-,-
-Belarus,1977,False,,,No data,,,,0.2,,,False,,,,,9463000.0,-,-
-Belarus,1978,False,,,No data,,,,0.9,,,False,,,,,9525000.0,-,-
-Belarus,1979,False,,,No data,,,,1.2,,,False,,,,,9584000.0,-,-
-Belarus,1980,False,,,No data,,,,1.1,,,False,,,,,9643000.0,-,-
+Belarus,1972,False,,,No data,,,,-0.2,,,False,,,,,9188968.0,,
+Belarus,1973,False,,,No data,,,,0.0,,,False,,,,,9257272.0,,
+Belarus,1974,False,,,No data,,,,-0.1,,,False,,,,,9317584.0,,
+Belarus,1975,False,,,No data,,,,0.1,,,False,,,,,9367000.0,,
+Belarus,1976,False,,,No data,,,,0.1,,,False,,,,,9411000.0,,
+Belarus,1977,False,,,No data,,,,0.2,,,False,,,,,9463000.0,,
+Belarus,1978,False,,,No data,,,,0.9,,,False,,,,,9525000.0,,
+Belarus,1979,False,,,No data,,,,1.2,,,False,,,,,9584000.0,,
+Belarus,1980,False,,,No data,,,,1.1,,,False,,,,,9643000.0,,
 Belarus,1981,False,,,No data,,,,1.2,,,False,,,,,9710000.0,,
 Belarus,1982,False,,,No data,,,,3.1,,,False,,,,,9776000.0,,
-Belarus,1983,False,,,No data,,,,1.0,,,False,,,,,9843000.0,-,-
-Belarus,1984,False,,,No data,,,,-0.7,,,False,,,,,9910000.0,-,-
-Belarus,1985,False,,,No data,,,,0.5,,,False,,,,,9975000.0,-,-
-Belarus,1986,False,,,No data,,,,2.3,,,False,,,,,10043000.0,-,-
-Belarus,1987,False,,,No data,,,,1.6,,,False,,,,,10111000.0,-,-
-Belarus,1988,False,,,No data,,,,0.0,,,False,,,,,10140000.0,-,-
-Belarus,1989,False,,,No data,,,,1.8,97.88336944580078,,False,,,,,10170000.0,-,-
-Belarus,1990,False,,,No data,,,,4.6,,0.0,False,,,,151190.0,10189348.0,-,-
+Belarus,1983,False,,,No data,,,,1.0,,,False,,,,,9843000.0,,
+Belarus,1984,False,,,No data,,,,-0.7,,,False,,,,,9910000.0,,
+Belarus,1985,False,,,No data,,,,0.5,,,False,,,,,9975000.0,,
+Belarus,1986,False,,,No data,,,,2.3,,,False,,,,,10043000.0,,
+Belarus,1987,False,,,No data,,,,1.6,,,False,,,,,10111000.0,,
+Belarus,1988,False,,,No data,,,,0.0,,,False,,,,,10140000.0,,
+Belarus,1989,False,,,No data,,,,1.8,97.88336944580078,,False,,,,,10170000.0,,
+Belarus,1990,False,,,No data,,,,4.6,,0.0,False,,,,151190.0,10189348.0,,
 Belarus,1991,False,,0.0,No data,6.0,,,94.2,,0.0,False,0.3414686101592236,33.0,,149332.0,10194050.0,4,4
 Belarus,1992,False,,1.0,No data,6.0,,,970.7,,0.0,False,0.3401469086654504,34.0,,125815.0,10216470.0,4,3
 Belarus,1993,False,,2.0,No data,6.0,,,1190.32,,0.0,False,0.3387367974275592,35.0,,99256.0,10239050.0,5,4
@@ -868,15 +868,15 @@ Belgium,2019,True,,,PR,,27.2,0.1,1.25,,90.27542981,False,,90.0,,589449.0,1148898
 Belgium,2020,True,,,PR,,,,0.74,,91.52641629,False,,90.0,,,11538604.0,1,1
 Belize,1970,False,,,No data,,,,21.41,,,False,,,71.27,561.0,120905.0,,
 Belize,1971,False,,,No data,,,,18.63,,,False,,,,608.0,123091.0,,
-Belize,1972,False,,,No data,,,,20.73,,,False,,,,559.0,125054.0,-,-
-Belize,1973,False,,,No data,,,,66.96,,,False,,,,603.0,126875.0,-,-
-Belize,1974,False,,,No data,,,,20.78,,,False,,,,727.0,128620.0,-,-
-Belize,1975,False,,,No data,,,,20.77,,,False,,,70.77,699.0,130801.0,-,-
-Belize,1976,False,,,No data,,,,-2.9,,,False,,,,599.0,133471.0,-,-
-Belize,1977,False,,,No data,,,,12.15,,,False,,,,658.0,136183.0,-,-
-Belize,1978,False,,,No data,,,,4.87,,,False,,,,675.0,138933.0,-,-
-Belize,1979,False,,,No data,,,,-11.82,,,False,,,,726.0,141823.0,-,-
-Belize,1980,True,,,No data,,,,7.05,,,False,,,56.55,844.0,145133.0,-,-
+Belize,1972,False,,,No data,,,,20.73,,,False,,,,559.0,125054.0,,
+Belize,1973,False,,,No data,,,,66.96,,,False,,,,603.0,126875.0,,
+Belize,1974,False,,,No data,,,,20.78,,,False,,,,727.0,128620.0,,
+Belize,1975,False,,,No data,,,,20.77,,,False,,,70.77,699.0,130801.0,,
+Belize,1976,False,,,No data,,,,-2.9,,,False,,,,599.0,133471.0,,
+Belize,1977,False,,,No data,,,,12.15,,,False,,,,658.0,136183.0,,
+Belize,1978,False,,,No data,,,,4.87,,,False,,,,675.0,138933.0,,
+Belize,1979,False,,,No data,,,,-11.82,,,False,,,,726.0,141823.0,,
+Belize,1980,True,,,No data,,,,7.05,,,False,,,56.55,844.0,145133.0,,
 Belize,1981,False,,,No data,,,,11.22,,,False,,36.0,,686.0,148764.0,,
 Belize,1982,False,,,No data,,,,6.84,,,False,,38.0,,709.0,152409.0,,
 Belize,1983,False,,,No data,,,,5.0,,,False,,39.0,,713.0,156053.0,1,2
@@ -1072,26 +1072,26 @@ Bolivia,2019,True,,,Mixed,,41.6,5.8,1.84,,47.47481911,False,,58.0,,99342.0,11777
 Bolivia,2020,True,,,Mixed,,43.6,6.6,0.94,,59.94010155,False,,57.0,,,11936162.0,3,3
 Bosnia-Herzegovina,1970,False,,,No data,,,,,,,False,,,,,3815561.0,,
 Bosnia-Herzegovina,1971,False,,,No data,,,,,,,False,,,,,3859242.0,,
-Bosnia-Herzegovina,1972,False,,,No data,,,,,,,False,,,,,3901895.0,-,-
-Bosnia-Herzegovina,1973,False,,,No data,,,,,,,False,,,,,3943152.0,-,-
-Bosnia-Herzegovina,1974,False,,,No data,,,,,,,False,,,,,3983063.0,-,-
-Bosnia-Herzegovina,1975,False,,,No data,,,,,,,False,,,,,4022090.0,-,-
-Bosnia-Herzegovina,1976,False,,,No data,,,,,,,False,,,,,4060039.0,-,-
-Bosnia-Herzegovina,1977,False,,,No data,,,,,,,False,,,,,4096516.0,-,-
-Bosnia-Herzegovina,1978,False,,,No data,,,,,,,False,,,,,4131521.0,-,-
-Bosnia-Herzegovina,1979,False,,,No data,,,,,,,False,,,,,4165511.0,-,-
-Bosnia-Herzegovina,1980,False,,,No data,,,,,,,False,,,,,4199820.0,-,-
+Bosnia-Herzegovina,1972,False,,,No data,,,,,,,False,,,,,3901895.0,,
+Bosnia-Herzegovina,1973,False,,,No data,,,,,,,False,,,,,3943152.0,,
+Bosnia-Herzegovina,1974,False,,,No data,,,,,,,False,,,,,3983063.0,,
+Bosnia-Herzegovina,1975,False,,,No data,,,,,,,False,,,,,4022090.0,,
+Bosnia-Herzegovina,1976,False,,,No data,,,,,,,False,,,,,4060039.0,,
+Bosnia-Herzegovina,1977,False,,,No data,,,,,,,False,,,,,4096516.0,,
+Bosnia-Herzegovina,1978,False,,,No data,,,,,,,False,,,,,4131521.0,,
+Bosnia-Herzegovina,1979,False,,,No data,,,,,,,False,,,,,4165511.0,,
+Bosnia-Herzegovina,1980,False,,,No data,,,,,,,False,,,,,4199820.0,,
 Bosnia-Herzegovina,1981,False,,,No data,,,,,,,False,,,,,4235970.0,,
 Bosnia-Herzegovina,1982,False,,,No data,,,,,,,False,,,,,4274013.0,,
-Bosnia-Herzegovina,1983,False,,,No data,,,,,,,False,,,,,4312521.0,-,-
-Bosnia-Herzegovina,1984,False,,,No data,,,,,,,False,,,,,4349597.0,-,-
-Bosnia-Herzegovina,1985,False,,,No data,,,,,,,False,,,,,4383306.0,-,-
-Bosnia-Herzegovina,1986,False,,,No data,,,,,,,False,,,,,4413374.0,-,-
-Bosnia-Herzegovina,1987,False,,,No data,,,,,,,False,,,,,4440300.0,-,-
-Bosnia-Herzegovina,1988,False,,,No data,,,,,,,False,,,,,4463320.0,-,-
-Bosnia-Herzegovina,1989,False,,,No data,,,,,,,False,,,,,4481230.0,-,-
-Bosnia-Herzegovina,1990,False,,,No data,,,,,,0.0,False,,,,6946.0,4494310.0,-,-
-Bosnia-Herzegovina,1991,False,,,No data,,,,,89.06359100341797,0.0,False,,,,6283.0,4502386.0,-,-
+Bosnia-Herzegovina,1983,False,,,No data,,,,,,,False,,,,,4312521.0,,
+Bosnia-Herzegovina,1984,False,,,No data,,,,,,,False,,,,,4349597.0,,
+Bosnia-Herzegovina,1985,False,,,No data,,,,,,,False,,,,,4383306.0,,
+Bosnia-Herzegovina,1986,False,,,No data,,,,,,,False,,,,,4413374.0,,
+Bosnia-Herzegovina,1987,False,,,No data,,,,,,,False,,,,,4440300.0,,
+Bosnia-Herzegovina,1988,False,,,No data,,,,,,,False,,,,,4463320.0,,
+Bosnia-Herzegovina,1989,False,,,No data,,,,,,,False,,,,,4481230.0,,
+Bosnia-Herzegovina,1990,False,,,No data,,,,,,0.0,False,,,,6946.0,4494310.0,,
+Bosnia-Herzegovina,1991,False,,,No data,,,,,89.06359100341797,0.0,False,,,,6283.0,4502386.0,,
 Bosnia-Herzegovina,1992,True,,0.0,No data,0.0,,,,,0.0,False,0.70554078532908,34.0,,5919.0,4275730.0,6,6
 Bosnia-Herzegovina,1993,False,,0.0,No data,0.0,,,,,0.0,False,0.7040494218597599,36.0,,5754.0,3942981.0,6,6
 Bosnia-Herzegovina,1994,True,,0.0,No data,0.0,,,,,0.0,False,0.7024185121072501,37.0,,6352.0,3762330.0,6,6
@@ -1230,13 +1230,13 @@ Brunei,1973,False,,,No data,,,,11.9,,,False,,,,17081.0,149065.0,6,5
 Brunei,1974,False,,,No data,,,,21.4,,,False,,,,19434.0,154314.0,6,5
 Brunei,1975,False,,,No data,,,,3.9,,,False,,,16.45,19326.0,159653.0,6,5
 Brunei,1976,False,,,No data,,,,5.9,,,False,,,,22793.0,165064.0,6,5
-Brunei,1977,False,,,No data,,,,11.1,,,False,,,,24691.0,170560.0,-,-
-Brunei,1978,False,,,No data,,,,6.4,,,False,,,,25485.0,176176.0,-,-
-Brunei,1979,False,,,No data,,,,5.5,,,False,,,,31303.0,181951.0,-,-
-Brunei,1980,False,,,No data,,,,5.3,,,False,,,17.52,34338.0,187921.0,-,-
+Brunei,1977,False,,,No data,,,,11.1,,,False,,,,24691.0,170560.0,,
+Brunei,1978,False,,,No data,,,,6.4,,,False,,,,25485.0,176176.0,,
+Brunei,1979,False,,,No data,,,,5.5,,,False,,,,31303.0,181951.0,,
+Brunei,1980,False,,,No data,,,,5.3,,,False,,,17.52,34338.0,187921.0,,
 Brunei,1981,False,,,No data,,,,9.14,77.7354965209961,,False,,,,32137.0,194099.0,,
 Brunei,1982,False,,,No data,,,,6.36,,,False,,,,24717.0,200630.0,,
-Brunei,1983,False,,,No data,,,,1.17,,,False,,,,23305.0,207523.0,-,-
+Brunei,1983,False,,,No data,,,,1.17,,,False,,,,23305.0,207523.0,,
 Brunei,1984,False,,,No data,,,,3.1,,,False,,37.0,,23404.0,214682.0,6,6
 Brunei,1985,False,,,No data,,,,2.3,,,False,,38.0,16.4,21426.0,222119.0,6,5
 Brunei,1986,False,,,No data,,,,1.78,,,False,,39.0,,13514.0,229815.0,6,5
@@ -1837,9 +1837,9 @@ Colombia,2019,True,,,PR,,51.3,14.0,3.52,95.249267578125,65.00690072,False,,64.0,
 Colombia,2020,True,,,PR,,54.2,20.6,2.52,95.6363296508789,69.79,False,,63.0,,,50930662.0,3,3
 Comoros,1970,False,,,No data,,,,4.32,,,False,,,,657.0,242351.0,,
 Comoros,1971,False,,,No data,,,,5.65,,,False,,,,684.0,249066.0,,
-Comoros,1972,False,,,No data,,,,5.53,,,False,,,,698.0,256187.0,-,-
-Comoros,1973,False,,,No data,,,,9.97,,,False,,,,750.0,263728.0,-,-
-Comoros,1974,False,,,No data,,,,18.43,,,False,,,,769.0,271719.0,-,-
+Comoros,1972,False,,,No data,,,,5.53,,,False,,,,698.0,256187.0,,
+Comoros,1973,False,,,No data,,,,9.97,,,False,,,,750.0,263728.0,,
+Comoros,1974,False,,,No data,,,,18.43,,,False,,,,769.0,271719.0,,
 Comoros,1975,False,,0.0,No data,-5.0,,,29.7,,,False,0.0430363993496024,19.0,,817.0,280036.0,5,2
 Comoros,1976,False,,1.0,No data,-5.0,,,9.6,,,False,0.0428692743159802,19.0,,820.0,288810.0,5,3
 Comoros,1977,False,,2.0,No data,-5.0,,,9.4,,,False,0.0427028877459674,18.0,,856.0,298152.0,4,4
@@ -1939,25 +1939,25 @@ Costa Rica,2019,True,,,PR,,48.2,4.3,2.1,,81.20259644,False,,72.0,,97161.0,508453
 Costa Rica,2020,False,,,PR,,49.3,7.0,0.72,,80.53018608,False,,71.0,,,5123105.0,1,1
 Croatia,1970,False,,,No data,,,,,,,False,,,48.01,,4412252.0,,
 Croatia,1971,False,,,No data,,,,,,,False,,,,,4431275.0,,
-Croatia,1972,False,,,No data,,,,,,,False,,,,,4450564.0,-,-
-Croatia,1973,False,,,No data,,,,,,,False,,,,,4470161.0,-,-
-Croatia,1974,False,,,No data,,,,,,,False,,,,,4490660.0,-,-
-Croatia,1975,False,,,No data,,,,,,,False,,,47.63,,4512082.0,-,-
-Croatia,1976,False,,,No data,,,,,,,False,,,,,4535934.0,-,-
-Croatia,1977,False,,,No data,,,,,,,False,,,,,4559571.0,-,-
-Croatia,1978,False,,,No data,,,,,,,False,,,,,4581085.0,-,-
-Croatia,1979,False,,,No data,,,,,,,False,,,,,4594778.0,-,-
-Croatia,1980,False,,,No data,,,,,,,False,,,44.64,,4599782.0,-,-
+Croatia,1972,False,,,No data,,,,,,,False,,,,,4450564.0,,
+Croatia,1973,False,,,No data,,,,,,,False,,,,,4470161.0,,
+Croatia,1974,False,,,No data,,,,,,,False,,,,,4490660.0,,
+Croatia,1975,False,,,No data,,,,,,,False,,,47.63,,4512082.0,,
+Croatia,1976,False,,,No data,,,,,,,False,,,,,4535934.0,,
+Croatia,1977,False,,,No data,,,,,,,False,,,,,4559571.0,,
+Croatia,1978,False,,,No data,,,,,,,False,,,,,4581085.0,,
+Croatia,1979,False,,,No data,,,,,,,False,,,,,4594778.0,,
+Croatia,1980,False,,,No data,,,,,,,False,,,44.64,,4599782.0,,
 Croatia,1981,False,,,No data,,,,40.2,,,False,,,,,4611509.0,,
 Croatia,1982,False,,,No data,,,,31.8,,,False,,,,,4634234.0,,
-Croatia,1983,False,,,No data,,,,40.6,,,False,,,,,4658254.0,-,-
-Croatia,1984,False,,,No data,,,,46.2,,,False,,,,,4680285.0,-,-
-Croatia,1985,False,,,No data,,,,78.9,,,False,,,42.54,,4701417.0,-,-
-Croatia,1986,False,,,No data,,,,91.2,,,False,,,,,4721446.0,-,-
-Croatia,1987,False,,,No data,,,,130.8,,,False,,,,,4739745.0,-,-
-Croatia,1988,False,,,No data,,,,186.7,,,False,,,,,4755207.0,-,-
-Croatia,1989,False,,,No data,,,,1181.4,,,False,,,,,4767260.0,-,-
-Croatia,1990,False,,,No data,,,,598.7,,0.0,False,,,39.91,64449.0,4777368.0,-,-
+Croatia,1983,False,,,No data,,,,40.6,,,False,,,,,4658254.0,,
+Croatia,1984,False,,,No data,,,,46.2,,,False,,,,,4680285.0,,
+Croatia,1985,False,,,No data,,,,78.9,,,False,,,42.54,,4701417.0,,
+Croatia,1986,False,,,No data,,,,91.2,,,False,,,,,4721446.0,,
+Croatia,1987,False,,,No data,,,,130.8,,,False,,,,,4739745.0,,
+Croatia,1988,False,,,No data,,,,186.7,,,False,,,,,4755207.0,,
+Croatia,1989,False,,,No data,,,,1181.4,,,False,,,,,4767260.0,,
+Croatia,1990,False,,,No data,,,,598.7,,0.0,False,,,39.91,64449.0,4777368.0,,
 Croatia,1991,True,,0.0,No data,-3.0,,,122.6,96.70155334472656,0.0,False,0.4165760344137769,44.0,,50703.0,4689022.0,3,4
 Croatia,1992,True,,1.0,Mixed,-3.0,,,635.6,,0.0,False,0.4005445925620591,44.0,,45171.0,4575818.0,4,4
 Croatia,1993,False,,2.0,Mixed,-3.0,,,1523.68,,0.097213389,False,0.3846026625059573,44.0,,41191.0,4600463.0,4,4
@@ -2092,27 +2092,27 @@ Cyprus,2019,False,,,PR,,31.2,0.2,0.56,,86.06362996,False,,79.0,,33666.0,1228836.
 Cyprus,2020,True,,,PR,,,,-0.64,,90.80194723,False,,80.0,,,1237537.0,1,1
 Czech Republic,1970,False,,,No data,,,,-0.41,,,False,,,40.08,,9858071.0,,
 Czech Republic,1971,False,,,No data,,,,-0.41,,,False,,,,,9826815.0,,
-Czech Republic,1972,False,,,No data,,,,-0.31,,,False,,,,,9867632.0,-,-
-Czech Republic,1973,False,,,No data,,,,0.31,,,False,,,,,9922266.0,-,-
-Czech Republic,1974,False,,,No data,,,,0.51,,,False,,,,,9988459.0,-,-
-Czech Republic,1975,False,,,No data,,,,0.71,,,False,,,36.65,,10058620.0,-,-
-Czech Republic,1976,False,,,No data,,,,0.81,,,False,,,,,10125939.0,-,-
-Czech Republic,1977,False,,,No data,,,,1.31,,,False,,,,,10186755.0,-,-
-Czech Republic,1978,False,,,No data,,,,1.59,,,False,,,,,10242098.0,-,-
-Czech Republic,1979,False,,,No data,,,,3.91,,,False,,,,,10292341.0,-,-
-Czech Republic,1980,False,,,No data,,,,2.91,,,False,,,34.46,,10304193.0,-,-
+Czech Republic,1972,False,,,No data,,,,-0.31,,,False,,,,,9867632.0,,
+Czech Republic,1973,False,,,No data,,,,0.31,,,False,,,,,9922266.0,,
+Czech Republic,1974,False,,,No data,,,,0.51,,,False,,,,,9988459.0,,
+Czech Republic,1975,False,,,No data,,,,0.71,,,False,,,36.65,,10058620.0,,
+Czech Republic,1976,False,,,No data,,,,0.81,,,False,,,,,10125939.0,,
+Czech Republic,1977,False,,,No data,,,,1.31,,,False,,,,,10186755.0,,
+Czech Republic,1978,False,,,No data,,,,1.59,,,False,,,,,10242098.0,,
+Czech Republic,1979,False,,,No data,,,,3.91,,,False,,,,,10292341.0,,
+Czech Republic,1980,False,,,No data,,,,2.91,,,False,,,34.46,,10304193.0,,
 Czech Republic,1981,False,,,No data,,,,0.82,,,False,,,,,10300591.0,,
 Czech Republic,1982,False,,,No data,,,,5.07,,,False,,,,,10314826.0,,
-Czech Republic,1983,False,,,No data,,,,0.95,,,False,,,,,10323856.0,-,-
-Czech Republic,1984,False,,,No data,,,,0.94,,,False,,,,,10330213.0,-,-
-Czech Republic,1985,False,,,No data,,,,2.28,,,False,,,32.8,,10337118.0,-,-
-Czech Republic,1986,False,,,No data,,,,0.5,,,False,,,,,10342227.0,-,-
-Czech Republic,1987,False,,,No data,,,,0.08,,,False,,,,,10347318.0,-,-
-Czech Republic,1988,False,,,No data,,,,0.14,,,False,,,,,10355276.0,-,-
-Czech Republic,1989,False,,,No data,,,,1.38,,,False,,,,,10361068.0,-,-
-Czech Republic,1990,False,,,No data,,,,10.02,,0.0,False,,,29.32,251819.0,10333355.0,-,-
-Czech Republic,1991,False,,,No data,,,,57.71,,0.0,False,,,,211165.0,10308578.0,-,-
-Czech Republic,1992,False,,,PR,,20.7,0.2,11.09,,0.0,False,0.6332696427906558,,,203728.0,10319123.0,-,-
+Czech Republic,1983,False,,,No data,,,,0.95,,,False,,,,,10323856.0,,
+Czech Republic,1984,False,,,No data,,,,0.94,,,False,,,,,10330213.0,,
+Czech Republic,1985,False,,,No data,,,,2.28,,,False,,,32.8,,10337118.0,,
+Czech Republic,1986,False,,,No data,,,,0.5,,,False,,,,,10342227.0,,
+Czech Republic,1987,False,,,No data,,,,0.08,,,False,,,,,10347318.0,,
+Czech Republic,1988,False,,,No data,,,,0.14,,,False,,,,,10355276.0,,
+Czech Republic,1989,False,,,No data,,,,1.38,,,False,,,,,10361068.0,,
+Czech Republic,1990,False,,,No data,,,,10.02,,0.0,False,,,29.32,251819.0,10333355.0,,
+Czech Republic,1991,False,,,No data,,,,57.71,,0.0,False,,,,211165.0,10308578.0,,
+Czech Republic,1992,False,,,PR,,20.7,0.2,11.09,,0.0,False,0.6332696427906558,,,203728.0,10319123.0,,
 Czech Republic,1993,False,,0.0,PR,10.0,26.6,0.1,20.81,,0.581319529,False,0.6422958527040562,65.0,,208531.0,10329855.0,1,2
 Czech Republic,1994,True,,1.0,PR,10.0,,,10.04,,1.259217838,False,0.6503408679913458,66.0,,217133.0,10333587.0,1,2
 Czech Republic,1995,True,1.0,2.0,PR,10.0,,,8.99,,1.45357584,False,0.6574323337633406,68.0,12.19,224361.0,10327253.0,1,2
@@ -2164,34 +2164,34 @@ Czechoslovakia,1989,True,,0.0,No data,-2.0,,,,,,False,0.6028762496310002,,,,,6,6
 Czechoslovakia,1990,True,,0.0,No data,7.0,,,,,,False,0.6035689876341918,,,,,2,2
 Czechoslovakia,1991,True,,1.0,No data,7.0,,,,,,False,0.6037326427690903,,,,,2,2
 Czechoslovakia,1992,True,,2.0,No data,7.0,,,,,,False,0.6033099712214716,,,,,2,2
-Czechoslovakia,1993,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,1994,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,1995,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,1996,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,1997,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,1998,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,1999,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2000,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2001,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2002,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2003,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2004,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2005,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2006,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2007,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2008,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2009,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2010,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2011,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2012,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2013,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2014,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2015,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2016,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2017,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2018,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2019,False,,,No data,,,,,,,False,,,,,,-,-
-Czechoslovakia,2020,False,,,No data,,,,,,,False,,,,,,-,-
+Czechoslovakia,1993,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,1994,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,1995,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,1996,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,1997,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,1998,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,1999,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2000,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2001,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2002,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2003,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2004,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2005,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2006,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2007,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2008,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2009,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2010,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2011,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2012,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2013,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2014,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2015,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2016,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2017,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2018,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2019,False,,,No data,,,,,,,False,,,,,,,
+Czechoslovakia,2020,False,,,No data,,,,,,,False,,,,,,,
 Democratic Republic of the Congo,1970,False,,4.0,No data,-9.0,,,8.03,,,False,0.0923223944922474,22.0,3.01,58994.0,20151733.0,,
 Democratic Republic of the Congo,1971,False,,5.0,No data,-9.0,,,5.78,,,False,0.0937973415680653,23.0,,56938.0,20712952.0,,
 Democratic Republic of the Congo,1972,False,,6.0,No data,-9.0,,,15.8,,,False,0.09530298530483,24.0,,53814.0,21273409.0,7,6
@@ -2296,11 +2296,11 @@ Denmark,2019,True,,,PR,,27.7,0.3,0.73,,98.04643475,False,,88.0,,322638.0,5814422
 Denmark,2020,False,,,PR,,,,0.42,,96.54914573,False,,88.0,,,5831404.0,1,1
 Djibouti,1970,False,,,No data,,,,4.25,,,False,,,,1181.0,144379.0,,
 Djibouti,1971,False,,,No data,,,,1.9,,,False,,,,1255.0,154225.0,,
-Djibouti,1972,False,,,No data,,,,7.1,,,False,,,,1298.0,165234.0,-,-
-Djibouti,1973,False,,,No data,,,,7.6,,,False,,,,1361.0,177327.0,-,-
-Djibouti,1974,False,,,No data,,,,16.1,,,False,,,,1314.0,191389.0,-,-
-Djibouti,1975,False,,,No data,,,,12.3,,,False,,,,1465.0,208582.0,-,-
-Djibouti,1976,False,,,No data,,,,12.4,,,False,,,,1584.0,229304.0,-,-
+Djibouti,1972,False,,,No data,,,,7.1,,,False,,,,1298.0,165234.0,,
+Djibouti,1973,False,,,No data,,,,7.6,,,False,,,,1361.0,177327.0,,
+Djibouti,1974,False,,,No data,,,,16.1,,,False,,,,1314.0,191389.0,,
+Djibouti,1975,False,,,No data,,,,12.3,,,False,,,,1465.0,208582.0,,
+Djibouti,1976,False,,,No data,,,,12.4,,,False,,,,1584.0,229304.0,,
 Djibouti,1977,True,,0.0,No data,-8.0,,,21.5,,,False,0.1713692953493857,33.0,,1402.0,253083.0,3,4
 Djibouti,1978,False,,1.0,No data,-8.0,,,19.6,,,False,0.1627423445617175,36.0,,1296.0,278425.0,3,4
 Djibouti,1979,True,,2.0,No data,-8.0,,,15.0,,,False,0.1544182647557279,35.0,,1353.0,302856.0,3,4
@@ -2347,12 +2347,12 @@ Djibouti,2019,False,,,Mixed,,,,3.32,,59.0,False,,57.0,,6935.0,1073994.0,7,5
 Djibouti,2020,False,,,Mixed,,,,2.88,,59.0,False,,57.0,,,1090156.0,7,5
 Dominica,1970,False,,,No data,,,,12.39,,,False,,32.0,,267.0,68895.0,,
 Dominica,1971,False,,,No data,,,,3.64,,,False,,32.0,,280.0,69430.0,,
-Dominica,1972,False,,,No data,,,,3.69,,,False,,33.0,,308.0,69870.0,-,-
-Dominica,1973,False,,,No data,,,,12.1,,,False,,33.0,,342.0,70334.0,-,-
-Dominica,1974,False,,,No data,,,,34.38,,,False,,32.0,,323.0,70822.0,-,-
-Dominica,1975,False,,,No data,,,,19.9,,,False,,32.0,,339.0,71300.0,-,-
-Dominica,1976,False,,,No data,,,,10.9,,,False,,32.0,,359.0,71748.0,-,-
-Dominica,1977,False,,,No data,,,,9.5,,,False,,33.0,,357.0,72142.0,-,-
+Dominica,1972,False,,,No data,,,,3.69,,,False,,33.0,,308.0,69870.0,,
+Dominica,1973,False,,,No data,,,,12.1,,,False,,33.0,,342.0,70334.0,,
+Dominica,1974,False,,,No data,,,,34.38,,,False,,32.0,,323.0,70822.0,,
+Dominica,1975,False,,,No data,,,,19.9,,,False,,32.0,,339.0,71300.0,,
+Dominica,1976,False,,,No data,,,,10.9,,,False,,32.0,,359.0,71748.0,,
+Dominica,1977,False,,,No data,,,,9.5,,,False,,33.0,,357.0,72142.0,,
 Dominica,1978,False,,,No data,,,,7.71,,,False,,33.0,,400.0,72478.0,2,3
 Dominica,1979,False,,,No data,,,,18.0,,,False,,35.0,,347.0,72768.0,2,2
 Dominica,1980,False,,,No data,,,,23.85,,,False,,35.0,,358.0,72978.0,2,2
@@ -2467,37 +2467,37 @@ East Germany (GDR),1986,True,,37.0,No data,-9.0,,,,,,False,0.5678392672669375,,,
 East Germany (GDR),1987,True,,38.0,No data,-9.0,,,,,,False,0.5672504838950599,,,,,7,6
 East Germany (GDR),1988,True,,39.0,No data,-9.0,,,,,,False,0.5666398316254599,,,,,7,6
 East Germany (GDR),1989,True,,0.0,No data,,,,,,,False,0.5660279677967401,,,,,6,6
-East Germany (GDR),1990,True,,0.0,No data,,,,,,,False,0.5654147611373399,,,,,-,-
-East Germany (GDR),1991,False,,,No data,,,,,,,False,0.5648001637694611,,,,,-,-
-East Germany (GDR),1992,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),1993,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),1994,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),1995,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),1996,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),1997,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),1998,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),1999,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2000,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2001,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2002,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2003,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2004,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2005,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2006,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2007,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2008,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2009,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2010,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2011,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2012,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2013,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2014,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2015,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2016,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2017,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2018,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2019,False,,,No data,,,,,,,False,,,,,,-,-
-East Germany (GDR),2020,False,,,No data,,,,,,,False,,,,,,-,-
+East Germany (GDR),1990,True,,0.0,No data,,,,,,,False,0.5654147611373399,,,,,,
+East Germany (GDR),1991,False,,,No data,,,,,,,False,0.5648001637694611,,,,,,
+East Germany (GDR),1992,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),1993,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),1994,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),1995,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),1996,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),1997,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),1998,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),1999,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2000,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2001,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2002,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2003,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2004,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2005,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2006,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2007,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2008,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2009,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2010,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2011,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2012,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2013,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2014,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2015,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2016,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2017,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2018,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2019,False,,,No data,,,,,,,False,,,,,,,
+East Germany (GDR),2020,False,,,No data,,,,,,,False,,,,,,,
 East Timor,1970,False,,,No data,,,,,,,False,,,,,,,
 East Timor,1971,False,,,No data,,,,,,,False,,,,,,,
 East Timor,1972,False,,,No data,,,,,,,False,,,,,,,
@@ -2755,27 +2755,27 @@ Equatorial Guinea,2019,False,,,PR,,,,1.21,,,False,,45.0,,30122.0,1553031.0,7,7
 Equatorial Guinea,2020,False,,,PR,,,,4.77,,,False,,44.0,,,1596049.0,7,7
 Eritrea,1970,False,,,No data,,,,,,,False,,,,,1272748.0,,
 Eritrea,1971,False,,,No data,,,,,,,False,,,,,1306234.0,,
-Eritrea,1972,False,,,No data,,,,,,,False,,,,,1340838.0,-,-
-Eritrea,1973,False,,,No data,,,,,,,False,,,,,1376516.0,-,-
-Eritrea,1974,False,,,No data,,,,,,,False,,,,,1413220.0,-,-
-Eritrea,1975,False,,,No data,,,,,,,False,,,,,1450867.0,-,-
-Eritrea,1976,False,,,No data,,,,,,,False,,,,,1489656.0,-,-
-Eritrea,1977,False,,,No data,,,,,,,False,,,,,1529802.0,-,-
-Eritrea,1978,False,,,No data,,,,,,,False,,,,,1571193.0,-,-
-Eritrea,1979,False,,,No data,,,,,,,False,,,,,1613829.0,-,-
-Eritrea,1980,False,,,No data,,,,,,,False,,,,,1657982.0,-,-
+Eritrea,1972,False,,,No data,,,,,,,False,,,,,1340838.0,,
+Eritrea,1973,False,,,No data,,,,,,,False,,,,,1376516.0,,
+Eritrea,1974,False,,,No data,,,,,,,False,,,,,1413220.0,,
+Eritrea,1975,False,,,No data,,,,,,,False,,,,,1450867.0,,
+Eritrea,1976,False,,,No data,,,,,,,False,,,,,1489656.0,,
+Eritrea,1977,False,,,No data,,,,,,,False,,,,,1529802.0,,
+Eritrea,1978,False,,,No data,,,,,,,False,,,,,1571193.0,,
+Eritrea,1979,False,,,No data,,,,,,,False,,,,,1613829.0,,
+Eritrea,1980,False,,,No data,,,,,,,False,,,,,1657982.0,,
 Eritrea,1981,False,,,No data,,,,,,,False,,,,,1703789.0,,
 Eritrea,1982,False,,,No data,,,,,,,False,,,,,1751045.0,,
-Eritrea,1983,False,,,No data,,,,,,,False,,,,,1799814.0,-,-
-Eritrea,1984,False,,,No data,,,,,,,False,,,,,1849594.0,-,-
-Eritrea,1985,False,,,No data,,,,,,,False,,,,,1899243.0,-,-
-Eritrea,1986,False,,,No data,,,,,,,False,,,,,1949611.0,-,-
-Eritrea,1987,False,,,No data,,,,,,,False,,,,,2000355.0,-,-
-Eritrea,1988,False,,,No data,,,,,,,False,,,,,2051546.0,-,-
-Eritrea,1989,False,,,No data,,,,,,,False,,,,,2102131.0,-,-
-Eritrea,1990,False,,,No data,,,,,,0.0,False,,,,,2149960.0,-,-
-Eritrea,1991,False,,,No data,,,,,,0.0,False,,,,,2039220.0,-,-
-Eritrea,1992,False,,,No data,,,,,,0.0,False,,,,,1921153.0,-,-
+Eritrea,1983,False,,,No data,,,,,,,False,,,,,1799814.0,,
+Eritrea,1984,False,,,No data,,,,,,,False,,,,,1849594.0,,
+Eritrea,1985,False,,,No data,,,,,,,False,,,,,1899243.0,,
+Eritrea,1986,False,,,No data,,,,,,,False,,,,,1949611.0,,
+Eritrea,1987,False,,,No data,,,,,,,False,,,,,2000355.0,,
+Eritrea,1988,False,,,No data,,,,,,,False,,,,,2051546.0,,
+Eritrea,1989,False,,,No data,,,,,,,False,,,,,2102131.0,,
+Eritrea,1990,False,,,No data,,,,,,0.0,False,,,,,2149960.0,,
+Eritrea,1991,False,,,No data,,,,,,0.0,False,,,,,2039220.0,,
+Eritrea,1992,False,,,No data,,,,,,0.0,False,,,,,1921153.0,,
 Eritrea,1993,False,,0.0,No data,-6.0,,,4.79,,0.0,False,0.50861462820174,19.0,,,1981419.0,6,5
 Eritrea,1994,False,,1.0,No data,-6.0,,,13.15,,0.0,False,0.5088513422895532,21.0,,,2042500.0,6,5
 Eritrea,1995,True,15.0,2.0,No data,-6.0,,,11.98,,0.0,False,0.5090852094695816,21.0,,,2157220.0,6,4
@@ -2806,25 +2806,25 @@ Eritrea,2019,False,,,Not applicable,,,,-16.36,,,False,,31.0,,,3498818.0,7,7
 Eritrea,2020,True,,,Not applicable,,,,4.91,,,False,,31.0,,,3555868.0,7,7
 Estonia,1970,False,,,No data,,,,,,,False,,,56.42,,1360076.0,,
 Estonia,1971,False,,,No data,,,,,,,False,,,,,1376955.0,,
-Estonia,1972,False,,,No data,,,,,,,False,,,,,1392518.0,-,-
-Estonia,1973,False,,,No data,,,,,,,False,,,,,1405951.0,-,-
-Estonia,1974,False,,,No data,,,,,,,False,,,,,1418169.0,-,-
-Estonia,1975,False,,,No data,,,,,,,False,,,53.54,,1429352.0,-,-
-Estonia,1976,False,,,No data,,,,,,,False,,,,,1439576.0,-,-
-Estonia,1977,False,,,No data,,,,,,,False,,,,,1450211.0,-,-
-Estonia,1978,False,,,No data,,,,,,,False,,,,,1460188.0,-,-
-Estonia,1979,False,,,No data,,,,,,,False,,,,,1468333.0,-,-
-Estonia,1980,False,,,No data,,,,,,,False,,,46.1,,1477219.0,-,-
+Estonia,1972,False,,,No data,,,,,,,False,,,,,1392518.0,,
+Estonia,1973,False,,,No data,,,,,,,False,,,,,1405951.0,,
+Estonia,1974,False,,,No data,,,,,,,False,,,,,1418169.0,,
+Estonia,1975,False,,,No data,,,,,,,False,,,53.54,,1429352.0,,
+Estonia,1976,False,,,No data,,,,,,,False,,,,,1439576.0,,
+Estonia,1977,False,,,No data,,,,,,,False,,,,,1450211.0,,
+Estonia,1978,False,,,No data,,,,,,,False,,,,,1460188.0,,
+Estonia,1979,False,,,No data,,,,,,,False,,,,,1468333.0,,
+Estonia,1980,False,,,No data,,,,,,,False,,,46.1,,1477219.0,,
 Estonia,1981,False,,,No data,,,,,,,False,,,,,1487666.0,,
 Estonia,1982,False,,,No data,,,,,,,False,,,,,1498414.0,,
-Estonia,1983,False,,,No data,,,,,,,False,,,,,1508745.0,-,-
-Estonia,1984,False,,,No data,,,,,,,False,,,,,1518617.0,-,-
-Estonia,1985,False,,,No data,,,,,,,False,,,41.81,,1528781.0,-,-
-Estonia,1986,False,,,No data,,,,,,,False,,,,,1540190.0,-,-
-Estonia,1987,False,,,No data,,,,,,,False,,,,,1552221.0,-,-
-Estonia,1988,False,,,No data,,,,,,,False,,,,,1561900.0,-,-
-Estonia,1989,False,,,No data,,,,,99.7264404296875,,False,,,,,1568131.0,-,-
-Estonia,1990,False,,,No data,,,,,,0.0,False,,,36.83,17760.0,1569174.0,-,-
+Estonia,1983,False,,,No data,,,,,,,False,,,,,1508745.0,,
+Estonia,1984,False,,,No data,,,,,,,False,,,,,1518617.0,,
+Estonia,1985,False,,,No data,,,,,,,False,,,41.81,,1528781.0,,
+Estonia,1986,False,,,No data,,,,,,,False,,,,,1540190.0,,
+Estonia,1987,False,,,No data,,,,,,,False,,,,,1552221.0,,
+Estonia,1988,False,,,No data,,,,,,,False,,,,,1561900.0,,
+Estonia,1989,False,,,No data,,,,,99.7264404296875,,False,,,,,1568131.0,,
+Estonia,1990,False,,,No data,,,,,,0.0,False,,,36.83,17760.0,1569174.0,,
 Estonia,1991,False,,0.0,No data,6.0,,,202.0,,0.0,False,0.5223171794602199,48.0,,18700.0,1561314.0,2,3
 Estonia,1992,True,,1.0,PR,6.0,,,1075.9,,0.065484797,False,0.5174292697324698,51.0,,14564.0,1533091.0,3,3
 Estonia,1993,False,,2.0,PR,6.0,,,89.57,,0.300711282,False,0.51243804818035,53.0,,13976.0,1494128.0,3,2
@@ -3316,25 +3316,25 @@ Gambia,2019,False,,,Plurality/Majority,,,,7.12,,34.5,False,,52.0,,5115.0,2508883
 Gambia,2020,False,,,Plurality/Majority,,,,5.93,,36.5,False,,52.0,,,2573995.0,4,4
 Georgia,1970,False,,,No data,,,,,,,False,,,,,4119900.0,,
 Georgia,1971,False,,,No data,,,,,,,False,,,,,4163000.0,,
-Georgia,1972,False,,,No data,,,,,,,False,,,,,4205300.0,-,-
-Georgia,1973,False,,,No data,,,,,,,False,,,,,4242500.0,-,-
-Georgia,1974,False,,,No data,,,,,,,False,,,,,4279500.0,-,-
-Georgia,1975,False,,,No data,,,,,,,False,,,,,4311200.0,-,-
-Georgia,1976,False,,,No data,,,,,,,False,,,,,4342400.0,-,-
-Georgia,1977,False,,,No data,,,,,,,False,,,,,4372100.0,-,-
-Georgia,1978,False,,,No data,,,,,,,False,,,,,4397700.0,-,-
-Georgia,1979,False,,,No data,,,,,,,False,,,,,4430200.0,-,-
-Georgia,1980,False,,,No data,,,,,,,False,,,,,4467700.0,-,-
+Georgia,1972,False,,,No data,,,,,,,False,,,,,4205300.0,,
+Georgia,1973,False,,,No data,,,,,,,False,,,,,4242500.0,,
+Georgia,1974,False,,,No data,,,,,,,False,,,,,4279500.0,,
+Georgia,1975,False,,,No data,,,,,,,False,,,,,4311200.0,,
+Georgia,1976,False,,,No data,,,,,,,False,,,,,4342400.0,,
+Georgia,1977,False,,,No data,,,,,,,False,,,,,4372100.0,,
+Georgia,1978,False,,,No data,,,,,,,False,,,,,4397700.0,,
+Georgia,1979,False,,,No data,,,,,,,False,,,,,4430200.0,,
+Georgia,1980,False,,,No data,,,,,,,False,,,,,4467700.0,,
 Georgia,1981,False,,,No data,,,,,,,False,,,,,4504500.0,,
 Georgia,1982,False,,,No data,,,,,,,False,,,,,4542800.0,,
-Georgia,1983,False,,,No data,,,,,,,False,,,,,4582900.0,-,-
-Georgia,1984,False,,,No data,,,,,,,False,,,,,4622200.0,-,-
-Georgia,1985,False,,,No data,,,,,,,False,,,,,4662900.0,-,-
-Georgia,1986,False,,,No data,,,,,,,False,,,,,4704500.0,-,-
-Georgia,1987,False,,,No data,,,,,,,False,,,,,4743500.0,-,-
-Georgia,1988,False,,,No data,,,,,,,False,,,,,4790700.0,-,-
-Georgia,1989,False,,,No data,,,,,,,False,,,,,4803300.0,-,-
-Georgia,1990,False,,,No data,,,,,,0.0,False,,,,64986.0,4802000.0,-,-
+Georgia,1983,False,,,No data,,,,,,,False,,,,,4582900.0,,
+Georgia,1984,False,,,No data,,,,,,,False,,,,,4622200.0,,
+Georgia,1985,False,,,No data,,,,,,,False,,,,,4662900.0,,
+Georgia,1986,False,,,No data,,,,,,,False,,,,,4704500.0,,
+Georgia,1987,False,,,No data,,,,,,,False,,,,,4743500.0,,
+Georgia,1988,False,,,No data,,,,,,,False,,,,,4790700.0,,
+Georgia,1989,False,,,No data,,,,,,,False,,,,,4803300.0,,
+Georgia,1990,False,,,No data,,,,,,0.0,False,,,,64986.0,4802000.0,,
 Georgia,1991,True,,0.0,No data,3.0,,,,,0.0,False,0.4275723650614399,32.0,,55268.0,4835900.0,6,5
 Georgia,1992,True,,0.0,Mixed,0.0,,,887.45,,0.0,False,0.41814637383517,33.0,,23983.0,4873500.0,4,5
 Georgia,1993,False,,0.0,Mixed,0.0,,,3125.37,,0.0,False,0.4086740202769799,34.0,,14017.0,4911100.0,5,5
@@ -3367,24 +3367,24 @@ Georgia,2019,False,,,Mixed,,35.9,19.9,4.85,99.55844116210938,68.84670565,False,,
 Georgia,2020,True,,,Mixed,,34.5,22.3,5.2,,72.53158402,False,,70.0,,,3722716.0,4,3
 Germany,1970,False,,,No data,,,,3.45,,,False,,63.0,51.31,1271643.0,78169289.0,,
 Germany,1971,False,,,No data,,,,5.24,,,False,,64.0,,1318939.0,78312842.0,,
-Germany,1972,False,,,No data,,,,5.48,,,False,,64.0,,1384776.0,78688452.0,-,-
-Germany,1973,False,,,No data,,,,7.03,,,False,,65.0,,1455367.0,78936666.0,-,-
-Germany,1974,False,,,No data,,,,6.99,,,False,,66.0,,1457746.0,78967433.0,-,-
-Germany,1975,False,,,No data,,,,5.91,,,False,,66.0,51.06,1466341.0,78673554.0,-,-
-Germany,1976,False,,,No data,,,,4.25,,,False,,67.0,,1542820.0,78336950.0,-,-
-Germany,1977,False,,,No data,,,,3.73,,,False,,68.0,,1600806.0,78159814.0,-,-
-Germany,1978,False,,,No data,,,,2.72,,,False,,68.0,,1669048.0,78091820.0,-,-
-Germany,1979,False,,,No data,,,,4.04,,,False,,68.0,,1735964.0,78126350.0,-,-
-Germany,1980,False,,,No data,,,,5.44,,,False,,70.0,49.76,1736297.0,78288576.0,-,-
+Germany,1972,False,,,No data,,,,5.48,,,False,,64.0,,1384776.0,78688452.0,,
+Germany,1973,False,,,No data,,,,7.03,,,False,,65.0,,1455367.0,78936666.0,,
+Germany,1974,False,,,No data,,,,6.99,,,False,,66.0,,1457746.0,78967433.0,,
+Germany,1975,False,,,No data,,,,5.91,,,False,,66.0,51.06,1466341.0,78673554.0,,
+Germany,1976,False,,,No data,,,,4.25,,,False,,67.0,,1542820.0,78336950.0,,
+Germany,1977,False,,,No data,,,,3.73,,,False,,68.0,,1600806.0,78159814.0,,
+Germany,1978,False,,,No data,,,,2.72,,,False,,68.0,,1669048.0,78091820.0,,
+Germany,1979,False,,,No data,,,,4.04,,,False,,68.0,,1735964.0,78126350.0,,
+Germany,1980,False,,,No data,,,,5.44,,,False,,70.0,49.76,1736297.0,78288576.0,,
 Germany,1981,False,,,No data,,,,6.34,,,False,,71.0,,1676250.0,78407907.0,,
 Germany,1982,False,,,No data,,,,5.24,,,False,,71.0,,1643902.0,78333366.0,,
-Germany,1983,False,,,No data,,,,3.29,,,False,,71.0,,1651925.0,78128282.0,-,-
-Germany,1984,False,,,No data,,,,2.41,,,False,,72.0,,1662090.0,77858685.0,-,-
-Germany,1985,False,,,No data,,,,2.07,,,False,,72.0,48.01,1672687.0,77684873.0,-,-
-Germany,1986,False,,,No data,,,,-0.13,,,False,,72.0,,1788948.0,77720436.0,-,-
-Germany,1987,False,,,No data,,,,0.25,,,False,,72.0,,1856396.0,77839920.0,-,-
-Germany,1988,False,,,No data,,,,1.27,,,False,,72.0,,1955973.0,78144619.0,-,-
-Germany,1989,False,,,No data,,,,2.78,,,False,,71.0,,2055193.0,78751283.0,-,-
+Germany,1983,False,,,No data,,,,3.29,,,False,,71.0,,1651925.0,78128282.0,,
+Germany,1984,False,,,No data,,,,2.41,,,False,,72.0,,1662090.0,77858685.0,,
+Germany,1985,False,,,No data,,,,2.07,,,False,,72.0,48.01,1672687.0,77684873.0,,
+Germany,1986,False,,,No data,,,,-0.13,,,False,,72.0,,1788948.0,77720436.0,,
+Germany,1987,False,,,No data,,,,0.25,,,False,,72.0,,1856396.0,77839920.0,,
+Germany,1988,False,,,No data,,,,1.27,,,False,,72.0,,1955973.0,78144619.0,,
+Germany,1989,False,,,No data,,,,2.78,,,False,,71.0,,2055193.0,78751283.0,,
 Germany,1990,True,,0.0,No data,10.0,,,2.7,,0.125892223,False,,74.0,33.62,2204489.0,79433029.0,1,2
 Germany,1991,True,,1.0,No data,10.0,29.4,0.1,4.05,,0.250274153,False,,76.0,,2341495.0,80013896.0,1,2
 Germany,1992,True,,2.0,No data,10.0,29.2,0.2,5.06,,0.43528529,False,,76.0,,2434019.0,80624598.0,1,2
@@ -3520,8 +3520,8 @@ Greece,2019,True,,,PR,,33.1,1.5,0.52,,75.67120669,False,,84.0,,302222.0,10721582
 Greece,2020,True,,,PR,,,,-1.25,,78.11584474,False,,83.0,,,10698599.0,1,2
 Grenada,1970,False,,,No data,,,,18.46,97.79447174072266,0.0,False,,,,179.0,98794.0,,
 Grenada,1971,False,,,No data,,,,18.46,,,False,,,,191.0,98535.0,,
-Grenada,1972,False,,,No data,,,,18.46,,,False,,,,209.0,98225.0,-,-
-Grenada,1973,False,,,No data,,,,18.46,,,False,,,,221.0,97886.0,-,-
+Grenada,1972,False,,,No data,,,,18.46,,,False,,,,209.0,98225.0,,
+Grenada,1973,False,,,No data,,,,18.46,,,False,,,,221.0,97886.0,,
 Grenada,1974,False,,,No data,,,,18.46,,,False,,32.0,,237.0,97528.0,2,4
 Grenada,1975,False,,,No data,,,,18.46,,0.0,False,,32.0,,261.0,97165.0,2,4
 Grenada,1976,False,,,No data,,,,18.46,,0.0,False,,32.0,,281.0,96781.0,2,4
@@ -3724,8 +3724,8 @@ Guinea,2019,False,,,Mixed,,,,9.47,,23.0,False,,48.0,,29383.0,12877539.0,5,5
 Guinea,2020,False,,,Mixed,,,,10.6,,26.0,False,,51.0,,,13205153.0,5,5
 Guinea-Bissau,1970,False,,,No data,,,,4.4,,,False,0.4306144520636145,,,1083.0,591663.0,,
 Guinea-Bissau,1971,False,,,No data,,,,5.62,,,False,0.4352588623972555,,,1048.0,594501.0,,
-Guinea-Bissau,1972,False,,,No data,,,,5.49,,,False,0.4399205705538174,,,1110.0,595950.0,-,-
-Guinea-Bissau,1973,False,,,No data,,,,0.79,,,False,0.4445992555526505,,,1133.0,603203.0,-,-
+Guinea-Bissau,1972,False,,,No data,,,,5.49,,,False,0.4399205705538174,,,1110.0,595950.0,,
+Guinea-Bissau,1973,False,,,No data,,,,0.79,,,False,0.4445992555526505,,,1133.0,603203.0,,
 Guinea-Bissau,1974,False,,0.0,No data,-7.0,,,30.67,,,False,0.4492946228587278,19.0,,1181.0,623576.0,6,6
 Guinea-Bissau,1975,False,,1.0,No data,-7.0,,,19.76,,,False,0.454005938419087,20.0,,1277.0,659635.0,6,6
 Guinea-Bissau,1976,False,,2.0,No data,-7.0,,,1.6,,,False,0.4587328316434598,21.0,,1379.0,701016.0,6,6
@@ -4693,25 +4693,25 @@ Jordan,2019,True,,,PR,,,,0.68,,,False,,74.0,,102985.0,10698683.0,5,5
 Jordan,2020,False,,,PR,,,,0.33,,,False,,71.0,,,10928721.0,6,5
 Kazakhstan,1970,False,,,No data,,,,,,,False,,,20.14,,12265305.0,,
 Kazakhstan,1971,False,,,No data,,,,,,,False,,,,,12444338.0,,
-Kazakhstan,1972,False,,,No data,,,,,,,False,,,,,12611997.0,-,-
-Kazakhstan,1973,False,,,No data,,,,,,,False,,,,,12789985.0,-,-
-Kazakhstan,1974,False,,,No data,,,,,,,False,,,,,12972497.0,-,-
-Kazakhstan,1975,False,,,No data,,,,,,,False,,,19.25,,13158942.0,-,-
-Kazakhstan,1976,False,,,No data,,,,,,,False,,,,,13346173.0,-,-
-Kazakhstan,1977,False,,,No data,,,,,,,False,,,,,13543521.0,-,-
-Kazakhstan,1978,False,,,No data,,,,,,,False,,,,,13750291.0,-,-
-Kazakhstan,1979,False,,,No data,,,,,,,False,,,,,13957795.0,-,-
-Kazakhstan,1980,False,,,No data,,,,,,,False,,,17.4,,14172710.0,-,-
+Kazakhstan,1972,False,,,No data,,,,,,,False,,,,,12611997.0,,
+Kazakhstan,1973,False,,,No data,,,,,,,False,,,,,12789985.0,,
+Kazakhstan,1974,False,,,No data,,,,,,,False,,,,,12972497.0,,
+Kazakhstan,1975,False,,,No data,,,,,,,False,,,19.25,,13158942.0,,
+Kazakhstan,1976,False,,,No data,,,,,,,False,,,,,13346173.0,,
+Kazakhstan,1977,False,,,No data,,,,,,,False,,,,,13543521.0,,
+Kazakhstan,1978,False,,,No data,,,,,,,False,,,,,13750291.0,,
+Kazakhstan,1979,False,,,No data,,,,,,,False,,,,,13957795.0,,
+Kazakhstan,1980,False,,,No data,,,,,,,False,,,17.4,,14172710.0,,
 Kazakhstan,1981,False,,,No data,,,,,,,False,,,,,14397391.0,,
 Kazakhstan,1982,False,,,No data,,,,,,,False,,,,,14634179.0,,
-Kazakhstan,1983,False,,,No data,,,,,,,False,,,,,14885966.0,-,-
-Kazakhstan,1984,False,,,No data,,,,,,,False,,,,,15147590.0,-,-
-Kazakhstan,1985,False,,,No data,,,,,,,False,,,16.45,,15413315.0,-,-
-Kazakhstan,1986,False,,,No data,,,,,,,False,,,,,15721289.0,-,-
-Kazakhstan,1987,False,,,No data,,,,,,,False,,,,,16072478.0,-,-
-Kazakhstan,1988,False,,,No data,,,,,,,False,,,,,16430590.0,-,-
-Kazakhstan,1989,False,,,No data,,,,,97.52938079833984,,False,,,,,16249500.0,-,-
-Kazakhstan,1990,False,,,No data,,,,,,0.0,False,,,15.78,198425.0,16348000.0,-,-
+Kazakhstan,1983,False,,,No data,,,,,,,False,,,,,14885966.0,,
+Kazakhstan,1984,False,,,No data,,,,,,,False,,,,,15147590.0,,
+Kazakhstan,1985,False,,,No data,,,,,,,False,,,16.45,,15413315.0,,
+Kazakhstan,1986,False,,,No data,,,,,,,False,,,,,15721289.0,,
+Kazakhstan,1987,False,,,No data,,,,,,,False,,,,,16072478.0,,
+Kazakhstan,1988,False,,,No data,,,,,,,False,,,,,16430590.0,,
+Kazakhstan,1989,False,,,No data,,,,,97.52938079833984,,False,,,,,16249500.0,,
+Kazakhstan,1990,False,,,No data,,,,,,0.0,False,,,15.78,198425.0,16348000.0,,
 Kazakhstan,1991,False,,0.0,No data,-3.0,,,,,0.0,False,0.6496081095074275,26.0,,196834.0,16451711.0,5,4
 Kazakhstan,1992,True,,1.0,No data,-3.0,,,2958.1,,0.0,False,0.6473851622167237,29.0,,208016.0,16439095.0,5,5
 Kazakhstan,1993,False,,2.0,No data,-3.0,,,1662.28,,0.0,False,0.6449957213398831,32.0,,148942.0,16380672.0,6,4
@@ -4795,43 +4795,43 @@ Kenya,2019,True,,,Plurality/Majority,,,,5.2,,22.66888257,False,,55.0,,217529.0,5
 Kenya,2020,True,,,Plurality/Majority,,,,5.4,,29.5,False,,55.0,,,51985780.0,4,4
 Kosovo,1970,False,,,No data,,,,,,,False,,,,,1219000.0,,
 Kosovo,1971,False,,,No data,,,,,,,False,,,,,1247000.0,,
-Kosovo,1972,False,,,No data,,,,,,,False,,,,,1278000.0,-,-
-Kosovo,1973,False,,,No data,,,,,,,False,,,,,1308000.0,-,-
-Kosovo,1974,False,,,No data,,,,,,,False,,,,,1339000.0,-,-
-Kosovo,1975,False,,,No data,,,,,,,False,,,,,1369000.0,-,-
-Kosovo,1976,False,,,No data,,,,,,,False,,,,,1400000.0,-,-
-Kosovo,1977,False,,,No data,,,,,,,False,,,,,1430000.0,-,-
-Kosovo,1978,False,,,No data,,,,,,,False,,,,,1460000.0,-,-
-Kosovo,1979,False,,,No data,,,,,,,False,,,,,1491000.0,-,-
-Kosovo,1980,False,,,No data,,,,,,,False,,,,,1521000.0,-,-
+Kosovo,1972,False,,,No data,,,,,,,False,,,,,1278000.0,,
+Kosovo,1973,False,,,No data,,,,,,,False,,,,,1308000.0,,
+Kosovo,1974,False,,,No data,,,,,,,False,,,,,1339000.0,,
+Kosovo,1975,False,,,No data,,,,,,,False,,,,,1369000.0,,
+Kosovo,1976,False,,,No data,,,,,,,False,,,,,1400000.0,,
+Kosovo,1977,False,,,No data,,,,,,,False,,,,,1430000.0,,
+Kosovo,1978,False,,,No data,,,,,,,False,,,,,1460000.0,,
+Kosovo,1979,False,,,No data,,,,,,,False,,,,,1491000.0,,
+Kosovo,1980,False,,,No data,,,,,,,False,,,,,1521000.0,,
 Kosovo,1981,False,,,No data,,,,,,,False,,,,,1552000.0,,
 Kosovo,1982,False,,,No data,,,,,,,False,,,,,1582000.0,,
-Kosovo,1983,False,,,No data,,,,,,,False,,,,,1614000.0,-,-
-Kosovo,1984,False,,,No data,,,,,,,False,,,,,1647000.0,-,-
-Kosovo,1985,False,,,No data,,,,,,,False,,,,,1682000.0,-,-
-Kosovo,1986,False,,,No data,,,,,,,False,,,,,1717000.0,-,-
-Kosovo,1987,False,,,No data,,,,,,,False,,,,,1753000.0,-,-
-Kosovo,1988,False,,,No data,,,,,,,False,,,,,1791000.0,-,-
-Kosovo,1989,False,,,No data,,,,,,,False,,,,,1827000.0,-,-
-Kosovo,1990,False,,,No data,,,,,,,False,,,,,1862000.0,-,-
-Kosovo,1991,False,,,No data,,,,,,,False,,,,,1898000.0,-,-
-Kosovo,1992,False,,,No data,,,,,,,False,,,,,1932000.0,-,-
-Kosovo,1993,False,,,No data,,,,,,,False,,,,,1965000.0,-,-
-Kosovo,1994,False,,,No data,,,,,,,False,,,,,1997000.0,-,-
-Kosovo,1995,False,,,No data,,,,,,,False,,,,,2029000.0,-,-
-Kosovo,1996,False,,,No data,,,,,,,False,,,,,2059000.0,-,-
-Kosovo,1997,False,,,No data,,,,,,,False,,,,,2086000.0,-,-
-Kosovo,1998,False,,,No data,,,,,,,False,,,,,1966000.0,-,-
-Kosovo,1999,True,,,No data,,,,,,,False,,,,,1762000.0,-,-
-Kosovo,2000,True,,,No data,,,,,,,False,,,,,1700000.0,-,-
-Kosovo,2001,True,,,PR,,,,,,,False,,,,,1701154.0,-,-
-Kosovo,2002,True,,,PR,,,,,,,False,,,,,1702310.0,-,-
-Kosovo,2003,True,,,PR,,29.0,24.5,-1.09,,,False,,,,,1703466.0,-,-
-Kosovo,2004,True,,,PR,,,,-1.06,,,False,,,,,1704622.0,-,-
-Kosovo,2005,True,,,PR,,31.2,24.9,-1.38,,,False,,,,,1705780.0,-,-
-Kosovo,2006,True,,,PR,,30.3,25.0,0.61,,,False,,,,,1719536.0,-,-
-Kosovo,2007,True,,,PR,,,,4.37,,,False,,,,,1733404.0,-,-
-Kosovo,2008,True,8.0,0.0,PR,8.0,,,9.34,,,False,,,,,1747383.0,-,-
+Kosovo,1983,False,,,No data,,,,,,,False,,,,,1614000.0,,
+Kosovo,1984,False,,,No data,,,,,,,False,,,,,1647000.0,,
+Kosovo,1985,False,,,No data,,,,,,,False,,,,,1682000.0,,
+Kosovo,1986,False,,,No data,,,,,,,False,,,,,1717000.0,,
+Kosovo,1987,False,,,No data,,,,,,,False,,,,,1753000.0,,
+Kosovo,1988,False,,,No data,,,,,,,False,,,,,1791000.0,,
+Kosovo,1989,False,,,No data,,,,,,,False,,,,,1827000.0,,
+Kosovo,1990,False,,,No data,,,,,,,False,,,,,1862000.0,,
+Kosovo,1991,False,,,No data,,,,,,,False,,,,,1898000.0,,
+Kosovo,1992,False,,,No data,,,,,,,False,,,,,1932000.0,,
+Kosovo,1993,False,,,No data,,,,,,,False,,,,,1965000.0,,
+Kosovo,1994,False,,,No data,,,,,,,False,,,,,1997000.0,,
+Kosovo,1995,False,,,No data,,,,,,,False,,,,,2029000.0,,
+Kosovo,1996,False,,,No data,,,,,,,False,,,,,2059000.0,,
+Kosovo,1997,False,,,No data,,,,,,,False,,,,,2086000.0,,
+Kosovo,1998,False,,,No data,,,,,,,False,,,,,1966000.0,,
+Kosovo,1999,True,,,No data,,,,,,,False,,,,,1762000.0,,
+Kosovo,2000,True,,,No data,,,,,,,False,,,,,1700000.0,,
+Kosovo,2001,True,,,PR,,,,,,,False,,,,,1701154.0,,
+Kosovo,2002,True,,,PR,,,,,,,False,,,,,1702310.0,,
+Kosovo,2003,True,,,PR,,29.0,24.5,-1.09,,,False,,,,,1703466.0,,
+Kosovo,2004,True,,,PR,,,,-1.06,,,False,,,,,1704622.0,,
+Kosovo,2005,True,,,PR,,31.2,24.9,-1.38,,,False,,,,,1705780.0,,
+Kosovo,2006,True,,,PR,,30.3,25.0,0.61,,,False,,,,,1719536.0,,
+Kosovo,2007,True,,,PR,,,,4.37,,,False,,,,,1733404.0,,
+Kosovo,2008,True,8.0,0.0,PR,8.0,,,9.34,,,False,,,,,1747383.0,,
 Kosovo,2009,True,8.0,1.0,PR,8.0,31.8,20.3,-2.4,,,False,,,,,1761474.0,5,4
 Kosovo,2010,True,6.0,2.0,PR,8.0,33.3,20.3,3.48,,,False,,,,,1775680.0,5,4
 Kosovo,2011,True,6.0,3.0,PR,8.0,27.8,17.5,7.34,,,False,,,,,1791000.0,5,4
@@ -4897,25 +4897,25 @@ Kuwait,2019,False,,,Other,,,,1.1,,99.54267645,False,,70.0,,235356.0,4441100.0,5,
 Kuwait,2020,False,,,Other,,,,1.0,96.4575424194336,99.10587967,False,,70.0,,,4360444.0,5,5
 Kyrgyzstan,1970,False,,,No data,,,,,,,False,,,32.92,,2959900.0,,
 Kyrgyzstan,1971,False,,,No data,,,,,,,False,,,,,3022300.0,,
-Kyrgyzstan,1972,False,,,No data,,,,,,,False,,,,,3088200.0,-,-
-Kyrgyzstan,1973,False,,,No data,,,,,,,False,,,,,3153800.0,-,-
-Kyrgyzstan,1974,False,,,No data,,,,,,,False,,,,,3223900.0,-,-
-Kyrgyzstan,1975,False,,,No data,,,,,,,False,,,29.96,,3292400.0,-,-
-Kyrgyzstan,1976,False,,,No data,,,,,,,False,,,,,3358700.0,-,-
-Kyrgyzstan,1977,False,,,No data,,,,,,,False,,,,,3423900.0,-,-
-Kyrgyzstan,1978,False,,,No data,,,,,,,False,,,,,3487100.0,-,-
-Kyrgyzstan,1979,False,,,No data,,,,,,,False,,,,,3552000.0,-,-
-Kyrgyzstan,1980,False,,,No data,,,,,,,False,,,25.33,,3617400.0,-,-
+Kyrgyzstan,1972,False,,,No data,,,,,,,False,,,,,3088200.0,,
+Kyrgyzstan,1973,False,,,No data,,,,,,,False,,,,,3153800.0,,
+Kyrgyzstan,1974,False,,,No data,,,,,,,False,,,,,3223900.0,,
+Kyrgyzstan,1975,False,,,No data,,,,,,,False,,,29.96,,3292400.0,,
+Kyrgyzstan,1976,False,,,No data,,,,,,,False,,,,,3358700.0,,
+Kyrgyzstan,1977,False,,,No data,,,,,,,False,,,,,3423900.0,,
+Kyrgyzstan,1978,False,,,No data,,,,,,,False,,,,,3487100.0,,
+Kyrgyzstan,1979,False,,,No data,,,,,,,False,,,,,3552000.0,,
+Kyrgyzstan,1980,False,,,No data,,,,,,,False,,,25.33,,3617400.0,,
 Kyrgyzstan,1981,False,,,No data,,,,,,,False,,,,,3685800.0,,
 Kyrgyzstan,1982,False,,,No data,,,,,,,False,,,,,3759300.0,,
-Kyrgyzstan,1983,False,,,No data,,,,,,,False,,,,,3838300.0,-,-
-Kyrgyzstan,1984,False,,,No data,,,,,,,False,,,,,3916400.0,-,-
-Kyrgyzstan,1985,False,,,No data,,,,,,,False,,,23.14,,3990300.0,-,-
-Kyrgyzstan,1986,False,,,No data,,,,,,,False,,,,,4066500.0,-,-
-Kyrgyzstan,1987,False,,,No data,,,,,,,False,,,,,4144600.0,-,-
-Kyrgyzstan,1988,False,,,No data,,,,,,,False,,,,,4218400.0,-,-
-Kyrgyzstan,1989,False,,,No data,,,,,,,False,,,,,4307500.0,-,-
-Kyrgyzstan,1990,False,,,No data,,,,,,0.0,False,,,20.94,36015.0,4391200.0,-,-
+Kyrgyzstan,1983,False,,,No data,,,,,,,False,,,,,3838300.0,,
+Kyrgyzstan,1984,False,,,No data,,,,,,,False,,,,,3916400.0,,
+Kyrgyzstan,1985,False,,,No data,,,,,,,False,,,23.14,,3990300.0,,
+Kyrgyzstan,1986,False,,,No data,,,,,,,False,,,,,4066500.0,,
+Kyrgyzstan,1987,False,,,No data,,,,,,,False,,,,,4144600.0,,
+Kyrgyzstan,1988,False,,,No data,,,,,,,False,,,,,4218400.0,,
+Kyrgyzstan,1989,False,,,No data,,,,,,,False,,,,,4307500.0,,
+Kyrgyzstan,1990,False,,,No data,,,,,,0.0,False,,,20.94,36015.0,4391200.0,,
 Kyrgyzstan,1991,False,,0.0,No data,-3.0,,,,,0.0,False,0.4014317176238201,29.0,,36106.0,4463600.0,5,4
 Kyrgyzstan,1992,False,,1.0,No data,-3.0,,,-71.33,,0.0,False,0.4125365984485798,31.0,,28335.0,4515400.0,4,2
 Kyrgyzstan,1993,False,,2.0,No data,-3.0,,,1086.19,,0.0,False,0.42354644338264,34.0,,24053.0,4516700.0,5,3
@@ -4999,25 +4999,25 @@ Laos,2019,False,,,Plurality/Majority,,,,3.32,,30.84,False,,45.0,,52761.0,7212053
 Laos,2020,False,,,Plurality/Majority,,,,5.13,,54.0,False,,44.0,,,7319399.0,7,6
 Latvia,1970,False,,,No data,,,,,,,False,,,29.44,,2359164.0,,
 Latvia,1971,False,,,No data,,,,,,,False,,,,,2376389.0,,
-Latvia,1972,False,,,No data,,,,,,,False,,,,,2395674.0,-,-
-Latvia,1973,False,,,No data,,,,,,,False,,,,,2415819.0,-,-
-Latvia,1974,False,,,No data,,,,,,,False,,,,,2437186.0,-,-
-Latvia,1975,False,,,No data,,,,,,,False,,,32.24,,2456130.0,-,-
-Latvia,1976,False,,,No data,,,,,,,False,,,,,2470989.0,-,-
-Latvia,1977,False,,,No data,,,,,,,False,,,,,2485073.0,-,-
-Latvia,1978,False,,,No data,,,,,,,False,,,,,2497921.0,-,-
-Latvia,1979,False,,,No data,,,,,,,False,,,,,2505953.0,-,-
-Latvia,1980,False,,,No data,,,,,,,False,,,31.4,,2511701.0,-,-
+Latvia,1972,False,,,No data,,,,,,,False,,,,,2395674.0,,
+Latvia,1973,False,,,No data,,,,,,,False,,,,,2415819.0,,
+Latvia,1974,False,,,No data,,,,,,,False,,,,,2437186.0,,
+Latvia,1975,False,,,No data,,,,,,,False,,,32.24,,2456130.0,,
+Latvia,1976,False,,,No data,,,,,,,False,,,,,2470989.0,,
+Latvia,1977,False,,,No data,,,,,,,False,,,,,2485073.0,,
+Latvia,1978,False,,,No data,,,,,,,False,,,,,2497921.0,,
+Latvia,1979,False,,,No data,,,,,,,False,,,,,2505953.0,,
+Latvia,1980,False,,,No data,,,,,,,False,,,31.4,,2511701.0,,
 Latvia,1981,False,,,No data,,,,,,,False,,,,,2519421.0,,
 Latvia,1982,False,,,No data,,,,,,,False,,,,,2531080.0,,
-Latvia,1983,False,,,No data,,,,,,,False,,,,,2546011.0,-,-
-Latvia,1984,False,,,No data,,,,,,,False,,,,,2562047.0,-,-
-Latvia,1985,False,,,No data,,,,,,,False,,,29.53,,2578873.0,-,-
-Latvia,1986,False,,,No data,,,,,,,False,,,,,2599892.0,-,-
-Latvia,1987,False,,,No data,,,,,,,False,,,,,2626583.0,-,-
-Latvia,1988,False,,,No data,,,,,,,False,,,,,2653434.0,-,-
-Latvia,1989,False,,,No data,,,,,99.45230102539062,,False,,,,,2666955.0,-,-
-Latvia,1990,False,,,No data,,,,,,0.0,False,,43.0,27.7,44957.0,2663151.0,-,-
+Latvia,1983,False,,,No data,,,,,,,False,,,,,2546011.0,,
+Latvia,1984,False,,,No data,,,,,,,False,,,,,2562047.0,,
+Latvia,1985,False,,,No data,,,,,,,False,,,29.53,,2578873.0,,
+Latvia,1986,False,,,No data,,,,,,,False,,,,,2599892.0,,
+Latvia,1987,False,,,No data,,,,,,,False,,,,,2626583.0,,
+Latvia,1988,False,,,No data,,,,,,,False,,,,,2653434.0,,
+Latvia,1989,False,,,No data,,,,,99.45230102539062,,False,,,,,2666955.0,,
+Latvia,1990,False,,,No data,,,,,,0.0,False,,43.0,27.7,44957.0,2663151.0,,
 Latvia,1991,False,,0.0,No data,8.0,,,,,0.0,False,0.7223222936195579,42.0,,40905.0,2650581.0,2,3
 Latvia,1992,True,,1.0,No data,8.0,,,951.7,,0.0,False,0.7259834597085816,46.0,,29148.0,2614338.0,3,3
 Latvia,1993,False,,2.0,PR,8.0,,,108.99,,0.0,False,0.7295260261205351,48.0,,27098.0,2563290.0,3,3
@@ -5254,25 +5254,25 @@ Libya,2019,True,,,Mixed,,,,4.56,,,False,,54.0,,,6569088.0,7,6
 Libya,2020,True,,,Mixed,,,,22.26,,,False,,55.0,,,6653942.0,7,6
 Lithuania,1970,False,,,No data,,,,,,,False,,,29.17,,3139689.0,,
 Lithuania,1971,False,,,No data,,,,,,,False,,,,,3179041.0,,
-Lithuania,1972,False,,,No data,,,,,,,False,,,,,3213622.0,-,-
-Lithuania,1973,False,,,No data,,,,,,,False,,,,,3244438.0,-,-
-Lithuania,1974,False,,,No data,,,,,,,False,,,,,3273894.0,-,-
-Lithuania,1975,False,,,No data,,,,,,,False,,,25.23,,3301652.0,-,-
-Lithuania,1976,False,,,No data,,,,,,,False,,,,,3328664.0,-,-
-Lithuania,1977,False,,,No data,,,,,,,False,,,,,3355036.0,-,-
-Lithuania,1978,False,,,No data,,,,,,,False,,,,,3379514.0,-,-
-Lithuania,1979,False,,,No data,,,,,,,False,,,,,3397842.0,-,-
-Lithuania,1980,False,,,No data,,,,,,,False,,,20.61,,3413202.0,-,-
+Lithuania,1972,False,,,No data,,,,,,,False,,,,,3213622.0,,
+Lithuania,1973,False,,,No data,,,,,,,False,,,,,3244438.0,,
+Lithuania,1974,False,,,No data,,,,,,,False,,,,,3273894.0,,
+Lithuania,1975,False,,,No data,,,,,,,False,,,25.23,,3301652.0,,
+Lithuania,1976,False,,,No data,,,,,,,False,,,,,3328664.0,,
+Lithuania,1977,False,,,No data,,,,,,,False,,,,,3355036.0,,
+Lithuania,1978,False,,,No data,,,,,,,False,,,,,3379514.0,,
+Lithuania,1979,False,,,No data,,,,,,,False,,,,,3397842.0,,
+Lithuania,1980,False,,,No data,,,,,,,False,,,20.61,,3413202.0,,
 Lithuania,1981,False,,,No data,,,,1.3,,,False,,,,,3432947.0,,
 Lithuania,1982,False,,,No data,,,,3.7,,,False,,,,,3457179.0,,
-Lithuania,1983,False,,,No data,,,,0.7,,,False,,,,,3485192.0,-,-
-Lithuania,1984,False,,,No data,,,,-0.6,,,False,,,,,3514205.0,-,-
-Lithuania,1985,False,,,No data,,,,0.6,,,False,,,15.69,,3544543.0,-,-
-Lithuania,1986,False,,,No data,,,,3.1,,,False,,,,,3578914.0,-,-
-Lithuania,1987,False,,,No data,,,,2.2,,,False,,,,,3616367.0,-,-
-Lithuania,1988,False,,,No data,,,,-0.4,,,False,,,,,3655049.0,-,-
-Lithuania,1989,False,,,No data,,,,1.9,98.44126892089844,,False,,,,,3684255.0,-,-
-Lithuania,1990,False,,,No data,,,,216.4,,0.0,False,,41.0,12.44,53624.0,3697838.0,-,-
+Lithuania,1983,False,,,No data,,,,0.7,,,False,,,,,3485192.0,,
+Lithuania,1984,False,,,No data,,,,-0.6,,,False,,,,,3514205.0,,
+Lithuania,1985,False,,,No data,,,,0.6,,,False,,,15.69,,3544543.0,,
+Lithuania,1986,False,,,No data,,,,3.1,,,False,,,,,3578914.0,,
+Lithuania,1987,False,,,No data,,,,2.2,,,False,,,,,3616367.0,,
+Lithuania,1988,False,,,No data,,,,-0.4,,,False,,,,,3655049.0,,
+Lithuania,1989,False,,,No data,,,,1.9,98.44126892089844,,False,,,,,3684255.0,,
+Lithuania,1990,False,,,No data,,,,216.4,,0.0,False,,41.0,12.44,53624.0,3697838.0,,
 Lithuania,1991,True,,0.0,No data,10.0,,,216.4,,0.0,False,0.362094526967134,41.0,,46833.0,3704134.0,2,3
 Lithuania,1992,True,,1.0,Mixed,10.0,,,1020.62,,0.0,False,0.3617945722461678,44.0,,39345.0,3700114.0,2,3
 Lithuania,1993,False,,2.0,Mixed,10.0,,,410.45,,0.0,False,0.3615062048880881,47.0,,33224.0,3682613.0,1,3
@@ -5407,26 +5407,26 @@ Macau,2019,False,,,No data,,,,2.75,,86.46792571,False,,54.0,,67463.0,663653.0,,
 Macau,2020,False,,,No data,,,,0.81,,88.1,False,,55.0,,,676283.0,,
 Macedonia,1970,False,,,No data,,,,,,,False,,,,,1656783.0,,
 Macedonia,1971,False,,,No data,,,,,,,False,,,,,1679012.0,,
-Macedonia,1972,False,,,No data,,,,,,,False,,,,,1701498.0,-,-
-Macedonia,1973,False,,,No data,,,,,,,False,,,,,1725228.0,-,-
-Macedonia,1974,False,,,No data,,,,,,,False,,,,,1749329.0,-,-
-Macedonia,1975,False,,,No data,,,,,,,False,,,,,1774013.0,-,-
-Macedonia,1976,False,,,No data,,,,,,,False,,,,,1799332.0,-,-
-Macedonia,1977,False,,,No data,,,,,,,False,,,,,1825299.0,-,-
-Macedonia,1978,False,,,No data,,,,,,,False,,,,,1851978.0,-,-
-Macedonia,1979,False,,,No data,,,,,,,False,,,,,1879354.0,-,-
-Macedonia,1980,False,,,No data,,,,,,,False,,,,,1907023.0,-,-
+Macedonia,1972,False,,,No data,,,,,,,False,,,,,1701498.0,,
+Macedonia,1973,False,,,No data,,,,,,,False,,,,,1725228.0,,
+Macedonia,1974,False,,,No data,,,,,,,False,,,,,1749329.0,,
+Macedonia,1975,False,,,No data,,,,,,,False,,,,,1774013.0,,
+Macedonia,1976,False,,,No data,,,,,,,False,,,,,1799332.0,,
+Macedonia,1977,False,,,No data,,,,,,,False,,,,,1825299.0,,
+Macedonia,1978,False,,,No data,,,,,,,False,,,,,1851978.0,,
+Macedonia,1979,False,,,No data,,,,,,,False,,,,,1879354.0,,
+Macedonia,1980,False,,,No data,,,,,,,False,,,,,1907023.0,,
 Macedonia,1981,False,,,No data,,,,,,,False,,,,,1935200.0,,
 Macedonia,1982,False,,,No data,,,,35.3,,,False,,,,,1958275.0,,
-Macedonia,1983,False,,,No data,,,,41.9,,,False,,,,,1974441.0,-,-
-Macedonia,1984,False,,,No data,,,,49.1,,,False,,,,,1988682.0,-,-
-Macedonia,1985,False,,,No data,,,,70.9,,,False,,,,,2001504.0,-,-
-Macedonia,1986,False,,,No data,,,,89.3,,,False,,,,,2012926.0,-,-
-Macedonia,1987,False,,,No data,,,,115.3,,,False,,,,,2023097.0,-,-
-Macedonia,1988,False,,,No data,,,,191.9,,,False,,,,,2031932.0,-,-
-Macedonia,1989,False,,,No data,,,,1258.2,,,False,,,,,2039426.0,-,-
-Macedonia,1990,False,,,No data,,,,600.0,,0.0,False,,,,12411.0,2044174.0,-,-
-Macedonia,1991,False,,0.0,No data,6.0,,,110.8,,0.0,False,0.5629638370835399,34.0,,12559.0,2036686.0,-,-
+Macedonia,1983,False,,,No data,,,,41.9,,,False,,,,,1974441.0,,
+Macedonia,1984,False,,,No data,,,,49.1,,,False,,,,,1988682.0,,
+Macedonia,1985,False,,,No data,,,,70.9,,,False,,,,,2001504.0,,
+Macedonia,1986,False,,,No data,,,,89.3,,,False,,,,,2012926.0,,
+Macedonia,1987,False,,,No data,,,,115.3,,,False,,,,,2023097.0,,
+Macedonia,1988,False,,,No data,,,,191.9,,,False,,,,,2031932.0,,
+Macedonia,1989,False,,,No data,,,,1258.2,,,False,,,,,2039426.0,,
+Macedonia,1990,False,,,No data,,,,600.0,,0.0,False,,,,12411.0,2044174.0,,
+Macedonia,1991,False,,0.0,No data,6.0,,,110.8,,0.0,False,0.5629638370835399,34.0,,12559.0,2036686.0,,
 Macedonia,1992,False,,1.0,No data,6.0,,,1511.7,,0.0,False,0.5580476808720117,34.0,,11563.0,2018023.0,3,4
 Macedonia,1993,False,,2.0,No data,6.0,,,338.68,,0.0,False,0.5530732676847582,34.0,,11337.0,1996893.0,3,3
 Macedonia,1994,True,,3.0,Plurality/Majority,6.0,,,125.49,94.05874633789062,0.0,False,0.5480505605372729,36.0,,11665.0,1982458.0,4,3
@@ -5968,25 +5968,25 @@ Mexico,2019,True,,,Mixed,,,,3.63,,70.06991047,False,,71.0,,2463238.0,125085311.0
 Mexico,2020,True,,,Mixed,,45.4,11.4,3.4,95.2478485107422,71.96819405,False,,71.0,,,125998302.0,3,4
 Moldova,1970,False,,,No data,,,,,,,False,,,9.73,,2456514.0,,
 Moldova,1971,False,,,No data,,,,,,,False,,,,,2483032.0,,
-Moldova,1972,False,,,No data,,,,,,,False,,,,,2509550.0,-,-
-Moldova,1973,False,,,No data,,,,,,,False,,,,,2536068.0,-,-
-Moldova,1974,False,,,No data,,,,,,,False,,,,,2563389.0,-,-
-Moldova,1975,False,,,No data,,,,,,,False,,,9.26,,2590711.0,-,-
-Moldova,1976,False,,,No data,,,,,,,False,,,,,2618032.0,-,-
-Moldova,1977,False,,,No data,,,,,,,False,,,,,2643746.0,-,-
-Moldova,1978,False,,,No data,,,,,,,False,,,,,2668657.0,-,-
-Moldova,1979,False,,,No data,,,,,,,False,,,,,2692764.0,-,-
-Moldova,1980,False,,,No data,,,,,,,False,,,8.5,,2716068.0,-,-
+Moldova,1972,False,,,No data,,,,,,,False,,,,,2509550.0,,
+Moldova,1973,False,,,No data,,,,,,,False,,,,,2536068.0,,
+Moldova,1974,False,,,No data,,,,,,,False,,,,,2563389.0,,
+Moldova,1975,False,,,No data,,,,,,,False,,,9.26,,2590711.0,,
+Moldova,1976,False,,,No data,,,,,,,False,,,,,2618032.0,,
+Moldova,1977,False,,,No data,,,,,,,False,,,,,2643746.0,,
+Moldova,1978,False,,,No data,,,,,,,False,,,,,2668657.0,,
+Moldova,1979,False,,,No data,,,,,,,False,,,,,2692764.0,,
+Moldova,1980,False,,,No data,,,,,,,False,,,8.5,,2716068.0,,
 Moldova,1981,False,,,No data,,,,,,,False,,,,,2740175.0,,
 Moldova,1982,False,,,No data,,,,,,,False,,,,,2765889.0,,
-Moldova,1983,False,,,No data,,,,,,,False,,,,,2792407.0,-,-
-Moldova,1984,False,,,No data,,,,,,,False,,,,,2819728.0,-,-
-Moldova,1985,False,,,No data,,,,,,,False,,,7.86,,2847050.0,-,-
-Moldova,1986,False,,,No data,,,,,,,False,,,,,2875175.0,-,-
-Moldova,1987,False,,,No data,,,,,,,False,,,,,2904907.0,-,-
-Moldova,1988,False,,,No data,,,,,,,False,,,,,2931424.0,-,-
-Moldova,1989,False,,,No data,,,,,96.37754821777344,,False,,,,,2952317.0,-,-
-Moldova,1990,False,,,No data,,,,,,0.0,False,,,7.21,28891.0,2965978.0,-,-
+Moldova,1983,False,,,No data,,,,,,,False,,,,,2792407.0,,
+Moldova,1984,False,,,No data,,,,,,,False,,,,,2819728.0,,
+Moldova,1985,False,,,No data,,,,,,,False,,,7.86,,2847050.0,,
+Moldova,1986,False,,,No data,,,,,,,False,,,,,2875175.0,,
+Moldova,1987,False,,,No data,,,,,,,False,,,,,2904907.0,,
+Moldova,1988,False,,,No data,,,,,,,False,,,,,2931424.0,,
+Moldova,1989,False,,,No data,,,,,96.37754821777344,,False,,,,,2952317.0,,
+Moldova,1990,False,,,No data,,,,,,0.0,False,,,7.21,28891.0,2965978.0,,
 Moldova,1991,True,,0.0,No data,5.0,,,,,0.0,False,0.0292028702860019,31.0,,27169.0,2973210.0,5,4
 Moldova,1992,True,,1.0,No data,5.0,,,1243.0,,0.0,False,0.0292777786318199,34.0,,15610.0,2975621.0,5,5
 Moldova,1993,False,,2.0,No data,5.0,,,788.5,,0.0,False,0.0293528759508155,36.0,,15619.0,2974817.0,5,5
@@ -6019,40 +6019,40 @@ Moldova,2019,False,,,Mixed,,26.0,2.6,4.85,,,False,,67.0,,35119.0,2664224.0,3,4
 Moldova,2020,False,,,Mixed,,,,3.77,,,False,,67.0,,,2635130.0,3,3
 Montenegro,1970,False,,,No data,,,,,,,False,,46.0,,,512407.0,,
 Montenegro,1971,False,,,No data,,,,,,,False,,46.0,,,515449.0,,
-Montenegro,1972,False,,,No data,,,,,,,False,,46.0,,,521785.0,-,-
-Montenegro,1973,False,,,No data,,,,,,,False,,46.0,,,530220.0,-,-
-Montenegro,1974,False,,,No data,,,,,,,False,,47.0,,,538902.0,-,-
-Montenegro,1975,False,,,No data,,,,,,,False,,48.0,,,546487.0,-,-
-Montenegro,1976,False,,,No data,,,,,,,False,,48.0,,,552562.0,-,-
-Montenegro,1977,False,,,No data,,,,,,,False,,48.0,,,557576.0,-,-
-Montenegro,1978,False,,,No data,,,,,,,False,,48.0,,,562065.0,-,-
-Montenegro,1979,False,,,No data,,,,,,,False,,48.0,,,566888.0,-,-
-Montenegro,1980,False,,,No data,,,,,,,False,,48.0,,,572608.0,-,-
+Montenegro,1972,False,,,No data,,,,,,,False,,46.0,,,521785.0,,
+Montenegro,1973,False,,,No data,,,,,,,False,,46.0,,,530220.0,,
+Montenegro,1974,False,,,No data,,,,,,,False,,47.0,,,538902.0,,
+Montenegro,1975,False,,,No data,,,,,,,False,,48.0,,,546487.0,,
+Montenegro,1976,False,,,No data,,,,,,,False,,48.0,,,552562.0,,
+Montenegro,1977,False,,,No data,,,,,,,False,,48.0,,,557576.0,,
+Montenegro,1978,False,,,No data,,,,,,,False,,48.0,,,562065.0,,
+Montenegro,1979,False,,,No data,,,,,,,False,,48.0,,,566888.0,,
+Montenegro,1980,False,,,No data,,,,,,,False,,48.0,,,572608.0,,
 Montenegro,1981,False,,,No data,,,,,89.63529968261719,,False,,48.0,,,579445.0,,
 Montenegro,1982,False,,,No data,,,,,,,False,,48.0,,,587001.0,,
-Montenegro,1983,False,,,No data,,,,,,,False,,48.0,,,594506.0,-,-
-Montenegro,1984,False,,,No data,,,,,,,False,,48.0,,,600884.0,-,-
-Montenegro,1985,False,,,No data,,,,,,,False,,48.0,,,605398.0,-,-
-Montenegro,1986,False,,,No data,,,,,,,False,,48.0,,,607711.0,-,-
-Montenegro,1987,False,,,No data,,,,,,,False,,48.0,,,608144.0,-,-
-Montenegro,1988,False,,,No data,,,,,,,False,,48.0,,,607413.0,-,-
-Montenegro,1989,False,,,No data,,,,,,,False,,48.0,,,606571.0,-,-
-Montenegro,1990,False,,,No data,,,,,,,False,,49.0,,6702.0,606372.0,-,-
-Montenegro,1991,False,,,No data,,,,,93.46273803710938,,False,,49.0,,5977.0,607105.0,-,-
-Montenegro,1992,False,,,No data,,,,,,,False,,49.0,,4572.0,608516.0,-,-
-Montenegro,1993,False,,,No data,,,,,,,False,,49.0,,2905.0,610170.0,-,-
-Montenegro,1994,False,,,No data,,,,,,,False,,49.0,,2945.0,611389.0,-,-
-Montenegro,1995,False,,,No data,,,,,,,False,,49.0,,3372.0,611712.0,-,-
-Montenegro,1996,False,,,No data,,,,,,,False,,49.0,,4312.0,611003.0,-,-
-Montenegro,1997,False,,,No data,,,,,,,False,,50.0,,4556.0,609520.0,-,-
-Montenegro,1998,False,,,No data,,,,,,,False,,50.0,,4838.0,607662.0,-,-
-Montenegro,1999,False,,,No data,,,,,,,False,,50.0,,4434.0,606001.0,-,-
-Montenegro,2000,False,,,No data,,,,29.86,,,False,,50.0,,4851.0,604950.0,-,-
-Montenegro,2001,True,,,No data,,,,23.73,,,False,,51.0,,5340.0,607389.0,-,-
-Montenegro,2002,False,,,No data,,,,19.7,,,False,,51.0,,5230.0,609828.0,-,-
-Montenegro,2003,False,,,No data,,,,7.5,97.7734603881836,,False,,51.0,,5259.0,612267.0,-,-
-Montenegro,2004,False,,,No data,,,,3.1,,25.3500686,False,,53.0,,5500.0,613353.0,-,-
-Montenegro,2005,False,,,No data,,,,3.45,,27.1,False,,54.0,,5839.0,614261.0,-,-
+Montenegro,1983,False,,,No data,,,,,,,False,,48.0,,,594506.0,,
+Montenegro,1984,False,,,No data,,,,,,,False,,48.0,,,600884.0,,
+Montenegro,1985,False,,,No data,,,,,,,False,,48.0,,,605398.0,,
+Montenegro,1986,False,,,No data,,,,,,,False,,48.0,,,607711.0,,
+Montenegro,1987,False,,,No data,,,,,,,False,,48.0,,,608144.0,,
+Montenegro,1988,False,,,No data,,,,,,,False,,48.0,,,607413.0,,
+Montenegro,1989,False,,,No data,,,,,,,False,,48.0,,,606571.0,,
+Montenegro,1990,False,,,No data,,,,,,,False,,49.0,,6702.0,606372.0,,
+Montenegro,1991,False,,,No data,,,,,93.46273803710938,,False,,49.0,,5977.0,607105.0,,
+Montenegro,1992,False,,,No data,,,,,,,False,,49.0,,4572.0,608516.0,,
+Montenegro,1993,False,,,No data,,,,,,,False,,49.0,,2905.0,610170.0,,
+Montenegro,1994,False,,,No data,,,,,,,False,,49.0,,2945.0,611389.0,,
+Montenegro,1995,False,,,No data,,,,,,,False,,49.0,,3372.0,611712.0,,
+Montenegro,1996,False,,,No data,,,,,,,False,,49.0,,4312.0,611003.0,,
+Montenegro,1997,False,,,No data,,,,,,,False,,50.0,,4556.0,609520.0,,
+Montenegro,1998,False,,,No data,,,,,,,False,,50.0,,4838.0,607662.0,,
+Montenegro,1999,False,,,No data,,,,,,,False,,50.0,,4434.0,606001.0,,
+Montenegro,2000,False,,,No data,,,,29.86,,,False,,50.0,,4851.0,604950.0,,
+Montenegro,2001,True,,,No data,,,,23.73,,,False,,51.0,,5340.0,607389.0,,
+Montenegro,2002,False,,,No data,,,,19.7,,,False,,51.0,,5230.0,609828.0,,
+Montenegro,2003,False,,,No data,,,,7.5,97.7734603881836,,False,,51.0,,5259.0,612267.0,,
+Montenegro,2004,False,,,No data,,,,3.1,,25.3500686,False,,53.0,,5500.0,613353.0,,
+Montenegro,2005,False,,,No data,,,,3.45,,27.1,False,,54.0,,5839.0,614261.0,,
 Montenegro,2006,False,4.0,0.0,PR,9.0,,,2.12,,28.9,False,,60.0,,6783.0,615025.0,3,3
 Montenegro,2007,True,2.0,1.0,PR,9.0,,,3.37,,30.8,False,,62.0,,8272.0,615875.0,3,3
 Montenegro,2008,False,2.0,2.0,PR,9.0,,,9.0,,32.9,False,,65.0,,8837.0,616969.0,3,3
@@ -6121,9 +6121,9 @@ Morocco,2019,False,,,PR,,,,0.24,,84.12036305,False,,70.0,,281738.0,36304408.0,5,
 Morocco,2020,False,,,PR,,,,0.71,,84.12036305,False,,70.0,,,36688772.0,5,5
 Mozambique,1970,False,,,No data,,,,4.7,,,False,,,10.72,6986.0,8411676.0,,
 Mozambique,1971,False,,,No data,,,,15.7,,,False,,,,7510.0,8622890.0,,
-Mozambique,1972,False,,,No data,,,,7.1,,,False,,,,7881.0,8860585.0,-,-
-Mozambique,1973,False,,,No data,,,,5.4,,,False,,,,8256.0,9123668.0,-,-
-Mozambique,1974,False,,,No data,,,,21.7,,,False,,,,8756.0,9404221.0,-,-
+Mozambique,1972,False,,,No data,,,,7.1,,,False,,,,7881.0,8860585.0,,
+Mozambique,1973,False,,,No data,,,,5.4,,,False,,,,8256.0,9123668.0,,
+Mozambique,1974,False,,,No data,,,,21.7,,,False,,,,8756.0,9404221.0,,
 Mozambique,1975,False,,0.0,No data,-8.0,,,3.3,,,False,0.5352124717167185,21.0,10.46,8948.0,9703732.0,6,6
 Mozambique,1976,False,,1.0,No data,-8.0,,,4.5,,,False,0.5415519020221637,20.0,,9474.0,10019210.0,7,7
 Mozambique,1977,False,,2.0,No data,-8.0,,,2.0,,,False,0.5477660213060112,21.0,,9386.0,10363575.0,7,7
@@ -6226,20 +6226,20 @@ Namibia,1971,False,,,No data,,,,6.53,,,False,,,,5433.0,776995.0,,
 Namibia,1972,False,,,No data,,,,9.5,,,False,,,,5540.0,800610.0,6,5
 Namibia,1973,False,,,No data,,,,11.6,,,False,,,,5752.0,824918.0,6,5
 Namibia,1974,False,,,No data,,,,13.52,,,False,,,,6178.0,850091.0,6,5
-Namibia,1975,True,,,No data,,,,11.24,,,False,,,13.49,6303.0,876572.0,-,-
-Namibia,1976,True,,,No data,,,,11.13,,,False,,,,6369.0,901840.0,-,-
-Namibia,1977,False,,,No data,,,,10.19,,,False,,,,6469.0,926109.0,-,-
-Namibia,1978,True,,,No data,,,,13.08,,,False,,,,6540.0,942023.0,-,-
-Namibia,1979,True,,,No data,,,,13.78,,,False,,,,6723.0,957334.0,-,-
-Namibia,1980,True,,,No data,,,,13.84,,,False,,,15.13,7758.0,975994.0,-,-
+Namibia,1975,True,,,No data,,,,11.24,,,False,,,13.49,6303.0,876572.0,,
+Namibia,1976,True,,,No data,,,,11.13,,,False,,,,6369.0,901840.0,,
+Namibia,1977,False,,,No data,,,,10.19,,,False,,,,6469.0,926109.0,,
+Namibia,1978,True,,,No data,,,,13.08,,,False,,,,6540.0,942023.0,,
+Namibia,1979,True,,,No data,,,,13.78,,,False,,,,6723.0,957334.0,,
+Namibia,1980,True,,,No data,,,,13.84,,,False,,,15.13,7758.0,975994.0,,
 Namibia,1981,False,,,No data,,,,14.76,,,False,,,,6987.0,987394.0,,
 Namibia,1982,True,,,No data,,,,15.54,,,False,,,,7023.0,1005520.0,,
-Namibia,1983,True,,,No data,,,,12.0,,,False,,,,6714.0,1033085.0,-,-
-Namibia,1984,True,,,No data,,,,9.1,,,False,,,,6969.0,1061995.0,-,-
-Namibia,1985,True,,,No data,,,,11.94,,,False,,,15.59,7812.0,1093311.0,-,-
-Namibia,1986,True,,,No data,,,,13.38,,,False,,,,7932.0,1127989.0,-,-
-Namibia,1987,True,,,No data,,,,12.62,,,False,,,,7617.0,1165430.0,-,-
-Namibia,1988,True,,,No data,,,,12.53,,,False,,,,8024.0,1207949.0,-,-
+Namibia,1983,True,,,No data,,,,12.0,,,False,,,,6714.0,1033085.0,,
+Namibia,1984,True,,,No data,,,,9.1,,,False,,,,6969.0,1061995.0,,
+Namibia,1985,True,,,No data,,,,11.94,,,False,,,15.59,7812.0,1093311.0,,
+Namibia,1986,True,,,No data,,,,13.38,,,False,,,,7932.0,1127989.0,,
+Namibia,1987,True,,,No data,,,,12.62,,,False,,,,7617.0,1165430.0,,
+Namibia,1988,True,,,No data,,,,12.53,,,False,,,,8024.0,1207949.0,,
 Namibia,1989,True,,,No data,,,,15.46,,,False,,,,8325.0,1288070.0,4,3
 Namibia,1990,True,,0.0,No data,6.0,,,12.02,,0.0,False,0.61264791884365,38.0,17.13,7292.0,1369011.0,2,3
 Namibia,1991,True,,1.0,No data,6.0,,,13.51,75.81658172607422,0.0,False,0.61208938965551,38.0,,7710.0,1415617.0,2,3
@@ -6937,9 +6937,9 @@ Panama,2019,False,,,PR,,49.8,4.3,-0.35,95.73607635498048,63.62841477,False,,71.0
 Panama,2020,False,,,PR,,,,-1.55,,64.25,False,,70.0,,,4294396.0,2,2
 Papua New Guinea,1970,False,,,No data,,,,0.65,,,False,,,0.94,,2489059.0,,
 Papua New Guinea,1971,False,,,No data,,,,3.58,,,False,,,,,2549315.0,,
-Papua New Guinea,1972,False,,,No data,,,,6.44,,,False,,,,,2610700.0,-,-
-Papua New Guinea,1973,False,,,No data,,,,8.41,,,False,,,,,2672144.0,-,-
-Papua New Guinea,1974,False,,,No data,,,,23.17,,,False,,,,,2733313.0,-,-
+Papua New Guinea,1972,False,,,No data,,,,6.44,,,False,,,,,2610700.0,,
+Papua New Guinea,1973,False,,,No data,,,,8.41,,,False,,,,,2672144.0,,
+Papua New Guinea,1974,False,,,No data,,,,23.17,,,False,,,,,2733313.0,,
 Papua New Guinea,1975,False,,0.0,No data,4.0,,,10.49,,,False,0.6171155733267433,29.0,4.9,,2794462.0,3,2
 Papua New Guinea,1976,False,,1.0,No data,4.0,,,7.66,,,False,0.6165753706375849,31.0,,,2855837.0,2,2
 Papua New Guinea,1977,False,,2.0,No data,4.0,,,4.53,,,False,0.6160199402672867,33.0,,,2917572.0,2,2
@@ -7498,25 +7498,25 @@ Romania,2019,False,,,PR,,34.8,4.6,3.83,,73.65747575,False,,80.0,,558260.0,193716
 Romania,2020,False,,,PR,,,,2.63,,78.45526741,False,,79.0,,,19265250.0,2,2
 Russia,1970,False,,,No data,,,,0.1,,,False,,,15.65,,130404000.0,,
 Russia,1971,False,,,No data,,,,-0.1,,,False,,,,,131155000.0,,
-Russia,1972,False,,,No data,,,,-0.2,,,False,,,,,131909000.0,-,-
-Russia,1973,False,,,No data,,,,0.0,,,False,,,,,132669000.0,-,-
-Russia,1974,False,,,No data,,,,-0.1,,,False,,,,,133432000.0,-,-
-Russia,1975,False,,,No data,,,,0.1,,,False,,,13.19,,134200000.0,-,-
-Russia,1976,False,,,No data,,,,0.0,,,False,,,,,135147000.0,-,-
-Russia,1977,False,,,No data,,,,0.3,,,False,,,,,136100000.0,-,-
-Russia,1978,False,,,No data,,,,0.7,,,False,,,,,137060000.0,-,-
-Russia,1979,False,,,No data,,,,1.1,,,False,,,,,138027000.0,-,-
-Russia,1980,False,,,No data,,,,1.1,,,False,,,10.85,,139010000.0,-,-
+Russia,1972,False,,,No data,,,,-0.2,,,False,,,,,131909000.0,,
+Russia,1973,False,,,No data,,,,0.0,,,False,,,,,132669000.0,,
+Russia,1974,False,,,No data,,,,-0.1,,,False,,,,,133432000.0,,
+Russia,1975,False,,,No data,,,,0.1,,,False,,,13.19,,134200000.0,,
+Russia,1976,False,,,No data,,,,0.0,,,False,,,,,135147000.0,,
+Russia,1977,False,,,No data,,,,0.3,,,False,,,,,136100000.0,,
+Russia,1978,False,,,No data,,,,0.7,,,False,,,,,137060000.0,,
+Russia,1979,False,,,No data,,,,1.1,,,False,,,,,138027000.0,,
+Russia,1980,False,,,No data,,,,1.1,,,False,,,10.85,,139010000.0,,
 Russia,1981,False,,,No data,,,,1.3,,,False,,,,,139941000.0,,
 Russia,1982,False,,,No data,,,,3.3,,,False,,,,,140823000.0,,
-Russia,1983,False,,,No data,,,,0.6,,,False,,,,,141668000.0,-,-
-Russia,1984,False,,,No data,,,,-0.9,,,False,,,,,142745000.0,-,-
-Russia,1985,False,,,No data,,,,0.4,,,False,,,8.45,,143858000.0,-,-
-Russia,1986,False,,,No data,,,,1.9,,,False,,,,,144894000.0,-,-
-Russia,1987,False,,,No data,,,,1.5,,,False,,,,,145908000.0,-,-
-Russia,1988,False,,,No data,,,,1.6,,,False,,,,,146857000.0,-,-
-Russia,1989,False,,,No data,,,,1.8,97.98605346679688,,False,,,,,147721000.0,-,-
-Russia,1990,False,,,No data,,,,5.6,,0.0,False,,47.0,6.53,2403881.0,147969407.0,-,-
+Russia,1983,False,,,No data,,,,0.6,,,False,,,,,141668000.0,,
+Russia,1984,False,,,No data,,,,-0.9,,,False,,,,,142745000.0,,
+Russia,1985,False,,,No data,,,,0.4,,,False,,,8.45,,143858000.0,,
+Russia,1986,False,,,No data,,,,1.9,,,False,,,,,144894000.0,,
+Russia,1987,False,,,No data,,,,1.5,,,False,,,,,145908000.0,,
+Russia,1988,False,,,No data,,,,1.6,,,False,,,,,146857000.0,,
+Russia,1989,False,,,No data,,,,1.8,97.98605346679688,,False,,,,,147721000.0,,
+Russia,1990,False,,,No data,,,,5.6,,0.0,False,,47.0,6.53,2403881.0,147969407.0,,
 Russia,1991,False,,,No data,,,,92.7,,0.0,False,0.6699413521220778,49.0,,2217230.0,148394216.0,3,3
 Russia,1992,True,,0.0,No data,5.0,,,1592.48,,0.000672532,True,0.665868171981907,50.0,,2423958.0,148538197.0,3,4
 Russia,1993,False,,1.0,Mixed,3.0,,,874.25,,0.013447238,True,0.6604152522498511,54.0,,2004084.0,148458777.0,3,4
@@ -7702,40 +7702,40 @@ Senegal,2019,True,,,Mixed,,,,1.02,,39.5,False,,61.0,,51998.0,16000781.0,3,3
 Senegal,2020,False,,,Mixed,,,,2.55,,42.6,False,,61.0,,,16436120.0,3,3
 Serbia,1970,False,,,No data,,,,,,,False,,38.0,26.08,,6972000.0,,
 Serbia,1971,False,,,No data,,,,,,,False,,38.0,,,7013000.0,,
-Serbia,1972,False,,,No data,,,,,,,False,,38.0,,,7053000.0,-,-
-Serbia,1973,False,,,No data,,,,,,,False,,38.0,,,7091000.0,-,-
-Serbia,1974,False,,,No data,,,,,,,False,,40.0,,,7128000.0,-,-
-Serbia,1975,False,,,No data,,,,,,,False,,40.0,28.55,,7163000.0,-,-
-Serbia,1976,False,,,No data,,,,,,,False,,40.0,,,7214000.0,-,-
-Serbia,1977,False,,,No data,,,,,,,False,,40.0,,,7258000.0,-,-
-Serbia,1978,False,,,No data,,,,,,,False,,41.0,,,7297000.0,-,-
-Serbia,1979,False,,,No data,,,,,,,False,,41.0,,,7332000.0,-,-
-Serbia,1980,False,,,No data,,,,,,,False,,41.0,30.57,,7362000.0,-,-
+Serbia,1972,False,,,No data,,,,,,,False,,38.0,,,7053000.0,,
+Serbia,1973,False,,,No data,,,,,,,False,,38.0,,,7091000.0,,
+Serbia,1974,False,,,No data,,,,,,,False,,40.0,,,7128000.0,,
+Serbia,1975,False,,,No data,,,,,,,False,,40.0,28.55,,7163000.0,,
+Serbia,1976,False,,,No data,,,,,,,False,,40.0,,,7214000.0,,
+Serbia,1977,False,,,No data,,,,,,,False,,40.0,,,7258000.0,,
+Serbia,1978,False,,,No data,,,,,,,False,,41.0,,,7297000.0,,
+Serbia,1979,False,,,No data,,,,,,,False,,41.0,,,7332000.0,,
+Serbia,1980,False,,,No data,,,,,,,False,,41.0,30.57,,7362000.0,,
 Serbia,1981,False,,,No data,,,,,,,False,,41.0,,,7405000.0,,
 Serbia,1982,False,,,No data,,,,,,,False,,41.0,,,7440000.0,,
-Serbia,1983,False,,,No data,,,,,,,False,,41.0,,,7468000.0,-,-
-Serbia,1984,False,,,No data,,,,,,,False,,41.0,,,7489000.0,-,-
-Serbia,1985,False,,,No data,,,,,,,False,,41.0,32.09,,7504000.0,-,-
-Serbia,1986,False,,,No data,,,,,,,False,,41.0,,,7536000.0,-,-
-Serbia,1987,False,,,No data,,,,,,,False,,41.0,,,7558000.0,-,-
-Serbia,1988,False,,,No data,,,,,,,False,,41.0,,,7572000.0,-,-
-Serbia,1989,False,,,No data,,,,,,,False,,41.0,,,7581000.0,-,-
-Serbia,1990,False,,,No data,,,,,,,False,,44.0,33.4,113436.0,7586000.0,-,-
-Serbia,1991,False,,,No data,,,,,,,False,,45.0,,100193.0,7595636.0,-,-
-Serbia,1992,False,,,No data,,,,,,,False,0.5563846540061499,45.0,,72005.0,7646424.0,-,-
-Serbia,1993,False,,,No data,,,,,,,False,0.5433937359827834,45.0,,50107.0,7699307.0,-,-
-Serbia,1994,False,,,No data,,,,,,,False,0.5291962640521857,42.0,,51373.0,7734639.0,-,-
-Serbia,1995,False,,,No data,,,,,,,False,0.514026027093172,43.0,32.42,54358.0,7625357.0,-,-
-Serbia,1996,False,,,No data,,,,,,,False,0.4980958030266106,44.0,,54383.0,7617794.0,-,-
-Serbia,1997,False,,,No data,,,,,,,False,0.4815961387188205,44.0,,58334.0,7596501.0,-,-
-Serbia,1998,False,,,No data,,,,30.0,,,False,0.4646953891838244,44.0,,62053.0,7567745.0,-,-
-Serbia,1999,False,,,No data,,,,41.1,,,False,0.4475404166252658,45.0,,56502.0,7540401.0,-,-
-Serbia,2000,False,,,No data,,,,70.0,,,False,0.4302580634133925,49.0,30.25,60002.0,7516346.0,-,-
-Serbia,2001,False,,,No data,,,,80.74,,,False,0.4129575386793314,50.0,,56563.0,7503433.0,-,-
-Serbia,2002,False,,,No data,,,,8.87,,,False,0.3957319220156249,55.0,,62472.0,7496522.0,-,-
-Serbia,2003,False,,,No data,,,,2.9,96.3972396850586,,False,0.3786603586962974,57.0,,67053.0,7480591.0,-,-
-Serbia,2004,False,,,No data,,,,10.6,,23.5,False,0.3618099733775882,60.0,,69948.0,7463157.0,-,-
-Serbia,2005,False,,,No data,,,,16.25,,26.3,False,0.3452372385135849,61.0,18.56,74951.0,7440769.0,-,-
+Serbia,1983,False,,,No data,,,,,,,False,,41.0,,,7468000.0,,
+Serbia,1984,False,,,No data,,,,,,,False,,41.0,,,7489000.0,,
+Serbia,1985,False,,,No data,,,,,,,False,,41.0,32.09,,7504000.0,,
+Serbia,1986,False,,,No data,,,,,,,False,,41.0,,,7536000.0,,
+Serbia,1987,False,,,No data,,,,,,,False,,41.0,,,7558000.0,,
+Serbia,1988,False,,,No data,,,,,,,False,,41.0,,,7572000.0,,
+Serbia,1989,False,,,No data,,,,,,,False,,41.0,,,7581000.0,,
+Serbia,1990,False,,,No data,,,,,,,False,,44.0,33.4,113436.0,7586000.0,,
+Serbia,1991,False,,,No data,,,,,,,False,,45.0,,100193.0,7595636.0,,
+Serbia,1992,False,,,No data,,,,,,,False,0.5563846540061499,45.0,,72005.0,7646424.0,,
+Serbia,1993,False,,,No data,,,,,,,False,0.5433937359827834,45.0,,50107.0,7699307.0,,
+Serbia,1994,False,,,No data,,,,,,,False,0.5291962640521857,42.0,,51373.0,7734639.0,,
+Serbia,1995,False,,,No data,,,,,,,False,0.514026027093172,43.0,32.42,54358.0,7625357.0,,
+Serbia,1996,False,,,No data,,,,,,,False,0.4980958030266106,44.0,,54383.0,7617794.0,,
+Serbia,1997,False,,,No data,,,,,,,False,0.4815961387188205,44.0,,58334.0,7596501.0,,
+Serbia,1998,False,,,No data,,,,30.0,,,False,0.4646953891838244,44.0,,62053.0,7567745.0,,
+Serbia,1999,False,,,No data,,,,41.1,,,False,0.4475404166252658,45.0,,56502.0,7540401.0,,
+Serbia,2000,False,,,No data,,,,70.0,,,False,0.4302580634133925,49.0,30.25,60002.0,7516346.0,,
+Serbia,2001,False,,,No data,,,,80.74,,,False,0.4129575386793314,50.0,,56563.0,7503433.0,,
+Serbia,2002,False,,,No data,,,,8.87,,,False,0.3957319220156249,55.0,,62472.0,7496522.0,,
+Serbia,2003,False,,,No data,,,,2.9,96.3972396850586,,False,0.3786603586962974,57.0,,67053.0,7480591.0,,
+Serbia,2004,False,,,No data,,,,10.6,,23.5,False,0.3618099733775882,60.0,,69948.0,7463157.0,,
+Serbia,2005,False,,,No data,,,,16.25,,26.3,False,0.3452372385135849,61.0,18.56,74951.0,7440769.0,,
 Serbia,2006,False,7.0,0.0,No data,8.0,,,10.73,,27.2,False,0.3289895808000014,66.0,,88010.0,7411569.0,3,2
 Serbia,2007,False,5.0,1.0,PR,8.0,,,6.0,,33.15,False,0.3131065753687965,68.0,,93841.0,7381579.0,3,2
 Serbia,2008,True,5.0,2.0,PR,8.0,,,12.39,,35.6,False,0.2976206017477356,69.0,,102723.0,7350222.0,3,2
@@ -7753,61 +7753,61 @@ Serbia,2019,False,,,PR,,34.5,4.6,1.85,99.48252868652344,77.41677362,False,,79.0,
 Serbia,2020,False,,,PR,,,,1.58,,78.36804077,False,,78.0,,,6899126.0,4,3
 Serbia-Montenegro,1970,False,,,No data,,,,,,,False,,,,,,,
 Serbia-Montenegro,1971,False,,,No data,,,,,,,False,,,,,,,
-Serbia-Montenegro,1972,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1973,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1974,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1975,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1976,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1977,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1978,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1979,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1980,False,,,No data,,,,,,,False,,,,,,-,-
+Serbia-Montenegro,1972,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1973,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1974,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1975,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1976,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1977,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1978,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1979,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1980,False,,,No data,,,,,,,False,,,,,,,
 Serbia-Montenegro,1981,False,,,No data,,,,,,,False,,,,,,,
 Serbia-Montenegro,1982,False,,,No data,,,,,,,False,,,,,,,
-Serbia-Montenegro,1983,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1984,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1985,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1986,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1987,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1988,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1989,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1990,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1991,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1992,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1993,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1994,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1995,False,10.0,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1996,False,9.0,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1997,False,9.0,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1998,False,10.0,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,1999,False,10.0,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2000,False,12.0,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2001,False,11.0,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2002,False,11.0,,No data,,,,,,,False,,,,,,-,-
+Serbia-Montenegro,1983,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1984,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1985,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1986,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1987,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1988,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1989,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1990,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1991,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1992,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1993,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1994,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1995,False,10.0,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1996,False,9.0,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1997,False,9.0,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1998,False,10.0,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,1999,False,10.0,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2000,False,12.0,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2001,False,11.0,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2002,False,11.0,,No data,,,,,,,False,,,,,,,
 Serbia-Montenegro,2003,True,9.0,3.0,No data,6.0,,,,,,False,,,,,,3,2
 Serbia-Montenegro,2004,True,9.0,4.0,No data,6.0,,,,,,False,,,,,,3,2
 Serbia-Montenegro,2005,True,8.0,5.0,No data,6.0,,,,,,False,,,,,,3,2
-Serbia-Montenegro,2006,True,,5.0,No data,6.0,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2007,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2008,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2009,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2010,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2011,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2012,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2013,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2014,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2015,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2016,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2017,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2018,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2019,False,,,No data,,,,,,,False,,,,,,-,-
-Serbia-Montenegro,2020,False,,,No data,,,,,,,False,,,,,,-,-
+Serbia-Montenegro,2006,True,,5.0,No data,6.0,,,,,,False,,,,,,,
+Serbia-Montenegro,2007,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2008,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2009,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2010,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2011,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2012,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2013,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2014,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2015,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2016,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2017,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2018,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2019,False,,,No data,,,,,,,False,,,,,,,
+Serbia-Montenegro,2020,False,,,No data,,,,,,,False,,,,,,,
 Seychelles,1970,False,,,No data,,,,14.89,,,False,,40.0,,410.0,53600.0,,
 Seychelles,1971,False,,,No data,,,,14.6,,,False,,40.0,,475.0,54695.0,,
-Seychelles,1972,False,,,No data,,,,20.94,,,False,,41.0,,507.0,56029.0,-,-
-Seychelles,1973,False,,,No data,,,,18.24,,,False,,41.0,,548.0,56892.0,-,-
-Seychelles,1974,False,,,No data,,,,24.42,,,False,,41.0,,560.0,57937.0,-,-
-Seychelles,1975,False,,,No data,,,,18.61,,,False,,41.0,,581.0,59292.0,-,-
+Seychelles,1972,False,,,No data,,,,20.94,,,False,,41.0,,507.0,56029.0,,
+Seychelles,1973,False,,,No data,,,,18.24,,,False,,41.0,,548.0,56892.0,,
+Seychelles,1974,False,,,No data,,,,24.42,,,False,,41.0,,560.0,57937.0,,
+Seychelles,1975,False,,,No data,,,,18.61,,,False,,41.0,,581.0,59292.0,,
 Seychelles,1976,False,,,No data,,,,14.87,,,False,,41.0,,648.0,60504.0,1,2
 Seychelles,1977,False,,,No data,,,,14.96,,,False,,42.0,,751.0,61786.0,6,3
 Seychelles,1978,False,,,No data,,,,11.78,,,False,,43.0,,814.0,62150.0,6,5
@@ -7957,27 +7957,27 @@ Singapore,2019,False,,,Plurality/Majority,,,,0.56,97.47958374023438,88.94925269,
 Singapore,2020,False,,,Plurality/Majority,,,,-0.18,,92.00434653,False,,83.0,,,5685807.0,4,4
 Slovak Republic,1970,False,,,No data,,,,,,,False,,,40.27,,4538223.0,,
 Slovak Republic,1971,False,,,No data,,,,,,,False,,,,,4557449.0,,
-Slovak Republic,1972,False,,,No data,,,,,,,False,,,,,4596622.0,-,-
-Slovak Republic,1973,False,,,No data,,,,,,,False,,,,,4641445.0,-,-
-Slovak Republic,1974,False,,,No data,,,,,,,False,,,,,4689623.0,-,-
-Slovak Republic,1975,False,,,No data,,,,,,,False,,,36.65,,4739105.0,-,-
-Slovak Republic,1976,False,,,No data,,,,,,,False,,,,,4789507.0,-,-
-Slovak Republic,1977,False,,,No data,,,,,,,False,,,,,4840501.0,-,-
-Slovak Republic,1978,False,,,No data,,,,,,,False,,,,,4890125.0,-,-
-Slovak Republic,1979,False,,,No data,,,,,,,False,,,,,4938973.0,-,-
-Slovak Republic,1980,False,,,No data,,,,,,,False,,,33.84,,4979815.0,-,-
+Slovak Republic,1972,False,,,No data,,,,,,,False,,,,,4596622.0,,
+Slovak Republic,1973,False,,,No data,,,,,,,False,,,,,4641445.0,,
+Slovak Republic,1974,False,,,No data,,,,,,,False,,,,,4689623.0,,
+Slovak Republic,1975,False,,,No data,,,,,,,False,,,36.65,,4739105.0,,
+Slovak Republic,1976,False,,,No data,,,,,,,False,,,,,4789507.0,,
+Slovak Republic,1977,False,,,No data,,,,,,,False,,,,,4840501.0,,
+Slovak Republic,1978,False,,,No data,,,,,,,False,,,,,4890125.0,,
+Slovak Republic,1979,False,,,No data,,,,,,,False,,,,,4938973.0,,
+Slovak Republic,1980,False,,,No data,,,,,,,False,,,33.84,,4979815.0,,
 Slovak Republic,1981,False,,,No data,,,,,,,False,,,,,5016105.0,,
 Slovak Republic,1982,False,,,No data,,,,,,,False,,,,,5055099.0,,
-Slovak Republic,1983,False,,,No data,,,,,,,False,,,,,5091971.0,-,-
-Slovak Republic,1984,False,,,No data,,,,,,,False,,,,,5127097.0,-,-
-Slovak Republic,1985,False,,,No data,,,,,,,False,,,31.88,,5161768.0,-,-
-Slovak Republic,1986,False,,,No data,,,,0.5,,,False,,,,,5193838.0,-,-
-Slovak Republic,1987,False,,,No data,,,,0.2,,,False,,,,,5222840.0,-,-
-Slovak Republic,1988,False,,,No data,,,,0.2,,,False,,,,,5250596.0,-,-
-Slovak Republic,1989,False,,,No data,,,,1.3,,,False,,,,,5275942.0,-,-
-Slovak Republic,1990,False,,,No data,,,,10.4,,0.0,False,,,28.93,99966.0,5299187.0,-,-
-Slovak Republic,1991,False,,,No data,,,,60.5,,0.0,False,,,,79604.0,5303294.0,-,-
-Slovak Republic,1992,False,,,No data,,,,9.89,,0.0,False,,,,74435.0,5305016.0,-,-
+Slovak Republic,1983,False,,,No data,,,,,,,False,,,,,5091971.0,,
+Slovak Republic,1984,False,,,No data,,,,,,,False,,,,,5127097.0,,
+Slovak Republic,1985,False,,,No data,,,,,,,False,,,31.88,,5161768.0,,
+Slovak Republic,1986,False,,,No data,,,,0.5,,,False,,,,,5193838.0,,
+Slovak Republic,1987,False,,,No data,,,,0.2,,,False,,,,,5222840.0,,
+Slovak Republic,1988,False,,,No data,,,,0.2,,,False,,,,,5250596.0,,
+Slovak Republic,1989,False,,,No data,,,,1.3,,,False,,,,,5275942.0,,
+Slovak Republic,1990,False,,,No data,,,,10.4,,0.0,False,,,28.93,99966.0,5299187.0,,
+Slovak Republic,1991,False,,,No data,,,,60.5,,0.0,False,,,,79604.0,5303294.0,,
+Slovak Republic,1992,False,,,No data,,,,9.89,,0.0,False,,,,74435.0,5305016.0,,
 Slovak Republic,1993,False,,0.0,No data,7.0,,,23.29,,0.127829232,False,0.5279228172752202,56.0,,74896.0,5325305.0,3,4
 Slovak Republic,1994,True,,1.0,PR,7.0,,,13.42,,0.318509704,False,0.5231787621375296,57.0,,78860.0,5346331.0,2,3
 Slovak Republic,1995,True,4.0,2.0,PR,7.0,,,9.84,,0.523210163,False,0.5181808531810798,59.0,22.23,82877.0,5361999.0,2,3
@@ -8008,25 +8008,25 @@ Slovak Republic,2019,False,,,PR,,23.2,0.6,2.77,,82.8536605,False,,83.0,,176538.0
 Slovak Republic,2020,False,,,PR,,,,1.94,,89.9209082,False,,83.0,,,5458827.0,1,1
 Slovenia,1970,False,,,No data,,,,,,,False,,,25.55,,1724891.0,,
 Slovenia,1971,False,,,No data,,,,,,,False,,,,,1738335.0,,
-Slovenia,1972,False,,,No data,,,,,,,False,,,,,1752233.0,-,-
-Slovenia,1973,False,,,No data,,,,,,,False,,,,,1766697.0,-,-
-Slovenia,1974,False,,,No data,,,,,,,False,,,,,1776132.0,-,-
-Slovenia,1975,False,,,No data,,,,,,,False,,,33.55,,1793581.0,-,-
-Slovenia,1976,False,,,No data,,,,,,,False,,,,,1820249.0,-,-
-Slovenia,1977,False,,,No data,,,,,,,False,,,,,1842377.0,-,-
-Slovenia,1978,False,,,No data,,,,,,,False,,,,,1862548.0,-,-
-Slovenia,1979,False,,,No data,,,,,,,False,,,,,1882599.0,-,-
-Slovenia,1980,False,,,No data,,,,,,,False,,,36.09,,1901315.0,-,-
+Slovenia,1972,False,,,No data,,,,,,,False,,,,,1752233.0,,
+Slovenia,1973,False,,,No data,,,,,,,False,,,,,1766697.0,,
+Slovenia,1974,False,,,No data,,,,,,,False,,,,,1776132.0,,
+Slovenia,1975,False,,,No data,,,,,,,False,,,33.55,,1793581.0,,
+Slovenia,1976,False,,,No data,,,,,,,False,,,,,1820249.0,,
+Slovenia,1977,False,,,No data,,,,,,,False,,,,,1842377.0,,
+Slovenia,1978,False,,,No data,,,,,,,False,,,,,1862548.0,,
+Slovenia,1979,False,,,No data,,,,,,,False,,,,,1882599.0,,
+Slovenia,1980,False,,,No data,,,,,,,False,,,36.09,,1901315.0,,
 Slovenia,1981,False,,,No data,,,,42.62,,,False,,,,,1906531.0,,
 Slovenia,1982,False,,,No data,,,,30.11,,,False,,,,,1910334.0,,
-Slovenia,1983,False,,,No data,,,,40.21,,,False,,,,,1922321.0,-,-
-Slovenia,1984,False,,,No data,,,,53.67,,,False,,,,,1932154.0,-,-
-Slovenia,1985,False,,,No data,,,,79.41,,,False,,,26.77,,1941641.0,-,-
-Slovenia,1986,False,,,No data,,,,95.89,,,False,,,,,1965964.0,-,-
-Slovenia,1987,False,,,No data,,,,132.07,,,False,,,,,1989776.0,-,-
-Slovenia,1988,False,,,No data,,,,198.75,,,False,,,,,1995196.0,-,-
-Slovenia,1989,False,,,No data,,,,1281.44,,,False,,,,,1996351.0,-,-
-Slovenia,1990,False,,,No data,,,,552.08,,0.0,False,,,15.7,42715.0,1998161.0,-,-
+Slovenia,1983,False,,,No data,,,,40.21,,,False,,,,,1922321.0,,
+Slovenia,1984,False,,,No data,,,,53.67,,,False,,,,,1932154.0,,
+Slovenia,1985,False,,,No data,,,,79.41,,,False,,,26.77,,1941641.0,,
+Slovenia,1986,False,,,No data,,,,95.89,,,False,,,,,1965964.0,,
+Slovenia,1987,False,,,No data,,,,132.07,,,False,,,,,1989776.0,,
+Slovenia,1988,False,,,No data,,,,198.75,,,False,,,,,1995196.0,,
+Slovenia,1989,False,,,No data,,,,1281.44,,,False,,,,,1996351.0,,
+Slovenia,1990,False,,,No data,,,,552.08,,0.0,False,,,15.7,42715.0,1998161.0,,
 Slovenia,1991,False,,0.0,No data,10.0,,,114.83,99.52452087402344,0.0,False,0.14448101741522,43.0,,37373.0,1999429.0,2,3
 Slovenia,1992,False,,1.0,PR,10.0,,,209.93,,0.0,False,0.1605706200901268,46.0,,35294.0,1996498.0,2,2
 Slovenia,1993,False,,2.0,PR,10.0,,,31.76,,0.409792399,False,0.1780105764716396,50.0,,37501.0,1991746.0,1,2
@@ -8059,12 +8059,12 @@ Slovenia,2019,False,,,PR,,24.4,0.0,1.63,,83.1083578,False,,80.0,,82557.0,2088385
 Slovenia,2020,False,,,PR,,,,-0.05,,86.60130109,False,,80.0,,,2102419.0,1,1
 Solomon Islands,1970,False,,,No data,,,,,,,False,,,,,172833.0,,
 Solomon Islands,1971,False,,,No data,,,,,,,False,,,,,177264.0,,
-Solomon Islands,1972,False,,,No data,,,,,,,False,,,,,181876.0,-,-
-Solomon Islands,1973,False,,,No data,,,,,,,False,,,,,186816.0,-,-
-Solomon Islands,1974,False,,,No data,,,,,,,False,,,,,192155.0,-,-
-Solomon Islands,1975,False,,,No data,,,,,,,False,,,,,197853.0,-,-
-Solomon Islands,1976,False,,,No data,,,,,,,False,,,,,204082.0,-,-
-Solomon Islands,1977,False,,,No data,,,,,,,False,,,,,210932.0,-,-
+Solomon Islands,1972,False,,,No data,,,,,,,False,,,,,181876.0,,
+Solomon Islands,1973,False,,,No data,,,,,,,False,,,,,186816.0,,
+Solomon Islands,1974,False,,,No data,,,,,,,False,,,,,192155.0,,
+Solomon Islands,1975,False,,,No data,,,,,,,False,,,,,197853.0,,
+Solomon Islands,1976,False,,,No data,,,,,,,False,,,,,204082.0,,
+Solomon Islands,1977,False,,,No data,,,,,,,False,,,,,210932.0,,
 Solomon Islands,1978,False,,0.0,No data,7.0,,,,,,False,0.3884508512659728,27.0,,,218193.0,2,2
 Solomon Islands,1979,False,,1.0,No data,7.0,,,,,,False,0.3909127295351025,27.0,,,225786.0,2,2
 Solomon Islands,1980,False,,2.0,No data,7.0,,,8.25,,,False,0.3933626386964041,29.0,,,233668.0,2,2
@@ -8263,45 +8263,45 @@ South Korea,2019,True,,,Mixed,,,,0.38,,96.15757918,False,,79.0,,2090946.0,517648
 South Korea,2020,False,,,Mixed,,,,0.54,,96.50505968,False,,78.0,,,51836239.0,2,2
 South Sudan,1970,False,,,No data,,,,,,,False,,,,,3342410.0,,
 South Sudan,1971,False,,,No data,,,,,,,False,,,,,3396808.0,,
-South Sudan,1972,False,,,No data,,,,,,,False,,,,,3464715.0,-,-
-South Sudan,1973,False,,,No data,,,,,,,False,,,,,3542465.0,-,-
-South Sudan,1974,False,,,No data,,,,,,,False,,,,,3629608.0,-,-
-South Sudan,1975,False,,,No data,,,,,,,False,,,,,3718279.0,-,-
-South Sudan,1976,False,,,No data,,,,,,,False,,,,,3808615.0,-,-
-South Sudan,1977,False,,,No data,,,,,,,False,,,,,3901044.0,-,-
-South Sudan,1978,False,,,No data,,,,,,,False,,,,,3995911.0,-,-
-South Sudan,1979,False,,,No data,,,,,,,False,,,,,4092792.0,-,-
-South Sudan,1980,False,,,No data,,,,,,,False,,,,,4192012.0,-,-
+South Sudan,1972,False,,,No data,,,,,,,False,,,,,3464715.0,,
+South Sudan,1973,False,,,No data,,,,,,,False,,,,,3542465.0,,
+South Sudan,1974,False,,,No data,,,,,,,False,,,,,3629608.0,,
+South Sudan,1975,False,,,No data,,,,,,,False,,,,,3718279.0,,
+South Sudan,1976,False,,,No data,,,,,,,False,,,,,3808615.0,,
+South Sudan,1977,False,,,No data,,,,,,,False,,,,,3901044.0,,
+South Sudan,1978,False,,,No data,,,,,,,False,,,,,3995911.0,,
+South Sudan,1979,False,,,No data,,,,,,,False,,,,,4092792.0,,
+South Sudan,1980,False,,,No data,,,,,,,False,,,,,4192012.0,,
 South Sudan,1981,False,,,No data,,,,,,,False,,,,,4293866.0,,
 South Sudan,1982,False,,,No data,,,,,,,False,,,,,4398297.0,,
-South Sudan,1983,False,,,No data,,,,,,,False,,,,,4502541.0,-,-
-South Sudan,1984,False,,,No data,,,,,,,False,,,,,4603039.0,-,-
-South Sudan,1985,False,,,No data,,,,,,,False,,,,,4706975.0,-,-
-South Sudan,1986,False,,,No data,,,,,,,False,,,,,4819667.0,-,-
-South Sudan,1987,False,,,No data,,,,,,,False,,,,,4893809.0,-,-
-South Sudan,1988,False,,,No data,,,,,,,False,,,,,4814879.0,-,-
-South Sudan,1989,False,,,No data,,,,,,,False,,,,,4706626.0,-,-
-South Sudan,1990,False,,,No data,,,,,,,False,,,,,4750817.0,-,-
-South Sudan,1991,False,,,No data,,,,,,,False,,,,,4867185.0,-,-
-South Sudan,1992,False,,,No data,,,,,,,False,,,,,4956969.0,-,-
-South Sudan,1993,False,,,No data,,,,,,,False,,,,,5018172.0,-,-
-South Sudan,1994,False,,,No data,,,,,,,False,,,,,5142863.0,-,-
-South Sudan,1995,False,,,No data,,,,,,,False,,,,,5302042.0,-,-
-South Sudan,1996,False,,,No data,,,,,,,False,,,,,5434894.0,-,-
-South Sudan,1997,False,,,No data,,,,,,,False,,,,,5589410.0,-,-
-South Sudan,1998,False,,,No data,,,,,,,False,,,,,5699436.0,-,-
-South Sudan,1999,False,,,No data,,,,,,,False,,,,,5850145.0,-,-
-South Sudan,2000,False,,,No data,,,,,,,False,,,,,6114440.0,-,-
-South Sudan,2001,False,,,No data,,,,,,,False,,,,,6394431.0,-,-
-South Sudan,2002,False,,,No data,,,,,,,False,,,,,6686100.0,-,-
-South Sudan,2003,False,,,No data,,,,,,,False,,,,,6992367.0,-,-
-South Sudan,2004,False,,,No data,,,,,,,False,,,,,7317118.0,-,-
-South Sudan,2005,False,,,No data,,,,,,,False,,,,,7662654.0,-,-
-South Sudan,2006,False,,,No data,,,,,,,False,,,,,8029517.0,-,-
-South Sudan,2007,False,,,No data,,,,,,,False,,,,,8417823.0,-,-
-South Sudan,2008,False,,,No data,,,,,26.831279754638672,,False,,,,,8823888.0,-,-
-South Sudan,2009,False,,,No data,,46.3,48.0,,,,False,,,,,9229227.0,-,-
-South Sudan,2010,False,,,Mixed,,,,,,,False,,,,,9714419.0,-,-
+South Sudan,1983,False,,,No data,,,,,,,False,,,,,4502541.0,,
+South Sudan,1984,False,,,No data,,,,,,,False,,,,,4603039.0,,
+South Sudan,1985,False,,,No data,,,,,,,False,,,,,4706975.0,,
+South Sudan,1986,False,,,No data,,,,,,,False,,,,,4819667.0,,
+South Sudan,1987,False,,,No data,,,,,,,False,,,,,4893809.0,,
+South Sudan,1988,False,,,No data,,,,,,,False,,,,,4814879.0,,
+South Sudan,1989,False,,,No data,,,,,,,False,,,,,4706626.0,,
+South Sudan,1990,False,,,No data,,,,,,,False,,,,,4750817.0,,
+South Sudan,1991,False,,,No data,,,,,,,False,,,,,4867185.0,,
+South Sudan,1992,False,,,No data,,,,,,,False,,,,,4956969.0,,
+South Sudan,1993,False,,,No data,,,,,,,False,,,,,5018172.0,,
+South Sudan,1994,False,,,No data,,,,,,,False,,,,,5142863.0,,
+South Sudan,1995,False,,,No data,,,,,,,False,,,,,5302042.0,,
+South Sudan,1996,False,,,No data,,,,,,,False,,,,,5434894.0,,
+South Sudan,1997,False,,,No data,,,,,,,False,,,,,5589410.0,,
+South Sudan,1998,False,,,No data,,,,,,,False,,,,,5699436.0,,
+South Sudan,1999,False,,,No data,,,,,,,False,,,,,5850145.0,,
+South Sudan,2000,False,,,No data,,,,,,,False,,,,,6114440.0,,
+South Sudan,2001,False,,,No data,,,,,,,False,,,,,6394431.0,,
+South Sudan,2002,False,,,No data,,,,,,,False,,,,,6686100.0,,
+South Sudan,2003,False,,,No data,,,,,,,False,,,,,6992367.0,,
+South Sudan,2004,False,,,No data,,,,,,,False,,,,,7317118.0,,
+South Sudan,2005,False,,,No data,,,,,,,False,,,,,7662654.0,,
+South Sudan,2006,False,,,No data,,,,,,,False,,,,,8029517.0,,
+South Sudan,2007,False,,,No data,,,,,,,False,,,,,8417823.0,,
+South Sudan,2008,False,,,No data,,,,,26.831279754638672,,False,,,,,8823888.0,,
+South Sudan,2009,False,,,No data,,46.3,48.0,,,,False,,,,,9229227.0,,
+South Sudan,2010,False,,,Mixed,,,,,,,False,,,,,9714419.0,,
 South Sudan,2011,False,,0.0,Mixed,0.0,,,,,,False,,,,,10243050.0,6,5
 South Sudan,2012,True,18.0,1.0,Mixed,0.0,,,45.08,,,False,,,,,10701604.0,6,5
 South Sudan,2013,True,22.0,0.0,Mixed,0.0,,,-0.04,,2.2,False,,,,,11106031.0,6,6
@@ -8384,36 +8384,36 @@ Soviet Union,1987,False,,65.0,No data,-7.0,,,,,,False,0.714440134142098,,,,,7,6
 Soviet Union,1988,False,,0.0,No data,-6.0,,,,,,False,0.7137858210162639,,,,,6,5
 Soviet Union,1989,True,,0.0,No data,-4.0,,,,,,False,0.7131272515279333,,,,,6,5
 Soviet Union,1990,True,,0.0,No data,0.0,,,,,,False,0.7124645921490804,,,,,5,4
-Soviet Union,1991,True,,0.0,No data,0.0,,,,,,False,0.7117977256129269,,,,,-,-
-Soviet Union,1992,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,1993,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,1994,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,1995,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,1996,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,1997,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,1998,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,1999,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2000,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2001,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2002,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2003,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2004,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2005,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2006,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2007,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2008,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2009,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2010,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2011,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2012,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2013,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2014,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2015,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2016,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2017,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2018,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2019,False,,,No data,,,,,,,False,,,,,,-,-
-Soviet Union,2020,False,,,No data,,,,,,,False,,,,,,-,-
+Soviet Union,1991,True,,0.0,No data,0.0,,,,,,False,0.7117977256129269,,,,,,
+Soviet Union,1992,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,1993,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,1994,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,1995,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,1996,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,1997,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,1998,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,1999,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2000,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2001,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2002,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2003,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2004,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2005,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2006,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2007,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2008,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2009,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2010,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2011,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2012,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2013,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2014,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2015,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2016,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2017,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2018,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2019,False,,,No data,,,,,,,False,,,,,,,
+Soviet Union,2020,False,,,No data,,,,,,,False,,,,,,,
 Spain,1970,True,,31.0,No data,-7.0,,,5.76,,,False,0.0318319072140952,50.0,41.99,400294.0,33814531.0,,
 Spain,1971,True,,32.0,No data,-7.0,,,8.24,,,False,0.0333825795078464,52.0,,421275.0,34224490.0,,
 Spain,1972,True,,33.0,No data,-7.0,,,8.27,,,False,0.0350049371163375,53.0,,457764.0,34604469.0,5,6
@@ -8518,15 +8518,15 @@ Sri Lanka,2019,True,,,PR,,,,4.3,92.25296020507812,29.0,False,,59.0,,271111.0,218
 Sri Lanka,2020,True,,,PR,,,,6.15,,35.0,False,,57.0,,,21919000.0,4,4
 St. Kitts and Nevis,1970,False,,,No data,,,,15.8,,,False,,,,142.0,44968.0,,
 St. Kitts and Nevis,1971,False,,,No data,,,,-1.6,,,False,,,,156.0,44583.0,,
-St. Kitts and Nevis,1972,False,,,No data,,,,6.2,,,False,,,,169.0,44416.0,-,-
-St. Kitts and Nevis,1973,False,,,No data,,,,10.3,,,False,,,,151.0,44242.0,-,-
-St. Kitts and Nevis,1974,False,,,No data,,,,28.4,,,False,,,,200.0,44056.0,-,-
-St. Kitts and Nevis,1975,False,,,No data,,,,10.7,,,False,,,,212.0,43888.0,-,-
-St. Kitts and Nevis,1976,False,,,No data,,,,13.1,,,False,,,,219.0,43740.0,-,-
-St. Kitts and Nevis,1977,False,,,No data,,,,17.8,,,False,,,,222.0,43603.0,-,-
-St. Kitts and Nevis,1978,False,,,No data,,,,33.42,,,False,,,,244.0,43465.0,-,-
-St. Kitts and Nevis,1979,False,,,No data,,,,11.2,,,False,,,,269.0,43278.0,-,-
-St. Kitts and Nevis,1980,False,,,No data,,,,19.33,,,False,,,,290.0,43097.0,-,-
+St. Kitts and Nevis,1972,False,,,No data,,,,6.2,,,False,,,,169.0,44416.0,,
+St. Kitts and Nevis,1973,False,,,No data,,,,10.3,,,False,,,,151.0,44242.0,,
+St. Kitts and Nevis,1974,False,,,No data,,,,28.4,,,False,,,,200.0,44056.0,,
+St. Kitts and Nevis,1975,False,,,No data,,,,10.7,,,False,,,,212.0,43888.0,,
+St. Kitts and Nevis,1976,False,,,No data,,,,13.1,,,False,,,,219.0,43740.0,,
+St. Kitts and Nevis,1977,False,,,No data,,,,17.8,,,False,,,,222.0,43603.0,,
+St. Kitts and Nevis,1978,False,,,No data,,,,33.42,,,False,,,,244.0,43465.0,,
+St. Kitts and Nevis,1979,False,,,No data,,,,11.2,,,False,,,,269.0,43278.0,,
+St. Kitts and Nevis,1980,False,,,No data,,,,19.33,,,False,,,,290.0,43097.0,,
 St. Kitts and Nevis,1981,False,,,No data,,,,8.56,,,False,,,,302.0,42953.0,,
 St. Kitts and Nevis,1982,False,,,No data,,,,5.97,,,False,,,,293.0,42794.0,,
 St. Kitts and Nevis,1983,False,,,No data,,,,2.23,,,False,,36.0,,297.0,42600.0,2,2
@@ -8569,13 +8569,13 @@ St. Kitts and Nevis,2019,False,,,Plurality/Majority,,,,-0.18,,,False,,49.0,,1457
 St. Kitts and Nevis,2020,False,,,Plurality/Majority,,,,-0.59,,,False,,49.0,,,47642.0,2,1
 St. Lucia,1970,False,,,No data,,,,13.4,,,False,,,,,103090.0,,
 St. Lucia,1971,False,,,No data,,,,8.39,,,False,,,,,104781.0,,
-St. Lucia,1972,False,,,No data,,,,7.88,,,False,,,,,106457.0,-,-
-St. Lucia,1973,False,,,No data,,,,13.44,,,False,,,,,108114.0,-,-
-St. Lucia,1974,False,,,No data,,,,34.22,,,False,,,,,109740.0,-,-
-St. Lucia,1975,False,,,No data,,,,17.74,,,False,,,,,111497.0,-,-
-St. Lucia,1976,False,,,No data,,,,9.67,,,False,,,,,113421.0,-,-
-St. Lucia,1977,False,,,No data,,,,8.87,,,False,,,,,115385.0,-,-
-St. Lucia,1978,False,,,No data,,,,10.88,,,False,,,,,117397.0,-,-
+St. Lucia,1972,False,,,No data,,,,7.88,,,False,,,,,106457.0,,
+St. Lucia,1973,False,,,No data,,,,13.44,,,False,,,,,108114.0,,
+St. Lucia,1974,False,,,No data,,,,34.22,,,False,,,,,109740.0,,
+St. Lucia,1975,False,,,No data,,,,17.74,,,False,,,,,111497.0,,
+St. Lucia,1976,False,,,No data,,,,9.67,,,False,,,,,113421.0,,
+St. Lucia,1977,False,,,No data,,,,8.87,,,False,,,,,115385.0,,
+St. Lucia,1978,False,,,No data,,,,10.88,,,False,,,,,117397.0,,
 St. Lucia,1979,False,,,No data,,,,9.39,,,False,,35.0,,,119463.0,2,3
 St. Lucia,1980,False,,,No data,,,,19.37,,,False,,36.0,,,121633.0,2,2
 St. Lucia,1981,False,,,No data,,,,15.13,,,False,,37.0,,,123909.0,,
@@ -8671,9 +8671,9 @@ Sudan,2019,True,,,Mixed,,,,50.99,,25.9,False,,45.0,,170040.0,43232093.0,7,6
 Sudan,2020,True,,,Mixed,,,,17087.72,,28.4,False,,47.0,,,44440486.0,7,6
 Suriname,1970,False,,,No data,,,,2.59,,,False,,,,1836.0,379918.0,,
 Suriname,1971,False,,,No data,,,,0.22,,,False,,,,1953.0,392026.0,,
-Suriname,1972,False,,,No data,,,,3.23,,,False,,,,2019.0,397529.0,-,-
-Suriname,1973,False,,,No data,,,,12.94,,,False,,,,2121.0,396331.0,-,-
-Suriname,1974,False,,,No data,,,,16.88,,,False,,,,1925.0,394519.0,-,-
+Suriname,1972,False,,,No data,,,,3.23,,,False,,,,2019.0,397529.0,,
+Suriname,1973,False,,,No data,,,,12.94,,,False,,,,2121.0,396331.0,,
+Suriname,1974,False,,,No data,,,,16.88,,,False,,,,1925.0,394519.0,,
 Suriname,1975,False,,0.0,No data,5.0,,,8.45,,,False,,36.0,,2099.0,392137.0,2,2
 Suriname,1976,False,,1.0,No data,5.0,,,10.07,,,False,,36.0,,2193.0,389231.0,2,2
 Suriname,1977,False,,2.0,No data,5.0,,,9.73,,,False,,36.0,,2480.0,385810.0,2,2
@@ -8977,25 +8977,25 @@ Taiwan,2019,True,,,Mixed,,,,,,,False,,,,1153761.0,,1,1
 Taiwan,2020,False,,,Mixed,,,,,,,False,,,,,,1,1
 Tajikistan,1970,False,,,No data,,,,,,,False,,,17.07,,2993019.0,,
 Tajikistan,1971,False,,,No data,,,,,,,False,,,,,3085961.0,,
-Tajikistan,1972,False,,,No data,,,,,,,False,,,,,3180461.0,-,-
-Tajikistan,1973,False,,,No data,,,,,,,False,,,,,3277487.0,-,-
-Tajikistan,1974,False,,,No data,,,,,,,False,,,,,3377758.0,-,-
-Tajikistan,1975,False,,,No data,,,,,,,False,,,15.15,,3482125.0,-,-
-Tajikistan,1976,False,,,No data,,,,,,,False,,,,,3590606.0,-,-
-Tajikistan,1977,False,,,No data,,,,,,,False,,,,,3703010.0,-,-
-Tajikistan,1978,False,,,No data,,,,,,,False,,,,,3818114.0,-,-
-Tajikistan,1979,False,,,No data,,,,,,,False,,,,,3932682.0,-,-
-Tajikistan,1980,False,,,No data,,,,,,,False,,,11.54,,4045965.0,-,-
+Tajikistan,1972,False,,,No data,,,,,,,False,,,,,3180461.0,,
+Tajikistan,1973,False,,,No data,,,,,,,False,,,,,3277487.0,,
+Tajikistan,1974,False,,,No data,,,,,,,False,,,,,3377758.0,,
+Tajikistan,1975,False,,,No data,,,,,,,False,,,15.15,,3482125.0,,
+Tajikistan,1976,False,,,No data,,,,,,,False,,,,,3590606.0,,
+Tajikistan,1977,False,,,No data,,,,,,,False,,,,,3703010.0,,
+Tajikistan,1978,False,,,No data,,,,,,,False,,,,,3818114.0,,
+Tajikistan,1979,False,,,No data,,,,,,,False,,,,,3932682.0,,
+Tajikistan,1980,False,,,No data,,,,,,,False,,,11.54,,4045965.0,,
 Tajikistan,1981,False,,,No data,,,,,,,False,,,,,4160745.0,,
 Tajikistan,1982,False,,,No data,,,,,,,False,,,,,4278908.0,,
-Tajikistan,1983,False,,,No data,,,,,,,False,,,,,4401502.0,-,-
-Tajikistan,1984,False,,,No data,,,,,,,False,,,,,4529501.0,-,-
-Tajikistan,1985,False,,,No data,,,,,,,False,,,9.9,,4660598.0,-,-
-Tajikistan,1986,False,,,No data,,,,,,,False,,,,,4798281.0,-,-
-Tajikistan,1987,False,,,No data,,,,,,,False,,,,,4946293.0,-,-
-Tajikistan,1988,False,,,No data,,,,,,,False,,,,,5100020.0,-,-
-Tajikistan,1989,False,,,No data,,,,,97.69402313232422,,False,,,,,5264332.0,-,-
-Tajikistan,1990,False,,,No data,,,,,,0.0,False,,,7.69,36567.0,5417860.0,-,-
+Tajikistan,1983,False,,,No data,,,,,,,False,,,,,4401502.0,,
+Tajikistan,1984,False,,,No data,,,,,,,False,,,,,4529501.0,,
+Tajikistan,1985,False,,,No data,,,,,,,False,,,9.9,,4660598.0,,
+Tajikistan,1986,False,,,No data,,,,,,,False,,,,,4798281.0,,
+Tajikistan,1987,False,,,No data,,,,,,,False,,,,,4946293.0,,
+Tajikistan,1988,False,,,No data,,,,,,,False,,,,,5100020.0,,
+Tajikistan,1989,False,,,No data,,,,,97.69402313232422,,False,,,,,5264332.0,,
+Tajikistan,1990,False,,,No data,,,,,,0.0,False,,,7.69,36567.0,5417860.0,,
 Tajikistan,1991,False,,0.0,No data,-2.0,,,,,0.0,False,0.3442171651427201,24.0,,36155.0,5556306.0,5,5
 Tajikistan,1992,True,,0.0,No data,-6.0,,,,,0.0,False,0.34085705944718,24.0,,18819.0,5656208.0,6,6
 Tajikistan,1993,False,,1.0,No data,-6.0,,,2600.72,,0.0,False,0.3375015501999999,30.0,,17508.0,5717806.0,7,7
@@ -9334,25 +9334,25 @@ Turkey,2019,True,,,PR,,41.9,3.5,15.18,96.7422103881836,73.97670281,False,,71.0,,
 Turkey,2020,True,,,PR,,,,12.28,,77.66956038,False,,71.0,,,84135428.0,5,6
 Turkmenistan,1970,False,,,No data,,,,,,,False,,,,,2201432.0,,
 Turkmenistan,1971,False,,,No data,,,,,,,False,,,,,2264434.0,,
-Turkmenistan,1972,False,,,No data,,,,,,,False,,,,,2328374.0,-,-
-Turkmenistan,1973,False,,,No data,,,,,,,False,,,,,2393323.0,-,-
-Turkmenistan,1974,False,,,No data,,,,,,,False,,,,,2459325.0,-,-
-Turkmenistan,1975,False,,,No data,,,,,,,False,,,,,2525760.0,-,-
-Turkmenistan,1976,False,,,No data,,,,,,,False,,,,,2592280.0,-,-
-Turkmenistan,1977,False,,,No data,,,,,,,False,,,,,2659019.0,-,-
-Turkmenistan,1978,False,,,No data,,,,,,,False,,,,,2726327.0,-,-
-Turkmenistan,1979,False,,,No data,,,,,,,False,,,,,2794392.0,-,-
-Turkmenistan,1980,False,,,No data,,,,,,,False,,,,,2862903.0,-,-
+Turkmenistan,1972,False,,,No data,,,,,,,False,,,,,2328374.0,,
+Turkmenistan,1973,False,,,No data,,,,,,,False,,,,,2393323.0,,
+Turkmenistan,1974,False,,,No data,,,,,,,False,,,,,2459325.0,,
+Turkmenistan,1975,False,,,No data,,,,,,,False,,,,,2525760.0,,
+Turkmenistan,1976,False,,,No data,,,,,,,False,,,,,2592280.0,,
+Turkmenistan,1977,False,,,No data,,,,,,,False,,,,,2659019.0,,
+Turkmenistan,1978,False,,,No data,,,,,,,False,,,,,2726327.0,,
+Turkmenistan,1979,False,,,No data,,,,,,,False,,,,,2794392.0,,
+Turkmenistan,1980,False,,,No data,,,,,,,False,,,,,2862903.0,,
 Turkmenistan,1981,False,,,No data,,,,,,,False,,,,,2932934.0,,
 Turkmenistan,1982,False,,,No data,,,,,,,False,,,,,3005972.0,,
-Turkmenistan,1983,False,,,No data,,,,,,,False,,,,,3082202.0,-,-
-Turkmenistan,1984,False,,,No data,,,,,,,False,,,,,3162165.0,-,-
-Turkmenistan,1985,False,,,No data,,,,,,,False,,,,,3246887.0,-,-
-Turkmenistan,1986,False,,,No data,,,,,,,False,,,,,3336773.0,-,-
-Turkmenistan,1987,False,,,No data,,,,,,,False,,,,,3430501.0,-,-
-Turkmenistan,1988,False,,,No data,,,,,,,False,,,,,3525110.0,-,-
-Turkmenistan,1989,False,,,No data,,,,,,,False,,,,,3621303.0,-,-
-Turkmenistan,1990,False,,,No data,,,,,,0.0,False,,,,42780.0,3720278.0,-,-
+Turkmenistan,1983,False,,,No data,,,,,,,False,,,,,3082202.0,,
+Turkmenistan,1984,False,,,No data,,,,,,,False,,,,,3162165.0,,
+Turkmenistan,1985,False,,,No data,,,,,,,False,,,,,3246887.0,,
+Turkmenistan,1986,False,,,No data,,,,,,,False,,,,,3336773.0,,
+Turkmenistan,1987,False,,,No data,,,,,,,False,,,,,3430501.0,,
+Turkmenistan,1988,False,,,No data,,,,,,,False,,,,,3525110.0,,
+Turkmenistan,1989,False,,,No data,,,,,,,False,,,,,3621303.0,,
+Turkmenistan,1990,False,,,No data,,,,,,0.0,False,,,,42780.0,3720278.0,,
 Turkmenistan,1991,False,,0.0,No data,-8.0,,,,,0.0,False,0.2733977585319014,21.0,,40459.0,3821782.0,6,5
 Turkmenistan,1992,False,,1.0,No data,-9.0,,,,,0.0,False,0.2636027445949628,22.0,,34632.0,3926369.0,7,6
 Turkmenistan,1993,False,,2.0,No data,-9.0,,,3102.4,,0.0,False,0.254026119484518,25.0,,39392.0,4031698.0,7,7
@@ -9436,25 +9436,25 @@ Uganda,2019,True,,,Plurality/Majority,,42.7,56.4,2.87,,14.7,False,,53.0,,89417.0
 Uganda,2020,True,,,Plurality/Majority,,,,3.79,,6.1,False,,52.0,,,44404611.0,6,5
 Ukraine,1970,False,,,No data,,,,0.2,,,False,,,32.33,,47279086.0,,
 Ukraine,1971,False,,,No data,,,,-0.2,,,False,,,,,47597756.0,,
-Ukraine,1972,False,,,No data,,,,-0.1,,,False,,,,,47974187.0,-,-
-Ukraine,1973,False,,,No data,,,,0.0,,,False,,,,,48301548.0,-,-
-Ukraine,1974,False,,,No data,,,,0.1,,,False,,,,,48602694.0,-,-
-Ukraine,1975,False,,,No data,,,,0.1,,,False,,,25.69,,48892187.0,-,-
-Ukraine,1976,False,,,No data,,,,0.0,,,False,,,,,49144535.0,-,-
-Ukraine,1977,False,,,No data,,,,0.4,,,False,,,,,49357430.0,-,-
-Ukraine,1978,False,,,No data,,,,0.8,,,False,,,,,49536615.0,-,-
-Ukraine,1979,False,,,No data,,,,1.1,,,False,,,,,49739734.0,-,-
-Ukraine,1980,False,,,No data,,,,1.3,,,False,,,20.95,,49973920.0,-,-
+Ukraine,1972,False,,,No data,,,,-0.1,,,False,,,,,47974187.0,,
+Ukraine,1973,False,,,No data,,,,0.0,,,False,,,,,48301548.0,,
+Ukraine,1974,False,,,No data,,,,0.1,,,False,,,,,48602694.0,,
+Ukraine,1975,False,,,No data,,,,0.1,,,False,,,25.69,,48892187.0,,
+Ukraine,1976,False,,,No data,,,,0.0,,,False,,,,,49144535.0,,
+Ukraine,1977,False,,,No data,,,,0.4,,,False,,,,,49357430.0,,
+Ukraine,1978,False,,,No data,,,,0.8,,,False,,,,,49536615.0,,
+Ukraine,1979,False,,,No data,,,,1.1,,,False,,,,,49739734.0,,
+Ukraine,1980,False,,,No data,,,,1.3,,,False,,,20.95,,49973920.0,,
 Ukraine,1981,False,,,No data,,,,1.0,,,False,,,,,50221000.0,,
 Ukraine,1982,False,,,No data,,,,2.8,,,False,,,,,50384000.0,,
-Ukraine,1983,False,,,No data,,,,0.7,,,False,,,,,50564000.0,-,-
-Ukraine,1984,False,,,No data,,,,-0.9,,,False,,,,,50754000.0,-,-
-Ukraine,1985,False,,,No data,,,,0.3,,,False,,,15.39,,50917000.0,-,-
-Ukraine,1986,False,,,No data,,,,1.5,,,False,,,,,51097000.0,-,-
-Ukraine,1987,False,,,No data,,,,1.5,,,False,,,,,51293000.0,-,-
-Ukraine,1988,False,,,No data,,,,-0.1,,,False,,,,,51521000.0,-,-
-Ukraine,1989,False,,,No data,,,,2.2,,,False,,,,,51773000.0,-,-
-Ukraine,1990,False,,,No data,,,,2.2,,0.0,False,,,11.65,609909.0,51891400.0,-,-
+Ukraine,1983,False,,,No data,,,,0.7,,,False,,,,,50564000.0,,
+Ukraine,1984,False,,,No data,,,,-0.9,,,False,,,,,50754000.0,,
+Ukraine,1985,False,,,No data,,,,0.3,,,False,,,15.39,,50917000.0,,
+Ukraine,1986,False,,,No data,,,,1.5,,,False,,,,,51097000.0,,
+Ukraine,1987,False,,,No data,,,,1.5,,,False,,,,,51293000.0,,
+Ukraine,1988,False,,,No data,,,,-0.1,,,False,,,,,51521000.0,,
+Ukraine,1989,False,,,No data,,,,2.2,,,False,,,,,51773000.0,,
+Ukraine,1990,False,,,No data,,,,2.2,,0.0,False,,,11.65,609909.0,51891400.0,,
 Ukraine,1991,True,,0.0,No data,6.0,,,2.2,,0.0,False,0.4144545425100654,33.0,,570253.0,52000500.0,3,3
 Ukraine,1992,True,,1.0,No data,6.0,29.7,19.2,2.2,,0.0,False,0.4068221861086191,39.0,,524732.0,52150400.0,3,3
 Ukraine,1993,False,,2.0,No data,5.0,28.9,18.5,4660.58,,0.00077697,False,0.3992348891387828,41.0,,424179.0,52179200.0,4,4
@@ -9691,25 +9691,25 @@ Uruguay,2019,False,,,PR,,39.7,1.1,7.88,98.77034759521484,83.35153377,False,,73.0
 Uruguay,2020,False,,,PR,,40.2,1.7,9.76,,86.1,False,,73.0,,,3429086.0,1,1
 Uzbekistan,1970,False,,,No data,,,,,,,False,,,,,12011361.0,,
 Uzbekistan,1971,False,,,No data,,,,,,,False,,,,,12370120.0,,
-Uzbekistan,1972,False,,,No data,,,,,,,False,,,,,12733242.0,-,-
-Uzbekistan,1973,False,,,No data,,,,,,,False,,,,,13107928.0,-,-
-Uzbekistan,1974,False,,,No data,,,,,,,False,,,,,13494711.0,-,-
-Uzbekistan,1975,False,,,No data,,,,,,,False,,,,,13894347.0,-,-
-Uzbekistan,1976,False,,,No data,,,,,,,False,,,,,14307397.0,-,-
-Uzbekistan,1977,False,,,No data,,,,,,,False,,,,,14731709.0,-,-
-Uzbekistan,1978,False,,,No data,,,,,,,False,,,,,15154314.0,-,-
-Uzbekistan,1979,False,,,No data,,,,,,,False,,,,,15558907.0,-,-
-Uzbekistan,1980,False,,,No data,,,,,,,False,,,,,15947129.0,-,-
+Uzbekistan,1972,False,,,No data,,,,,,,False,,,,,12733242.0,,
+Uzbekistan,1973,False,,,No data,,,,,,,False,,,,,13107928.0,,
+Uzbekistan,1974,False,,,No data,,,,,,,False,,,,,13494711.0,,
+Uzbekistan,1975,False,,,No data,,,,,,,False,,,,,13894347.0,,
+Uzbekistan,1976,False,,,No data,,,,,,,False,,,,,14307397.0,,
+Uzbekistan,1977,False,,,No data,,,,,,,False,,,,,14731709.0,,
+Uzbekistan,1978,False,,,No data,,,,,,,False,,,,,15154314.0,,
+Uzbekistan,1979,False,,,No data,,,,,,,False,,,,,15558907.0,,
+Uzbekistan,1980,False,,,No data,,,,,,,False,,,,,15947129.0,,
 Uzbekistan,1981,False,,,No data,,,,,,,False,,,,,16335642.0,,
 Uzbekistan,1982,False,,,No data,,,,,,,False,,,,,16735643.0,,
-Uzbekistan,1983,False,,,No data,,,,,,,False,,,,,17152857.0,-,-
-Uzbekistan,1984,False,,,No data,,,,,,,False,,,,,17594364.0,-,-
-Uzbekistan,1985,False,,,No data,,,,,,,False,,,,,18063201.0,-,-
-Uzbekistan,1986,False,,,No data,,,,,,,False,,,,,18560008.0,-,-
-Uzbekistan,1987,False,,,No data,,,,,,,False,,,,,19077170.0,-,-
-Uzbekistan,1988,False,,,No data,,,,,,,False,,,,,19600028.0,-,-
-Uzbekistan,1989,False,,,No data,,,,,,,False,,,,,20102902.0,-,-
-Uzbekistan,1990,False,,,No data,,,,,,0.0,False,,,,123370.0,20510000.0,-,-
+Uzbekistan,1983,False,,,No data,,,,,,,False,,,,,17152857.0,,
+Uzbekistan,1984,False,,,No data,,,,,,,False,,,,,17594364.0,,
+Uzbekistan,1985,False,,,No data,,,,,,,False,,,,,18063201.0,,
+Uzbekistan,1986,False,,,No data,,,,,,,False,,,,,18560008.0,,
+Uzbekistan,1987,False,,,No data,,,,,,,False,,,,,19077170.0,,
+Uzbekistan,1988,False,,,No data,,,,,,,False,,,,,19600028.0,,
+Uzbekistan,1989,False,,,No data,,,,,,,False,,,,,20102902.0,,
+Uzbekistan,1990,False,,,No data,,,,,,0.0,False,,,,123370.0,20510000.0,,
 Uzbekistan,1991,False,,0.0,No data,-9.0,,,,,0.0,False,0.2884167879808296,25.0,,120944.0,20952000.0,6,5
 Uzbekistan,1992,True,,1.0,No data,-9.0,,,645.15,,0.0,False,0.2818436585644932,30.0,,98173.0,21449000.0,6,6
 Uzbekistan,1993,False,,2.0,No data,-9.0,,,534.18,,0.0,False,0.2753418143320477,33.0,,118127.0,21942000.0,7,7
@@ -9742,14 +9742,14 @@ Uzbekistan,2019,False,,,Plurality/Majority,,,,14.53,99.99994659423828,70.4000024
 Uzbekistan,2020,False,,,Plurality/Majority,,,,12.86,,71.1,False,,51.0,,,34232050.0,7,6
 Vanuatu,1970,False,,,No data,,,,1.5,,,False,,,,,87019.0,,
 Vanuatu,1971,False,,,No data,,,,6.5,,,False,,,,,89796.0,,
-Vanuatu,1972,False,,,No data,,,,8.8,,,False,,,,,92687.0,-,-
-Vanuatu,1973,False,,,No data,,,,6.4,,,False,,,,,95687.0,-,-
-Vanuatu,1974,False,,,No data,,,,29.1,,,False,,,,,98790.0,-,-
-Vanuatu,1975,False,,,No data,,,,3.7,,,False,,,,,102010.0,-,-
-Vanuatu,1976,False,,,No data,,,,0.29,,,False,,,,,105341.0,-,-
-Vanuatu,1977,False,,,No data,,,,4.73,,,False,,,,,108769.0,-,-
-Vanuatu,1978,False,,,No data,,,,6.69,,,False,,,,,112185.0,-,-
-Vanuatu,1979,False,,,No data,,,,3.39,52.87392044067383,,False,,,,,115344.0,-,-
+Vanuatu,1972,False,,,No data,,,,8.8,,,False,,,,,92687.0,,
+Vanuatu,1973,False,,,No data,,,,6.4,,,False,,,,,95687.0,,
+Vanuatu,1974,False,,,No data,,,,29.1,,,False,,,,,98790.0,,
+Vanuatu,1975,False,,,No data,,,,3.7,,,False,,,,,102010.0,,
+Vanuatu,1976,False,,,No data,,,,0.29,,,False,,,,,105341.0,,
+Vanuatu,1977,False,,,No data,,,,4.73,,,False,,,,,108769.0,,
+Vanuatu,1978,False,,,No data,,,,6.69,,,False,,,,,112185.0,,
+Vanuatu,1979,False,,,No data,,,,3.39,52.87392044067383,,False,,,,,115344.0,,
 Vanuatu,1980,False,,,No data,,,,11.24,,,False,,32.0,,,118156.0,2,3
 Vanuatu,1981,False,,,No data,,,,26.85,,,False,,33.0,,,120887.0,,
 Vanuatu,1982,False,,,No data,,,,6.67,,,False,,33.0,,,123748.0,,
@@ -9899,51 +9899,51 @@ Vietnam,1972,False,,,No data,,,,25.3,,,False,0.537991342565554,24.0,,39049.0,439
 Vietnam,1973,False,,,No data,,,,44.4,,,False,0.5392925588529938,23.0,,38520.0,44891281.0,4,5
 Vietnam,1974,False,,,No data,,,,55.0,,,False,0.5406018188020416,24.0,,39463.0,45898698.0,4,5
 Vietnam,1975,False,,,No data,,,,4.98,,,False,0.5419194764844742,24.0,17.66,40651.0,46969616.0,7,7
-Vietnam,1976,False,,22.0,No data,-7.0,,,4.98,,,False,0.5432461344366348,24.0,,45130.0,48163573.0,-,-
-Vietnam,1977,False,,23.0,No data,-7.0,,,4.98,,,False,0.5445823923528922,24.0,,51234.0,49418150.0,-,-
-Vietnam,1978,False,,24.0,No data,-7.0,,,4.07,,,False,0.5459293180359597,23.0,,52153.0,50701458.0,-,-
-Vietnam,1979,False,,25.0,No data,-7.0,,,4.04,83.82594299316406,,False,0.5472878496829159,24.0,,55659.0,51831389.0,-,-
-Vietnam,1980,False,,26.0,No data,-7.0,,,25.16,,,False,0.5486591631117044,25.0,18.06,53662.0,52968270.0,-,-
+Vietnam,1976,False,,22.0,No data,-7.0,,,4.98,,,False,0.5432461344366348,24.0,,45130.0,48163573.0,,
+Vietnam,1977,False,,23.0,No data,-7.0,,,4.98,,,False,0.5445823923528922,24.0,,51234.0,49418150.0,,
+Vietnam,1978,False,,24.0,No data,-7.0,,,4.07,,,False,0.5459293180359597,23.0,,52153.0,50701458.0,,
+Vietnam,1979,False,,25.0,No data,-7.0,,,4.04,83.82594299316406,,False,0.5472878496829159,24.0,,55659.0,51831389.0,,
+Vietnam,1980,False,,26.0,No data,-7.0,,,25.16,,,False,0.5486591631117044,25.0,18.06,53662.0,52968270.0,,
 Vietnam,1981,False,,27.0,No data,-7.0,,,69.6,,,False,0.5500446888185246,25.0,,56762.0,54280394.0,,
 Vietnam,1982,False,,28.0,No data,-7.0,,,95.4,,,False,0.551446097280249,25.0,,61375.0,55632153.0,,
-Vietnam,1983,False,,29.0,No data,-7.0,,,49.49,,,False,0.5528653173997219,25.0,,65697.0,57011444.0,-,-
-Vietnam,1984,False,,30.0,No data,-7.0,,,64.9,,,False,0.5543049614481453,25.0,,71278.0,58406863.0,-,-
-Vietnam,1985,False,,31.0,No data,-7.0,,,91.6,,,False,0.555767451540181,26.0,29.06,75259.0,59811313.0,-,-
-Vietnam,1986,False,,32.0,No data,-7.0,,,453.54,,,False,0.5572563256716659,25.0,,77645.0,61221107.0,-,-
-Vietnam,1987,False,,33.0,No data,-7.0,,,360.36,,,False,0.558775054090855,25.0,,79867.0,62630787.0,-,-
-Vietnam,1988,False,,34.0,No data,-7.0,,,374.35,,,False,0.5603282705430395,26.0,,83774.0,64037514.0,-,-
-Vietnam,1989,False,,35.0,No data,-7.0,,,95.77,87.59645080566406,,False,0.5619209795002873,28.0,,87175.0,65466361.0,-,-
-Vietnam,1990,False,,36.0,No data,-7.0,,,36.03,,0.0,False,0.563559175965889,30.0,39.94,92868.0,66912613.0,-,-
-Vietnam,1991,False,,37.0,No data,-7.0,,,81.82,,0.0,False,0.565249852559193,30.0,,101767.0,68358820.0,-,-
-Vietnam,1992,True,,38.0,Plurality/Majority,-7.0,35.7,58.9,37.71,,0.0,False,0.5670009557874339,31.0,,109931.0,69788747.0,-,-
-Vietnam,1993,False,,39.0,Plurality/Majority,-7.0,,,8.38,,0.0,False,0.568821618714774,32.0,,115699.0,71176405.0,-,-
-Vietnam,1994,True,,40.0,Plurality/Majority,-7.0,,,9.49,,0.0,False,0.5707227455327046,34.0,,122087.0,72501087.0,-,-
-Vietnam,1995,True,10.0,41.0,Plurality/Majority,-7.0,,,16.93,,0.0,False,0.5727164842283117,38.0,36.62,131930.0,73759110.0,-,-
-Vietnam,1996,True,10.0,42.0,Plurality/Majority,-7.0,,,5.59,,0.000134813,False,0.5748166444170306,38.0,,141896.0,74946448.0,-,-
-Vietnam,1997,True,10.0,43.0,Plurality/Majority,-7.0,35.4,48.9,3.1,,0.003981962,False,0.5770393448843315,40.0,,153397.0,76058603.0,-,-
-Vietnam,1998,False,10.0,44.0,Plurality/Majority,-7.0,,,8.11,,0.013078543,False,0.5794024489290002,41.0,,162105.0,77128424.0,-,-
-Vietnam,1999,False,9.0,45.0,Plurality/Majority,-7.0,,,4.11,90.2782974243164,0.128926663,False,0.5819262603918964,41.0,,170596.0,78123713.0,-,-
-Vietnam,2000,False,9.0,46.0,Plurality/Majority,-7.0,,,-1.77,90.1561279296875,0.254248276,False,0.5846330553200613,43.0,31.02,179218.0,79001142.0,-,-
-Vietnam,2001,True,9.0,47.0,Plurality/Majority,-7.0,,,-0.31,,1.265651236,False,0.5875475535719253,43.0,,190562.0,79817777.0,-,-
-Vietnam,2002,False,10.0,48.0,Plurality/Majority,-7.0,37.0,50.7,4.08,,1.854999236,False,0.5906966115863005,43.0,,203148.0,80642308.0,-,-
-Vietnam,2003,False,9.0,49.0,Plurality/Majority,-7.0,,,3.23,,3.780280814,False,0.5941087775200966,44.0,,215507.0,81475825.0,-,-
-Vietnam,2004,False,8.0,50.0,Plurality/Majority,-7.0,36.8,43.6,7.76,,7.642408528,False,0.5978135609609809,45.0,,236644.0,82311227.0,-,-
-Vietnam,2005,False,8.0,51.0,Plurality/Majority,-7.0,,,8.28,,12.73992929,False,0.6018410565892963,47.0,23.35,262269.0,83142095.0,-,-
-Vietnam,2006,False,8.0,52.0,Plurality/Majority,-7.0,35.8,38.1,7.4,,17.25456172,False,0.6062190241289377,50.0,,283842.0,83951800.0,-,-
-Vietnam,2007,False,8.0,53.0,Plurality/Majority,-7.0,,,8.31,,20.75544477,False,0.610972415704805,52.0,,302870.0,84762269.0,-,-
-Vietnam,2008,False,8.0,54.0,Plurality/Majority,-7.0,35.6,35.0,23.11,,23.92,False,0.6161189086252907,54.0,,326594.0,85597241.0,-,-
-Vietnam,2009,False,7.0,55.0,Plurality/Majority,-7.0,,,6.73,93.52044677734376,26.55,False,0.6216653491018488,55.0,,344972.0,86482923.0,-,-
-Vietnam,2010,False,7.0,56.0,Plurality/Majority,-7.0,39.3,16.0,9.2,,30.65,False,0.6276019615512166,55.0,14.29,391268.0,87411012.0,-,-
-Vietnam,2011,False,8.0,57.0,Plurality/Majority,-7.0,,,18.67,,35.07,False,0.6338958655911876,56.0,,424565.0,88349117.0,-,-
-Vietnam,2012,False,8.0,58.0,Plurality/Majority,-7.0,35.6,13.0,9.07,,36.8,False,0.6404820474772817,58.0,,471763.0,89301326.0,-,-
-Vietnam,2013,False,7.0,59.0,Plurality/Majority,-7.0,,,6.58,,38.5,False,0.6472525146935133,58.0,,491030.0,90267739.0,-,-
-Vietnam,2014,False,7.0,60.0,Plurality/Majority,-7.0,34.8,11.0,4.09,,41.0,False,,63.0,,523533.0,91235504.0,-,-
-Vietnam,2015,False,7.0,61.0,Plurality/Majority,-7.0,,,0.64,,45.0,False,,63.0,,561821.0,92191398.0,-,-
-Vietnam,2016,False,7.0,62.0,Plurality/Majority,-7.0,35.3,8.3,2.68,,53.0,False,,64.0,,601768.0,93126529.0,-,-
-Vietnam,2017,True,7.0,63.0,Plurality/Majority,-7.0,,,3.52,,58.14,False,,64.0,,653411.0,94033048.0,-,-
-Vietnam,2018,True,7.0,64.0,Plurality/Majority,-7.0,35.7,6.9,3.54,,69.84792868,False,,65.0,,705553.0,94914330.0,-,-
-Vietnam,2019,False,,,Plurality/Majority,,,,2.8,95.75386810302734,68.66158021,False,,64.0,,750727.0,95776716.0,-,-
-Vietnam,2020,False,,,Plurality/Majority,,,,3.22,,70.3,False,,63.0,,,96648685.0,-,-
+Vietnam,1983,False,,29.0,No data,-7.0,,,49.49,,,False,0.5528653173997219,25.0,,65697.0,57011444.0,,
+Vietnam,1984,False,,30.0,No data,-7.0,,,64.9,,,False,0.5543049614481453,25.0,,71278.0,58406863.0,,
+Vietnam,1985,False,,31.0,No data,-7.0,,,91.6,,,False,0.555767451540181,26.0,29.06,75259.0,59811313.0,,
+Vietnam,1986,False,,32.0,No data,-7.0,,,453.54,,,False,0.5572563256716659,25.0,,77645.0,61221107.0,,
+Vietnam,1987,False,,33.0,No data,-7.0,,,360.36,,,False,0.558775054090855,25.0,,79867.0,62630787.0,,
+Vietnam,1988,False,,34.0,No data,-7.0,,,374.35,,,False,0.5603282705430395,26.0,,83774.0,64037514.0,,
+Vietnam,1989,False,,35.0,No data,-7.0,,,95.77,87.59645080566406,,False,0.5619209795002873,28.0,,87175.0,65466361.0,,
+Vietnam,1990,False,,36.0,No data,-7.0,,,36.03,,0.0,False,0.563559175965889,30.0,39.94,92868.0,66912613.0,,
+Vietnam,1991,False,,37.0,No data,-7.0,,,81.82,,0.0,False,0.565249852559193,30.0,,101767.0,68358820.0,,
+Vietnam,1992,True,,38.0,Plurality/Majority,-7.0,35.7,58.9,37.71,,0.0,False,0.5670009557874339,31.0,,109931.0,69788747.0,,
+Vietnam,1993,False,,39.0,Plurality/Majority,-7.0,,,8.38,,0.0,False,0.568821618714774,32.0,,115699.0,71176405.0,,
+Vietnam,1994,True,,40.0,Plurality/Majority,-7.0,,,9.49,,0.0,False,0.5707227455327046,34.0,,122087.0,72501087.0,,
+Vietnam,1995,True,10.0,41.0,Plurality/Majority,-7.0,,,16.93,,0.0,False,0.5727164842283117,38.0,36.62,131930.0,73759110.0,,
+Vietnam,1996,True,10.0,42.0,Plurality/Majority,-7.0,,,5.59,,0.000134813,False,0.5748166444170306,38.0,,141896.0,74946448.0,,
+Vietnam,1997,True,10.0,43.0,Plurality/Majority,-7.0,35.4,48.9,3.1,,0.003981962,False,0.5770393448843315,40.0,,153397.0,76058603.0,,
+Vietnam,1998,False,10.0,44.0,Plurality/Majority,-7.0,,,8.11,,0.013078543,False,0.5794024489290002,41.0,,162105.0,77128424.0,,
+Vietnam,1999,False,9.0,45.0,Plurality/Majority,-7.0,,,4.11,90.2782974243164,0.128926663,False,0.5819262603918964,41.0,,170596.0,78123713.0,,
+Vietnam,2000,False,9.0,46.0,Plurality/Majority,-7.0,,,-1.77,90.1561279296875,0.254248276,False,0.5846330553200613,43.0,31.02,179218.0,79001142.0,,
+Vietnam,2001,True,9.0,47.0,Plurality/Majority,-7.0,,,-0.31,,1.265651236,False,0.5875475535719253,43.0,,190562.0,79817777.0,,
+Vietnam,2002,False,10.0,48.0,Plurality/Majority,-7.0,37.0,50.7,4.08,,1.854999236,False,0.5906966115863005,43.0,,203148.0,80642308.0,,
+Vietnam,2003,False,9.0,49.0,Plurality/Majority,-7.0,,,3.23,,3.780280814,False,0.5941087775200966,44.0,,215507.0,81475825.0,,
+Vietnam,2004,False,8.0,50.0,Plurality/Majority,-7.0,36.8,43.6,7.76,,7.642408528,False,0.5978135609609809,45.0,,236644.0,82311227.0,,
+Vietnam,2005,False,8.0,51.0,Plurality/Majority,-7.0,,,8.28,,12.73992929,False,0.6018410565892963,47.0,23.35,262269.0,83142095.0,,
+Vietnam,2006,False,8.0,52.0,Plurality/Majority,-7.0,35.8,38.1,7.4,,17.25456172,False,0.6062190241289377,50.0,,283842.0,83951800.0,,
+Vietnam,2007,False,8.0,53.0,Plurality/Majority,-7.0,,,8.31,,20.75544477,False,0.610972415704805,52.0,,302870.0,84762269.0,,
+Vietnam,2008,False,8.0,54.0,Plurality/Majority,-7.0,35.6,35.0,23.11,,23.92,False,0.6161189086252907,54.0,,326594.0,85597241.0,,
+Vietnam,2009,False,7.0,55.0,Plurality/Majority,-7.0,,,6.73,93.52044677734376,26.55,False,0.6216653491018488,55.0,,344972.0,86482923.0,,
+Vietnam,2010,False,7.0,56.0,Plurality/Majority,-7.0,39.3,16.0,9.2,,30.65,False,0.6276019615512166,55.0,14.29,391268.0,87411012.0,,
+Vietnam,2011,False,8.0,57.0,Plurality/Majority,-7.0,,,18.67,,35.07,False,0.6338958655911876,56.0,,424565.0,88349117.0,,
+Vietnam,2012,False,8.0,58.0,Plurality/Majority,-7.0,35.6,13.0,9.07,,36.8,False,0.6404820474772817,58.0,,471763.0,89301326.0,,
+Vietnam,2013,False,7.0,59.0,Plurality/Majority,-7.0,,,6.58,,38.5,False,0.6472525146935133,58.0,,491030.0,90267739.0,,
+Vietnam,2014,False,7.0,60.0,Plurality/Majority,-7.0,34.8,11.0,4.09,,41.0,False,,63.0,,523533.0,91235504.0,,
+Vietnam,2015,False,7.0,61.0,Plurality/Majority,-7.0,,,0.64,,45.0,False,,63.0,,561821.0,92191398.0,,
+Vietnam,2016,False,7.0,62.0,Plurality/Majority,-7.0,35.3,8.3,2.68,,53.0,False,,64.0,,601768.0,93126529.0,,
+Vietnam,2017,True,7.0,63.0,Plurality/Majority,-7.0,,,3.52,,58.14,False,,64.0,,653411.0,94033048.0,,
+Vietnam,2018,True,7.0,64.0,Plurality/Majority,-7.0,35.7,6.9,3.54,,69.84792868,False,,65.0,,705553.0,94914330.0,,
+Vietnam,2019,False,,,Plurality/Majority,,,,2.8,95.75386810302734,68.66158021,False,,64.0,,750727.0,95776716.0,,
+Vietnam,2020,False,,,Plurality/Majority,,,,3.22,,70.3,False,,63.0,,,96648685.0,,
 Wallis and Futuna,1970,False,,,No data,,,,,,,False,,,,,,,
 Wallis and Futuna,1971,False,,,No data,,,,,,,False,,,,,,,
 Wallis and Futuna,1972,False,,,No data,,,,,,,False,,,,,,,
@@ -10066,37 +10066,37 @@ West Germany (FRG),1986,True,,37.0,No data,10.0,,,,,,False,0.62335305966758,,,,,
 West Germany (FRG),1987,True,,38.0,No data,10.0,,,,,,False,0.62551444075378,,,,,1,2
 West Germany (FRG),1988,True,,39.0,No data,10.0,,,,,,False,0.6276115826589801,,,,,1,2
 West Germany (FRG),1989,True,,40.0,No data,10.0,,,,,,False,0.6296447131442401,,,,,1,1
-West Germany (FRG),1990,True,,41.0,No data,10.0,,,,,,False,0.63161407247928,,,,,-,-
-West Germany (FRG),1991,False,,,No data,,,,,,,False,0.63351993831374,,,,,-,-
-West Germany (FRG),1992,False,,,No data,,,,,,,False,0.63536269278919,,,,,-,-
-West Germany (FRG),1993,False,,,No data,,,,,,,False,0.6371424282920799,,,,,-,-
-West Germany (FRG),1994,False,,,No data,,,,,,,False,0.6388596067939101,,,,,-,-
-West Germany (FRG),1995,False,,,No data,,,,,,,False,0.6405146378410399,,,,,-,-
-West Germany (FRG),1996,False,,,No data,,,,,,,False,0.64210759919874,,,,,-,-
-West Germany (FRG),1997,False,,,No data,,,,,,,False,0.64363899477026,,,,,-,-
-West Germany (FRG),1998,False,,,No data,,,,,,,False,0.64510907434294,,,,,-,-
-West Germany (FRG),1999,False,,,No data,,,,,,,False,0.64651829705077,,,,,-,-
-West Germany (FRG),2000,False,,,No data,,,,,,,False,0.6478668020771801,,,,,-,-
-West Germany (FRG),2001,False,,,No data,,,,,,,False,0.64915516034402,,,,,-,-
-West Germany (FRG),2002,False,,,No data,,,,,,,False,0.65038365725208,,,,,-,-
-West Germany (FRG),2003,False,,,No data,,,,,,,False,0.65155270745502,,,,,-,-
-West Germany (FRG),2004,False,,,No data,,,,,,,False,0.65266268462734,,,,,-,-
-West Germany (FRG),2005,False,,,No data,,,,,,,False,0.6537139475356799,,,,,-,-
-West Germany (FRG),2006,False,,,No data,,,,,,,False,0.65470694690682,,,,,-,-
-West Germany (FRG),2007,False,,,No data,,,,,,,False,0.65564207327138,,,,,-,-
-West Germany (FRG),2008,False,,,No data,,,,,,,False,0.65651972625358,,,,,-,-
-West Germany (FRG),2009,False,,,No data,,,,,,,False,0.6573403260401799,,,,,-,-
-West Germany (FRG),2010,False,,,No data,,,,,,,False,0.65810432800846,,,,,-,-
-West Germany (FRG),2011,False,,,No data,,,,,,,False,0.6588120552298901,,,,,-,-
-West Germany (FRG),2012,False,,,No data,,,,,,,False,0.65946417600818,,,,,-,-
-West Germany (FRG),2013,False,,,No data,,,,,,,False,0.6600609531205399,,,,,-,-
-West Germany (FRG),2014,False,,,No data,,,,,,,False,,,,,,-,-
-West Germany (FRG),2015,False,,,No data,,,,,,,False,,,,,,-,-
-West Germany (FRG),2016,False,,,No data,,,,,,,False,,,,,,-,-
-West Germany (FRG),2017,False,,,No data,,,,,,,False,,,,,,-,-
-West Germany (FRG),2018,False,,,No data,,,,,,,False,,,,,,-,-
-West Germany (FRG),2019,False,,,No data,,,,,,,False,,,,,,-,-
-West Germany (FRG),2020,False,,,No data,,,,,,,False,,,,,,-,-
+West Germany (FRG),1990,True,,41.0,No data,10.0,,,,,,False,0.63161407247928,,,,,,
+West Germany (FRG),1991,False,,,No data,,,,,,,False,0.63351993831374,,,,,,
+West Germany (FRG),1992,False,,,No data,,,,,,,False,0.63536269278919,,,,,,
+West Germany (FRG),1993,False,,,No data,,,,,,,False,0.6371424282920799,,,,,,
+West Germany (FRG),1994,False,,,No data,,,,,,,False,0.6388596067939101,,,,,,
+West Germany (FRG),1995,False,,,No data,,,,,,,False,0.6405146378410399,,,,,,
+West Germany (FRG),1996,False,,,No data,,,,,,,False,0.64210759919874,,,,,,
+West Germany (FRG),1997,False,,,No data,,,,,,,False,0.64363899477026,,,,,,
+West Germany (FRG),1998,False,,,No data,,,,,,,False,0.64510907434294,,,,,,
+West Germany (FRG),1999,False,,,No data,,,,,,,False,0.64651829705077,,,,,,
+West Germany (FRG),2000,False,,,No data,,,,,,,False,0.6478668020771801,,,,,,
+West Germany (FRG),2001,False,,,No data,,,,,,,False,0.64915516034402,,,,,,
+West Germany (FRG),2002,False,,,No data,,,,,,,False,0.65038365725208,,,,,,
+West Germany (FRG),2003,False,,,No data,,,,,,,False,0.65155270745502,,,,,,
+West Germany (FRG),2004,False,,,No data,,,,,,,False,0.65266268462734,,,,,,
+West Germany (FRG),2005,False,,,No data,,,,,,,False,0.6537139475356799,,,,,,
+West Germany (FRG),2006,False,,,No data,,,,,,,False,0.65470694690682,,,,,,
+West Germany (FRG),2007,False,,,No data,,,,,,,False,0.65564207327138,,,,,,
+West Germany (FRG),2008,False,,,No data,,,,,,,False,0.65651972625358,,,,,,
+West Germany (FRG),2009,False,,,No data,,,,,,,False,0.6573403260401799,,,,,,
+West Germany (FRG),2010,False,,,No data,,,,,,,False,0.65810432800846,,,,,,
+West Germany (FRG),2011,False,,,No data,,,,,,,False,0.6588120552298901,,,,,,
+West Germany (FRG),2012,False,,,No data,,,,,,,False,0.65946417600818,,,,,,
+West Germany (FRG),2013,False,,,No data,,,,,,,False,0.6600609531205399,,,,,,
+West Germany (FRG),2014,False,,,No data,,,,,,,False,,,,,,,
+West Germany (FRG),2015,False,,,No data,,,,,,,False,,,,,,,
+West Germany (FRG),2016,False,,,No data,,,,,,,False,,,,,,,
+West Germany (FRG),2017,False,,,No data,,,,,,,False,,,,,,,
+West Germany (FRG),2018,False,,,No data,,,,,,,False,,,,,,,
+West Germany (FRG),2019,False,,,No data,,,,,,,False,,,,,,,
+West Germany (FRG),2020,False,,,No data,,,,,,,False,,,,,,,
 Western Sahara,1970,False,,,No data,,,,,,,False,,,,,,,
 Western Sahara,1971,False,,,No data,,,,,,,False,,,,,,,
 Western Sahara,1972,False,,,No data,,,,,,,False,,,,,,,
@@ -10150,24 +10150,24 @@ Western Sahara,2019,False,,,No data,,,,,,,False,,,,,,,
 Western Sahara,2020,False,,,No data,,,,,,,False,,,,,,,
 Yemen,1970,False,,,No data,,,,5.0,,,False,,25.0,0.51,,6843607.0,,
 Yemen,1971,False,,,No data,,,,5.7,,,False,,25.0,,,7024196.0,,
-Yemen,1972,False,,,No data,,,,4.5,,,False,,26.0,,,7215835.0,-,-
-Yemen,1973,False,,,No data,,,,16.4,,,False,,27.0,,,7417736.0,-,-
-Yemen,1974,False,,,No data,,,,23.7,,,False,,28.0,,,7630190.0,-,-
-Yemen,1975,False,,,No data,,,,12.0,,,False,,28.0,0.23,,7855657.0,-,-
-Yemen,1976,False,,,No data,,,,3.7,,,False,,27.0,,,8094985.0,-,-
-Yemen,1977,False,,,No data,,,,5.2,,,False,,28.0,,,8348182.0,-,-
-Yemen,1978,False,,,No data,,,,2.9,,,False,,29.0,,,8615301.0,-,-
-Yemen,1979,False,,,No data,,,,13.8,,,False,,29.0,,,8899922.0,-,-
-Yemen,1980,False,,,No data,,,,10.0,,,False,,30.0,1.74,,9204938.0,-,-
+Yemen,1972,False,,,No data,,,,4.5,,,False,,26.0,,,7215835.0,,
+Yemen,1973,False,,,No data,,,,16.4,,,False,,27.0,,,7417736.0,,
+Yemen,1974,False,,,No data,,,,23.7,,,False,,28.0,,,7630190.0,,
+Yemen,1975,False,,,No data,,,,12.0,,,False,,28.0,0.23,,7855657.0,,
+Yemen,1976,False,,,No data,,,,3.7,,,False,,27.0,,,8094985.0,,
+Yemen,1977,False,,,No data,,,,5.2,,,False,,28.0,,,8348182.0,,
+Yemen,1978,False,,,No data,,,,2.9,,,False,,29.0,,,8615301.0,,
+Yemen,1979,False,,,No data,,,,13.8,,,False,,29.0,,,8899922.0,,
+Yemen,1980,False,,,No data,,,,10.0,,,False,,30.0,1.74,,9204938.0,,
 Yemen,1981,False,,,No data,,,,3.8,,,False,,30.0,,,9529105.0,,
 Yemen,1982,False,,,No data,,,,9.5,,,False,,30.0,,,9872292.0,,
-Yemen,1983,False,,,No data,,,,10.7,,,False,,30.0,,,10237391.0,-,-
-Yemen,1984,False,,,No data,,,,1.5,,,False,,31.0,,,10625687.0,-,-
-Yemen,1985,False,,,No data,,,,5.1,,,False,,31.0,2.97,,11036918.0,-,-
-Yemen,1986,False,,,No data,,,,0.8,,,False,,31.0,,,11465444.0,-,-
-Yemen,1987,False,,,No data,,,,2.8,,,False,,31.0,,,11915563.0,-,-
-Yemen,1988,False,,,No data,,,,0.0,,,False,,32.0,,,12387238.0,-,-
-Yemen,1989,False,,,No data,,,,18.0,,,False,,32.0,,7514.0,12872362.0,-,-
+Yemen,1983,False,,,No data,,,,10.7,,,False,,30.0,,,10237391.0,,
+Yemen,1984,False,,,No data,,,,1.5,,,False,,31.0,,,10625687.0,,
+Yemen,1985,False,,,No data,,,,5.1,,,False,,31.0,2.97,,11036918.0,,
+Yemen,1986,False,,,No data,,,,0.8,,,False,,31.0,,,11465444.0,,
+Yemen,1987,False,,,No data,,,,2.8,,,False,,31.0,,,11915563.0,,
+Yemen,1988,False,,,No data,,,,0.0,,,False,,32.0,,,12387238.0,,
+Yemen,1989,False,,,No data,,,,18.0,,,False,,32.0,,7514.0,12872362.0,,
 Yemen,1990,False,,0.0,No data,0.0,,,36.0,,0.0,False,,32.0,4.81,9131.0,13375121.0,6,5
 Yemen,1991,True,,0.0,No data,0.0,,,44.91,,0.0,False,,33.0,,8920.0,13895851.0,6,5
 Yemen,1992,True,,0.0,No data,0.0,,,51.2,,0.0,False,,34.0,,9181.0,14433771.0,6,4
@@ -10232,24 +10232,24 @@ Yugoslavia,1999,True,,8.0,No data,-6.0,,,,,,False,,,,,,5,5
 Yugoslavia,2000,True,,0.0,No data,7.0,,,,,,False,,,,,,4,4
 Yugoslavia,2001,True,,1.0,No data,7.0,,,,,,False,,,,,,3,3
 Yugoslavia,2002,True,,2.0,No data,7.0,,,,,,False,,,,,,3,2
-Yugoslavia,2003,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2004,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2005,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2006,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2007,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2008,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2009,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2010,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2011,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2012,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2013,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2014,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2015,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2016,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2017,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2018,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2019,False,,,No data,,,,,,,False,,,,,,-,-
-Yugoslavia,2020,False,,,No data,,,,,,,False,,,,,,-,-
+Yugoslavia,2003,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2004,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2005,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2006,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2007,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2008,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2009,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2010,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2011,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2012,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2013,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2014,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2015,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2016,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2017,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2018,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2019,False,,,No data,,,,,,,False,,,,,,,
+Yugoslavia,2020,False,,,No data,,,,,,,False,,,,,,,
 Zaire,1970,False,,,No data,,,,,,,False,,,,,,,
 Zaire,1971,False,,,No data,,,,,,,False,,,,,,,
 Zaire,1972,True,,,No data,,,,,,,False,,,,,,,
