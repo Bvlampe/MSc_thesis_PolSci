@@ -3,9 +3,16 @@ import numpy as np
 import var_edits
 
 
-def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Country", in_index=False):
+def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Country", in_index=False, in_header=False):
+    assert((not(in_header and in_index)) and "Error: list_countries_per_set() was called with both in_index and in_header set as True")
     i = 0
-    countries = in_dataset.index.unique() if in_index else in_dataset.loc[:, name_column].unique()
+    countries = []
+    if in_index:
+        countries = in_dataset.index.unique()
+    elif in_header:
+        countries = in_dataset.columns.unique()
+    else:
+        countries = in_dataset.loc[:, name_column].unique()
     for country in countries:
         io_list.loc[i, name_dataset] = country
         i += 1
@@ -128,7 +135,10 @@ def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
 # drop_missing regulates whether countries that do not appear in the dict
 # (not present in GTD, too small, sub- and super-national entities)
 # should be dropped (True) or left in with their original names (False)
-def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop_missing=True):
+def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, in_header=False,
+                     drop_missing=True, leave_groups=False):
+    assert ((not (
+                in_header and in_index)) and "Error: rename_countries() was called with both in_index and in_header set as True")
     if in_index:
         for country in io_data.index:
             if country in in_dict.keys():
@@ -139,9 +149,21 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop
                     io_data.drop(country, inplace=True)
                 else:
                     io_data.rename(index={country: newname}, inplace=True)
+    elif in_header:
+        for country in io_data.columns:
+            if country in in_dict.keys():
+                newname = in_dict[country]
+                if newname == "None" and drop_missing:
+                    io_data.drop(country, inplace=True, axis=1)
+                elif newname == "Region" and drop_missing:
+                    io_data.drop(country, inplace=True, axis=1)
+                else:
+                    io_data.rename(columns={country: newname}, inplace=True)
     else:
         for i in range(len(io_data.index)):
             country = io_data.loc[i, ctry_name]
+            if leave_groups and (country in ["Arab League", "AU", "CIS", "ECOWAS", "EU", "NATO", "UN"]):
+                continue
             if country in in_dict.keys():
                 newname = in_dict[country]
                 if newname == "None" and drop_missing:
@@ -152,7 +174,6 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, drop
                     io_data.loc[i, ctry_name] = newname
         if drop_missing:
             io_data.dropna(subset=ctry_name, inplace=True)
-
 
 def dataprep(step="merge", edit_col=None, write=False):
     path_rawdata = "datasets_input/"
@@ -175,6 +196,7 @@ def dataprep(step="merge", edit_col=None, write=False):
     path_edu = path_rawdata + "education.csv"
     path_econ = path_rawdata + "econ.csv"
     path_pop = path_rawdata + "population.csv"
+    path_groups = path_rawdata + "group_membership.csv"
 
     # Only done once
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
@@ -199,6 +221,7 @@ def dataprep(step="merge", edit_col=None, write=False):
     raw_edu = pd.read_csv(path_edu).loc[:, ["country", "year", "lpc"]].rename(columns={"lpc": "education"}).rename(str.capitalize, axis="columns")
     raw_econ = pd.read_csv(path_econ, encoding="cp1252").loc[:, ["country", "year", "rgdpe"]].rename(str.capitalize, axis="columns").rename(columns={"Rgdpe": "GDP"})
     raw_pop = pd.read_csv(path_pop).rename(columns={"Country Name": "Country"})
+    raw_groups = pd.read_csv(path_groups, index_col=[0, 1]).rename(columns={"ioname": "Group"}).rename(str.capitalize, axis="columns")
 
     main_index_ctry = raw_GTD.loc[:, "Country"].unique()
     main_index_ctry.sort()
@@ -223,13 +246,12 @@ def dataprep(step="merge", edit_col=None, write=False):
         list_countries_per_set(raw_edu, "Education", cntry_names)
         list_countries_per_set(raw_econ, "GDP", cntry_names)
         list_countries_per_set(raw_pop, "Population", cntry_names)
+        list_countries_per_set(raw_groups, "Groups", cntry_names, in_header=True)
         create_country_table(main_index.get_level_values(0), cntry_names, write=write)
 
     elif step == "update_dict":
         cntry_names = pd.DataFrame()
-        cntry_names["Education"] = raw_edu.loc[:, "Country"].unique()
-        list_countries_per_set(raw_econ, "GDP", cntry_names)
-        list_countries_per_set(raw_pop, "Population", cntry_names)
+        cntry_names["Groups"] = raw_groups.columns.unique()
         update_table(main_index.get_level_values(0), cntry_names)
 
     elif step == "merge":
@@ -248,12 +270,13 @@ def dataprep(step="merge", edit_col=None, write=False):
         rename_countries(raw_inflation, concordance_table)
         rename_countries(raw_lit, concordance_table)
         rename_countries(raw_iusers, concordance_table)
-        rename_countries(raw_interventions, concordance_table)
+        rename_countries(raw_interventions, concordance_table, leave_groups=True)
         rename_countries(raw_religion, concordance_table)
         rename_countries(raw_glob, concordance_table)
         rename_countries(raw_edu, concordance_table)
         rename_countries(raw_econ, concordance_table)
         rename_countries(raw_pop, concordance_table)
+        rename_countries(raw_groups, concordance_table, in_header=True)
 
         main_data = generic_list_transform(raw_GTD, main_index, "Terrorist attack")
         slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
@@ -266,7 +289,8 @@ def dataprep(step="merge", edit_col=None, write=False):
         slice_inflation = generic_table_transform(raw_inflation, main_index, "Inflation")
         slice_lit = generic_list_transform(raw_lit, main_index, "Literacy")
         slice_iusers = generic_table_transform(raw_iusers, main_index, "Internet users")
-        slice_interventions = var_edits.format_interventions(raw_interventions, main_index)
+        slice_interventions = var_edits.format_interventions(
+            raw_interventions, main_index, raw_groups.rename({"LOAS": "Arab League"}, level=0))
         slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
         slice_glob = generic_list_transform(raw_glob, main_index, "Globalization")
         slice_edu = generic_list_transform(raw_edu, main_index, "Education")
@@ -304,11 +328,6 @@ def dataprep(step="merge", edit_col=None, write=False):
             slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
             main_data.loc[:, "Religious fragmentation"] = slice_rel_frag.loc[:, "Religious fragmentation"]
 
-        elif edit_col == "Intervention":
-            rename_countries(raw_interventions, country_dict())
-            slice_intervention = var_edits.format_interventions(raw_interventions, main_index)
-            main_data = main_data.merge(slice_intervention, left_index=True, right_index=True)
-
         elif edit_col == "set_1":
             concordance_table = country_dict()
             rename_countries(raw_edu, concordance_table)
@@ -332,6 +351,13 @@ def dataprep(step="merge", edit_col=None, write=False):
 
         elif edit_col == "GDP_pp":
             main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
+
+        elif edit_col == "Interventions":
+            concordance_table = country_dict()
+            rename_countries(raw_interventions, concordance_table, leave_groups=True)
+            rename_countries(raw_groups, concordance_table, in_header=True)
+            slice_interventions = var_edits.format_interventions(
+                raw_interventions, main_index, raw_groups.rename({"LOAS": "Arab League"}, level=0))
 
         if write:
             main_data.to_csv("merged_data.csv")

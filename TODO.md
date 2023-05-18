@@ -2,11 +2,11 @@
 
 ### Todo
 
-- [ ] Implement attribution of group interventions (NATO, UN, etc.)
 
 ---
 ### WIP
 
+- [ ] Implement attribution of group interventions (NATO, UN, etc.)
 - [ ] DataPrep
   - [x] Finish generic_table_transform() function definition
   - [x] Merge datasets

@@ -49,12 +49,22 @@ def format_GTD(in_data, in_index):
     return out_data
 
 
-def format_interventions(in_data, in_index):
+def format_interventions(in_data, in_index, in_groups):
+    print("Czech Rep" in in_groups.columns)
     in_data.dropna(subset="Country", inplace=True)
-    out_data = pd.DataFrame(index=in_index, columns=["Intervention"])
+    out_data = pd.DataFrame(index=in_index, columns=["Intervention", "Group Intervention"])
     for _, row in in_data.iterrows():
+        # Handle group interventions, continue statement avoids an attempt of individual attribution
+        # of the intervention to a non-existing country with the group name
+        if row.loc["Country"] in in_groups.index.get_level_values(0):
+            if row.loc["Year"] in in_groups.index.get_level_values(1):
+                for country in in_groups.columns:
+                    if in_groups.loc[(row.loc["Country"], int(row.loc["Year"])), country] == 1:
+                        out_data.loc[(country, row.loc["Year"]), "Group Intervention"] = True
+            continue
         out_data.loc[(row.loc["Country"], row.loc["Year"]), "Intervention"] = True
     out_data.fillna(value=False, inplace=True)
+    print(out_data)
     return out_data
 
 def format_FH(in_data, in_index):
@@ -90,3 +100,4 @@ def format_FH(in_data, in_index):
                 out_data.loc[(country, 1982), "FH_civ"] = row[column] if '-' not in row[column] else np.nan
 
     return out_data
+
