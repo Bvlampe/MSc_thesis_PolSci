@@ -186,7 +186,7 @@ def dataprep(step="merge", edit_col=None, write=False):
     raw_elecsys = pd.read_csv(path_elecsys).loc[:, ["Country", "Year", "Electoral system family"]].rename(str.capitalize, axis="columns")
     raw_democracy = pd.read_csv(path_democracy).loc[:, ["country", "year", "polity2"]].rename(columns={"polity2": "Democracy"}).rename(str.capitalize, axis="columns")
     raw_democracy = raw_democracy.loc[raw_democracy["Year"] >= 1950, :].reset_index()
-    raw_FH = pd.read_csv(path_FH, header=[0, 1, 2], index_col=0, encoding="cp1252")
+    raw_FH = pd.read_csv(path_FH, header=[0, 1], index_col=0, encoding="cp1252")
     raw_inequality = pd.read_csv(path_inequality).rename(columns={"Country Name": "Country"})
     raw_poverty = pd.read_csv(path_poverty).rename(columns={"Country Name": "Country"})
     raw_poverty = raw_poverty.loc[raw_poverty["Indicator Name"] == "Poverty gap at $6.85 a day (2017 PPP) (%)", :].reset_index()
@@ -321,6 +321,12 @@ def dataprep(step="merge", edit_col=None, write=False):
             main_data = main_data.merge(slice_edu, left_index=True, right_index=True)
             main_data = main_data.merge(slice_econ, left_index=True, right_index=True)
             main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
+
+        elif edit_col == "FH":
+            concordance_table = country_dict()
+            rename_countries(raw_FH, concordance_table, in_index=True)
+            slice_FH = var_edits.format_FH(raw_FH, main_index)
+            main_data = main_data.merge(slice_FH, left_index=True, right_index=True)
 
         if write:
             main_data.to_csv("merged_data.csv")

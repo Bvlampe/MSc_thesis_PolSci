@@ -59,5 +59,37 @@ def format_interventions(in_data, in_index):
 
 def format_FH(in_data, in_index):
     out_data = pd.DataFrame(index=in_index, columns=["FH_pol", "FH_civ"])
-    # for country, row in in_data.iterrows():
-    #
+    last_year = ""
+    for column in in_data:
+        var = column[1].strip()
+
+        if var == "Status":
+            continue
+        colvals = in_data.loc[:, column]
+        if "Unnamed" not in column[0]:
+            last_year = column[0]
+            # The columns with indicated years starting with "August" or "November"
+            # are attributed to the following year
+            if last_year[0] in ["A", "N"]:
+                last_year = last_year[-4:]
+
+        if last_year.isnumeric():
+            for country, row in in_data.iterrows():
+                if var == "PR":
+                    out_data.loc[(country, int(last_year)), "FH_pol"] = row[column]
+                elif var == "CL":
+                    out_data.loc[(country, int(last_year)), "FH_civ"] = row[column]
+        # This is the only column attributed to two years, as it encompasses the entirety of 1981
+        # and the majority of 1982
+        elif last_year == "Jan.1981-Aug. 1982":
+            if var == "PR":
+                out_data.loc[(country, 1981), "FH_pol"] = row[column]
+                out_data.loc[(country, 1982), "FH_pol"] = row[column]
+            elif var == "CL":
+                out_data.loc[(country, 1981), "FH_civ"] = row[column]
+                out_data.loc[(country, 1982), "FH_civ"] = row[column]
+
+    if True: # Remove after finalising function
+        print(out_data)
+        assert(False)
+    return out_data
