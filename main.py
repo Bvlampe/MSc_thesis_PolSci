@@ -3,7 +3,7 @@ import models
 
 
 def main():
-    # dataprep.dataprep("edit", edit_col="FH", write=True)
+    # dataprep.dataprep("edit", edit_col="GDP_pp")
     models.models()
 
 

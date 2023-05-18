@@ -21,10 +21,6 @@
     - [ ] Internet users?
     - [x] Education
   - [ ] Format intervention and FH datasets
-- [ ] Train models
-  - [x] Logistic regression
-  - [x] Random forest
-  - [x] GBM
 - [ ] Evaluate models
   - [ ] Compare predictive power of variables
 
@@ -48,16 +44,19 @@
   - [x] Interventions
   - [x] Religious fragmentation
   - [x] Globalisation
-- [x] Create concordance tables
-  - [x] List non-corresponding country names per dataset
-  - [x] Attribute missing country names from other datasets to those in GTD in Excel (manually)
-  - [x] Create dict or DataFrame from newly "sorted" file
 - [x] Finish calc_rel_frag() function
 - [x] Homogenise country names
-  - [x] Create concordance tables (WIP)
+  - [x] Create concordance tables
+    - [x] List non-corresponding country names per dataset
+    - [x] Attribute missing country names from other datasets to those in GTD in Excel (manually)
+    - [x] Create dict or DataFrame from newly "sorted" file
   - [x] Apply CTs to each dataset
 - [x] Decide on new datasets
   - [x] Weapons movement
   - [x] Ties to US
 - [x] Properly shift GTD data in a way that respects country-level index differences
 - [x] Format FH data and integrate it into the unified dataset
+- [x] Train models
+  - [x] Logistic regression
+  - [x] Random forest
+  - [x] GBM

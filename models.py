@@ -52,7 +52,11 @@ def models():
     indep_vars.remove("Terrorist attack lag-1")
     indep_vars.remove("Year")
 
+    print(main_data.columns)
+
+    i = 1
     for train_index, test_index in tss.split(main_data['Year'].unique()):
+        print("Fold number", i, ":")
         # Get the training and testing data for this split
         # x_train, x_test = main_data.iloc[train_index][indep_vars], main_data.iloc[test_index][indep_vars]
         # y_train, y_test = main_data.iloc[train_index]["Terrorist attack"], main_data.iloc[test_index]["Terrorist attack"]
@@ -66,23 +70,27 @@ def models():
         x_train = x_train.drop(["Terrorist attack lag-1"], axis=1)
         x_test = x_test.drop(["Terrorist attack lag-1"], axis=1)
 
+
         model_logreg.fit(x_train, y_train)
-        predictions = model_logreg.predict(x_test)
+        y_pred = model_logreg.predict(x_test)
         print("Logistic regression:")
-        # print(classification_report(y_test, predictions))
-        # print(confusion_matrix(y_test, predictions))
+        # print(classification_report(y_test, y_pred))
+        # print(confusion_matrix(y_test, y_pred))
+        print("Accuracy:", accuracy_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_logreg.predict_proba(x_test)[:,1]))
+        print()
 
         model_rf.fit(x_train, y_train)
         y_pred = model_rf.predict(x_test)
-        accuracy = accuracy_score(y_test, y_pred)
         print("Random forest:")
-        # print("Accuracy:", accuracy)
+        print("Accuracy:", accuracy_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_rf.predict_proba(x_test)[:, 1]))
+        print()
 
         model_gbm.fit(x_train, y_train)
         y_pred = model_gbm.predict(x_test)
         print("Gradient boosting machine:")
+        print("Accuracy:", accuracy_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1]))
 
 
@@ -90,8 +98,10 @@ def models():
         # of the impurity decrease within each tree" - scikit-learn doc
         importance = model_gbm.feature_importances_
         features = model_gbm.feature_names_in_
-        # summarize feature importance
-        for i, v in enumerate(importance):
-            print('Feature: %0d, Score: %.5f' % (i, v))
+        # summarize feature importance, as of yet does not display the names of the features due to
+        # how the scikit-learn pipeline works. To be fixed
+        # for i, v in enumerate(importance):
+        #     print('Feature: %0d, Score: %.5f' % (i, v))
 
         print("--------------------------------------------------------")
+        i += 1

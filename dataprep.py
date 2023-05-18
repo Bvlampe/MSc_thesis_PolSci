@@ -329,5 +329,9 @@ def dataprep(step="merge", edit_col=None, write=False):
             main_data.loc[:, "FH_pol"] = slice_FH.loc[:, "FH_pol"]
             # main_data = main_data.merge(slice_FH, left_index=True, right_index=True)
             main_data.replace(to_replace={"FH_civ": '-', "FH_pol": '-'}, value=np.nan, inplace=True)
+
+        elif edit_col == "GDP_pp":
+            main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
+
         if write:
             main_data.to_csv("merged_data.csv")
