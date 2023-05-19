@@ -20,8 +20,6 @@
     - [ ] Internet users?
     - [x] Education
   - [x] Format intervention and FH datasets
-- [ ] Evaluate models
-  - [ ] Compare predictive power of variables
 
 ---
 ### Done ✓
@@ -60,3 +58,5 @@
   - [x] Random forest
   - [x] GBM
 - [x] Implement attribution of group interventions (NATO, UN, etc.)
+- [x] Evaluate models
+  - [x] Compare predictive power of variables

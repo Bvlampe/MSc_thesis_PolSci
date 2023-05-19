@@ -9,6 +9,12 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import roc_auc_score, roc_curve
 
 
+def query_write():
+    answer = ""
+    while answer not in ["y", "n"]:
+        answer = input("Write model output to log file? y/n: ")
+    return True if answer == "y" else False
+
 def models():
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
 
@@ -50,9 +56,10 @@ def models():
 
     indep_vars = list(main_data.columns.values)
     indep_vars.remove("Terrorist attack lag-1")
-    indep_vars.remove("Year")
+    # indep_vars.remove("Year")
 
-    print(main_data.columns)
+
+    log = pd.DataFrame(index=indep_vars)
 
     i = 1
     for train_index, test_index in tss.split(main_data['Year'].unique()):
@@ -99,5 +106,12 @@ def models():
         for feature, v in zip(x_train.columns, model_gbm.feature_importances_):
             print(f"Feature: {feature}, Score: %.5f" % (v))
 
+        log.loc[:len(model_gbm.feature_importances_),f"Fold {i}"] = model_gbm.feature_importances_
+        log.loc["Accuracy", f"Fold {i}"] = accuracy_score(y_test, y_pred)
+        log.loc["Recall", f"Fold {i}"] = recall_score(y_test, y_pred)
+        log.loc["ROC-AUC", f"Fold {i}"] = roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1])
         print("--------------------------------------------------------")
         i += 1
+    print("Log file:\n", log)
+    if query_write():
+        log.to_csv("log.csv")
