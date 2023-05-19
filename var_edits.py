@@ -99,6 +99,6 @@ def format_FH(in_data, in_index):
             elif var == "CL":
                 out_data.loc[(country, 1981), "FH_civ"] = row[column] if '-' not in row[column] else np.nan
                 out_data.loc[(country, 1982), "FH_civ"] = row[column] if '-' not in row[column] else np.nan
-
+    out_data.replace(to_replace={"FH_civ": '-', "FH_pol": '-'}, value=np.nan, inplace=True)
     return out_data
 

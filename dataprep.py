@@ -260,7 +260,7 @@ def dataprep(step="merge", edit_col=None):
         list_countries_per_set(raw_econ, "GDP", cntry_names)
         list_countries_per_set(raw_pop, "Population", cntry_names)
         list_countries_per_set(raw_groups, "Groups", cntry_names, in_header=True)
-        create_country_table(main_index.get_level_values(0), cntry_names, write=write)
+        create_country_table(main_index.get_level_values(0), cntry_names, write=query_write(start_time))
 
     elif step == "update_dict":
         cntry_names = pd.DataFrame()

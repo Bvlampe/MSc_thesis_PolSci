@@ -3,7 +3,7 @@ import models
 
 
 def main():
-    dataprep.dataprep("merge")
+    dataprep.dataprep("edit", edit_col="FH")
     # models.models()
 
 
