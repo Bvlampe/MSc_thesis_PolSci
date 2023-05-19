@@ -96,8 +96,6 @@ def models():
 
         # The feature_importances_ attribute measures the "mean and standard deviation of accumulation
         # of the impurity decrease within each tree" - scikit-learn doc
-        # summarize feature importance, as of yet does not display the names of the features due to
-        # how the scikit-learn pipeline works. To be fixed
         for feature, v in zip(x_train.columns, model_gbm.feature_importances_):
             print(f"Feature: {feature}, Score: %.5f" % (v))
 

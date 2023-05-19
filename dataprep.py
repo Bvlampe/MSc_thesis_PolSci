@@ -326,6 +326,7 @@ def dataprep(step="merge", edit_col=None):
         main_data = main_data.merge(slice_edu, left_index=True, right_index=True)
         main_data = main_data.merge(slice_econ, left_index=True, right_index=True)
         main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
+        main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
 
         if query_write(start_time):
             main_data.to_csv("merged_data.csv")
