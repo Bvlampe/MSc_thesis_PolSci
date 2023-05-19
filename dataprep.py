@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import var_edits
+import time
 
 
 def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Country", in_index=False, in_header=False):
@@ -159,6 +160,7 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, in_h
                     io_data.drop(country, inplace=True, axis=1)
                 else:
                     io_data.rename(columns={country: newname}, inplace=True)
+
     else:
         for i in range(len(io_data.index)):
             country = io_data.loc[i, ctry_name]
@@ -175,7 +177,18 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, in_h
         if drop_missing:
             io_data.dropna(subset=ctry_name, inplace=True)
 
-def dataprep(step="merge", edit_col=None, write=False):
+
+def query_write(start_time):
+    print("Elapsed time at query_write():", time.time() - start_time, "sec")
+    answer = ""
+    while answer not in ["y", "n"]:
+        answer = input("Write to file? y/n: ")
+    return True if answer == "y" else False
+
+
+def dataprep(step="merge", edit_col=None):
+    start_time = time.time()
+
     path_rawdata = "datasets_input/"
 
     path_GTD_raw = path_rawdata + "GTD_raw.csv"
@@ -314,7 +327,7 @@ def dataprep(step="merge", edit_col=None, write=False):
         main_data = main_data.merge(slice_econ, left_index=True, right_index=True)
         main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
 
-        if write:
+        if query_write(start_time):
             main_data.to_csv("merged_data.csv")
 
     # Not needed in common usage, only for short ad-hoc patches
@@ -358,6 +371,11 @@ def dataprep(step="merge", edit_col=None, write=False):
             rename_countries(raw_groups, concordance_table, in_header=True)
             slice_interventions = var_edits.format_interventions(
                 raw_interventions, main_index, raw_groups.rename({"LOAS": "Arab League"}, level=0))
+            main_data.drop("Intervention", axis=1, inplace=True)
+            main_data = main_data.merge(slice_interventions, left_index=True, right_index=True)
 
-        if write:
+        if query_write(start_time):
             main_data.to_csv("merged_data.csv")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print("Total time elapsed:", elapsed_time, "sec")

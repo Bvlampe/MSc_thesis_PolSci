@@ -6,8 +6,7 @@
 ---
 ### WIP
 
-- [ ] Implement attribution of group interventions (NATO, UN, etc.)
-- [ ] DataPrep
+- [x] DataPrep
   - [x] Finish generic_table_transform() function definition
   - [x] Merge datasets
   - [ ] Add new datasets
@@ -20,7 +19,7 @@
     - [x] Literacy
     - [ ] Internet users?
     - [x] Education
-  - [ ] Format intervention and FH datasets
+  - [x] Format intervention and FH datasets
 - [ ] Evaluate models
   - [ ] Compare predictive power of variables
 
@@ -60,3 +59,4 @@
   - [x] Logistic regression
   - [x] Random forest
   - [x] GBM
+- [x] Implement attribution of group interventions (NATO, UN, etc.)
