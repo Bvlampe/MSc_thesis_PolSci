@@ -9,10 +9,10 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import roc_auc_score, roc_curve
 
 
-def query_write():
+def query_yn(question):
     answer = ""
     while answer not in ["y", "n"]:
-        answer = input("Write model output to log file? y/n: ")
+        answer = input(question)
     return True if answer == "y" else False
 
 def models():
@@ -23,21 +23,27 @@ def models():
     # Drop un-lagged DV and variables with too little data, as well as missing values
     main_data.drop(["Terrorist attack"], axis=1, inplace=True)
 
+    nans_before = main_data.isna().sum()
+    print("NaN per column before interpolation:\n", nans_before, end='\n')
+
     # Interpolate missing values for some sparsely-documented features,
     # max 10 consecutive years to be interpolated
-    main_data["Inequality"] = main_data.groupby(level=0)["Inequality"].apply(
-        lambda group: group.interpolate(limit=10, limit_area="inside"))
-    main_data["Poverty"] = main_data.groupby(level=0)["Poverty"].apply(
-        lambda group: group.interpolate(limit=10, limit_area="inside"))
-    main_data["Literacy"] = main_data.groupby(level=0)["Literacy"].apply(
-        lambda group: group.interpolate(limit=10, limit_area="inside"))
-    main_data["Education"] = main_data.groupby(level=0)["Education"].apply(
-        lambda group: group.interpolate(limit=10, limit_area="inside"))
+    for col in main_data.columns:
+        main_data[col] = main_data.groupby(level=0)[col].apply(
+            lambda group: group.interpolate(limit=10, limit_area="inside"))
+
+    print("NaN per column after interpolation:\n", main_data.isna().sum(), end='\n')
+    print("NaN removed per column:\n", nans_before - main_data.isna().sum(), end='\n')
 
     # Literacy and education datasets are used for the same reason so I drop one. TBA: create models with either one
     # and compare performances
+    print("main_data shape before dropping:", main_data.shape, end='\n')
     main_data.drop(["Education"], axis=1, inplace=True)
     main_data.dropna(inplace=True)
+    print("main_data shape after dropping:", main_data.shape, end='\n')
+
+    if not query_yn("Continue with model generation? y/n: "):
+        return
 
     # Ensures the "no data" value is the default case dropped in the dummies
     elecsys_dummies = pd.get_dummies(main_data["Elec_sys"], drop_first=False, prefix="elecsys").drop(["elecsys_No data"], axis=1)
@@ -113,5 +119,5 @@ def models():
         print("--------------------------------------------------------")
         i += 1
     print("Log file:\n", log)
-    if query_write():
+    if query_yn("Write model output to log file? y/n: "):
         log.to_csv("log.csv")
