@@ -33,7 +33,7 @@ def models():
             lambda group: group.interpolate(limit=10, limit_area="inside"))
 
     print("NaN per column after interpolation:\n", main_data.isna().sum(), end='\n')
-    print("NaN removed per column:\n", nans_before - main_data.isna().sum(), end='\n')
+    print("NaN interpolated per column:\n", nans_before - main_data.isna().sum(), end='\n')
 
     # Literacy and education datasets are used for the same reason so I drop one. TBA: create models with either one
     # and compare performances
