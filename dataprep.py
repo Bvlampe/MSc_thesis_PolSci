@@ -399,7 +399,7 @@ def dataprep(step="merge", edit_col=None):
 
         elif edit_col == "Weapons":
             rename_countries(raw_weapons, concordance_table, in_index=True)
-            slice_weapons = var_edits.format_weapons(raw_weapons, main_index).to_csv("test.csv")
+            slice_weapons = var_edits.format_weapons(raw_weapons, main_index)
             main_data = main_data.merge(slice_weapons, left_index=True, right_index=True)
 
         if query_yn(start_time, "Overwrite full dataset? y/n: "):
