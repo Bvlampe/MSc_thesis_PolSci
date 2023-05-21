@@ -10,6 +10,14 @@ def cut_GTD(path_in, path_out, code="cp1252"):
     return in_data
 
 
+# Same but for the COW trade dataset
+def cut_trade(path_in, path_out):
+    in_data = pd.read_csv(path_in)
+    out_data = in_data.query("ccode1 == 2 or ccode2 == 2")
+    out_data.to_csv(path_out, index=False)
+    return out_data
+
+
 # Transforms the election system dataset from an election-level format to a country-year format
 def format_elecsys(in_elec, in_index):
     out_data = pd.DataFrame(index=in_index, columns=["Elec_sys"])

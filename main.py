@@ -3,8 +3,8 @@ import models
 
 
 def main():
-    # dataprep.dataprep("edit", edit_col="GDP_pp")
-    models.models()
+    dataprep.dataprep("update_dict")
+    # models.models()
 
 
 if __name__ == "__main__":

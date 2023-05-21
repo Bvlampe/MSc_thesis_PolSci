@@ -4,6 +4,15 @@ import var_edits
 import time
 
 
+def query_yn(start_time=None, query="Write to file? y/n: "):
+    if start_time is not None:
+        print("Elapsed time at query_yn():", time.time() - start_time, "sec")
+    answer = ""
+    while answer not in ["y", "n"]:
+        answer = input(query)
+    return True if answer == "y" else False
+
+
 def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Country", in_index=False, in_header=False):
     assert((not(in_header and in_index)) and "Error: list_countries_per_set() was called with both in_index and in_header set as True")
     i = 0
@@ -17,12 +26,12 @@ def list_countries_per_set(in_dataset, name_dataset, io_list, name_column="Count
     for country in countries:
         io_list.loc[i, name_dataset] = country
         i += 1
-
-
 # Takes the country names in the main dataset (as list-like variable) and a DataFrame of country names in
 # the other datasets (each column being a list of all countries from one specific dataset, with the column
 # name being the name of the dataset) and exports an Excel file with those countries not matching up between the
 # datasets with the goal to create a concordance table from it
+
+
 def create_country_table(main, in_data, write=False):
     first = list(set(main))
     first.sort()
@@ -46,12 +55,12 @@ def create_country_table(main, in_data, write=False):
     if write:
         out.loc[:, ["Non-matching", "Main"]].to_csv("country_names.csv", index=False)
 
-
 def update_table(main, in_data):
     old_table = pd.read_csv("concordance_table.csv")
     first = list(set(main))
     first.sort()
-    out = pd.DataFrame(index=range(len(list(first))), columns=["Main"], data=list(first))
+    out = pd.DataFrame(index=range(len(list(first))), columns=["Main", "Non-matching"])
+    out.loc[:, "Main"] = list(first)
     diff_countries = []
 
     for column in in_data.columns:
@@ -70,7 +79,10 @@ def update_table(main, in_data):
     for ctry in diff_countries:
         out.loc[i, "Non-matching"] = ctry
         i += 1
-    out.loc[:, ["Non-matching", "Main"]].to_csv("updated_country_names.csv", index=False)
+    print(out)
+    if query_yn():
+        out.loc[:, ["Non-matching", "Main"]].to_csv("updated_country_names.csv", index=False)
+
 
 def country_dict():
     source = pd.read_csv("concordance_table.csv")
@@ -78,12 +90,12 @@ def country_dict():
     for _, row in source.iterrows():
         out[row.loc["Non-matching"]] = row.loc["Rename"]
     return out
-
-
 # Transforms a dataset with country and year in different columns (with one datapoint per row)
 # into a DataFrame with the standardised Multi-Index
 # var_name is the name to be assigned to the new column in the output set,
 # column_name the column to be searched for in the input set
+
+
 def generic_list_transform(in_data, in_index, var_name, column_name=None, year_name="Year", ctry_name="Country"):
     print(var_name, ':')
     totalrows = len(in_data.index)
@@ -105,11 +117,11 @@ def generic_list_transform(in_data, in_index, var_name, column_name=None, year_n
         out.loc[(ctry, year), var_name] = value
         done += 1
     return out
-
-
 # Transforms a dataset with country as the index and one column per year
 # into a DataFrame with the standardised Multi-Index
 # var_name is the name to be assigned to the new column in the output set, no effect on input set search
+
+
 def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
     print(var_name, ':')
     totalrows = len(in_data.index)
@@ -129,13 +141,13 @@ def generic_table_transform(in_data, in_index, var_name, ctry_name="Country"):
                 out.loc[(country, year), var_name] = row.loc[str(year)]
         done += 1
     return out
-
-
 # Uses a country name dict to homogenise the country names. Carried out in place on the dataset given as input.
 # in_index should be set to true if the country names are in the index and not in a dedicated column.
 # drop_missing regulates whether countries that do not appear in the dict
 # (not present in GTD, too small, sub- and super-national entities)
 # should be dropped (True) or left in with their original names (False)
+
+
 def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, in_header=False,
                      drop_missing=True, leave_groups=False):
     assert ((not (
@@ -178,20 +190,12 @@ def rename_countries(io_data, in_dict, ctry_name="Country", in_index=False, in_h
             io_data.dropna(subset=ctry_name, inplace=True)
 
 
-def query_write(start_time):
-    print("Elapsed time at query_write():", time.time() - start_time, "sec")
-    answer = ""
-    while answer not in ["y", "n"]:
-        answer = input("Write to file? y/n: ")
-    return True if answer == "y" else False
-
-
 def dataprep(step="merge", edit_col=None):
     start_time = time.time()
 
     path_rawdata = "datasets_input/"
 
-    path_GTD_raw = path_rawdata + "GTD_raw.csv"
+    # path_GTD_raw = path_rawdata + "GTD_raw.csv"
     path_GTD = path_rawdata + "GTD_formatted.csv"
     path_fragility = path_rawdata + "fragility.csv"
     path_durability = path_rawdata + "dur_dem.csv"
@@ -210,9 +214,12 @@ def dataprep(step="merge", edit_col=None):
     path_econ = path_rawdata + "econ.csv"
     path_pop = path_rawdata + "population.csv"
     path_groups = path_rawdata + "group_membership.csv"
+    # path_trade_raw = path_rawdata + "Dyadic_COW_4.0.csv"
+    path_trade = path_rawdata + "trade.csv"
 
     # Only done once
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
+    # raw_trade = var_edits.cut_trade(path_trade_raw, path_trade)
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252").rename(str.capitalize, axis="columns")
     raw_fragility = pd.read_csv(path_fragility).loc[:, ["country", "year", "sfi"]].rename(columns={"sfi" : "Fragility"}).rename(str.capitalize, axis="columns")
     raw_durability = pd.read_csv(path_durability).loc[:, ["country", "year", "durable"]].rename(str.capitalize, axis="columns")
@@ -235,6 +242,7 @@ def dataprep(step="merge", edit_col=None):
     raw_econ = pd.read_csv(path_econ, encoding="cp1252").loc[:, ["country", "year", "rgdpe"]].rename(str.capitalize, axis="columns").rename(columns={"Rgdpe": "GDP"})
     raw_pop = pd.read_csv(path_pop).rename(columns={"Country Name": "Country"})
     raw_groups = pd.read_csv(path_groups, index_col=[0, 1]).rename(columns={"ioname": "Group"}).rename(str.capitalize, axis="columns")
+    raw_trade = pd.read_csv(path_trade).rename(str.capitalize, axis="columns").rename(columns={"Ccode2": "Country"})
 
     main_index_ctry = raw_GTD.loc[:, "Country"].unique()
     main_index_ctry.sort()
@@ -260,11 +268,12 @@ def dataprep(step="merge", edit_col=None):
         list_countries_per_set(raw_econ, "GDP", cntry_names)
         list_countries_per_set(raw_pop, "Population", cntry_names)
         list_countries_per_set(raw_groups, "Groups", cntry_names, in_header=True)
+        list_countries_per_set(raw_trade, "Trade", cntry_names)
         create_country_table(main_index.get_level_values(0), cntry_names, write=query_write(start_time))
 
     elif step == "update_dict":
         cntry_names = pd.DataFrame()
-        cntry_names["Groups"] = raw_groups.columns.unique()
+        cntry_names["Trade"] = raw_trade.loc[:, "Country"].unique()
         update_table(main_index.get_level_values(0), cntry_names)
 
     elif step == "merge":

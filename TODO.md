@@ -12,12 +12,12 @@
   - [ ] Add new datasets
     - [ ] Weapons movement
     - [ ] Ties to US (?)
-  - [ ] Interpolate values:
-    - [ ] Fragility?
+  - [x] Interpolate values:
+    - [x] Fragility?
     - [x] Inequality
     - [x] Poverty
     - [x] Literacy
-    - [ ] Internet users?
+    - [x] Internet users?
     - [x] Education
   - [x] Format intervention and FH datasets
 
