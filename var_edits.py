@@ -120,3 +120,23 @@ def format_trade(in_data, in_index, econ_data):
             rel_trade = abs_trade * 1000 / econ_data.loc[(ctry, year), "GDP"]
             out_data.loc[(ctry, year), "US Trade"] = rel_trade
     return out_data
+
+
+# Only dataprep function that already imputes data (all other interpolation is done leading up to the model creation,
+# but is not written to the merged dataset file
+# This is because it is necessary for this dataset to interpolate missing variables before merging it, as multiple
+# entries per country may exist and if some, but not all of these entries are missing data for a specific year, summing
+# them up will result in non-missing data, which will circumvent interpolation and potentially lead to grossly
+# misleading numbers
+def format_weapons(in_data, in_index):
+    out_data = pd.DataFrame(index=in_index, columns=["Weapon imports"])
+    for ctry, row in in_data.iterrows():
+        ip_row = row.interpolate(limit=10, limit_area="inside")
+        for year in row.index:
+            if (ctry not in in_index.get_level_values(0)) or (int(year) not in in_index.get_level_values(1)):
+                continue
+            if np.isnan(out_data.loc[(ctry, int(year)), "Weapon imports"]):
+                out_data.loc[(ctry, int(year)), "Weapon imports"] = ip_row[year]
+            else:
+                out_data.loc[(ctry, int(year)), "Weapon imports"] += ip_row[year]
+    return out_data

@@ -304,6 +304,7 @@ def dataprep(step="merge", edit_col=None):
         rename_countries(raw_pop, concordance_table)
         rename_countries(raw_groups, concordance_table, in_header=True)
         rename_countries(raw_trade, concordance_table)
+        rename_countries(raw_weapons, concordance_table, in_index=True)
 
         main_data = generic_list_transform(raw_GTD, main_index, "Terrorist attack")
         slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
@@ -324,6 +325,7 @@ def dataprep(step="merge", edit_col=None):
         slice_econ = generic_list_transform(raw_econ, main_index, "GDP")
         slice_pop = generic_table_transform(raw_pop, main_index, "Population")
         slice_trade = var_edits.format_trade(raw_trade, main_index, slice_econ)
+        slice_weapons = var_edits.format_weapons(raw_weapons, main_index)
 
         main_data = main_data.merge(slice_fragility, left_index=True, right_index=True)
         main_data = main_data.merge(slice_durability, left_index=True, right_index=True)
@@ -342,6 +344,7 @@ def dataprep(step="merge", edit_col=None):
         main_data = main_data.merge(slice_econ, left_index=True, right_index=True)
         main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
         main_data = main_data.merge(slice_trade, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_trade, left_index=True, right_index=True)
         main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
 
         if query_yn(start_time):
@@ -353,13 +356,13 @@ def dataprep(step="merge", edit_col=None):
     elif step == "edit":
         assert(edit_col is not None)
         main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
+        concordance_table = country_dict()
 
         if edit_col == "Religious fragmentation":
             slice_rel_frag = var_edits.calc_rel_frag(raw_religion, main_index)
             main_data.loc[:, "Religious fragmentation"] = slice_rel_frag.loc[:, "Religious fragmentation"]
 
         elif edit_col == "set_1":
-            concordance_table = country_dict()
             rename_countries(raw_edu, concordance_table)
             rename_countries(raw_econ, concordance_table)
             rename_countries(raw_pop, concordance_table)
@@ -371,7 +374,6 @@ def dataprep(step="merge", edit_col=None):
             main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
 
         elif edit_col == "FH":
-            concordance_table = country_dict()
             rename_countries(raw_FH, concordance_table, in_index=True)
             slice_FH = var_edits.format_FH(raw_FH, main_index)
             main_data.loc[:, "FH_civ"] = slice_FH.loc[:, "FH_civ"]
@@ -383,7 +385,6 @@ def dataprep(step="merge", edit_col=None):
             main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
 
         elif edit_col == "Interventions":
-            concordance_table = country_dict()
             rename_countries(raw_interventions, concordance_table, leave_groups=True)
             rename_countries(raw_groups, concordance_table, in_header=True)
             slice_interventions = var_edits.format_interventions(
@@ -392,12 +393,16 @@ def dataprep(step="merge", edit_col=None):
             main_data = main_data.merge(slice_interventions, left_index=True, right_index=True)
 
         elif edit_col == "Trade":
-            concordance_table = country_dict()
             rename_countries(raw_trade, concordance_table)
             slice_trade = var_edits.format_trade(raw_trade, main_index, main_data)
             main_data = main_data.merge(slice_trade, left_index=True, right_index=True)
 
-        if query_yn(start_time):
+        elif edit_col == "Weapons":
+            rename_countries(raw_weapons, concordance_table, in_index=True)
+            slice_weapons = var_edits.format_weapons(raw_weapons, main_index).to_csv("test.csv")
+            main_data = main_data.merge(slice_weapons, left_index=True, right_index=True)
+
+        if query_yn(start_time, "Overwrite full dataset? y/n: "):
             main_data.to_csv("merged_data.csv")
     end_time = time.time()
     elapsed_time = end_time - start_time

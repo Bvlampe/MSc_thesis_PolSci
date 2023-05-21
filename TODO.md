@@ -6,20 +6,6 @@
 ---
 ### WIP
 
-- [x] DataPrep
-  - [x] Finish generic_table_transform() function definition
-  - [x] Merge datasets
-  - [ ] Add new datasets
-    - [ ] Weapons movement
-    - [ ] Ties to US (?)
-  - [x] Interpolate values:
-    - [x] Fragility?
-    - [x] Inequality
-    - [x] Poverty
-    - [x] Literacy
-    - [x] Internet users?
-    - [x] Education
-  - [x] Format intervention and FH datasets
 
 ---
 ### Done ✓
@@ -60,3 +46,17 @@
 - [x] Implement attribution of group interventions (NATO, UN, etc.)
 - [x] Evaluate models
   - [x] Compare predictive power of variables
+- [x] DataPrep
+  - [x] Finish generic_table_transform() function definition
+  - [x] Merge datasets
+  - [x] Add new datasets
+    - [x] Weapons movement
+    - [x] Ties to US (?)
+  - [x] Interpolate values:
+    - [x] Fragility?
+    - [x] Inequality
+    - [x] Poverty
+    - [x] Literacy
+    - [x] Internet users?
+    - [x] Education
+  - [x] Format intervention and FH datasets

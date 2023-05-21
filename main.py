@@ -3,7 +3,7 @@ import models
 
 
 def main():
-    dataprep.dataprep("update_dict", edit_col="Trade")
+    dataprep.dataprep("edit", edit_col="Weapons")
     # models.models()
 
 
