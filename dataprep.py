@@ -217,6 +217,7 @@ def dataprep(step="merge", edit_col=None):
     path_groups = path_rawdata + "group_membership.csv"
     # path_trade_raw = path_rawdata + "Dyadic_COW_4.0.csv"
     path_trade = path_rawdata + "trade.csv"
+    path_weapons = path_rawdata + "weapon_imports.csv"
 
     # Only done once
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
@@ -244,6 +245,7 @@ def dataprep(step="merge", edit_col=None):
     raw_pop = pd.read_csv(path_pop).rename(columns={"Country Name": "Country"})
     raw_groups = pd.read_csv(path_groups, index_col=[0, 1]).rename(columns={"ioname": "Group"}).rename(str.capitalize, axis="columns")
     raw_trade = pd.read_csv(path_trade).rename(str.capitalize, axis="columns").rename(columns={"Importer2": "Country"}).replace({-9: np.nan})
+    raw_weapons = pd.read_csv(path_weapons, index_col=[0]).loc[:"Zimbabwe", :"2022"] #.drop(["NaN", "Total"], axis=0)
 
     main_index_ctry = raw_GTD.loc[:, "Country"].unique()
     main_index_ctry.sort()
@@ -270,11 +272,12 @@ def dataprep(step="merge", edit_col=None):
         list_countries_per_set(raw_pop, "Population", cntry_names)
         list_countries_per_set(raw_groups, "Groups", cntry_names, in_header=True)
         list_countries_per_set(raw_trade, "Trade", cntry_names)
+        list_countries_per_set(raw_weapons, "Weapons", cntry_names, in_index=True)
         create_country_table(main_index.get_level_values(0), cntry_names, write=query_yn(start_time))
 
     elif step == "update_dict":
         cntry_names = pd.DataFrame()
-        cntry_names["Trade"] = raw_trade.loc[:, "Country"].unique()
+        cntry_names["Weapons"] = raw_weapons.index.unique()
         update_table(main_index.get_level_values(0), cntry_names)
 
     elif step == "merge":

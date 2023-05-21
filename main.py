@@ -3,8 +3,8 @@ import models
 
 
 def main():
-    # dataprep.dataprep("edit", edit_col="Trade")
-    models.models()
+    dataprep.dataprep("update_dict", edit_col="Trade")
+    # models.models()
 
 
 if __name__ == "__main__":
