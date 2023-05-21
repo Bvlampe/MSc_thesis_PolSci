@@ -80,6 +80,7 @@ def update_table(main, in_data):
         out.loc[i, "Non-matching"] = ctry
         i += 1
     print(out)
+    print("Number of new non-matching:", len(out.loc[:,"Non-matching"].unique()) - 1)
     if query_yn():
         out.loc[:, ["Non-matching", "Main"]].to_csv("updated_country_names.csv", index=False)
 
@@ -242,7 +243,7 @@ def dataprep(step="merge", edit_col=None):
     raw_econ = pd.read_csv(path_econ, encoding="cp1252").loc[:, ["country", "year", "rgdpe"]].rename(str.capitalize, axis="columns").rename(columns={"Rgdpe": "GDP"})
     raw_pop = pd.read_csv(path_pop).rename(columns={"Country Name": "Country"})
     raw_groups = pd.read_csv(path_groups, index_col=[0, 1]).rename(columns={"ioname": "Group"}).rename(str.capitalize, axis="columns")
-    raw_trade = pd.read_csv(path_trade).rename(str.capitalize, axis="columns").rename(columns={"Ccode2": "Country"})
+    raw_trade = pd.read_csv(path_trade).rename(str.capitalize, axis="columns").rename(columns={"Importer2": "Country"}).replace({-9: np.nan})
 
     main_index_ctry = raw_GTD.loc[:, "Country"].unique()
     main_index_ctry.sort()
@@ -269,7 +270,7 @@ def dataprep(step="merge", edit_col=None):
         list_countries_per_set(raw_pop, "Population", cntry_names)
         list_countries_per_set(raw_groups, "Groups", cntry_names, in_header=True)
         list_countries_per_set(raw_trade, "Trade", cntry_names)
-        create_country_table(main_index.get_level_values(0), cntry_names, write=query_write(start_time))
+        create_country_table(main_index.get_level_values(0), cntry_names, write=query_yn(start_time))
 
     elif step == "update_dict":
         cntry_names = pd.DataFrame()
@@ -299,6 +300,7 @@ def dataprep(step="merge", edit_col=None):
         rename_countries(raw_econ, concordance_table)
         rename_countries(raw_pop, concordance_table)
         rename_countries(raw_groups, concordance_table, in_header=True)
+        rename_countries(raw_trade, concordance_table)
 
         main_data = generic_list_transform(raw_GTD, main_index, "Terrorist attack")
         slice_fragility = generic_list_transform(raw_fragility, main_index, "Fragility")
@@ -318,6 +320,7 @@ def dataprep(step="merge", edit_col=None):
         slice_edu = generic_list_transform(raw_edu, main_index, "Education")
         slice_econ = generic_list_transform(raw_econ, main_index, "GDP")
         slice_pop = generic_table_transform(raw_pop, main_index, "Population")
+        slice_trade = var_edits.format_trade(raw_trade, main_index, slice_econ)
 
         main_data = main_data.merge(slice_fragility, left_index=True, right_index=True)
         main_data = main_data.merge(slice_durability, left_index=True, right_index=True)
@@ -335,9 +338,10 @@ def dataprep(step="merge", edit_col=None):
         main_data = main_data.merge(slice_edu, left_index=True, right_index=True)
         main_data = main_data.merge(slice_econ, left_index=True, right_index=True)
         main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
+        main_data = main_data.merge(slice_trade, left_index=True, right_index=True)
         main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
 
-        if query_write(start_time):
+        if query_yn(start_time):
             main_data.to_csv("merged_data.csv")
 
     # Not needed in common usage, only for short ad-hoc patches
@@ -384,7 +388,13 @@ def dataprep(step="merge", edit_col=None):
             main_data.drop("Intervention", axis=1, inplace=True)
             main_data = main_data.merge(slice_interventions, left_index=True, right_index=True)
 
-        if query_write(start_time):
+        elif edit_col == "Trade":
+            concordance_table = country_dict()
+            rename_countries(raw_trade, concordance_table)
+            slice_trade = var_edits.format_trade(raw_trade, main_index, main_data)
+            main_data = main_data.merge(slice_trade, left_index=True, right_index=True)
+
+        if query_yn(start_time):
             main_data.to_csv("merged_data.csv")
     end_time = time.time()
     elapsed_time = end_time - start_time

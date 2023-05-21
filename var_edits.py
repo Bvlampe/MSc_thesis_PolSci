@@ -110,3 +110,13 @@ def format_FH(in_data, in_index):
     out_data.replace(to_replace={"FH_civ": '-', "FH_pol": '-'}, value=np.nan, inplace=True)
     return out_data
 
+def format_trade(in_data, in_index, econ_data):
+    out_data = pd.DataFrame(index=in_index, columns=["US Trade"])
+    for _, row in in_data.iterrows():
+        ctry = row.loc["Country"]
+        year = row.loc["Year"]
+        if ctry in in_index.get_level_values(0) and year in in_index.get_level_values(1):
+            abs_trade = row.loc["Flow1"] + row.loc["Flow2"]
+            rel_trade = abs_trade * 1000 / econ_data.loc[(ctry, year), "GDP"]
+            out_data.loc[(ctry, year), "US Trade"] = rel_trade
+    return out_data
