@@ -327,24 +327,11 @@ def dataprep(step="merge", edit_col=None):
         slice_trade = var_edits.format_trade(raw_trade, main_index, slice_econ)
         slice_weapons = var_edits.format_weapons(raw_weapons, main_index)
 
-        main_data = main_data.merge(slice_fragility, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_durability, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_elecsys, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_democracy, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_FH, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_inequality, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_poverty, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_inflation, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_lit, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_iusers, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_interventions, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_rel_frag, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_glob, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_edu, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_econ, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_pop, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_trade, left_index=True, right_index=True)
-        main_data = main_data.merge(slice_trade, left_index=True, right_index=True)
+
+        for dset in [slice_fragility, slice_durability, slice_elecsys, slice_democracy, slice_FH, slice_inequality,
+                     slice_poverty, slice_inflation, slice_lit, slice_iusers, slice_interventions, slice_rel_frag,
+                     slice_glob, slice_edu, slice_econ, slice_pop, slice_trade, slice_weapons]:
+            main_data = main_data.merge(dset, left_index=True, right_index=True)
         main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
 
         if query_yn(start_time):
