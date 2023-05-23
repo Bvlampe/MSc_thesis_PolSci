@@ -89,21 +89,24 @@ def models():
         print("Logistic regression:")
         # print(classification_report(y_test, y_pred))
         # print(confusion_matrix(y_test, y_pred))
-        print("Accuracy:", accuracy_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
+        print("Precision:", precision_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
+        print("Accuracy:", accuracy_score(y_test, y_pred))
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_logreg.predict_proba(x_test)[:,1]))
         print()
 
         model_rf.fit(x_train, y_train)
         y_pred = model_rf.predict(x_test)
         print("Random forest:")
-        print("Accuracy:", accuracy_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
+        print("Precision:", precision_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
+        print("Accuracy:", accuracy_score(y_test, y_pred))
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_rf.predict_proba(x_test)[:, 1]))
         print()
 
         model_gbm.fit(x_train, y_train)
         y_pred = model_gbm.predict(x_test)
         print("Gradient boosting machine:")
-        print("Accuracy:", accuracy_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
+        print("Precision:", precision_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
+        print("Accuracy:", accuracy_score(y_test, y_pred))
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1]))
 
 
@@ -114,6 +117,7 @@ def models():
 
         log.loc[:len(model_gbm.feature_importances_),f"Fold {i}"] = model_gbm.feature_importances_
         log.loc["Accuracy", f"Fold {i}"] = accuracy_score(y_test, y_pred)
+        log.loc["Precision", f"Fold {i}"] = precision_score(y_test, y_pred)
         log.loc["Recall", f"Fold {i}"] = recall_score(y_test, y_pred)
         log.loc["ROC-AUC", f"Fold {i}"] = roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1])
         print("--------------------------------------------------------")
