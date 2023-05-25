@@ -186,8 +186,12 @@ def partial_models(varchoice, extra_options=[]):
                         "Global terrorist attacks"], axis=1, inplace=True)
     elif varchoice == "professional":
         main_data.drop(["Terrorist attack", "Fragility", "Durability", "Democracy", "FH_pol", "FH_civ", "GDP", "GDP_pp",
-                        "Inequality", "Poverty", "Inflation", "Literacy", "Global terrorist attacks"],
+                        "Inequality", "Poverty", "Inflation", "Global terrorist attacks"],
                        axis=1, inplace=True)
+        if "Literacy" in main_data.columns:
+            main_data.drop(["Literacy"], axis=1, inplace=True)
+        else:
+            main_data.drop(["Education"], axis=1, inplace=True)
         main_data.drop(elecsys_dummies.columns, axis=1, inplace=True)
     elif varchoice == "combined":
         main_data.drop(["Terrorist attack", "Global terrorist attacks"], axis=1, inplace=True)
@@ -274,4 +278,5 @@ def partial_models(varchoice, extra_options=[]):
         print("--------------------------------------------------------")
         i += 1
     print("Log file:\n", log)
-    log.to_csv("output_files/" + varchoice + ".csv")
+    suffix = '_' + "_".join(extra_options) if extra_options else ''
+    log.to_csv("output_files/" + varchoice + suffix + ".csv")
