@@ -334,7 +334,7 @@ def dataprep(step="merge", edit_col=None):
                      slice_poverty, slice_inflation, slice_lit, slice_iusers, slice_interventions, slice_rel_frag,
                      slice_glob, slice_edu, slice_econ, slice_pop, slice_trade, slice_weapons, slice_global_terrorism]:
             main_data = main_data.merge(dset, left_index=True, right_index=True)
-        main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
+        # main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
 
         if query_yn(start_time):
             main_data.to_csv("merged_data.csv")
@@ -370,8 +370,8 @@ def dataprep(step="merge", edit_col=None):
             # main_data = main_data.merge(slice_FH, left_index=True, right_index=True)
             main_data.replace(to_replace={"FH_civ": '-', "FH_pol": '-'}, value=np.nan, inplace=True)
 
-        elif edit_col == "GDP_pp":
-            main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
+        # elif edit_col == "GDP_pp":
+        #     main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
 
         elif edit_col == "Interventions":
             rename_countries(raw_interventions, concordance_table, leave_groups=True)
