@@ -278,7 +278,7 @@ def partial_models(varchoice, macrolog, extra_options=[]):
         print("--------------------------------------------------------")
         i += 1
     print("Log file:\n", log)
-    suffix = '_' + "_".join(extra_options) if extra_options else ''
+    suffix = '_' + "+".join(extra_options) if extra_options else ''
     log.to_csv("output_files/" + varchoice + suffix + ".csv")
 
     for model in ["LR", "RF", "GBM"]:
