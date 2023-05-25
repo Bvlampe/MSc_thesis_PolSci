@@ -139,7 +139,7 @@ def models():
 
 
 # Copy-pasted from the models() function just to avoid fucking up something permanently
-def partial_models(varchoice, extra_options=[]):
+def partial_models(varchoice, macrolog, extra_options=[]):
     assert(varchoice in ["academic", "professional", "combined", "all"])
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
 
@@ -280,3 +280,12 @@ def partial_models(varchoice, extra_options=[]):
     print("Log file:\n", log)
     suffix = '_' + "_".join(extra_options) if extra_options else ''
     log.to_csv("output_files/" + varchoice + suffix + ".csv")
+
+    for model in ["LR", "RF", "GBM"]:
+        tomacrolog = []
+        for i in range(5):
+            tomacrolog.append(log.loc["ROC-AUC", f"{model} Fold {i + 1}"])
+        tomacrolog.remove(max(tomacrolog))
+        tomacrolog.remove(min(tomacrolog))
+        assert(len(tomacrolog) == 3)
+        macrolog[varchoice, model] = np.average(tomacrolog)
