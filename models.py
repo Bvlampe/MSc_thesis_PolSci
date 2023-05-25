@@ -140,8 +140,11 @@ def models():
 
 # Copy-pasted from the models() function just to avoid fucking up something permanently
 def partial_models(varchoice, macrolog, extra_options=[]):
-    assert(varchoice in ["academic", "professional", "combined", "all"])
+    assert(varchoice in ["academic", "professional", "combined", "all", "notrade"])
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
+
+    if varchoice == "notrade":
+        main_data.drop(["US Trade"], axis=1, inplace=True)
 
     # Lag DV to avoid data leakage
     main_data["Terrorist attack lag-1"] = main_data.groupby(level=0)["Terrorist attack"].shift(-1)

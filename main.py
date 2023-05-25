@@ -7,12 +7,14 @@ import models
 def main():
     # dataprep.dataprep("edit", edit_col="Global terrorism")
     # dataexpl.dataexpl()
+    # for extra in [[], ["interpol_glob_GTD"], ["education"], ["interpol_glob_GTD", "education"]]:
+    #     auc_roc_set = pd.DataFrame()
+    #     for vars in ["academic", "professional", "combined", "all", "notrade"]:
+    #         models.partial_models(varchoice=vars, macrolog=auc_roc_set, extra_options=extra)
+    #     suffix = '_' + "+".join(extra) if extra else ''
+    #     auc_roc_set.to_csv("output_files/auc_roc_per_model" + suffix + ".csv")
     auc_roc_set = pd.DataFrame()
-    for extra in [[], ["interpol_glob_GTD"], ["education"], ["interpol_glob_GTD", "education"]]:
-        for vars in ["academic", "professional", "combined", "all"]:
-            models.partial_models(varchoice=vars, macrolog=auc_roc_set, extra_options=extra)
-        suffix = '_' + "+".join(extra) if extra else ''
-        auc_roc_set.to_csv("output_files/auc_roc_per_model" + suffix + ".csv")
+    models.partial_models(varchoice="notrade", macrolog=auc_roc_set, extra_options=[])
     # models.models()
 
 
