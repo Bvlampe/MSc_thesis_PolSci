@@ -81,8 +81,8 @@ def models():
         x_test.columns = x_test.columns.tolist()
 
         y_train, y_test = x_train['Terrorist attack lag-1'], x_test['Terrorist attack lag-1']
-        x_train = x_train.drop(["Terrorist attack lag-1"], axis=1)
-        x_test = x_test.drop(["Terrorist attack lag-1"], axis=1)
+        x_train = x_train.drop(["Terrorist attack lag-1", "Year"], axis=1)
+        x_test = x_test.drop(["Terrorist attack lag-1", "Year"], axis=1)
 
 
         model_logreg.fit(x_train, y_train)
@@ -185,7 +185,7 @@ def partial_models(varchoice, macrolog, extra_options=[]):
         main_data.drop(["Terrorist attack", "US Trade", "Internet users", "Weapon imports",
                         "Global terrorist attacks"], axis=1, inplace=True)
     elif varchoice == "professional":
-        main_data.drop(["Terrorist attack", "Fragility", "Durability", "Democracy", "FH_pol", "FH_civ", "GDP", "GDP_pp",
+        main_data.drop(["Terrorist attack", "Fragility", "Durability", "Democracy", "FH_pol", "FH_civ", "GDP",
                         "Inequality", "Poverty", "Inflation", "Global terrorist attacks"],
                        axis=1, inplace=True)
         if "Literacy" in main_data.columns:
@@ -225,8 +225,8 @@ def partial_models(varchoice, macrolog, extra_options=[]):
         x_test.columns = x_test.columns.tolist()
 
         y_train, y_test = x_train['Terrorist attack lag-1'], x_test['Terrorist attack lag-1']
-        x_train = x_train.drop(["Terrorist attack lag-1"], axis=1)
-        x_test = x_test.drop(["Terrorist attack lag-1"], axis=1)
+        x_train = x_train.drop(["Terrorist attack lag-1", "Year"], axis=1)
+        x_test = x_test.drop(["Terrorist attack lag-1", "Year"], axis=1)
 
 
         model_logreg.fit(x_train, y_train)
