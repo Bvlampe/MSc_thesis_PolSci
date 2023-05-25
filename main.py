@@ -10,7 +10,7 @@ def main():
     auc_roc_set = pd.DataFrame()
     for vars in ["academic", "professional", "combined", "all"]:
         models.partial_models(varchoice=vars, macrolog=auc_roc_set, extra_options=[])
-    auc_roc_set.to_csv("output_files/auc_roc_per_model")
+    auc_roc_set.to_csv("output_files/auc_roc_per_model.csv")
     # models.models()
 
 

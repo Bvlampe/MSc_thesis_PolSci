@@ -288,4 +288,4 @@ def partial_models(varchoice, macrolog, extra_options=[]):
         tomacrolog.remove(max(tomacrolog))
         tomacrolog.remove(min(tomacrolog))
         assert(len(tomacrolog) == 3)
-        macrolog[varchoice, model] = np.average(tomacrolog)
+        macrolog.loc[varchoice, model] = np.average(tomacrolog)
