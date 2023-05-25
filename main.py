@@ -5,7 +5,9 @@ import models
 
 def main():
     # dataprep.dataprep("edit", edit_col="Global terrorism")
-    dataexpl.dataexpl()
+    # dataexpl.dataexpl()
+    for vars in ["academic", "professional", "combined", "all"]:
+        models.partial_models(varchoice=vars, extra_options=[])
     # models.models()
 
 
