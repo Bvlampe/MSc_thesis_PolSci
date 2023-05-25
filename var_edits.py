@@ -57,6 +57,29 @@ def format_GTD(in_data, in_index):
     return out_data
 
 
+def glob_GTD(in_data, in_index):
+    out_data = pd.DataFrame(index=in_index, columns=["Global terrorist attacks"])
+    print("glob_GTD():")
+    totalrows = len(in_data.index)
+    done = 0
+    print_freq = int(totalrows / 10)
+    count, year = 0, 0
+    for _, row in in_data.iterrows():
+        if not done % print_freq:
+            print(100 * done / totalrows, '%')
+        if row["Iyear"] != year:
+            # Save previously added up attacks
+            if year in in_index.get_level_values(1):
+                for country in in_index.get_level_values(0):
+                    out_data.loc[(country, year), "Global terrorist attacks"] = count
+            # Start counting anew
+            year = row["Iyear"]
+            count = 1
+        else:
+            count += 1
+        done += 1
+    return out_data
+
 def format_interventions(in_data, in_index, in_groups):
     in_data.dropna(subset="Country", inplace=True)
     out_data = pd.DataFrame(index=in_index, columns=["Intervention", "Group Intervention"])

@@ -196,7 +196,7 @@ def dataprep(step="merge", edit_col=None):
 
     path_rawdata = "datasets_input/"
 
-    # path_GTD_raw = path_rawdata + "GTD_raw.csv"
+    path_GTD_raw = path_rawdata + "GTD.csv"
     path_GTD = path_rawdata + "GTD_formatted.csv"
     path_fragility = path_rawdata + "fragility.csv"
     path_durability = path_rawdata + "dur_dem.csv"
@@ -223,6 +223,7 @@ def dataprep(step="merge", edit_col=None):
     # raw_GTD = cut_GTD(path_GTD_raw, path_GTD)
     # raw_trade = var_edits.cut_trade(path_trade_raw, path_trade)
     raw_GTD = pd.read_csv(path_GTD, encoding="cp1252").rename(str.capitalize, axis="columns")
+    raw_glob_GTD = pd.read_csv(path_GTD_raw, encoding="cp1252").rename(str.capitalize, axis="columns")
     raw_fragility = pd.read_csv(path_fragility).loc[:, ["country", "year", "sfi"]].rename(columns={"sfi" : "Fragility"}).rename(str.capitalize, axis="columns")
     raw_durability = pd.read_csv(path_durability).loc[:, ["country", "year", "durable"]].rename(str.capitalize, axis="columns")
     raw_durability = raw_durability.loc[raw_durability["Year"] >= 1950, :].reset_index()
@@ -326,11 +327,12 @@ def dataprep(step="merge", edit_col=None):
         slice_pop = generic_table_transform(raw_pop, main_index, "Population")
         slice_trade = var_edits.format_trade(raw_trade, main_index, slice_econ)
         slice_weapons = var_edits.format_weapons(raw_weapons, main_index)
+        slice_global_terrorism = var_edits.glob_GTD(raw_glob_GTD, main_index)
 
 
         for dset in [slice_fragility, slice_durability, slice_elecsys, slice_democracy, slice_FH, slice_inequality,
                      slice_poverty, slice_inflation, slice_lit, slice_iusers, slice_interventions, slice_rel_frag,
-                     slice_glob, slice_edu, slice_econ, slice_pop, slice_trade, slice_weapons]:
+                     slice_glob, slice_edu, slice_econ, slice_pop, slice_trade, slice_weapons, slice_global_terrorism]:
             main_data = main_data.merge(dset, left_index=True, right_index=True)
         main_data.loc[:, "GDP_pp"] = (main_data.loc[:, "GDP"] * 1000000) / main_data.loc[:, "Population"]
 
@@ -389,6 +391,11 @@ def dataprep(step="merge", edit_col=None):
             slice_weapons = var_edits.format_weapons(raw_weapons, main_index)
             main_data = main_data.merge(slice_weapons, left_index=True, right_index=True)
 
+        elif edit_col == "Global terrorism":
+            slice_global_terrorism = var_edits.glob_GTD(raw_glob_GTD, main_index)
+            main_data = main_data.merge(slice_global_terrorism, left_index=True, right_index=True)
+
+        print(main_data)
         if query_yn(start_time, "Overwrite full dataset? y/n: "):
             main_data.to_csv("merged_data.csv")
     end_time = time.time()
