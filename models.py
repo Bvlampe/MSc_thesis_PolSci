@@ -15,6 +15,9 @@ def query_yn(question):
         answer = input(question)
     return True if answer == "y" else False
 
+def query_txt(question = "Enter filename to write to: ")
+    return input(question)
+
 def models():
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
 
@@ -93,6 +96,11 @@ def models():
         print("Accuracy:", accuracy_score(y_test, y_pred))
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_logreg.predict_proba(x_test)[:,1]))
         print()
+        log.loc[:len(model_logreg.feature_importances_),f"LR Fold {i}"] = model_logreg.feature_importances_
+        log.loc["Accuracy", f"LR Fold {i}"] = accuracy_score(y_test, y_pred)
+        log.loc["Precision", f"LR Fold {i}"] = precision_score(y_test, y_pred)
+        log.loc["Recall", f"LR Fold {i}"] = recall_score(y_test, y_pred)
+        log.loc["ROC-AUC", f"LR Fold {i}"] = roc_auc_score(y_test, model_logreg.predict_proba(x_test)[:,1])
 
         model_rf.fit(x_train, y_train)
         y_pred = model_rf.predict(x_test)
@@ -101,6 +109,11 @@ def models():
         print("Accuracy:", accuracy_score(y_test, y_pred))
         print("ROC-AUC-score: ", roc_auc_score(y_test, model_rf.predict_proba(x_test)[:, 1]))
         print()
+        log.loc[:len(model_rf.feature_importances_),f"RF Fold {i}"] = model_rf.feature_importances_
+        log.loc["Accuracy", f"RF Fold {i}"] = accuracy_score(y_test, y_pred)
+        log.loc["Precision", f"RF Fold {i}"] = precision_score(y_test, y_pred)
+        log.loc["Recall", f"RF Fold {i}"] = recall_score(y_test, y_pred)
+        log.loc["ROC-AUC", f"RF Fold {i}"] = roc_auc_score(y_test, model_rf.predict_proba(x_test)[:,1])
 
         model_gbm.fit(x_train, y_train)
         y_pred = model_gbm.predict(x_test)
@@ -115,13 +128,13 @@ def models():
         for feature, v in zip(x_train.columns, model_gbm.feature_importances_):
             print(f"Feature: {feature}, Score: %.5f" % (v))
 
-        log.loc[:len(model_gbm.feature_importances_),f"Fold {i}"] = model_gbm.feature_importances_
-        log.loc["Accuracy", f"Fold {i}"] = accuracy_score(y_test, y_pred)
-        log.loc["Precision", f"Fold {i}"] = precision_score(y_test, y_pred)
-        log.loc["Recall", f"Fold {i}"] = recall_score(y_test, y_pred)
-        log.loc["ROC-AUC", f"Fold {i}"] = roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1])
+        log.loc[:len(model_gbm.feature_importances_),f"GBM Fold {i}"] = model_gbm.feature_importances_
+        log.loc["Accuracy", f"GBM Fold {i}"] = accuracy_score(y_test, y_pred)
+        log.loc["Precision", f"GBM Fold {i}"] = precision_score(y_test, y_pred)
+        log.loc["Recall", f"GBM Fold {i}"] = recall_score(y_test, y_pred)
+        log.loc["ROC-AUC", f"GBM Fold {i}"] = roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1])
         print("--------------------------------------------------------")
         i += 1
     print("Log file:\n", log)
     if query_yn("Write model output to log file? y/n: "):
-        log.to_csv("log.csv")
+        log.to_csv(query_txt())

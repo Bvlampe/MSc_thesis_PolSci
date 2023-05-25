@@ -1,9 +1,11 @@
+import dataexpl
 import dataprep
 import models
 
 
 def main():
-    dataprep.dataprep("edit", edit_col="Global terrorism")
+    # dataprep.dataprep("edit", edit_col="Global terrorism")
+    dataexpl.dataexpl()
     # models.models()
 
 
