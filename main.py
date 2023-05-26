@@ -14,7 +14,8 @@ def main():
     #     suffix = '_' + "+".join(extra) if extra else ''
     #     auc_roc_set.to_csv("output_files/auc_roc_per_model" + suffix + ".csv")
     auc_roc_set = pd.DataFrame()
-    models.partial_models(varchoice="notrade", macrolog=auc_roc_set, extra_options=[])
+    models.partial_models(varchoice="nogdp", macrolog=auc_roc_set, extra_options=[])
+    auc_roc_set.to_csv("output_files/auc_roc_per_model_nogdp.csv")
     # models.models()
 
 
