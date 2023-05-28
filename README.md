@@ -1,6 +1,7 @@
 # MSc_thesis_PolSci
 
 Work in progress: Political Science MSc thesis data prep and modelling
+
 Project: Assessing the Relevance of Explanatory Factors in Forecasting Terrorist Threats
 
 The scripts "dataprep.py" and "var_edits.py" contain code for data handling, while "dataexpl.py" and, more importantly, "models.py" contain code for the analysis.
