@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 def dataexpl():
@@ -15,10 +16,8 @@ def dataexpl():
     for ctry, ctry_data in main_data.groupby(axis=0, level=0):
         attacks.loc[ctry, "Population"] = ctry_data.iloc[-1, :].loc["Population"]
         attacks.loc[ctry, "Attacks"] =\
-            len(ctry_data[ctry_data["Terrorist attack"] == True]) /\
-            (len(ctry_data[ctry_data["Terrorist attack"] == False]) +
-             len(ctry_data[ctry_data["Terrorist attack"] == True]))
+            len(ctry_data[ctry_data["Terrorist attack"] == True]) / ctry_data.loc[:, "Terrorist attack"].count()
     attacks.dropna(inplace=True)
     attacks.sort_values(by="Population", inplace=True)
-    attacks.plot(x="Population", y="Attacks", kind="scatter", logx=True, title="Attack frequency over population")
+    attacks.plot(x="Population", y="Attacks", kind="scatter", logx=True, title="Terrorist attack frequency over population")
     plt.show()
