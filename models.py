@@ -158,7 +158,8 @@ def partial_models(varchoice, macrolog, extra_options=[]):
     # max 10 consecutive years to be interpolated
 
     if "interpol_glob_GTD" in extra_options:
-        main_data.replace(to_replace={"Global terrorist attacks": 1}, value=np.NaN)
+        main_data.replace(to_replace={"Global terrorist attacks": 1}, value=np.NaN, inplace=True)
+
 
     for col in main_data.columns:
         main_data[col] = main_data.groupby(level=0)[col].apply(
