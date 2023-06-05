@@ -6,7 +6,7 @@ from sklearn.model_selection import TimeSeriesSplit
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, ConfusionMatrixDisplay, classification_report
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.metrics import roc_auc_score, roc_curve
+from sklearn.metrics import roc_auc_score, roc_curve, precision_recall_curve, auc
 
 
 def query_yn(question):
@@ -42,9 +42,6 @@ def models():
     main_data.drop(["Education"], axis=1, inplace=True)
     main_data.dropna(inplace=True)
     print("main_data shape after dropping:", main_data.shape, end='\n')
-
-    if not query_yn("Continue with model generation? y/n: "):
-        return
 
     # Ensures the "no data" value is the default case dropped in the dummies
     elecsys_dummies = pd.get_dummies(main_data["Elec_sys"], drop_first=False, prefix="elecsys").drop(["elecsys_No data"], axis=1)
@@ -99,6 +96,8 @@ def models():
         log.loc["Precision", f"LR Fold {i}"] = precision_score(y_test, y_pred)
         log.loc["Recall", f"LR Fold {i}"] = recall_score(y_test, y_pred)
         log.loc["ROC-AUC", f"LR Fold {i}"] = roc_auc_score(y_test, model_logreg.predict_proba(x_test)[:,1])
+        precision, recall, thresholds = precision_recall_curve(y_test, model_logreg.predict_proba(x_test)[:, 1])
+        log.loc["PR-AUC", f"LR Fold {i}"] = auc(recall, precision)
 
         model_rf.fit(x_train, y_train)
         y_pred = model_rf.predict(x_test)
@@ -112,6 +111,8 @@ def models():
         log.loc["Precision", f"RF Fold {i}"] = precision_score(y_test, y_pred)
         log.loc["Recall", f"RF Fold {i}"] = recall_score(y_test, y_pred)
         log.loc["ROC-AUC", f"RF Fold {i}"] = roc_auc_score(y_test, model_rf.predict_proba(x_test)[:,1])
+        precision, recall, thresholds = precision_recall_curve(y_test, model_rf.predict_proba(x_test)[:, 1])
+        log.loc["PR-AUC", f"RF Fold {i}"] = auc(recall, precision)
 
         model_gbm.fit(x_train, y_train)
         y_pred = model_gbm.predict(x_test)
@@ -131,6 +132,8 @@ def models():
         log.loc["Precision", f"GBM Fold {i}"] = precision_score(y_test, y_pred)
         log.loc["Recall", f"GBM Fold {i}"] = recall_score(y_test, y_pred)
         log.loc["ROC-AUC", f"GBM Fold {i}"] = roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1])
+        precision, recall, thresholds = precision_recall_curve(y_test, model_gbm.predict_proba(x_test)[:, 1])
+        log.loc["PR-AUC", f"GBM Fold {i}"] = auc(recall, precision)
         print("--------------------------------------------------------")
         i += 1
     print("Log file:\n", log)
@@ -249,6 +252,8 @@ def partial_models(varchoice, macrolog, extra_options=[]):
         log.loc["Precision", f"LR Fold {i}"] = precision_score(y_test, y_pred)
         log.loc["Recall", f"LR Fold {i}"] = recall_score(y_test, y_pred)
         log.loc["ROC-AUC", f"LR Fold {i}"] = roc_auc_score(y_test, model_logreg.predict_proba(x_test)[:,1])
+        precision, recall, thresholds = precision_recall_curve(y_test, model_logreg.predict_proba(x_test)[:, 1])
+        log.loc["PR-AUC", f"LR Fold {i}"] = auc(recall, precision)
 
         model_rf.fit(x_train, y_train)
         y_pred = model_rf.predict(x_test)
@@ -262,6 +267,8 @@ def partial_models(varchoice, macrolog, extra_options=[]):
         log.loc["Precision", f"RF Fold {i}"] = precision_score(y_test, y_pred)
         log.loc["Recall", f"RF Fold {i}"] = recall_score(y_test, y_pred)
         log.loc["ROC-AUC", f"RF Fold {i}"] = roc_auc_score(y_test, model_rf.predict_proba(x_test)[:,1])
+        precision, recall, thresholds = precision_recall_curve(y_test, model_rf.predict_proba(x_test)[:, 1])
+        log.loc["PR-AUC", f"RF Fold {i}"] = auc(recall, precision)
 
         model_gbm.fit(x_train, y_train)
         y_pred = model_gbm.predict(x_test)
@@ -281,6 +288,8 @@ def partial_models(varchoice, macrolog, extra_options=[]):
         log.loc["Precision", f"GBM Fold {i}"] = precision_score(y_test, y_pred)
         log.loc["Recall", f"GBM Fold {i}"] = recall_score(y_test, y_pred)
         log.loc["ROC-AUC", f"GBM Fold {i}"] = roc_auc_score(y_test, model_gbm.predict_proba(x_test)[:,1])
+        precision, recall, thresholds = precision_recall_curve(y_test, model_gbm.predict_proba(x_test)[:, 1])
+        log.loc["PR-AUC", f"GBM Fold {i}"] = auc(recall, precision)
         print("--------------------------------------------------------")
         i += 1
     print("Log file:\n", log)
