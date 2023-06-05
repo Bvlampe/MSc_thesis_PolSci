@@ -11,6 +11,8 @@ def dataexpl():
 
     main_data.loc["Afghanistan", "Global terrorist attacks"].plot(title="Global terrorist attacks")
     plt.show()
+    main_data.replace(to_replace={"Global terrorist attacks": 1}, value=np.NaN).loc["Afghanistan", "Global terrorist attacks"].interpolate().plot(title="Global terrorist attacks")
+    plt.show()
 
     attacks = pd.DataFrame(columns=["Population", "Attacks"])
     for ctry, ctry_data in main_data.groupby(axis=0, level=0):
