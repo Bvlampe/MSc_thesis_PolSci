@@ -21,7 +21,7 @@ def main():
     # dataexpl.dataexpl()
     for extra in [[], ["interpol_glob_GTD"], ["education"], ["interpol_glob_GTD", "education"]]:
         for vars in ["academic", "professional", "combined", "all", "notrade", "nogdp"]:
-            models.new_models(varchoice=vars, extra_options=extra)
+            models.new_models(varchoice=vars, extra_options=extra, write=True, debug_print=True)
 
 
 if __name__ == "__main__":

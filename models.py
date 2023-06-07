@@ -309,7 +309,7 @@ def partial_models(varchoice, macrolog, extra_options=[]):
 
 
 # Allows for the creation of the main, as well as variant models
-def new_models(varchoice, extra_options=[], last_train_year=2007):
+def new_models(varchoice, extra_options=[], write=True, debug_print=False, last_train_year=2009):
     assert(varchoice in ["academic", "professional", "combined", "all", "notrade", "nogdp"])
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
 
@@ -327,7 +327,7 @@ def new_models(varchoice, extra_options=[], last_train_year=2007):
     # Interpolate missing values for some sparsely-documented features,
     # max 10 consecutive years to be interpolated
     for col in main_data.columns:
-        main_data[col] = main_data.groupby(level=0)[col].apply(
+        main_data[col] = main_data.groupby(level=0, group_keys=False)[col].apply(
             lambda group: group.interpolate(limit=10, limit_area="inside"))
 
     # Literacy and education datasets are used for the same reason, so I drop one. TBA: create models with either one
@@ -365,7 +365,7 @@ def new_models(varchoice, extra_options=[], last_train_year=2007):
 
     indep_vars = list(main_data.columns.values)
     indep_vars.remove("Terrorist attack lag-1")
-    log = pd.DataFrame(index=indep_vars)
+    log = pd.DataFrame(index=indep_vars, columns=["LR", "RF", "RF importance scaled", "GBM", "GBM importance scaled"])
 
     # Split off data (by default, cases after 2007, or about 25% of the data) for testing
     main_data['Year'] = main_data.index.get_level_values(1)
@@ -373,6 +373,13 @@ def new_models(varchoice, extra_options=[], last_train_year=2007):
     data_test = main_data.loc[main_data['Year'].isin(range(last_train_year + 1, 9999))]
     y_test = data_test['Terrorist attack lag-1']
     x_test = data_test.drop(["Terrorist attack lag-1", "Year"], axis=1)
+
+    if debug_print:
+        print(f"Model variation: {varchoice}, extra_options={extra_options}:")
+        print(f"Length of train/val set: {len(data_rem)}")
+        print(f"Length of test set: {len(data_test)}")
+        print(f"Split: {len(data_rem) / (len(data_rem) + len(data_test))}/{len(data_test) / (len(data_rem) + len(data_test))}")
+        print()
 
     best_model_lr = None
     best_prauc_lr = 0
@@ -413,12 +420,7 @@ def new_models(varchoice, extra_options=[], last_train_year=2007):
             best_prauc_gbm = auc(recall, precision)
             best_model_gbm = model_gbm
 
-    print("Logistic regression:")
     y_pred = best_model_lr.predict(x_test)
-    print("Precision:", precision_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
-    print("Accuracy:", accuracy_score(y_test, y_pred))
-    print("ROC-AUC-score: ", roc_auc_score(y_test, best_model_lr.predict_proba(x_test)[:,1]))
-    print()
     log.loc["Accuracy", "LR"] = accuracy_score(y_test, y_pred)
     log.loc["Precision", "LR"] = precision_score(y_test, y_pred)
     log.loc["Recall", "LR"] = recall_score(y_test, y_pred)
@@ -426,14 +428,9 @@ def new_models(varchoice, extra_options=[], last_train_year=2007):
     precision, recall, thresholds = precision_recall_curve(y_test, best_model_lr.predict_proba(x_test)[:, 1])
     log.loc["PR-AUC", "LR"] = auc(recall, precision)
 
-    print("Random forest:")
     y_pred = best_model_rf.predict(x_test)
-    print("Precision:", precision_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
-    print("Accuracy:", accuracy_score(y_test, y_pred))
-    print("ROC-AUC-score: ", roc_auc_score(y_test, best_model_rf.predict_proba(x_test)[:, 1]))
-    print()
-    log.loc[:len(best_model_rf.feature_importances_), "RF"] = best_model_rf.feature_importances_
-    log.loc[:len(best_model_rf.feature_importances_), "RF importance scaled"] = \
+    log.loc[:, "RF"].iloc[:len(best_model_rf.feature_importances_)] = best_model_rf.feature_importances_
+    log.loc[:, "RF importance scaled"].iloc[:len(best_model_rf.feature_importances_)] = \
         [imp / max(best_model_rf.feature_importances_) for imp in best_model_rf.feature_importances_]
     log.loc["Accuracy", "RF"] = accuracy_score(y_test, y_pred)
     log.loc["Precision", "RF"] = precision_score(y_test, y_pred)
@@ -442,14 +439,9 @@ def new_models(varchoice, extra_options=[], last_train_year=2007):
     precision, recall, thresholds = precision_recall_curve(y_test, best_model_rf.predict_proba(x_test)[:, 1])
     log.loc["PR-AUC", "RF"] = auc(recall, precision)
 
-    print("Gradient boosting machine:")
     y_pred = model_gbm.predict(x_test)
-    print("Precision:", precision_score(y_test, y_pred), "Recall:", recall_score(y_test, y_pred))
-    print("Accuracy:", accuracy_score(y_test, y_pred))
-    print("ROC-AUC-score: ", roc_auc_score(y_test, best_model_gbm.predict_proba(x_test)[:, 1]))
-    print()
-    log.loc[:len(best_model_gbm.feature_importances_), "GBM"] = best_model_gbm.feature_importances_
-    log.loc[:len(best_model_rf.feature_importances_), "GBM importance scaled"] = \
+    log.loc[:, "GBM"].iloc[:len(best_model_gbm.feature_importances_)] = best_model_gbm.feature_importances_
+    log.loc[:, "GBM importance scaled"].iloc[:len(best_model_rf.feature_importances_)] = \
         [imp / max(best_model_gbm.feature_importances_) for imp in best_model_gbm.feature_importances_]
     log.loc["Accuracy", "GBM"] = accuracy_score(y_test, y_pred)
     log.loc["Precision", "GBM"] = precision_score(y_test, y_pred)
@@ -458,7 +450,6 @@ def new_models(varchoice, extra_options=[], last_train_year=2007):
     precision, recall, thresholds = precision_recall_curve(y_test, best_model_gbm.predict_proba(x_test)[:, 1])
     log.loc["PR-AUC", "GBM"] = auc(recall, precision)
 
-    print("Log file:\n", log)
     suffix = '_' + "+".join(extra_options) if extra_options else ''
-    log.to_csv("output_files/" + varchoice + suffix + ".csv")
-#
+    if write:
+        log.to_csv("output_files/" + varchoice + suffix + ".csv")
