@@ -7,6 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, ConfusionMatrixDisplay, classification_report
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import roc_auc_score, roc_curve, precision_recall_curve, auc
+from copy import deepcopy
 
 
 def query_yn(question):
@@ -406,19 +407,19 @@ def new_models(varchoice, roclog, prlog, extra_options=[], write=True, debug_pri
         precision, recall, thresholds = precision_recall_curve(y_val, model_logreg.predict_proba(x_val)[:, 1])
         if auc(recall, precision) > best_prauc_lr:
             best_prauc_lr = auc(recall, precision)
-            best_model_lr = model_logreg
+            best_model_lr = deepcopy(model_logreg)
 
         model_rf.fit(x_train, y_train)
         precision, recall, thresholds = precision_recall_curve(y_val, model_rf.predict_proba(x_val)[:, 1])
         if auc(recall, precision) > best_prauc_rf:
             best_prauc_rf = auc(recall, precision)
-            best_model_rf = model_rf
+            best_model_rf = deepcopy(model_rf)
 
         model_gbm.fit(x_train, y_train)
         precision, recall, thresholds = precision_recall_curve(y_val, model_gbm.predict_proba(x_val)[:, 1])
         if auc(recall, precision) > best_prauc_gbm:
             best_prauc_gbm = auc(recall, precision)
-            best_model_gbm = model_gbm
+            best_model_gbm = deepcopy(model_gbm)
 
     y_pred = best_model_lr.predict(x_test)
     log.loc["Accuracy", "LR"] = accuracy_score(y_test, y_pred)
