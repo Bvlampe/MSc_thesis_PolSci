@@ -309,7 +309,7 @@ def partial_models(varchoice, macrolog, extra_options=[]):
 
 
 # Allows for the creation of the main, as well as variant models
-def new_models(varchoice, extra_options=[], write=True, debug_print=False, last_train_year=2009):
+def new_models(varchoice, roclog, prlog, extra_options=[], write=True, debug_print=False, last_train_year=2009):
     assert(varchoice in ["academic", "professional", "combined", "all", "notrade", "nogdp"])
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
 
@@ -453,3 +453,7 @@ def new_models(varchoice, extra_options=[], write=True, debug_print=False, last_
     suffix = '_' + "+".join(extra_options) if extra_options else ''
     if write:
         log.to_csv("output_files/" + varchoice + suffix + ".csv")
+
+    for model in ["LR", "RF", "GBM"]:
+        roclog.loc[varchoice, model] = log.loc["ROC-AUC", model]
+        prlog.loc[varchoice, model] = log.loc["PR-AUC", model]
