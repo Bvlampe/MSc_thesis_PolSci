@@ -2,6 +2,7 @@ import pandas as pd
 import dataexpl
 import dataprep
 import models
+import resexpl
 
 
 # Old function calls, not in use anymore
@@ -27,6 +28,7 @@ def main():
         suffix = '_' + "+".join(extra) if extra else ''
         auc_roc_log.to_csv("output_files/auc_roc_per_model" + suffix + ".csv")
         auc_pr_log.to_csv("output_files/auc_pr_per_model" + suffix + ".csv")
+    resexpl.resexpl()
 
 
 if __name__ == "__main__":

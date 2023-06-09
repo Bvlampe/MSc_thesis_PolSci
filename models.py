@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, ConfusionMatrixDisplay, classification_report
+from sklearn.metrics import accuracy_score, precision_score, recall_score
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.metrics import roc_auc_score, roc_curve, precision_recall_curve, auc
+from sklearn.metrics import roc_auc_score, precision_recall_curve, auc, roc_curve, RocCurveDisplay, PrecisionRecallDisplay
 from copy import deepcopy
 
 
@@ -458,3 +458,27 @@ def new_models(varchoice, roclog, prlog, extra_options=[], write=True, debug_pri
     for model in ["LR", "RF", "GBM"]:
         roclog.loc[varchoice, model] = log.loc["ROC-AUC", model]
         prlog.loc[varchoice, model] = log.loc["PR-AUC", model]
+
+    if not extra_options and varchoice == "all":
+        fig, ax = plt.subplots(2, 3, figsize=(20, 15))
+        RocCurveDisplay.from_estimator(best_model_lr, x_test, y_test).plot(ax=ax[0][0])
+        ax[0][0].title.set_text("ROC curve, LR")
+        plt.close()
+        RocCurveDisplay.from_estimator(best_model_rf, x_test, y_test).plot(ax=ax[0][1])
+        ax[0][1].title.set_text("ROC curve, RF")
+        plt.close()
+        RocCurveDisplay.from_estimator(best_model_gbm, x_test, y_test).plot(ax=ax[0][2])
+        ax[0][2].title.set_text("ROC curve, GBM")
+        plt.close()
+        PrecisionRecallDisplay.from_estimator(best_model_lr, x_test, y_test).plot(ax=ax[1][0])
+        ax[1][0].title.set_text("PR curve, LR")
+        plt.close()
+        PrecisionRecallDisplay.from_estimator(best_model_rf, x_test, y_test).plot(ax=ax[1][1])
+        ax[1][1].title.set_text("PR curve, RF")
+        plt.close()
+        PrecisionRecallDisplay.from_estimator(best_model_gbm, x_test, y_test).plot(ax=ax[1][2])
+        ax[1][2].title.set_text("PR curve, GBM")
+        plt.close()
+        fig.tight_layout(h_pad=3.0)
+        fig.savefig("plots/curves.png")
+        plt.close()

@@ -9,7 +9,7 @@ def dataexpl():
     perc = 100 * len(main_data[main_data["Terrorist attack"] == True]) / len(main_data)
     print("Percentage of units with terrorist attacks:", perc, "%")
 
-    main_data.loc["Afghanistan", "Global terrorist attacks"].plot(title="Global terrorist attacks")
+    main_data.loc["Afghanistan", "Global terrorist attacks"].plot(title="Global terrorist attacks", logy=True)
     plt.show()
     main_data.replace(to_replace={"Global terrorist attacks": 1}, value=np.NaN).loc["Afghanistan", "Global terrorist attacks"].interpolate().plot(title="Global terrorist attacks")
     plt.show()
@@ -36,3 +36,5 @@ def dataexpl():
         print(f"Percentage of cases up to and including year {year}:")
         print(f"Education: {100 * uptoincled / len(ed_data)}")
         print(f"Literacy: {100 * uptoincllit / len(lit_data)}")
+    print(f"Length of ed_data: {len(ed_data)}, years: {min(ed_data.index.get_level_values(1))}-{max(ed_data.index.get_level_values(1))}")
+    print(f"Length of lit_data: {len(lit_data)}, years: {min(lit_data.index.get_level_values(1))}-{max(lit_data.index.get_level_values(1))}")
