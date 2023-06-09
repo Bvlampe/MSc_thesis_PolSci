@@ -18,7 +18,7 @@ def resexpl():
     mpl.rc('ytick', labelsize=8)
     for (set, name) in [(acad_data, "Academic"), (prof_data, "Professional"), (comb_data, "Combined"), (all_data, "All")]:
         data = set.transpose()
-        # plt.subplot(2, 2, i)
+        plt.subplot(2, 2, i)
         x = set.loc["PR-AUC", :].dropna()
         y = set.loc["ROC-AUC", :].dropna()
         labels = set.columns
@@ -26,7 +26,7 @@ def resexpl():
         plt.xlabel("AUC-PR", fontsize=8)
         plt.ylabel("AUC-ROC", fontsize=8)
         plt.xticks(np.arange(0.84, 0.91, 0.02))
-        plt.yticks(np.arange(0.80, 0.89, 0.02))
+        plt.yticks(np.arange(0.78, 0.89, 0.02))
         for label in labels:
             point = (set.loc["PR-AUC", label], set.loc["ROC-AUC", label])
             coords = (set.loc["PR-AUC", label] + 0.003, set.loc["ROC-AUC", label])
