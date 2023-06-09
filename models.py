@@ -459,8 +459,9 @@ def new_models(varchoice, roclog, prlog, extra_options=[], write=True, debug_pri
         roclog.loc[varchoice, model] = log.loc["ROC-AUC", model]
         prlog.loc[varchoice, model] = log.loc["PR-AUC", model]
 
+    # Plot ROC and PR curves for the main model
     if not extra_options and varchoice == "all":
-        fig, ax = plt.subplots(2, 3, figsize=(20, 15))
+        fig, ax = plt.subplots(2, 3, figsize=(15, 10))
         RocCurveDisplay.from_estimator(best_model_lr, x_test, y_test).plot(ax=ax[0][0])
         ax[0][0].title.set_text("ROC curve, LR")
         plt.close()
