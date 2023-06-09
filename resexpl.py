@@ -29,10 +29,10 @@ def resexpl():
         plt.yticks(np.arange(0.78, 0.89, 0.02))
         for label in labels:
             point = (set.loc["PR-AUC", label], set.loc["ROC-AUC", label])
-            coords = (set.loc["PR-AUC", label] + 0.003, set.loc["ROC-AUC", label])
+            coords = (set.loc["PR-AUC", label] + 0.002, set.loc["ROC-AUC", label])
             ax[0 if i < 3 else 1][(i + 1) % 2].annotate(label, point, coords, xycoords="data")
         plt.title(name)
         i += 1
     fig.tight_layout()
     plt.savefig("plots/AUC-ROC over AUC-PR.png")
-    plt.show()
+    plt.close()
