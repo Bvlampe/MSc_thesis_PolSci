@@ -19,13 +19,16 @@ def query_yn(question):
 
 # Allows for the creation of the main, as well as variant models
 def new_models(varchoice, roclog, prlog, extra_options=[], write=True, debug_print=False, last_train_year=2009):
-    assert(varchoice in ["academic", "professional", "combined", "all", "notrade", "nogdp"])
+    assert(varchoice in ["academic", "professional", "combined", "all", "notrade", "nogdp", "nogdpweap"])
     main_data = pd.read_csv("merged_data.csv", index_col=[0, 1])
 
     if varchoice == "notrade":
         main_data.drop(["US Trade"], axis=1, inplace=True)
     elif varchoice == "nogdp":
         main_data.drop(["GDP"], axis=1, inplace=True)
+    elif varchoice == "nogdpweap":
+        main_data.drop(["GDP"], axis=1, inplace=True)
+        main_data.drop(["Weapon imports"], axis=1, inplace=True)
 
     # Lag DV to avoid data leakage
     main_data["Terrorist attack lag-1"] = main_data.groupby(level=0)["Terrorist attack"].shift(-1)

@@ -21,7 +21,7 @@ def dataexpl():
             len(ctry_data[ctry_data["Terrorist attack"] == True]) / ctry_data.loc[:, "Terrorist attack"].count()
     attacks.dropna(inplace=True)
     attacks.sort_values(by="Population", inplace=True)
-    attacks.plot(x="Population", y="Attacks", kind="scatter", logx=True, title="Terrorist attack frequency over population")
+    attacks.plot(x="Population", y="Attacks", kind="scatter", logx=True, title="Terrorist attack likelihood over population")
     plt.show()
 
     main_data['Year'] = main_data.index.get_level_values(1)
